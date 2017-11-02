@@ -1,0 +1,89 @@
+remark goes here
+MASS
+OH 16.000        0.465               same as oh 
+HO 1.008         0.135               same as ho 
+CT 12.010        0.878               same as c3 
+OS 16.000        0.465               same as os 
+P  30.970        1.538               same as p4 
+O2 16.000        0.434               same as o  
+H1 1.008         0.135               same as hc 
+H2 1.008         0.135               same as hc 
+
+BOND
+OH-HO  369.60   0.974       same as ho-oh
+OH-CT  314.10   1.426       same as c3-oh
+CT-CT  303.10   1.535       same as c3-c3
+CT-H1  337.30   1.092       same as c3-hc
+CT-OS  301.50   1.439       same as c3-os
+OS-P   311.60   1.636       same as os-p4
+P -O2  456.40   1.503       same as o -p4
+CT-H2  337.30   1.092       same as c3-hc
+
+ANGLE
+OH-CT-CT   67.720     109.430   same as c3-c3-oh
+OH-CT-H1   51.070     109.500   same as hc-c3-oh
+HO-OH-CT   47.090     108.160   same as c3-oh-ho
+CT-CT-OS   67.780     108.420   same as c3-c3-os
+CT-CT-CT   63.210     110.630   same as c3-c3-c3
+CT-CT-H1   46.370     110.050   same as c3-c3-hc
+CT-OS-CT   62.390     112.450   same as c3-os-c3
+OS-CT-H1   50.870     108.700   same as hc-c3-os
+OS-CT-OH   72.380     109.210   same as oh-c3-os
+OS-CT-H2   50.870     108.700   same as hc-c3-os
+CT-OS-P    77.590     117.480   same as c3-os-p4
+OS-P -O2   43.100     116.670   same as o -p4-os
+O2-P -O2   45.060     117.220   same as o -p4-o 
+H1-CT-H1   39.430     108.350   same as hc-c3-hc
+CT-CT-H2   46.370     110.050   same as c3-c3-hc
+OH-CT-H2   51.070     109.500   same as hc-c3-oh
+
+DIHE
+OH-CT-CT-OS   1    0.144         0.000          -3.000      same as os-c3-c3-oh
+OH-CT-CT-OS   1    1.175         0.000           2.000      same as os-c3-c3-oh
+OH-CT-CT-CT   1    0.156         0.000           3.000      same as X -c3-c3-X 
+OH-CT-CT-H1   1    0.000         0.000          -3.000      same as hc-c3-c3-oh
+OH-CT-CT-H1   1    0.250         0.000           1.000      same as hc-c3-c3-oh
+OH-CT-CT-OH   1    0.144         0.000          -3.000      same as oh-c3-c3-oh
+OH-CT-CT-OH   1    1.175         0.000           2.000      same as oh-c3-c3-oh
+HO-OH-CT-CT   1    0.160         0.000          -3.000      same as ho-oh-c3-c3
+HO-OH-CT-CT   1    0.250         0.000           1.000      same as ho-oh-c3-c3
+HO-OH-CT-H1   1    0.167         0.000           3.000      same as X -c3-oh-X 
+CT-CT-OS-CT   1    0.383         0.000          -3.000      same as c3-c3-os-c3
+CT-CT-OS-CT   1    0.100       180.000           2.000      same as c3-c3-os-c3
+CT-CT-CT-OS   1    0.156         0.000           3.000      same as X -c3-c3-X 
+CT-CT-CT-H1   1    0.160         0.000           3.000      same as hc-c3-c3-c3
+CT-CT-CT-CT   1    0.180         0.000          -3.000      same as c3-c3-c3-c3
+CT-CT-CT-CT   1    0.250       180.000          -2.000      same as c3-c3-c3-c3
+CT-CT-CT-CT   1    0.200       180.000           1.000      same as c3-c3-c3-c3
+CT-OS-CT-OH   1    0.383         0.000           3.000      same as X -c3-os-X 
+CT-OS-CT-H2   1    0.383         0.000           3.000      same as X -c3-os-X 
+CT-CT-OS-P    1    0.383         0.000           3.000      same as X -c3-os-X 
+OS-CT-CT-H1   1    0.000         0.000          -3.000      same as hc-c3-c3-os
+OS-CT-CT-H1   1    0.250         0.000           1.000      same as hc-c3-c3-os
+OS-CT-CT-OS   1    0.144         0.000          -3.000      same as os-c3-c3-os
+OS-CT-CT-OS   1    1.175         0.000           2.000      same as os-c3-c3-os
+OS-CT-OH-HO   1    0.167         0.000           3.000      same as X -c3-oh-X 
+CT-OS-P -O2   1    1.050       180.000           2.000      same as X -os-p4-X 
+P -OS-CT-H1   1    0.383         0.000           3.000      same as X -c3-os-X 
+H1-CT-CT-H1   1    0.150         0.000           3.000      same as hc-c3-c3-hc
+H1-CT-OS-CT   1    0.383         0.000           3.000      same as X -c3-os-X 
+CT-CT-CT-H2   1    0.160         0.000           3.000      same as hc-c3-c3-c3
+OH-CT-CT-H2   1    0.000         0.000          -3.000      same as hc-c3-c3-oh
+OH-CT-CT-H2   1    0.250         0.000           1.000      same as hc-c3-c3-oh
+H1-CT-CT-H2   1    0.150         0.000           3.000      same as hc-c3-c3-hc
+HO-OH-CT-H2   1    0.167         0.000           3.000      same as X -c3-oh-X 
+
+IMPROPER
+
+NONBON
+  OH          1.7210  0.2104             same as oh 
+  HO          0.0000  0.0000             same as ho 
+  CT          1.9080  0.1094             same as c3 
+  OS          1.6837  0.1700             same as os 
+  P           2.1000  0.2000             same as p4 
+  O2          1.6612  0.2100             same as o  
+  H1          1.4870  0.0157             same as hc 
+  H2          1.4870  0.0157             same as hc 
+
+
+

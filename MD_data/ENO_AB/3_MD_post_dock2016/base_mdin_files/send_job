@@ -1,0 +1,29 @@
+export CUDA_VISIBLE_DEVICES=0,1
+export DO_PARALLEL='mpirun -np 2'
+#use: $DO_PARALLEL -host localhost
+#
+
+enzyme=ENO_AB_WT_APO_2PG_docked
+
+
+# minimize
+
+$AMBERHOME/bin/pmemd.cuda -O -i mdin_min_v0_l1 -o ${enzyme}_min_v0_l1.out -p ${enzyme}.prmtop -c ${enzyme}.inpcrd -ref ${enzyme}.inpcrd -r ${enzyme}_min_v0_l1.rst
+
+
+# equilibrate the whole thing at once
+
+$DO_PARALLEL -host localhost $AMBERHOME/bin/pmemd.cuda.MPI -O -i mdin_equil_v0_l1 -o ${enzyme}_equil_v0_l1.out -p ${enzyme}.prmtop -c ${enzyme}_min_v0_l1.rst -ref ${enzyme}_min_v0_l1.rst -r ${enzyme}_equil_v0_l1.rst 
+
+
+# run MD
+
+$DO_PARALLEL -host localhost $AMBERHOME/bin/pmemd.cuda.MPI -O -i mdin_prod_v0_l2 -o  ${enzyme}_prod_v0_l1.out -p ${enzyme}.prmtop -c ${enzyme}_equil_v0_l1.rst -ref ${enzyme}_equil_v0_l1.rst -r ${enzyme}_prod_v0_l1.rst 
+
+
+#$DO_PARALLEL -host localhost $AMBERHOME/bin/pmemd.cuda.MPI -O -i mdin_prod_v0_l1 -o  ${enzyme}_prod_v0_l2.out -p ${enzyme}.prmtop -c ${enzyme}_prod_v0_l1.rst -ref ${enzyme}_prod_v0_l1.rst -r ${enzyme}_prod_v0_l2.rst 
+
+
+#$DO_PARALLEL -host localhost $AMBERHOME/bin/pmemd.cuda.MPI -O -i mdin_prod_v0_l2 -o  ${enzyme}_prod_v0_l3.out -p ${enzyme}.prmtop -c ${enzyme}_prod_v0_l2_recentered.rst -ref ${enzyme}_prod_v0_l2_recentered.rst -r ${enzyme}_prod_v0_l3.rst 
+
+echo "I am done here:" $HOSTNAME:$PWD | mail -s "job status report - 3H8A_A" marta.ra.matos@gmail.com

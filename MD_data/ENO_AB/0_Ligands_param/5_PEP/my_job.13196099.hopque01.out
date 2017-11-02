@@ -1,0 +1,18 @@
+
+ + --------------------------------------------------------------------------
+ +        Job name: PEP
+ +          Job Id: 13196099.hopque01
+ +          System: hopper
+ +     Queued Time: Wed Sep 16 22:54:01 2015
+ +      Start Time: Wed Sep 16 22:59:32 2015
+ + Completion Time: Wed Sep 16 23:17:02 2015
+ +            User: nmih
+ +        MOM Host: nid04749
+ +           Queue: reg_small
+ +  Req. Resources: mppnodect=4,mppnppn=12,mppwidth=48,walltime=05:00:00
+ +  Used Resources: cput=00:17:13,energy_used=0,mem=114792kb,vmem=1771152kb,walltime=00:17:34
+ +     Acct String: m1244
+ +   PBS_O_WORKDIR: /global/u2/n/nmih/marta/PEP
+ +     Submit Args: pbs_gaussian
+ + --------------------------------------------------------------------------
+

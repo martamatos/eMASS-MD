@@ -1,0 +1,20 @@
+took s7p molecule from pdb > in molden added hydrogens > save to xyz > put xyz coordinates in EFZ.gau file
+
+module load g09
+qsub pbs_gaussian
+
+newzmat -ichk -opdb molecule.chk s7p_opt.pdb
+
+antechamber -i s7p_opt.pdb -fi pdb -o s7p_opt.mol2 -fo mol2 -c bcc -s 2 -nc -2
+
+antechamber -fi gout -fo ac -i EFZ_restart.log -o S7P_resp.ac -c resp -nc -2 -rn S7P
+
+atomtype -i S7P_resp.ac -o s7p_resp_gaff.ac -p amber
+
+prepgen -i s7p_resp_gaff.ac -o s7p_resp_gaff.prepc -f car -rn S7P
+
+parmchk -i s7p_resp_gaff.prepc -o S7P.frcmod -f prepc
+
+antechamber -i EFZ_restart.log -fi gout -o s7p_resp_gaff2.prepc -fo prepi -nc -2 -c resp -rn S7P -a s7p_opt.pdb -fa pdb -ao name
+
+rm -f ATOMTYPE.INF NEWPDB.PDB PREP.INF QOUT esout qout punch ANTE*

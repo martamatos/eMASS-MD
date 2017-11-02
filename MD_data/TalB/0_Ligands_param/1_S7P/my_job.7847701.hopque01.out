@@ -1,0 +1,20 @@
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+
+ + --------------------------------------------------------------------------
+ +        Job name: gaussian
+ +          Job Id: 7847701.hopque01
+ +          System: hopper
+ +     Queued Time: Wed Jul  9 13:43:26 2014
+ +      Start Time: Wed Jul  9 15:49:02 2014
+ + Completion Time: Wed Jul  9 21:36:00 2014
+ +            User: ebrunk
+ +        MOM Host: nid03935
+ +           Queue: reg_small
+ +  Req. Resources: mppnodect=4,mppnppn=12,mppwidth=48,walltime=12:30:00
+ +  Used Resources: cput=05:43:58,mem=120552kb,vmem=1829280kb,walltime=05:47:02
+ +     Acct String: m1244
+ +   PBS_O_WORKDIR: /global/u1/e/ebrunk/phosphorylation/s7p
+ +     Submit Args: pbs_gaussian
+ + --------------------------------------------------------------------------
+

@@ -1,0 +1,52 @@
+HEADER    NONAME 05-Jun-11
+TITLE     Produced by PDBeChem
+COMPND    X15      
+AUTHOR    EBI-PDBe Generated
+REVDAT   1  05-Jun-11     0
+ATOM      1  OAG X15     0       3.833   2.065   0.392  1.00 20.00           O+0
+ATOM      2  PAO X15     0       3.392   0.574  -0.023  1.00 20.00           P+0
+ATOM      3  OAH X15     0       3.453   0.433  -1.496  1.00 20.00           O+0
+ATOM      4  OAF X15     0       4.388  -0.491   0.659  1.00 20.00           O+0
+ATOM      5  OAK X15     0       1.887   0.299   0.480  1.00 20.00           O+0
+ATOM      6  CAM X15     0       1.328  -0.867   0.122  1.00 20.00           C+0
+ATOM      7  OAB X15     0       1.952  -1.656  -0.548  1.00 20.00           O+0
+ATOM      8  CAL X15     0      -0.078  -1.194   0.557  1.00 20.00           C+0
+ATOM      9  OAA X15     0      -0.403  -2.526   0.155  1.00 20.00           O+0
+ATOM     10  CAI X15     0      -1.054  -0.212  -0.094  1.00 20.00           C+0
+ATOM     11  OAJ X15     0      -2.371  -0.447   0.407  1.00 20.00           O+0
+ATOM     12  PAN X15     0      -3.653   0.407  -0.063  1.00 20.00           P+0
+ATOM     13  OAD X15     0      -4.982  -0.212   0.602  1.00 20.00           O+0
+ATOM     14  OAE X15     0      -3.480   1.937   0.407  1.00 20.00           O+0
+ATOM     15  OAC X15     0      -3.768   0.353  -1.537  1.00 20.00           O+0
+ATOM     16  HAG X15     0       4.731   2.300   0.120  1.00 20.00           H+0
+ATOM     17  HAF X15     0       4.400  -0.455   1.625  1.00 20.00           H+0
+ATOM     18  HAL X15     0      -0.151  -1.113   1.641  1.00 20.00           H+0
+ATOM     19  HAA X15     0      -0.359  -2.671  -0.800  1.00 20.00           H+0
+ATOM     20 HAI1 X15     0      -0.752   0.809   0.140  1.00 20.00           H+0
+ATOM     21 HAI2 X15     0      -1.046  -0.354  -1.175  1.00 20.00           H+0
+ATOM     22  HAD X15     0      -5.795   0.253   0.363  1.00 20.00           H+0
+ATOM     23  HAE X15     0      -3.399   2.048   1.364  1.00 20.00           H+0
+CONECT    1   16    2
+CONECT    2    4    1    3    5
+CONECT    3    2
+CONECT    4   17    2
+CONECT    5    6    2
+CONECT    6    8    7    5
+CONECT    7    6
+CONECT    8   10    6   18    9
+CONECT    9    8   19
+CONECT   10    8   20   21   11
+CONECT   11   10   12
+CONECT   12   15   13   14   11
+CONECT   13   22   12
+CONECT   14   23   12
+CONECT   15   12
+CONECT   16    1
+CONECT   17    4
+CONECT   18    8
+CONECT   19    9
+CONECT   20   10
+CONECT   21   10
+CONECT   22   13
+CONECT   23   14
+END

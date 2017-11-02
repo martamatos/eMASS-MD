@@ -1,0 +1,9 @@
+dock_prep/GAPDH_WT_APO-002_receptor_G3P_docked.pdb
+dock_prep/GAPDH_WT_APO-004_receptor_G3P_docked.pdb
+dock_prep/GAPDH_WT_APO-016_receptor_G3P_docked.pdb
+dock_prep/GAPDH_WT_APO-024_receptor_G3P_docked.pdb
+dock_prep/GAPDH_WT_APO-026_receptor_G3P_docked.pdb
+dock_prep/GAPDH_WT_APO-027_receptor_G3P_docked.pdb
+dock_prep/GAPDH_WT_APO-032_receptor_G3P_docked.pdb
+dock_prep/GAPDH_WT_APO-036_receptor_G3P_docked.pdb
+dock_prep/GAPDH_WT_APO-038_receptor_G3P_docked.pdb

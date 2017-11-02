@@ -1,0 +1,647 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24336,        639]
+NotebookOptionsPosition[     23711,        613]
+NotebookOutlinePosition[     24051,        628]
+CellTagsIndexPosition[     24008,        625]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Quit", "[", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.639729139436756*^9, 3.639729140587323*^9}, {
+   3.640093333126033*^9, 3.640093334996044*^9}, {3.64032346627951*^9, 
+   3.640323466979537*^9}, 3.676967732906159*^9, {3.676969081297453*^9, 
+   3.6769691220993032`*^9}, {3.676969255452931*^9, 3.6769692574578323`*^9}, {
+   3.676970240113895*^9, 3.6769702447737637`*^9}, {3.682053449390788*^9, 
+   3.682053452353827*^9}, {3.682159217598268*^9, 3.682159221631666*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"<<", "Toolbox`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "Toolbox`Style`"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "MASSef`"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"enzModelsDir", " ", "=", " ", 
+  "\"\</home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/\>\""}\
+], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mainDir", "=", 
+   RowBox[{"enzModelsDir", "<>", "\"\<code_data/\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"baseDir", "=", " ", 
+    RowBox[{"enzModelsDir", "<>", "\"\<GAPD/GAPD_param_inf/\>\""}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataDir", " ", "=", " ", 
+   RowBox[{"baseDir", "<>", "\"\<output/treated_data/\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"outputDir", "=", " ", 
+   RowBox[{"baseDir", "<>", "\"\<output/model_simulations/models/\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"!", 
+      RowBox[{"DirectoryQ", "[", "outputDir", "]"}]}], ",", 
+     "\[IndentingNewLine]", "\t", 
+     RowBox[{"CreateDirectory", "[", 
+      RowBox[{"outputDir", ",", 
+       RowBox[{"CreateIntermediateDirectories", "\[Rule]", " ", "True"}]}], 
+      "]"}]}], "\[IndentingNewLine]", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Import", "[", 
+    RowBox[{"mainDir", "<>", "\"\<enzyme_model_building.m\>\""}], "]"}], 
+   ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"metsData", "=", 
+   RowBox[{
+   "mainDir", "<>", "\"\<mets_concentrations_rabinowitz2016.xls\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"KeqData", "=", 
+    RowBox[{"mainDir", "<>", "\"\<reactions_keqs.xls\>\""}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"metsToIgnore", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     InterpretationBox[
+      SuperscriptBox[
+       StyleBox["h",
+        StripOnInput->False,
+        ShowSyntaxStyles->False,
+        AutoSpacing->False,
+        ZeroWidthTimes->True,
+        LineColor->RGBColor[0, 0, 0],
+        FrontFaceColor->RGBColor[0, 0, 0],
+        BackFaceColor->RGBColor[0, 0, 0],
+        GraphicsColor->RGBColor[0, 0, 0],
+        FontColor->RGBColor[0, 0, 0]], 
+       StyleBox["c",
+        StripOnInput->False,
+        ShowSyntaxStyles->False,
+        AutoSpacing->False,
+        ZeroWidthTimes->True,
+        LineColor->RGBColor[0, 0, 0],
+        FrontFaceColor->RGBColor[0, 0, 0],
+        BackFaceColor->RGBColor[0, 0, 0],
+        GraphicsColor->RGBColor[0, 0, 0],
+        FontColor->RGBColor[0, 0, 0]]],
+      Toolbox`metabolite["h", "c"],
+      Editable->False,
+      Selectable->False], ",", 
+     InterpretationBox[
+      SuperscriptBox[
+       StyleBox["h2o",
+        StripOnInput->False,
+        ShowSyntaxStyles->False,
+        AutoSpacing->False,
+        ZeroWidthTimes->True,
+        LineColor->RGBColor[0, 0, 0],
+        FrontFaceColor->RGBColor[0, 0, 0],
+        BackFaceColor->RGBColor[0, 0, 0],
+        GraphicsColor->RGBColor[0, 0, 0],
+        FontColor->RGBColor[0, 0, 0]], 
+       StyleBox["c",
+        StripOnInput->False,
+        ShowSyntaxStyles->False,
+        AutoSpacing->False,
+        ZeroWidthTimes->True,
+        LineColor->RGBColor[0, 0, 0],
+        FrontFaceColor->RGBColor[0, 0, 0],
+        BackFaceColor->RGBColor[0, 0, 0],
+        GraphicsColor->RGBColor[0, 0, 0],
+        FontColor->RGBColor[0, 0, 0]]],
+      Toolbox`metabolite["h2o", "c"],
+      Editable->False,
+      Selectable->False]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fitCutoff", "=", "1"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"enzName", "=", "\"\<GAPD\>\""}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"rxn", " ", "=", " ", 
+    RowBox[{
+    "str2mass", "[", 
+     "\"\<GAPD: g3p[c] + nad[c] + pi[c] <-> 13dpg[c] + h[c] + nadh[c]\>\"", 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"catalyticBranch", "=", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<E_GAPD[c] + nad[c] <=> E_GAPD[c]&nad\>\"", ",", 
+      "\[IndentingNewLine]", "\t\t\t\t", 
+      "\"\<E_GAPD[c]&nad + g3p[c] <=> E_GAPD[c]&nad&g3p\>\"", ",", 
+      "\[IndentingNewLine]", "\t\t\t\t", 
+      "\"\<E_GAPD[c]&nad&g3p + pi[c] <=> E_GAPD[c]&nad&g3p&pi\>\"", ",", 
+      "\[IndentingNewLine]", "\t\t\t\t", 
+      "\"\<E_GAPD[c]&nad&g3p&pi <=> E_GAPD[c]&nadh&13dpg\>\"", ",", 
+      "\[IndentingNewLine]", "\t\t\t\t", 
+      "\"\<E_GAPD[c]&nadh&13dpg <=> E_GAPD[c]&nadh + 13dpg[c]\>\"", ",", 
+      "\[IndentingNewLine]", "\t\t\t\t", 
+      "\"\<E_GAPD[c]&nadh <=> E_GAPD[c] + nadh[c]\>\""}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"activatorlist", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nActivationSites", " ", "=", " ", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"inhibitorList", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nInhibitionSites", " ", "=", " ", "0"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"inhibitorMet", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"affectedMets", "=", 
+    RowBox[{"{", "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"eTotal", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     TagBox[
+      StyleBox[
+       RowBox[{"parameter", "[", "\"\<GAPD_total\>\"", "]"}],
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "->", 
+     RowBox[{"6.875", "*", 
+      RowBox[{"10", "^", 
+       RowBox[{"-", "5"}]}]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"enzSolFile", "=", 
+   RowBox[{"baseDir", "<>", "\"\<input/enzSol_GAPD_.m\>\""}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.676290397552228*^9, 3.676290450112253*^9}, {
+   3.676290495909384*^9, 3.67629050479047*^9}, {3.6762905399325523`*^9, 
+   3.676290540694272*^9}, {3.682156755273003*^9, 3.682156815777536*^9}, {
+   3.682157119815291*^9, 3.6821571247362823`*^9}, {3.682159360920402*^9, 
+   3.682159367944022*^9}, {3.6821595317430477`*^9, 3.682159562963408*^9}, {
+   3.682159681071164*^9, 3.682159708488242*^9}, {3.6930332822076063`*^9, 
+   3.693033292826644*^9}, 3.693033422780096*^9, {3.693034016443396*^9, 
+   3.6930340314175367`*^9}, {3.693561473555544*^9, 3.6935615054042377`*^9}, {
+   3.6935615441107473`*^9, 3.693561554590827*^9}, {3.693562109214583*^9, 
+   3.693562110810638*^9}, {3.6935624438333797`*^9, 3.6935624480466223`*^9}, {
+   3.693571272487793*^9, 3.693571328723299*^9}, {3.6936367536818743`*^9, 
+   3.69363676385737*^9}, {3.693732104277255*^9, 3.693732106323821*^9}, {
+   3.69418472152966*^9, 3.6941847310771723`*^9}, {3.695117101982223*^9, 
+   3.6951171264085817`*^9}, {3.69512953992806*^9, 3.695129552558981*^9}, {
+   3.695129763383546*^9, 3.695129764138936*^9}, {3.6955396516336937`*^9, 
+   3.695539655971801*^9}, {3.695543269271299*^9, 3.695543269774255*^9}, {
+   3.709438016026246*^9, 3.709438027484147*^9}, {3.709438075992269*^9, 
+   3.709438080176832*^9}, {3.709439382779067*^9, 3.709439391902315*^9}, {
+   3.709441121255672*^9, 3.709441133462165*^9}, {3.7096176135807133`*^9, 
+   3.709617636695094*^9}, 3.709617718646123*^9, {3.718430942951435*^9, 
+   3.718430958528714*^9}, {3.718431364297*^9, 3.718431370797943*^9}, {
+   3.7184316756687317`*^9, 3.718431705392458*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Build base model", "Section",
+ CellChangeTimes->{{3.639732418939518*^9, 3.639732426478991*^9}, 
+   3.6399119286948357`*^9, 3.6755086697702827`*^9, {3.68215665443184*^9, 
+   3.682156655766983*^9}, {3.682158853618226*^9, 3.682158856618361*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"enzymeModel", "=", 
+    RowBox[{"constructEnzymeModule", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Mechanism", "\[Rule]", "catalyticBranch"}], ",", 
+      RowBox[{"Activators", "\[Rule]", "activatorlist"}], ",", 
+      RowBox[{"ActivationSites", "\[Rule]", "nActivationSites"}], ",", 
+      RowBox[{"Inhibitors", "\[Rule]", "inhibitorList"}], ",", 
+      RowBox[{"InhibitionSites", "\[Rule]", "nInhibitionSites"}]}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"model", "=", 
+    RowBox[{"defineInitialConditions", "[", 
+     RowBox[{"enzymeModel", ",", " ", "metsData", ",", " ", "KeqData"}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"updateIgnore", "[", 
+    RowBox[{"model", ",", " ", "metsToIgnore"}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "allReactions", ",", " ", "allCatalyticReactions", ",", " ", 
+     "nonCatalyticReactions", ",", " ", "rateConstList"}], "}"}], "=", 
+   RowBox[{"getRateConstantsIDs", "[", "model", "]"}]}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.693033864059559*^9, 3.6930338658393*^9}, {
+  3.6930347504711637`*^9, 3.693034750967729*^9}, {3.693571307279998*^9, 
+  3.6935713075406647`*^9}, {3.6935713420837917`*^9, 3.693571343005865*^9}, {
+  3.694184738084241*^9, 3.694184738703046*^9}, {3.7094402279016047`*^9, 
+  3.709440244736122*^9}, {3.709440423739497*^9, 3.709440424711669*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"newRateConstList", "=", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"rateConstList", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", "+", "1"}], "]"}], "]"}], ",", 
+         RowBox[{"rateConstList", "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", " ", 
+         RowBox[{"Length", "@", "rateConstList"}], ",", " ", "2"}], "}"}]}], 
+      "]"}], " ", "//", "Flatten"}]}], ";"}], 
+  " "}], "\[IndentingNewLine]", "newRateConstList", "\[IndentingNewLine]"}], \
+"Input",
+ CellChangeTimes->{{3.6937750076062803`*^9, 3.6937750081579638`*^9}, {
+  3.694184742148093*^9, 3.6941847426280613`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD1",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongLeftArrow]"],
+    Toolbox`rateconst["GAPD1", False],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD1",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongRightArrow]"],
+    Toolbox`rateconst["GAPD1", True],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD2",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongLeftArrow]"],
+    Toolbox`rateconst["GAPD2", False],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD2",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongRightArrow]"],
+    Toolbox`rateconst["GAPD2", True],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD3",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongLeftArrow]"],
+    Toolbox`rateconst["GAPD3", False],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD3",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongRightArrow]"],
+    Toolbox`rateconst["GAPD3", True],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD4",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongLeftArrow]"],
+    Toolbox`rateconst["GAPD4", False],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD4",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongRightArrow]"],
+    Toolbox`rateconst["GAPD4", True],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD5",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongLeftArrow]"],
+    Toolbox`rateconst["GAPD5", False],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD5",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongRightArrow]"],
+    Toolbox`rateconst["GAPD5", True],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD6",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongLeftArrow]"],
+    Toolbox`rateconst["GAPD6", False],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["GAPD6",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongRightArrow]"],
+    Toolbox`rateconst["GAPD6", True],
+    Editable->False,
+    Selectable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.693775009617569*^9, 3.693821708863532*^9, 
+  3.69418466454937*^9, 3.694184743046384*^9, 3.694240656910512*^9, 
+  3.694240706819111*^9, 3.695109250197554*^9, 3.6951171637530203`*^9, 
+  3.6951295634678698`*^9, 3.695129625082253*^9, 3.6951297745219383`*^9, 
+  3.695540520270774*^9, 3.695540605985321*^9, 3.69554329063651*^9, 
+  3.695543438353135*^9, 3.709440452239759*^9, 3.709441148567769*^9, 
+  3.709533093425695*^9, 3.709533139181012*^9, 3.70953321497635*^9, 
+  3.709545858023945*^9, 3.709545888741804*^9, 3.709613184110984*^9, 
+  3.709617658213376*^9, 3.709617777975464*^9, 3.7096276028340178`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Generate ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " models from ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " rate constant sets"
+}], "Section",
+ CellChangeTimes->{{3.639732418939518*^9, 3.639732426478991*^9}, 
+   3.6399119286948357`*^9, 3.6755086697702827`*^9, {3.68215665443184*^9, 
+   3.682156671319798*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ParallelNeeds", "[", "\"\<Toolbox`\>\"", "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dataTypeList", "=", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Keq\>\"", ",", "\"\<dKd\>\"", ",", "\"\<Km1\>\"", ",", 
+       "\"\<Km2\>\"", ",", "\"\<Km3\>\"", ",", "\"\<Kd\>\"", ",", 
+       "\"\<kcat\>\"", ",", " ", "\"\<all\>\""}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"nEnsembles", " ", "=", "99"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"LaunchKernels", "[", "2", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ParallelDo", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Do", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"modelList", " ", "=", " ", 
+           RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"dataFile", "=", 
+           RowBox[{
+           "dataDir", "<>", "\"\<rateconst_\>\"", "<>", " ", "enzName", " ", 
+            "<>", "\"\<_\>\"", "<>", "dataType", "<>", "\"\<_\>\"", "<>", 
+            RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.csv\>\""}]}], 
+          ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", "dataFile", "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ratesFiltered", "=", 
+           RowBox[{"importRateConstants", "[", 
+            RowBox[{"dataFile", ",", " ", "fitCutoff"}], "]"}]}], " ", ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"modelList", "=", 
+           RowBox[{"substituteRateValues", "[", 
+            RowBox[{
+            "model", ",", " ", "ratesFiltered", ",", " ", "newRateConstList", 
+             ",", " ", 
+             RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", 
+          RowBox[{"modelList", "=", 
+           RowBox[{"calculateEnzymeConcentrations", "[", 
+            RowBox[{"modelList", ",", " ", "eTotal", ",", " ", "enzSolFile"}],
+             "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{"modelList", "=", 
+             RowBox[{"addExchangeReactionsToModel", "[", 
+              RowBox[{"modelList", ",", " ", "rxn"}], "]"}]}], ";"}], "*)"}], 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"Export", "[", 
+           RowBox[{
+            RowBox[{
+            "outputDir", "<>", "\"\<model_\>\"", "<>", " ", "enzName", " ", 
+             "<>", "\"\<_\>\"", "<>", "dataType", "<>", "\"\<_\>\"", "<>", 
+             RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.mx\>\""}], ",", 
+            "modelList", ",", " ", "\"\<MX\>\""}], "]"}], ";"}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"dataType", ",", " ", "dataTypeList"}], "}"}]}], "]"}], 
+       ";"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "0", ",", " ", "nEnsembles"}], "}"}]}], "]"}], ";"}],
+    "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.682156678699472*^9, 3.6821567075628643`*^9}, {
+   3.682157110915913*^9, 3.682157146804167*^9}, {3.682157182697796*^9, 
+   3.6821572054725227`*^9}, {3.682158591057746*^9, 3.682158591368857*^9}, {
+   3.682158689279951*^9, 3.68215880692085*^9}, {3.682159002141611*^9, 
+   3.682159008953348*^9}, {3.682159047299437*^9, 3.682159070644505*^9}, {
+   3.68215913411782*^9, 3.682159138020639*^9}, {3.682159656814909*^9, 
+   3.6821596769526043`*^9}, {3.682160023848654*^9, 3.6821600245776777`*^9}, {
+   3.693034808777965*^9, 3.693034808937348*^9}, {3.693034850375012*^9, 
+   3.693034901587558*^9}, {3.6930352702142477`*^9, 3.693035271964526*^9}, {
+   3.693128013195047*^9, 3.693128019121337*^9}, {3.693562038150343*^9, 
+   3.6935620602369204`*^9}, {3.693562090819395*^9, 3.693562094304595*^9}, 
+   3.693571316994828*^9, {3.693571358650281*^9, 3.693571358907096*^9}, 
+   3.6937321127225323`*^9, {3.693775012493807*^9, 3.6937750193813257`*^9}, {
+   3.693821713763001*^9, 3.6938217224402733`*^9}, {3.693822741296784*^9, 
+   3.6938227432746468`*^9}, {3.694184671668994*^9, 3.6941846814428368`*^9}, 
+   3.694184752576223*^9, {3.694240659753223*^9, 3.694240697489416*^9}, {
+   3.695117172082211*^9, 3.695117180377038*^9}, {3.695129583651617*^9, 
+   3.695129632667384*^9}, {3.695129716229373*^9, 3.695129720897642*^9}, {
+   3.6955405253682337`*^9, 3.695540549228199*^9}, {3.695540585309845*^9, 
+   3.695540594993105*^9}, {3.695543307760806*^9, 3.695543338131892*^9}, {
+   3.709440132180089*^9, 3.709440172259548*^9}, 3.709441140284436*^9, 
+   3.7095330957950573`*^9, {3.7095458629422894`*^9, 3.70954586307206*^9}, 
+   3.7096178769687223`*^9, {3.718430981603587*^9, 3.7184310012622223`*^9}, {
+   3.718431033461214*^9, 3.718431037723535*^9}}]
+}, Open  ]]
+},
+WindowSize->{954, 1021},
+WindowMargins->{{946, Automatic}, {3, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 505, 8, 34, "Input"],
+Cell[1066, 30, 8017, 206, 1143, "Input"],
+Cell[CellGroupData[{
+Cell[9108, 240, 248, 3, 65, "Section"],
+Cell[9359, 245, 1604, 35, 259, "Input"],
+Cell[CellGroupData[{
+Cell[10988, 284, 849, 21, 145, "Input"],
+Cell[11840, 307, 6554, 191, 36, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18443, 504, 330, 11, 65, "Section"],
+Cell[18776, 517, 4919, 93, 598, "Input"]
+}, Open  ]]
+}
+]
+*)
+

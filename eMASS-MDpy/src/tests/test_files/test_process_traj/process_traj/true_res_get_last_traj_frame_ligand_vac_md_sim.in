@@ -1,0 +1,4 @@
+trajin G6PD_WT_NADP_6PGL_docked_cl111_1_100.crd lastframe
+trajout ligand_vac.pdb pdb
+strip !(:6PG)
+go

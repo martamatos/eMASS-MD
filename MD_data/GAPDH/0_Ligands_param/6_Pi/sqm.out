@@ -1,0 +1,96 @@
+            --------------------------------------------------------
+                             AMBER SQM VERSION 14
+ 
+                                     By
+              Ross C. Walker, Michael F. Crowley, Scott Brozell,
+                         Tim Giese, Andreas W. Goetz,
+                        Tai-Sung Lee and David A. Case
+ 
+            --------------------------------------------------------
+ 
+
+--------------------------------------------------------------------------------
+  QM CALCULATION INFO
+--------------------------------------------------------------------------------
+
+| QMMM: Citation for AMBER QMMM Run:
+| QMMM: R.C. Walker, M.F. Crowley and D.A. Case, J. COMP. CHEM. 29:1019, 2008
+
+QMMM: SINGLET STATE CALCULATION
+QMMM: RHF CALCULATION, NO. OF DOUBLY OCCUPIED LEVELS = 16
+
+| QMMM: *** Selected Hamiltonian *** 
+| QMMM: AM1         
+
+| QMMM: *** Parameter sets in use ***
+| QMMM: P : M.J.S.DEWAR et al. THEOCHEM, 187,1, (1989)
+| QMMM: O : M.J.S.DEWAR et al. JACS, 107, 3902, (1985)
+| QMMM: H : M.J.S.DEWAR et al. JACS, 107, 3902, (1985)
+
+| QMMM: *** SCF convergence criteria ***
+| QMMM: Energy change                :  0.1D-09 kcal/mol
+| QMMM: Error matrix |FP-PF|         :  0.1D+00 au
+| QMMM: Density matrix change        :  0.1D-09
+| QMMM: Maximum number of SCF cycles :     1000
+
+| QMMM: *** Diagonalization Routine Information ***
+| QMMM: Pseudo diagonalizations are allowed.
+| QMMM: Auto diagonalization routine selection is disabled.
+| QMMM: Using internal diagonalization routine (diag_routine=1).
+
+  QMMM: QM Region Cartesian Coordinates (*=link atom) 
+  QMMM: QM_NO.   MM_NO.  ATOM         X         Y         Z
+  QMMM:     1        1      P       -0.1480   -0.0000    0.0670
+  QMMM:     2        2      O       -0.8770    1.2740   -0.2900
+  QMMM:     3        3      O       -0.8740   -1.2750   -0.2910
+  QMMM:     4        4      O        0.5300   -0.0000    1.4290
+  QMMM:     5        5      O        1.2580    0.0020   -0.9400
+  QMMM:     6        6      H        1.9240    0.0000   -0.2680
+
+--------------------------------------------------------------------------------
+  RESULTS
+--------------------------------------------------------------------------------
+
+      iter         sqm energy              rms gradient
+      ----    -------------------    -----------------------
+xmin    10     -205.1184 kcal/mol        0.0002 kcal/(mol*A)
+xmin    10     -205.1184 kcal/mol        0.0000 kcal/(mol*A)
+  ... geometry converged !
+ 
+ Final MO eigenvalues (eV):
+ -25.2462  -22.0702  -21.5647  -21.5587   -7.7590   -5.7645   -4.0157   -3.4826
+  -2.7949   -1.7761   -0.1631    0.3096    0.3397    0.3889    0.4979    0.5037
+  14.5551   15.7154   17.3852   19.1401   19.1559
+
+ Heat of formation   =       -205.11844165 kcal/mol  (       -8.89460308 eV)
+
+ Total SCF energy    =     -32861.76143104 kcal/mol  (    -1424.99290712 eV)
+ Electronic energy   =     -85346.45414905 kcal/mol  (    -3700.89996744 eV)
+ Core-core repulsion =      52484.69271801 kcal/mol  (     2275.90706032 eV)
+ 
+    Atomic Charges for Step       1 :
+  Atom    Element       Mulliken Charge
+     1      P                  2.512
+     2      O                 -1.269
+     3      O                 -1.269
+     4      O                 -1.290
+     5      O                 -0.848
+     6      H                  0.163
+ Total Mulliken Charge =      -2.000
+ 
+                  X        Y        Z     TOTAL  
+  QM DIPOLE     2.547    0.002   -0.632    2.625
+ 
+ Final Structure
+
+  QMMM: QM Region Cartesian Coordinates (*=link atom) 
+  QMMM: QM_NO.   MM_NO.  ATOM         X         Y         Z
+  QMMM:     1        1      P       -0.1685   -0.0002    0.0725
+  QMMM:     2        2      O       -0.8830    1.2769   -0.2963
+  QMMM:     3        3      O       -0.8813   -1.2780   -0.2972
+  QMMM:     4        4      O        0.5272   -0.0002    1.4187
+  QMMM:     5        5      O        1.2370    0.0011   -0.8884
+  QMMM:     6        6      H        1.9816    0.0014   -0.3023
+
+           --------- Calculation Completed ----------
+

@@ -1,0 +1,2 @@
+dock_prep/GAPDH_WT_APO-023_receptor_G3P_docked.pdb
+dock_prep/GAPDH_WT_APO-025_receptor_G3P_docked.pdb

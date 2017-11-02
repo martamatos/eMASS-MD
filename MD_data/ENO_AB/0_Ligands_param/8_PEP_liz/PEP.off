@@ -1,0 +1,105 @@
+!!index array str
+ "PEP"
+!entry.PEP.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "O1" "o" 0 1 131072 1 8 -0.870612
+ "C2" "c" 0 1 131072 2 6 0.825220
+ "O6" "o" 0 1 131072 3 8 -0.870612
+ "C1" "ce" 0 1 131072 4 6 0.433967
+ "C3" "c2" 0 1 131072 5 6 -0.844493
+ "H1" "ha" 0 1 131072 6 1 0.184568
+ "H2" "ha" 0 1 131072 7 1 0.184568
+ "O2" "os" 0 1 131072 8 8 -0.520767
+ "P" "p5" 0 1 131072 9 -1 1.342672
+ "O4" "o" 0 1 131072 10 8 -0.954837
+ "O5" "o" 0 1 131072 11 8 -0.954837
+ "O3" "o" 0 1 131072 12 8 -0.954837
+!entry.PEP.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "O1" "o" 0 -1 0.0
+ "C2" "c" 0 -1 0.0
+ "O6" "o" 0 -1 0.0
+ "C1" "ce" 0 -1 0.0
+ "C3" "c2" 0 -1 0.0
+ "H1" "ha" 0 -1 0.0
+ "H2" "ha" 0 -1 0.0
+ "O2" "os" 0 -1 0.0
+ "P" "p5" 0 -1 0.0
+ "O4" "o" 0 -1 0.0
+ "O5" "o" 0 -1 0.0
+ "O3" "o" 0 -1 0.0
+!entry.PEP.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.PEP.unit.childsequence single int
+ 2
+!entry.PEP.unit.connect array int
+ 1
+ 12
+!entry.PEP.unit.connectivity table  int atom1x  int atom2x  int flags
+ 1 2 1
+ 2 3 1
+ 2 4 1
+ 4 5 1
+ 4 8 1
+ 5 6 1
+ 5 7 1
+ 8 9 1
+ 9 10 1
+ 9 11 1
+ 9 12 1
+!entry.PEP.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+ "R" 1 "A" 2
+ "R" 1 "A" 3
+ "R" 1 "A" 4
+ "R" 1 "A" 5
+ "R" 1 "A" 6
+ "R" 1 "A" 7
+ "R" 1 "A" 8
+ "R" 1 "A" 9
+ "R" 1 "A" 10
+ "R" 1 "A" 11
+ "R" 1 "A" 12
+!entry.PEP.unit.name single str
+ "PEP"
+!entry.PEP.unit.positions table  dbl x  dbl y  dbl z
+ 3.540003 1.419779 1.933042E-06
+ 4.445176 0.709594 0.486110
+ 4.315125 -0.448430 0.901123
+ 5.852440 1.373644 0.633128
+ 5.897507 2.686732 0.886139
+ 6.832464 3.179650 1.071117
+ 4.980566 3.249755 0.886142
+ 6.884328 0.552664 0.554144
+ 8.613198 0.937551 0.474144
+ 8.776231 1.611564 -0.864957
+ 8.866179 1.824345 1.669843
+ 9.198322 -0.448911 0.571187
+!entry.PEP.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 1 12 0 0 0 0
+!entry.PEP.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "PEP" 1 13 1 "?" 0
+!entry.PEP.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.PEP.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.PEP.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

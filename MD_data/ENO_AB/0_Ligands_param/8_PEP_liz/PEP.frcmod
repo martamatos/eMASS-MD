@@ -1,0 +1,58 @@
+remark goes here
+MASS
+ce 12.010        0.360               same as c2
+c  12.010        0.616               same as c  
+o  16.000        0.434               same as o  
+c2 12.010        0.360               same as ce 
+ha 1.008         0.135               same as hc 
+os 16.000        0.465               same as os 
+p5 30.970        1.538               same as p4 
+
+BOND
+ce-c   449.90   1.406       same as c -c2
+ce-c2  387.90   1.453       same as cc-ce
+ce-os  392.60   1.357       same as ce-os
+c -o   648.00   1.214       same as c -o 
+c2-ha  344.30   1.087       same as c2-hc
+os-p5  311.60   1.636       same as os-p4
+p5-o   456.40   1.503       same as o -p4
+
+ANGLE
+ce-c -o    72.770     119.120   same as c2-c -o 
+ce-c2-ha   50.300     119.700   same as c2-c2-hc
+ce-os-p5   77.590     129.070   same as ce-os-p5
+ce-os-p5   77.590     129.070   same as ce-os-p5
+c -ce-c2   67.930     120.700   same as c -c2-c2
+c -ce-os   70.229     117.340   same as c -ce-os 
+o -c -o    78.170     130.380   same as o -c -o 
+c2-ce-os   71.040     121.890   same as c2-ce-os
+ha-c2-ha   37.810     118.920   same as hc-c2-hc
+os-p5-o    43.100     116.670   same as o -p4-os
+o -p5-o    45.060     117.220   same as o -p4-o 
+
+DIHE
+ce-os-p5-o    1    1.050       180.000           2.000      same as X -os-p4-X 
+c -ce-c2-ha   1    6.650       180.000           2.000      same as X -c2-c2-X 
+c -ce-os-p5   1    1.050       180.000           2.000      same as X -c2-os-X 
+o -c -ce-c2   1    2.175       180.000          -2.000      same as c2-c2-c -o 
+o -c -ce-c2   1    0.300         0.000           3.000      same as c2-c2-c -o 
+o -c -ce-os   1    2.175       180.000           2.000      same as X -c -c2-X 
+c2-ce-os-p5   1    1.050       180.000           2.000      same as X -c2-os-X 
+ha-c2-ce-os   1    6.650       180.000           2.000      same as X -c2-c2-X 
+
+IMPROPER
+c -c2-ce-os         1.1          180.0         2.0          Using default value
+ce-o -c -os         1.1          180.0         2.0          Using default value
+ce-ha-c2-ha         1.1          180.0         2.0          Using default value
+
+NONBON
+  ce          1.9080  0.0860             same as ce 
+  c           1.9080  0.0860             same as c  
+  o           1.6612  0.2100             same as o  
+  c2          1.9080  0.0860             same as cc 
+  ha          1.4870  0.0157             same as hc 
+  os          1.6837  0.1700             same as os 
+  p5          2.1000  0.2000             same as p4 
+
+
+

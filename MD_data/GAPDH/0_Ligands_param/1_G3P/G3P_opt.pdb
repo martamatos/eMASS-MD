@@ -1,0 +1,33 @@
+HEADER
+REMARK 15 atoms
+HETATM    1  P1  G3H     1      -1.825   0.480  -0.049                       P
+HETATM    2  O2  G3H     1      -0.697  -0.562   0.794                       O
+HETATM    3  O3  G3H     1       2.742  -1.336   0.013                       O
+HETATM    4  O4  G3H     1      -2.733   0.893   1.068                       O
+HETATM    5  O5  G3H     1      -2.392  -0.423  -1.108                       O
+HETATM    6  O6  G3H     1      -0.892   1.556  -0.578                       O
+HETATM    7  O7  G3H     1       2.871   1.230  -0.418                       O
+HETATM    8  C8  G3H     1       0.293  -1.151   0.055                       C
+HETATM    9  C9  G3H     1       1.651  -0.576   0.484                       C
+HETATM   10  C10 G3H     1       1.821   0.866   0.060                       C
+HETATM   11  H11 G3H     1       0.340  -2.228   0.245                       H
+HETATM   12  H12 G3H     1       0.155  -1.025  -1.014                       H
+HETATM   13  H13 G3H     1       1.651  -0.575   1.575                       H
+HETATM   14  H14 G3H     1       0.959   1.514   0.186                       H
+HETATM   15  H15 G3H     1       3.330  -0.703  -0.386                       H
+CONECT    1    2    4    5    6
+CONECT    2    1    8
+CONECT    3    9   15
+CONECT    4    1
+CONECT    5    1
+CONECT    6    1
+CONECT    7   10
+CONECT    8    2    9   11   12
+CONECT    9    3    8   10   13
+CONECT   10    7    9   14
+CONECT   11    8
+CONECT   12    8
+CONECT   13    9
+CONECT   14   10
+CONECT   15    3
+END

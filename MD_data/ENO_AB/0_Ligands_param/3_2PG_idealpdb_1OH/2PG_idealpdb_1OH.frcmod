@@ -1,0 +1,83 @@
+remark goes here
+MASS
+CT 12.010        0.878               same as c3 
+OH 16.000        0.465               same as oh 
+HO 1.008         0.135               same as ho 
+H1 1.008         0.135               same as hc 
+C  12.010        0.616               same as c  
+O2 16.000        0.434               same as o  
+OS 16.000        0.465               same as os 
+P  30.970        1.538               same as p4 
+
+BOND
+CT-OH  314.10   1.426       same as c3-oh
+CT-H1  337.30   1.092       same as c3-hc
+CT-CT  303.10   1.535       same as c3-c3
+OH-HO  369.60   0.974       same as ho-oh
+CT-C   328.30   1.508       same as c -c3
+CT-OS  301.50   1.439       same as c3-os
+C -O2  648.00   1.214       same as c -o 
+OS-P   311.60   1.636       same as os-p4
+P -O2  456.40   1.503       same as o -p4
+P -OH  307.40   1.641       same as oh-p4
+
+ANGLE
+CT-OH-HO   47.090     108.160   same as c3-oh-ho
+CT-CT-C    63.790     110.530   same as c -c3-c3
+CT-CT-H1   46.370     110.050   same as c3-c3-hc
+CT-CT-OS   67.780     108.420   same as c3-c3-os
+OH-CT-H1   51.070     109.500   same as hc-c3-oh
+OH-CT-CT   67.720     109.430   same as c3-c3-oh
+H1-CT-H1   39.430     108.350   same as hc-c3-hc
+CT-C -O2   68.030     123.110   same as c3-c -o 
+CT-OS-P    77.590     117.480   same as c3-os-p4
+C -CT-H1   47.200     109.680   same as c -c3-hc
+C -CT-OS   68.030     109.820   same as c -c3-os
+O2-C -O2   78.170     130.380   same as o -c -o 
+H1-CT-OS   50.870     108.700   same as hc-c3-os
+OS-P -O2   43.100     116.670   same as o -p4-os
+OS-P -OH   72.236      98.025   Calculated with empirical approach
+P -OH-HO   55.270     110.190   same as ho-oh-p4
+O2-P -O2   45.060     117.220   same as o -p4-o 
+O2-P -OH   42.880     117.390   same as o -p4-oh
+
+DIHE
+CT-CT-C -O2   1    0.000       180.000           2.000      same as X -c -c3-X 
+CT-CT-OS-P    1    0.383         0.000           3.000      same as X -c3-os-X 
+OH-CT-CT-C    1    0.156         0.000           3.000      same as X -c3-c3-X 
+OH-CT-CT-H1   1    0.000         0.000          -3.000      same as hc-c3-c3-oh
+OH-CT-CT-H1   1    0.250         0.000           1.000      same as hc-c3-c3-oh
+OH-CT-CT-OS   1    0.144         0.000          -3.000      same as os-c3-c3-oh
+OH-CT-CT-OS   1    1.175         0.000           2.000      same as os-c3-c3-oh
+HO-OH-CT-H1   1    0.167         0.000           3.000      same as X -c3-oh-X 
+HO-OH-CT-CT   1    0.160         0.000          -3.000      same as ho-oh-c3-c3
+HO-OH-CT-CT   1    0.250         0.000           1.000      same as ho-oh-c3-c3
+H1-CT-CT-C    1    0.156         0.000           3.000      same as X -c3-c3-X 
+H1-CT-CT-H1   1    0.150         0.000           3.000      same as hc-c3-c3-hc
+H1-CT-CT-OS   1    0.000         0.000          -3.000      same as hc-c3-c3-os
+H1-CT-CT-OS   1    0.250         0.000           1.000      same as hc-c3-c3-os
+CT-OS-P -O2   1    1.050       180.000           2.000      same as X -os-p4-X 
+CT-OS-P -OH   1    1.050       180.000           2.000      same as X -os-p4-X 
+C -CT-OS-P    1    0.383         0.000           3.000      same as X -c3-os-X 
+O2-C -CT-H1   1    0.800         0.000          -1.000      same as hc-c3-c -o 
+O2-C -CT-H1   1    0.080       180.000           3.000      same as hc-c3-c -o 
+O2-C -CT-OS   1    0.000       180.000           2.000      same as X -c -c3-X 
+H1-CT-OS-P    1    0.383         0.000           3.000      same as X -c3-os-X 
+OS-P -OH-HO   1    0.700         0.000           1.000      same as X -oh-p4-X 
+O2-P -OH-HO   1    0.700         0.000           1.000      same as X -oh-p4-X 
+
+IMPROPER
+CT-O2-C -OS         1.1          180.0         2.0          Using default value
+
+NONBON
+  CT          1.9080  0.1094             same as c3 
+  OH          1.7210  0.2104             same as oh 
+  HO          0.0000  0.0000             same as ho 
+  H1          1.4870  0.0157             same as hc 
+  C           1.9080  0.0860             same as c  
+  O2          1.6612  0.2100             same as o  
+  OS          1.6837  0.1700             same as os 
+  P           2.1000  0.2000             same as p4 
+
+
+

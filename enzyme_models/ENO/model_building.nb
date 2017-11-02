@@ -1,0 +1,1755 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     68214,       1747]
+NotebookOptionsPosition[     59621,       1517]
+NotebookOutlinePosition[     59961,       1532]
+CellTagsIndexPosition[     59918,       1529]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Quit", "[", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.639729139436756*^9, 3.639729140587323*^9}, {
+   3.640093333126033*^9, 3.640093334996044*^9}, {3.64032346627951*^9, 
+   3.640323466979537*^9}, 3.676967732906159*^9, {3.676969081297453*^9, 
+   3.6769691220993032`*^9}, {3.676969255452931*^9, 3.6769692574578323`*^9}, {
+   3.676970240113895*^9, 3.6769702447737637`*^9}, {3.682053449390788*^9, 
+   3.682053452353827*^9}, {3.682159217598268*^9, 3.682159221631666*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"<<", "Toolbox`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "Toolbox`Style`"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "MASSef`"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetDirectory", "[", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"enzModelsDir", " ", "=", " ", 
+  "\"\</home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/\>\""}\
+], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mainDir", "=", 
+   RowBox[{"enzModelsDir", "<>", "\"\<code_data/\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"baseDir", "=", " ", 
+    RowBox[{"enzModelsDir", "<>", "\"\<ENO/ENO_param_inf/\>\""}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dataDir", " ", "=", " ", 
+   RowBox[{"baseDir", "<>", "\"\<output/treated_data/\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"outputDir", "=", " ", 
+   RowBox[{"baseDir", "<>", "\"\<output/model_simulations/models/\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"!", 
+      RowBox[{"DirectoryQ", "[", "outputDir", "]"}]}], ",", 
+     "\[IndentingNewLine]", "\t", 
+     RowBox[{"CreateDirectory", "[", 
+      RowBox[{"outputDir", ",", 
+       RowBox[{"CreateIntermediateDirectories", "\[Rule]", " ", "True"}]}], 
+      "]"}]}], "\[IndentingNewLine]", "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Import", "[", 
+    RowBox[{"mainDir", "<>", "\"\<enzyme_model_building.m\>\""}], "]"}], 
+   ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"metsData", "=", 
+   RowBox[{
+   "mainDir", "<>", "\"\<mets_concentrations_rabinowitz2016.xls\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"KeqData", "=", 
+    RowBox[{"mainDir", "<>", "\"\<reactions_keqs.xls\>\""}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"metsToIgnore", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     InterpretationBox[
+      SuperscriptBox[
+       StyleBox["h",
+        StripOnInput->False,
+        ShowSyntaxStyles->False,
+        AutoSpacing->False,
+        ZeroWidthTimes->True,
+        LineColor->RGBColor[0, 0, 0],
+        FrontFaceColor->RGBColor[0, 0, 0],
+        BackFaceColor->RGBColor[0, 0, 0],
+        GraphicsColor->RGBColor[0, 0, 0],
+        FontColor->RGBColor[0, 0, 0]], 
+       StyleBox["c",
+        StripOnInput->False,
+        ShowSyntaxStyles->False,
+        AutoSpacing->False,
+        ZeroWidthTimes->True,
+        LineColor->RGBColor[0, 0, 0],
+        FrontFaceColor->RGBColor[0, 0, 0],
+        BackFaceColor->RGBColor[0, 0, 0],
+        GraphicsColor->RGBColor[0, 0, 0],
+        FontColor->RGBColor[0, 0, 0]]],
+      Toolbox`metabolite["h", "c"],
+      Editable->False,
+      Selectable->False], ",", 
+     InterpretationBox[
+      SuperscriptBox[
+       StyleBox["h2o",
+        StripOnInput->False,
+        ShowSyntaxStyles->False,
+        AutoSpacing->False,
+        ZeroWidthTimes->True,
+        LineColor->RGBColor[0, 0, 0],
+        FrontFaceColor->RGBColor[0, 0, 0],
+        BackFaceColor->RGBColor[0, 0, 0],
+        GraphicsColor->RGBColor[0, 0, 0],
+        FontColor->RGBColor[0, 0, 0]], 
+       StyleBox["c",
+        StripOnInput->False,
+        ShowSyntaxStyles->False,
+        AutoSpacing->False,
+        ZeroWidthTimes->True,
+        LineColor->RGBColor[0, 0, 0],
+        FrontFaceColor->RGBColor[0, 0, 0],
+        BackFaceColor->RGBColor[0, 0, 0],
+        GraphicsColor->RGBColor[0, 0, 0],
+        FontColor->RGBColor[0, 0, 0]]],
+      Toolbox`metabolite["h2o", "c"],
+      Editable->False,
+      Selectable->False]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fitCutoff", "=", "1"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"enzName", "=", "\"\<ENO\>\""}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"rxn", " ", "=", " ", 
+    RowBox[{"str2mass", "[", "\"\<ENO: 2pg[c] <-> pep[c]\>\"", "]"}]}], ";"}],
+   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"catalyticBranch", "=", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<E_ENO[c] + 2pg[c] <=> E_ENO[c]&2pg\>\"", ",", "\[IndentingNewLine]",
+       "\t\t\t\t", "\"\<E_ENO[c]&2pg <=> E_ENO[c]&pep\>\"", ",", 
+      "\[IndentingNewLine]", "\t\t\t\t", 
+      "\"\<E_ENO[c]&pep <=> E_ENO[c] + pep[c]\>\""}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"activatorlist", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nActivationSites", " ", "=", " ", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"inhibitorList", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nInhibitionSites", " ", "=", " ", "0"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"inhibitorMet", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"affectedMets", "=", 
+    RowBox[{"{", "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"eTotal", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     TagBox[
+      StyleBox[
+       RowBox[{"parameter", "[", "\"\<ENO_total\>\"", "]"}],
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "->", " ", 
+     RowBox[{"1.93", "*", 
+      RowBox[{"10", "^", 
+       RowBox[{"-", "5"}]}]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"enzSolFile", "=", 
+   RowBox[{"baseDir", "<>", "\"\<input/enzSol_ENO_.m\>\""}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.676290397552228*^9, 3.676290450112253*^9}, {
+   3.676290495909384*^9, 3.67629050479047*^9}, {3.6762905399325523`*^9, 
+   3.676290540694272*^9}, {3.682156755273003*^9, 3.682156815777536*^9}, {
+   3.682157119815291*^9, 3.6821571247362823`*^9}, {3.682159360920402*^9, 
+   3.682159367944022*^9}, {3.6821595317430477`*^9, 3.682159562963408*^9}, {
+   3.682159681071164*^9, 3.682159708488242*^9}, {3.6930332822076063`*^9, 
+   3.693033292826644*^9}, 3.693033422780096*^9, {3.693034016443396*^9, 
+   3.6930340314175367`*^9}, {3.693561473555544*^9, 3.6935615054042377`*^9}, {
+   3.6935615441107473`*^9, 3.693561554590827*^9}, {3.693562109214583*^9, 
+   3.693562110810638*^9}, {3.6935624438333797`*^9, 3.6935624480466223`*^9}, {
+   3.693571272487793*^9, 3.693571328723299*^9}, {3.6936367536818743`*^9, 
+   3.69363676385737*^9}, {3.693732104277255*^9, 3.693732106323821*^9}, {
+   3.69418472152966*^9, 3.6941847310771723`*^9}, {3.695117101982223*^9, 
+   3.6951171264085817`*^9}, {3.69512953992806*^9, 3.695129552558981*^9}, {
+   3.695129763383546*^9, 3.695129764138936*^9}, {3.6955396516336937`*^9, 
+   3.695539655971801*^9}, {3.695543269271299*^9, 3.695543269774255*^9}, {
+   3.709438016026246*^9, 3.709438027484147*^9}, {3.709438075992269*^9, 
+   3.709438080176832*^9}, {3.709439382779067*^9, 3.709439391902315*^9}, {
+   3.709441121255672*^9, 3.709441133462165*^9}, {3.718430872761654*^9, 
+   3.718430913409429*^9}, {3.718431330828925*^9, 3.718431345400072*^9}, {
+   3.718431746099552*^9, 3.718431746441012*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Build base model", "Section",
+ CellChangeTimes->{{3.639732418939518*^9, 3.639732426478991*^9}, 
+   3.6399119286948357`*^9, 3.6755086697702827`*^9, {3.68215665443184*^9, 
+   3.682156655766983*^9}, {3.682158853618226*^9, 3.682158856618361*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"enzymeModel", "=", 
+    RowBox[{"constructEnzymeModule", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Mechanism", "\[Rule]", "catalyticBranch"}], ",", 
+      RowBox[{"Activators", "\[Rule]", "activatorlist"}], ",", 
+      RowBox[{"ActivationSites", "\[Rule]", "nActivationSites"}], ",", 
+      RowBox[{"Inhibitors", "\[Rule]", "inhibitorList"}], ",", 
+      RowBox[{"InhibitionSites", "\[Rule]", "nInhibitionSites"}]}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"model", "=", 
+    RowBox[{"defineInitialConditions", "[", 
+     RowBox[{"enzymeModel", ",", " ", "metsData", ",", " ", "KeqData"}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"updateIgnore", "[", 
+    RowBox[{"model", ",", " ", "metsToIgnore"}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "allReactions", ",", " ", "allCatalyticReactions", ",", " ", 
+     "nonCatalyticReactions", ",", " ", "rateConstList"}], "}"}], "=", 
+   RowBox[{"getRateConstantsIDs", "[", "model", "]"}]}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.693033864059559*^9, 3.6930338658393*^9}, {
+  3.6930347504711637`*^9, 3.693034750967729*^9}, {3.693571307279998*^9, 
+  3.6935713075406647`*^9}, {3.6935713420837917`*^9, 3.693571343005865*^9}, {
+  3.694184738084241*^9, 3.694184738703046*^9}, {3.7094402279016047`*^9, 
+  3.709440244736122*^9}, {3.709440423739497*^9, 3.709440424711669*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"newRateConstList", "=", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"rateConstList", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", "+", "1"}], "]"}], "]"}], ",", 
+         RowBox[{"rateConstList", "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", " ", 
+         RowBox[{"Length", "@", "rateConstList"}], ",", " ", "2"}], "}"}]}], 
+      "]"}], " ", "//", "Flatten"}]}], ";"}], 
+  " "}], "\[IndentingNewLine]", "newRateConstList", "\[IndentingNewLine]"}], \
+"Input",
+ CellChangeTimes->{{3.6937750076062803`*^9, 3.6937750081579638`*^9}, {
+  3.694184742148093*^9, 3.6941847426280613`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["ENO1",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongLeftArrow]"],
+    Toolbox`rateconst["ENO1", False],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["ENO1",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongRightArrow]"],
+    Toolbox`rateconst["ENO1", True],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["ENO2",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongLeftArrow]"],
+    Toolbox`rateconst["ENO2", False],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["ENO2",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongRightArrow]"],
+    Toolbox`rateconst["ENO2", True],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["ENO3",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongLeftArrow]"],
+    Toolbox`rateconst["ENO3", False],
+    Editable->False,
+    Selectable->False], ",", 
+   InterpretationBox[
+    SubsuperscriptBox["k", 
+     StyleBox["ENO3",
+      StripOnInput->False,
+      ShowSyntaxStyles->False,
+      AutoSpacing->False,
+      ZeroWidthTimes->True,
+      LineColor->RGBColor[0, 0, 0],
+      FrontFaceColor->RGBColor[0, 0, 0],
+      BackFaceColor->RGBColor[0, 0, 0],
+      GraphicsColor->RGBColor[0, 0, 0],
+      FontColor->RGBColor[0, 0, 0]], "\[LongRightArrow]"],
+    Toolbox`rateconst["ENO3", True],
+    Editable->False,
+    Selectable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.693775009617569*^9, 3.693821708863532*^9, 
+  3.69418466454937*^9, 3.694184743046384*^9, 3.694240656910512*^9, 
+  3.694240706819111*^9, 3.695109250197554*^9, 3.6951171637530203`*^9, 
+  3.6951295634678698`*^9, 3.695129625082253*^9, 3.6951297745219383`*^9, 
+  3.695540520270774*^9, 3.695540605985321*^9, 3.69554329063651*^9, 
+  3.695543438353135*^9, 3.709440452239759*^9, 3.709441148567769*^9, 
+  3.709533093425695*^9, 3.709533139181012*^9, 3.70953321497635*^9, 
+  3.709545858023945*^9, 3.709545888741804*^9, 3.709613184110984*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Generate ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " models from ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " rate constant sets"
+}], "Section",
+ CellChangeTimes->{{3.639732418939518*^9, 3.639732426478991*^9}, 
+   3.6399119286948357`*^9, 3.6755086697702827`*^9, {3.68215665443184*^9, 
+   3.682156671319798*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ParallelNeeds", "[", "\"\<Toolbox`\>\"", "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dataTypeList", "=", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Keq\>\"", ",", "\"\<dKd\>\"", ",", "\"\<Km\>\"", ",", 
+       "\"\<kcat\>\"", ",", " ", "\"\<all\>\""}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"nEnsembles", " ", "=", "99"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"LaunchKernels", "[", "2", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ParallelDo", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Do", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"modelList", " ", "=", " ", 
+           RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"dataFile", "=", 
+           RowBox[{
+           "dataDir", "<>", "\"\<rateconst_\>\"", "<>", " ", "enzName", " ", 
+            "<>", "\"\<_\>\"", "<>", "dataType", "<>", "\"\<_\>\"", "<>", 
+            RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.csv\>\""}]}], 
+          ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", "dataFile", "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ratesFiltered", "=", 
+           RowBox[{"importRateConstants", "[", 
+            RowBox[{"dataFile", ",", " ", "fitCutoff"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"modelList", "=", 
+           RowBox[{"substituteRateValues", "[", 
+            RowBox[{
+            "model", ",", " ", "ratesFiltered", ",", " ", "newRateConstList", 
+             ",", " ", 
+             RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", 
+          RowBox[{"modelList", "=", 
+           RowBox[{"calculateEnzymeConcentrations", "[", 
+            RowBox[{"modelList", ",", " ", "eTotal", ",", " ", "enzSolFile"}],
+             "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{"modelList", "=", 
+             RowBox[{"addExchangeReactionsToModel", "[", 
+              RowBox[{"modelList", ",", " ", "rxn"}], "]"}]}], ";"}], "*)"}], 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"Export", "[", 
+           RowBox[{
+            RowBox[{
+            "outputDir", "<>", "\"\<model_\>\"", "<>", " ", "enzName", " ", 
+             "<>", "\"\<_\>\"", "<>", "dataType", "<>", "\"\<_\>\"", "<>", 
+             RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.mx\>\""}], ",", 
+            "modelList", ",", " ", "\"\<MX\>\""}], "]"}], ";"}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"dataType", ",", " ", "dataTypeList"}], "}"}]}], "]"}], 
+       ";"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "0", ",", " ", "nEnsembles"}], "}"}]}], "]"}], ";"}],
+    "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.682156678699472*^9, 3.6821567075628643`*^9}, {
+   3.682157110915913*^9, 3.682157146804167*^9}, {3.682157182697796*^9, 
+   3.6821572054725227`*^9}, {3.682158591057746*^9, 3.682158591368857*^9}, {
+   3.682158689279951*^9, 3.68215880692085*^9}, {3.682159002141611*^9, 
+   3.682159008953348*^9}, {3.682159047299437*^9, 3.682159070644505*^9}, {
+   3.68215913411782*^9, 3.682159138020639*^9}, {3.682159656814909*^9, 
+   3.6821596769526043`*^9}, {3.682160023848654*^9, 3.6821600245776777`*^9}, {
+   3.693034808777965*^9, 3.693034808937348*^9}, {3.693034850375012*^9, 
+   3.693034901587558*^9}, {3.6930352702142477`*^9, 3.693035271964526*^9}, {
+   3.693128013195047*^9, 3.693128019121337*^9}, {3.693562038150343*^9, 
+   3.6935620602369204`*^9}, {3.693562090819395*^9, 3.693562094304595*^9}, 
+   3.693571316994828*^9, {3.693571358650281*^9, 3.693571358907096*^9}, 
+   3.6937321127225323`*^9, {3.693775012493807*^9, 3.6937750193813257`*^9}, {
+   3.693821713763001*^9, 3.6938217224402733`*^9}, {3.693822741296784*^9, 
+   3.6938227432746468`*^9}, {3.694184671668994*^9, 3.6941846814428368`*^9}, 
+   3.694184752576223*^9, {3.694240659753223*^9, 3.694240697489416*^9}, {
+   3.695117172082211*^9, 3.695117180377038*^9}, {3.695129583651617*^9, 
+   3.695129632667384*^9}, {3.695129716229373*^9, 3.695129720897642*^9}, {
+   3.6955405253682337`*^9, 3.695540549228199*^9}, {3.695540585309845*^9, 
+   3.695540594993105*^9}, {3.695543307760806*^9, 3.695543338131892*^9}, {
+   3.709440132180089*^9, 3.709440172259548*^9}, 3.709441140284436*^9, 
+   3.7095330957950573`*^9, {3.7095458629422894`*^9, 3.70954586307206*^9}, {
+   3.718430558393811*^9, 3.7184305634115*^9}, {3.718431042929562*^9, 
+   3.718431044965508*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_0.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613212925593*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_13.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613212965419*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_0.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613244450136*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_13.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613245880275*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_1.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613282544364*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_14.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613283038126*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_1.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096133099681273`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_14.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613313659328*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_15.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613364209836*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_2.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613365349465*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_2.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613396400639*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_15.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613398952477*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_3.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613448698295*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_16.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613451060031*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_3.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096134844170523`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_16.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613486302639*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_17.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613534712961*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_4.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613536294833*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_17.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613565826022*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_4.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096135736219378`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_18.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613628390085*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_5.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613635098078*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_18.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096136681505337`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_5.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613674694413*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_19.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613725491226*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_6.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096137310807047`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_19.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613767991404*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_6.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613770027317*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_20.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613816170183*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_7.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613819202126*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_20.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613850722982*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_7.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096138570617733`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_21.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613901617223*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_8.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613907358939*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_21.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613934422041*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_8.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709613943280637*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_22.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096139800942173`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_9.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096139908402863`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_22.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614014561419*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_9.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614025281884*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_23.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614056149396*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_10.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614064931423*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_23.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614088288785*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_10.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614097700789*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_24.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.70961413601993*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_11.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096141426266603`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_24.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614162560502*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_11.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614166928893*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_25.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614195908805*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_12.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614202242021*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_25.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614222187273*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_12.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614225186378*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_26.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614259046966*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_39.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096142600118723`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_26.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096142746108847`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_39.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614276812537*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_27.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614294091123*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_40.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614296734013*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_27.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096143086130133`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_40.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614310480258*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_28.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614328965433*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_41.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614330104805*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_28.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614342305908*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_41.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096143434948606`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_42.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614360148703*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_29.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096143602895737`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_29.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614373430956*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_42.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614374661256*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_30.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614392450173*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_43.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614393444762*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_30.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614404732888*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_43.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614405547763*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_31.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614421105645*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_44.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096144219308643`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_31.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614433322688*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_44.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614434259575*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_32.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614453007306*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_45.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096144532284307`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_45.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096144783866568`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_32.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614480389349*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_46.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614513761298*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_33.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614517040826*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_46.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614543162757*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_33.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614545008148*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_47.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096145606688023`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_34.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614562046481*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_47.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614571759004*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_34.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614574351657*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_48.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096145896217203`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_35.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096145928577137`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_48.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614603755506*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_35.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614605121923*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_49.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614633915794*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_36.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096146416452837`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_49.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614660160495*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_36.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614665547949*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_50.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614691976205*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_37.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614695164749*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_50.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614716306017*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_37.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614719029194*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_51.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614753052575*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_38.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614755561043*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_51.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.70961477616721*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_38.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.70961477747224*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_52.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614805558668*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_64.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096148075540543`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_52.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096148304744053`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_64.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614836236594*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_53.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096148607176237`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_65.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.70961486338971*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_53.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614873167268*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_65.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614874047139*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_54.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096148894887466`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_66.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096148901376133`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_66.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096149019453287`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_54.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614903303048*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_67.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614917658839*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_55.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614919158752*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_67.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614928566657*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_55.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096149304687233`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_68.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614944971485*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_56.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614948681641*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_68.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614957095408*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_56.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614960955093*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_69.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614975168902*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_57.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614978109421*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_69.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614988155851*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_57.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709614988282679*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_58.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615005184602*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_70.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096150053261967`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_58.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096150156990337`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_70.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615017569189*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_59.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615031544457*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_71.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615033327157*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_59.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615042074033*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_71.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096150444717903`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_60.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.70961505877816*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_72.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615061136284*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_60.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096150697770452`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_72.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615072052343*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_61.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096150854248943`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_73.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096150876344137`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_61.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615096013865*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_73.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615099842476*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_62.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615112071151*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_74.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.70961511524212*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_62.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096151244520397`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_74.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615125232951*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_63.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096151402659063`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_75.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096151411536617`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_63.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615151329883*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_75.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.70961515244418*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_76.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615167041277*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_88.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615168289041*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_88.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096151799666023`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_76.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615180537098*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_89.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615198781448*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_77.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615198855192*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_89.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.70961521356166*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_77.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.70961521497118*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_90.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615232593423*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_78.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096152353244047`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_78.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615245904973*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_90.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615247319759*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_79.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615263485464*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_91.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615264907978*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_79.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615275587886*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_91.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096152771387978`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_80.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615291838263*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_92.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615292675002*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_92.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096153031537237`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_80.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615303252934*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_81.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615319035571*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_93.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096153193690567`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_81.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615330236301*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_93.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096153308062162`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_82.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615346695396*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_94.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615346811927*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_94.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615358443597*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_82.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096153600653343`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_95.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615375478406*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_83.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615376839849*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_95.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615387663569*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_83.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615388741868*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_96.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615404602275*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_84.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096154056517143`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_96.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615415775097*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_84.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615417349449*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_97.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.70961543197761*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_85.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615433310112*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_97.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7096154435433283`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_85.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615445300262*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_98.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615458993425*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_86.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615460794858*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_86.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615470865149*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_98.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615471049848*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_87.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615485353723*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_all_99.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615486399102*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_87.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615496853342*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/ENO/ENO_param_inf/output/\
+treated_data/rateconst_ENO_dKd_99.csv\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.709615498056538*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{954, 1021},
+WindowMargins->{{934, Automatic}, {3, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 505, 8, 34, "Input"],
+Cell[1066, 30, 7521, 196, 1074, "Input"],
+Cell[CellGroupData[{
+Cell[8612, 230, 248, 3, 65, "Section"],
+Cell[8863, 235, 1604, 35, 259, "Input"],
+Cell[CellGroupData[{
+Cell[10492, 274, 849, 21, 145, "Input"],
+Cell[11344, 297, 3531, 100, 36, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14924, 403, 330, 11, 65, "Section"],
+Cell[CellGroupData[{
+Cell[15279, 418, 4818, 92, 598, "Input"],
+Cell[CellGroupData[{
+Cell[20122, 514, 193, 3, 24, "Print"],
+Cell[20318, 519, 194, 3, 24, "Print"],
+Cell[20515, 524, 193, 3, 24, "Print"],
+Cell[20711, 529, 194, 3, 24, "Print"],
+Cell[20908, 534, 193, 3, 24, "Print"],
+Cell[21104, 539, 194, 3, 24, "Print"],
+Cell[21301, 544, 195, 3, 24, "Print"],
+Cell[21499, 549, 194, 3, 24, "Print"],
+Cell[21696, 554, 194, 3, 24, "Print"],
+Cell[21893, 559, 193, 3, 24, "Print"],
+Cell[22089, 564, 193, 3, 24, "Print"],
+Cell[22285, 569, 194, 3, 24, "Print"],
+Cell[22482, 574, 193, 3, 24, "Print"],
+Cell[22678, 579, 194, 3, 24, "Print"],
+Cell[22875, 584, 195, 3, 24, "Print"],
+Cell[23073, 589, 194, 3, 24, "Print"],
+Cell[23270, 594, 194, 3, 24, "Print"],
+Cell[23467, 599, 193, 3, 24, "Print"],
+Cell[23663, 604, 194, 3, 24, "Print"],
+Cell[23860, 609, 195, 3, 24, "Print"],
+Cell[24058, 614, 194, 3, 24, "Print"],
+Cell[24255, 619, 193, 3, 24, "Print"],
+Cell[24451, 624, 196, 3, 24, "Print"],
+Cell[24650, 629, 193, 3, 24, "Print"],
+Cell[24846, 634, 194, 3, 24, "Print"],
+Cell[25043, 639, 195, 3, 24, "Print"],
+Cell[25241, 644, 194, 3, 24, "Print"],
+Cell[25438, 649, 193, 3, 24, "Print"],
+Cell[25634, 654, 194, 3, 24, "Print"],
+Cell[25831, 659, 193, 3, 24, "Print"],
+Cell[26027, 664, 194, 3, 24, "Print"],
+Cell[26224, 669, 195, 3, 24, "Print"],
+Cell[26422, 674, 194, 3, 24, "Print"],
+Cell[26619, 679, 193, 3, 24, "Print"],
+Cell[26815, 684, 194, 3, 24, "Print"],
+Cell[27012, 689, 193, 3, 24, "Print"],
+Cell[27208, 694, 196, 3, 24, "Print"],
+Cell[27407, 699, 195, 3, 24, "Print"],
+Cell[27605, 704, 194, 3, 24, "Print"],
+Cell[27802, 709, 193, 3, 24, "Print"],
+Cell[27998, 714, 194, 3, 24, "Print"],
+Cell[28195, 719, 194, 3, 24, "Print"],
+Cell[28392, 724, 194, 3, 24, "Print"],
+Cell[28589, 729, 194, 3, 24, "Print"],
+Cell[28786, 734, 193, 3, 24, "Print"],
+Cell[28982, 739, 196, 3, 24, "Print"],
+Cell[29181, 744, 194, 3, 24, "Print"],
+Cell[29378, 749, 194, 3, 24, "Print"],
+Cell[29575, 754, 194, 3, 24, "Print"],
+Cell[29772, 759, 194, 3, 24, "Print"],
+Cell[29969, 764, 194, 3, 24, "Print"],
+Cell[30166, 769, 194, 3, 24, "Print"],
+Cell[30363, 774, 194, 3, 24, "Print"],
+Cell[30560, 779, 196, 3, 24, "Print"],
+Cell[30759, 784, 196, 3, 24, "Print"],
+Cell[30958, 789, 194, 3, 24, "Print"],
+Cell[31155, 794, 194, 3, 24, "Print"],
+Cell[31352, 799, 194, 3, 24, "Print"],
+Cell[31549, 804, 196, 3, 24, "Print"],
+Cell[31748, 809, 194, 3, 24, "Print"],
+Cell[31945, 814, 194, 3, 24, "Print"],
+Cell[32142, 819, 194, 3, 24, "Print"],
+Cell[32339, 824, 194, 3, 24, "Print"],
+Cell[32536, 829, 196, 3, 24, "Print"],
+Cell[32735, 834, 194, 3, 24, "Print"],
+Cell[32932, 839, 196, 3, 24, "Print"],
+Cell[33131, 844, 194, 3, 24, "Print"],
+Cell[33328, 849, 194, 3, 24, "Print"],
+Cell[33525, 854, 194, 3, 24, "Print"],
+Cell[33722, 859, 194, 3, 24, "Print"],
+Cell[33919, 864, 194, 3, 24, "Print"],
+Cell[34116, 869, 194, 3, 24, "Print"],
+Cell[34313, 874, 194, 3, 24, "Print"],
+Cell[34510, 879, 196, 3, 24, "Print"],
+Cell[34709, 884, 194, 3, 24, "Print"],
+Cell[34906, 889, 194, 3, 24, "Print"],
+Cell[35103, 894, 194, 3, 24, "Print"],
+Cell[35300, 899, 196, 3, 24, "Print"],
+Cell[35499, 904, 196, 3, 24, "Print"],
+Cell[35698, 909, 194, 3, 24, "Print"],
+Cell[35895, 914, 194, 3, 24, "Print"],
+Cell[36092, 919, 194, 3, 24, "Print"],
+Cell[36289, 924, 194, 3, 24, "Print"],
+Cell[36486, 929, 194, 3, 24, "Print"],
+Cell[36683, 934, 196, 3, 24, "Print"],
+Cell[36882, 939, 194, 3, 24, "Print"],
+Cell[37079, 944, 194, 3, 24, "Print"],
+Cell[37276, 949, 194, 3, 24, "Print"],
+Cell[37473, 954, 196, 3, 24, "Print"],
+Cell[37672, 959, 196, 3, 24, "Print"],
+Cell[37871, 964, 194, 3, 24, "Print"],
+Cell[38068, 969, 194, 3, 24, "Print"],
+Cell[38265, 974, 194, 3, 24, "Print"],
+Cell[38462, 979, 196, 3, 24, "Print"],
+Cell[38661, 984, 194, 3, 24, "Print"],
+Cell[38858, 989, 194, 3, 24, "Print"],
+Cell[39055, 994, 194, 3, 24, "Print"],
+Cell[39252, 999, 194, 3, 24, "Print"],
+Cell[39449, 1004, 194, 3, 24, "Print"],
+Cell[39646, 1009, 194, 3, 24, "Print"],
+Cell[39843, 1014, 194, 3, 24, "Print"],
+Cell[40040, 1019, 194, 3, 24, "Print"],
+Cell[40237, 1024, 193, 3, 24, "Print"],
+Cell[40433, 1029, 193, 3, 24, "Print"],
+Cell[40629, 1034, 194, 3, 24, "Print"],
+Cell[40826, 1039, 196, 3, 24, "Print"],
+Cell[41025, 1044, 196, 3, 24, "Print"],
+Cell[41224, 1049, 194, 3, 24, "Print"],
+Cell[41421, 1054, 196, 3, 24, "Print"],
+Cell[41620, 1059, 193, 3, 24, "Print"],
+Cell[41816, 1064, 194, 3, 24, "Print"],
+Cell[42013, 1069, 194, 3, 24, "Print"],
+Cell[42210, 1074, 196, 3, 24, "Print"],
+Cell[42409, 1079, 196, 3, 24, "Print"],
+Cell[42608, 1084, 196, 3, 24, "Print"],
+Cell[42807, 1089, 194, 3, 24, "Print"],
+Cell[43004, 1094, 194, 3, 24, "Print"],
+Cell[43201, 1099, 194, 3, 24, "Print"],
+Cell[43398, 1104, 194, 3, 24, "Print"],
+Cell[43595, 1109, 196, 3, 24, "Print"],
+Cell[43794, 1114, 194, 3, 24, "Print"],
+Cell[43991, 1119, 194, 3, 24, "Print"],
+Cell[44188, 1124, 194, 3, 24, "Print"],
+Cell[44385, 1129, 194, 3, 24, "Print"],
+Cell[44582, 1134, 194, 3, 24, "Print"],
+Cell[44779, 1139, 194, 3, 24, "Print"],
+Cell[44976, 1144, 194, 3, 24, "Print"],
+Cell[45173, 1149, 194, 3, 24, "Print"],
+Cell[45370, 1154, 194, 3, 24, "Print"],
+Cell[45567, 1159, 196, 3, 24, "Print"],
+Cell[45766, 1164, 196, 3, 24, "Print"],
+Cell[45965, 1169, 194, 3, 24, "Print"],
+Cell[46162, 1174, 194, 3, 24, "Print"],
+Cell[46359, 1179, 194, 3, 24, "Print"],
+Cell[46556, 1184, 194, 3, 24, "Print"],
+Cell[46753, 1189, 196, 3, 24, "Print"],
+Cell[46952, 1194, 193, 3, 24, "Print"],
+Cell[47148, 1199, 194, 3, 24, "Print"],
+Cell[47345, 1204, 196, 3, 24, "Print"],
+Cell[47544, 1209, 194, 3, 24, "Print"],
+Cell[47741, 1214, 196, 3, 24, "Print"],
+Cell[47940, 1219, 196, 3, 24, "Print"],
+Cell[48139, 1224, 194, 3, 24, "Print"],
+Cell[48336, 1229, 194, 3, 24, "Print"],
+Cell[48533, 1234, 194, 3, 24, "Print"],
+Cell[48730, 1239, 193, 3, 24, "Print"],
+Cell[48926, 1244, 196, 3, 24, "Print"],
+Cell[49125, 1249, 194, 3, 24, "Print"],
+Cell[49322, 1254, 196, 3, 24, "Print"],
+Cell[49521, 1259, 196, 3, 24, "Print"],
+Cell[49720, 1264, 194, 3, 24, "Print"],
+Cell[49917, 1269, 193, 3, 24, "Print"],
+Cell[50113, 1274, 194, 3, 24, "Print"],
+Cell[50310, 1279, 194, 3, 24, "Print"],
+Cell[50507, 1284, 196, 3, 24, "Print"],
+Cell[50706, 1289, 194, 3, 24, "Print"],
+Cell[50903, 1294, 194, 3, 24, "Print"],
+Cell[51100, 1299, 194, 3, 24, "Print"],
+Cell[51297, 1304, 193, 3, 24, "Print"],
+Cell[51493, 1309, 193, 3, 24, "Print"],
+Cell[51689, 1314, 194, 3, 24, "Print"],
+Cell[51886, 1319, 196, 3, 24, "Print"],
+Cell[52085, 1324, 194, 3, 24, "Print"],
+Cell[52282, 1329, 194, 3, 24, "Print"],
+Cell[52479, 1334, 194, 3, 24, "Print"],
+Cell[52676, 1339, 194, 3, 24, "Print"],
+Cell[52873, 1344, 194, 3, 24, "Print"],
+Cell[53070, 1349, 196, 3, 24, "Print"],
+Cell[53269, 1354, 194, 3, 24, "Print"],
+Cell[53466, 1359, 194, 3, 24, "Print"],
+Cell[53663, 1364, 196, 3, 24, "Print"],
+Cell[53862, 1369, 194, 3, 24, "Print"],
+Cell[54059, 1374, 194, 3, 24, "Print"],
+Cell[54256, 1379, 196, 3, 24, "Print"],
+Cell[54455, 1384, 194, 3, 24, "Print"],
+Cell[54652, 1389, 196, 3, 24, "Print"],
+Cell[54851, 1394, 194, 3, 24, "Print"],
+Cell[55048, 1399, 194, 3, 24, "Print"],
+Cell[55245, 1404, 194, 3, 24, "Print"],
+Cell[55442, 1409, 196, 3, 24, "Print"],
+Cell[55641, 1414, 194, 3, 24, "Print"],
+Cell[55838, 1419, 194, 3, 24, "Print"],
+Cell[56035, 1424, 194, 3, 24, "Print"],
+Cell[56232, 1429, 194, 3, 24, "Print"],
+Cell[56429, 1434, 194, 3, 24, "Print"],
+Cell[56626, 1439, 196, 3, 24, "Print"],
+Cell[56825, 1444, 194, 3, 24, "Print"],
+Cell[57022, 1449, 194, 3, 24, "Print"],
+Cell[57219, 1454, 193, 3, 24, "Print"],
+Cell[57415, 1459, 194, 3, 24, "Print"],
+Cell[57612, 1464, 196, 3, 24, "Print"],
+Cell[57811, 1469, 194, 3, 24, "Print"],
+Cell[58008, 1474, 194, 3, 24, "Print"],
+Cell[58205, 1479, 194, 3, 24, "Print"],
+Cell[58402, 1484, 194, 3, 24, "Print"],
+Cell[58599, 1489, 194, 3, 24, "Print"],
+Cell[58796, 1494, 194, 3, 24, "Print"],
+Cell[58993, 1499, 194, 3, 24, "Print"],
+Cell[59190, 1504, 194, 3, 24, "Print"],
+Cell[59387, 1509, 194, 3, 24, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

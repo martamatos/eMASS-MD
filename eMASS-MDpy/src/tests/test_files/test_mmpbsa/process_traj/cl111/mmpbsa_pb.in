@@ -1,0 +1,7 @@
+&general
+  keep_files=0,verbose=2,  startframe=10,
+  endframe=10,
+/
+&pb
+  fillratio=4.0,inp=1,radiopt=0,
+/

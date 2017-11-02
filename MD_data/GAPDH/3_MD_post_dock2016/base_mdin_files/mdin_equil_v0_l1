@@ -1,0 +1,25 @@
+density equilibration
+ &cntrl
+  imin = 0,     ntx = 1,        irest = 0,
+  ntpr = 2500,  ntwr = 1000,    ntwx = 0,
+  ntf = 2,      ntc = 2,
+  ntb = 1,      cut = 12.0,
+  nstlim = 500000,       dt = 0.0015,
+  tempi = 0.0,  ntt = 3,  ig=-1,      gamma_ln = 5,
+  ntr=1,        nmropt=1,
+ /
+&wt
+TYPE='TEMP0', istep1=0,       istep2=40000,  value1=50.0,  value2=300.0,
+/
+&wt
+TYPE='TEMP0', istep1=40001,  istep2=500000,  value1=300.0, value2=300.0,
+/
+&wt
+TYPE='END',
+/
+constrain the residue
+5.0
+RES 1 332
+END
+END
+

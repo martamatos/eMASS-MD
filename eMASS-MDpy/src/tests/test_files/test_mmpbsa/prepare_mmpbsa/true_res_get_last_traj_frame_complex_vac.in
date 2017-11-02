@@ -1,0 +1,5 @@
+trajin G6PD_WT_NADP_6PGL_docked_cl111_100.crd lastframe
+trajout complex_vac.pdb pdb
+strip :WAT
+strip :Na+
+go

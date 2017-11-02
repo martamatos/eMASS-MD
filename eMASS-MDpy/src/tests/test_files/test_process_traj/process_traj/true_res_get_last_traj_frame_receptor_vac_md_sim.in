@@ -1,0 +1,6 @@
+trajin G6PD_WT_NADP_6PGL_docked_cl111_1_100.crd lastframe
+trajout receptor_vac.pdb pdb
+strip :WAT
+strip :Na+
+strip :6PG
+go

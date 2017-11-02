@@ -1,0 +1,27 @@
+HEADER
+REMARK PEP.pdb
+HETATM    1  C1          1       0.312  -0.491   2.366                       C
+HETATM    2  O1          1       1.203  -1.349   2.350                       O
+HETATM    3  O2          1      -0.103   0.114   3.377                       O
+HETATM    4  C2          1      -0.405  -0.172   1.016                       C
+HETATM    5  C3          1      -1.709   0.131   1.059                       C
+HETATM    6  O3          1       0.336  -0.293  -0.070                       O
+HETATM    7  P1          1      -0.045   0.164  -1.740                       P
+HETATM    8  O4          1      -0.118   1.670  -1.701                       O
+HETATM    9  O5          1       1.157  -0.403  -2.452                       O
+HETATM   10  O6          1      -1.352  -0.530  -2.040                       O
+HETATM   11  H1          1      -2.268   0.285   0.156                       H
+HETATM   12  H2          1      -2.188   0.236   2.017                       H
+CONECT    1    2    3    4
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1    5    6
+CONECT    5    4   11   12
+CONECT    6    4    7
+CONECT    7    6    8    9   10
+CONECT    8    7
+CONECT    9    7
+CONECT   10    7
+CONECT   11    5
+CONECT   12    5
+END

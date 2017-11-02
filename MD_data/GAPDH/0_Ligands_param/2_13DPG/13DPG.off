@@ -1,0 +1,147 @@
+!!index array str
+ "DPG"
+!entry.DPG.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "O1" "O2" 0 1 131072 1 8 -0.923165
+ "P1" "P" 0 1 131072 2 15 1.345439
+ "O2" "O2" 0 1 131072 3 8 -0.923165
+ "O3" "O2" 0 1 131072 4 8 -0.923165
+ "O4" "OS" 0 1 131072 5 8 -0.626869
+ "C1" "C" 0 1 131072 6 6 0.902129
+ "O5" "O" 0 1 131072 7 8 -0.727502
+ "C2" "CT" 0 1 131072 8 6 -0.012104
+ "O6" "OH" 0 1 131072 9 8 -0.662691
+ "H2" "HO" 0 1 131072 10 1 0.373080
+ "H1" "H1" 0 1 131072 11 1 0.062339
+ "C3" "CT" 0 1 131072 12 6 0.275673
+ "H3" "H1" 0 1 131072 13 1 -0.019328
+ "H4" "H1" 0 1 131072 14 1 -0.019328
+ "O7" "OS" 0 1 131072 15 8 -0.533631
+ "P2" "P" 0 1 131072 16 15 1.296068
+ "O9" "O2" 0 1 131072 17 8 -0.961260
+ "O10" "O2" 0 1 131072 18 8 -0.961260
+ "O8" "O2" 0 1 131072 19 8 -0.961260
+!entry.DPG.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "O1" "O2" 0 -1 0.0
+ "P1" "P" 0 -1 0.0
+ "O2" "O2" 0 -1 0.0
+ "O3" "O2" 0 -1 0.0
+ "O4" "OS" 0 -1 0.0
+ "C1" "C" 0 -1 0.0
+ "O5" "O" 0 -1 0.0
+ "C2" "CT" 0 -1 0.0
+ "O6" "OH" 0 -1 0.0
+ "H2" "HO" 0 -1 0.0
+ "H1" "H1" 0 -1 0.0
+ "C3" "CT" 0 -1 0.0
+ "H3" "H1" 0 -1 0.0
+ "H4" "H1" 0 -1 0.0
+ "O7" "OS" 0 -1 0.0
+ "P2" "P" 0 -1 0.0
+ "O9" "O2" 0 -1 0.0
+ "O10" "O2" 0 -1 0.0
+ "O8" "O2" 0 -1 0.0
+!entry.DPG.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.DPG.unit.childsequence single int
+ 2
+!entry.DPG.unit.connect array int
+ 1
+ 19
+!entry.DPG.unit.connectivity table  int atom1x  int atom2x  int flags
+ 1 2 1
+ 2 3 1
+ 2 4 1
+ 2 5 1
+ 5 6 1
+ 6 7 1
+ 6 8 1
+ 8 9 1
+ 8 11 1
+ 8 12 1
+ 9 10 1
+ 12 13 1
+ 12 14 1
+ 12 15 1
+ 15 16 1
+ 16 17 1
+ 16 18 1
+ 16 19 1
+!entry.DPG.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+ "R" 1 "A" 2
+ "R" 1 "A" 3
+ "R" 1 "A" 4
+ "R" 1 "A" 5
+ "R" 1 "A" 6
+ "R" 1 "A" 7
+ "R" 1 "A" 8
+ "R" 1 "A" 9
+ "R" 1 "A" 10
+ "R" 1 "A" 11
+ "R" 1 "A" 12
+ "R" 1 "A" 13
+ "R" 1 "A" 14
+ "R" 1 "A" 15
+ "R" 1 "A" 16
+ "R" 1 "A" 17
+ "R" 1 "A" 18
+ "R" 1 "A" 19
+!entry.DPG.unit.name single str
+ "DPG"
+!entry.DPG.unit.positions table  dbl x  dbl y  dbl z
+ 4.135000 -1.557000 -1.039000
+ 3.923000 -0.459000 -0.040000
+ 4.092000 -0.839000 1.398000
+ 4.413000 0.898000 -0.446000
+ 2.065000 -0.279000 -0.241000
+ 1.254000 0.597000 0.208000
+ 1.429000 1.383000 1.120000
+ -0.110000 0.700000 -0.532000
+ -0.355000 2.089000 -0.697000
+ -0.049000 2.463000 0.120000
+ -0.012000 0.276000 -1.522000
+ -1.289000 0.012000 0.190000
+ -1.001000 -1.017000 0.417000
+ -1.443000 0.522000 1.140000
+ -2.426000 0.053000 -0.595000
+ -3.965000 -0.386000 0.057000
+ -3.783000 -1.815000 0.524000
+ -4.207000 0.608000 1.174000
+ -4.863000 -0.219000 -1.150000
+!entry.DPG.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 1 19 0 0 0 0
+!entry.DPG.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "DPG" 1 20 1 "?" 0
+!entry.DPG.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.DPG.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.DPG.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

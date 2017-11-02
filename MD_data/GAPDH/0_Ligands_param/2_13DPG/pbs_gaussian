@@ -1,0 +1,15 @@
+#PBS -q regular
+#PBS -l mppwidth=48
+#PBS -l mppnppn=12
+#PBS -l walltime=05:00:00
+#PBS -N 2PG_orig
+#PBS -e my_job.$PBS_JOBID.err
+#PBS -o my_job.$PBS_JOBID.out
+#PBS -V
+
+module load g09
+
+cd /global/homes/n/nmih/marta/13DPG
+g09 13DPG_H4.gau > 13DPG_H4.out
+#g09 EFZ_restart.gau > EFZ.out
+

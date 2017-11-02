@@ -1,0 +1,67 @@
+
+<HTML>
+<title>AMBER Parameter Database</title>
+<body BGCOLOR="ffffff">
+
+<h2>Contributors</h2>
+<a href="http://www.rosswalker.co.uk">R. Walker</a><br>
+The Scripps Research Institute,
+San Diego <br>
+
+<h1>Comments</h1>
+
+<pre>
+Contributed parameters for NADH and NAD+ 
+prepared for use in AMBER by Ross Walker
+(http://www.rosswalker.co.uk).
+
+The charges were derived from RESP fits to NADH and NAD+ and are suitable
+for use with the FF94 and FF99 force fields. The parameters were adapted
+for use in AMBER from the CHARMM parameters of Pavelites et al. These
+parameters have been tested using a linear response approach to relaxation
+dynamics for calculating optical spectra of proteins and have been found
+to reproduce the reorganization energy of LADH+NADH to within 13 % of
+experiment.
+
+If you use these parameters please cite the following two papers:
+
+1) Walker, R.C, de Souza, M.M., Mercer, I.P., Gould, I.R., Klug, D.R.,
+J. Phys. Chem. B., 2002, 106(44), 11658-11665
+
+2) Pavelites, J.J., Gao, J.L., Bash, P.A., Mackerell, A.D.,
+J. Comput. Chem. 1997, 18, 221
+
+The files are as follows:
+
+NADH.lib   leap library file of NADH with RESP calculated charges
+           (e.g. load in xleap with: loadoff NADH.lib)
+           Unit name is NAD (e.g edit NAD)
+
+NAD+.lib   leap library file of NAD+ with RESP calculated charges.
+           Unit name is NDP (e.g edit NDP)
+
+frcmod.NADH Force field parameters for NADH.
+            Adapted from the Pavelites et al. paper for Charmm NICH
+            parameters converted to AMBER using the NICH parameters
+            of Pavelites et al. and the default AMBER parameters for
+            the sugar and ribose sections of NADH.
+
+frcmod.NAD+ Force field parameters for NAD+.
+            Adapted in same method as above.
+
+Please note additional crd/prm files are bundled with the AMBER8 release.
+</pre>
+
+<hr>
+<center>
+[ <a href="../index.html">APD Home</a> ] [ <a href="../submit.html">Submit Parameters</a> ] [ <a href="http://www.amber.ucsf.edu/amber/amber.html">Amber Home</a> ] [ <a href="http://amber.ch.ic.ac.uk/amber.html">UK Mirror</a> ] [ <a href="http://pharmacy.man.ac.uk">Pharmacy Home</a> ] [ <a href="mailto:r.a.bryce@man.ac.uk">Contact</a> ]
+</center>
+
+<hr>
+Last modified 
+Tue Jan 13 17:52:34 GMT 2004
+<br>
+
+
+</HTML>
+

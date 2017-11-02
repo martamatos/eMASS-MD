@@ -1,0 +1,6 @@
+Mg2+ vdw parameters from Magnesium Optimization Paper
+MASS
+MG 24.305        0.120               magnesium
+
+NONB
+  MG          1.5545  0.00295        Allner et al. JCTC , 8, 1493-1502, (2012)

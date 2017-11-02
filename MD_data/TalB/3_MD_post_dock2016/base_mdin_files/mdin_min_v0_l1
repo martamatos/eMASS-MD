@@ -1,0 +1,12 @@
+density minlibration
+ &cntrl
+  imin = 1,
+  ntx = 1,
+  ntmin=2,
+  maxcyc=1000000,
+  ntpr = 1000,
+  ntf = 2,
+  ntc = 2,
+  ntb = 1,
+  cut = 12.0,
+ &end

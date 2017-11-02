@@ -1,0 +1,6 @@
+&general
+  keep_files=2,verbose=2,
+/
+&pb
+  fillratio=4.0,inp=1,radiopt=0,
+/

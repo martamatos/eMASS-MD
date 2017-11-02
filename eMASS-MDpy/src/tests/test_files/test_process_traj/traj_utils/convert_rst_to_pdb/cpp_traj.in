@@ -1,0 +1,3 @@
+trajin test_files/test_process_traj/traj_utils/convert_rst_to_pdb/G6PD_WT_NADP_G6P_min_v0_l1.rst lastframe
+trajout test_files/test_process_traj/traj_utils/convert_rst_to_pdb/G6PD_WT_NADP_G6P_min_v0_l1.pdb pdb
+go

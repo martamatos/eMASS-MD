@@ -1,0 +1,30 @@
+remark goes here
+MASS
+P  30.970        1.538               same as p4 
+O2 16.000        0.434               same as o  
+OH 16.000        0.465               same as oh 
+HO 1.008         0.135               same as ho 
+
+BOND
+P -O2  456.40   1.503       same as o -p4
+P -OH  307.40   1.641       same as oh-p4
+OH-HO  369.60   0.974       same as ho-oh
+
+ANGLE
+P -OH-HO   55.270     110.190   same as ho-oh-p4
+O2-P -O2   45.060     117.220   same as o -p4-o 
+O2-P -OH   42.880     117.390   same as o -p4-oh
+
+DIHE
+O2-P -OH-HO   1    0.700         0.000           1.000      same as X -oh-p4-X 
+
+IMPROPER
+
+NONBON
+  P           2.1000  0.2000             same as p4 
+  O2          1.6612  0.2100             same as o  
+  OH          1.7210  0.2104             same as oh 
+  HO          0.0000  0.0000             same as ho 
+
+
+

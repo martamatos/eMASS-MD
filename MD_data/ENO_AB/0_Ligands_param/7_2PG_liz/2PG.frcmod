@@ -1,0 +1,93 @@
+remark goes here
+MASS
+c3 12.010        0.878               same as c3 
+c  12.010        0.616               same as c  
+o  16.000        0.434               same as o  
+oh 16.000        0.465               same as oh 
+ho 1.008         0.135               same as ho 
+hc 1.008         0.135               same as hc 
+os 16.000        0.465               same as os 
+p4 30.970        1.538               same as p4 
+c3 12.010        0.878               same as c3
+c  12.010        0.616               same as c
+o  16.000        0.434               same as o
+oh 16.000        0.465               same as oh
+ho 1.008         0.135               same as ho
+hc 1.008         0.135               same as hc
+os 16.000        0.465               same as os
+p4 30.970        1.538               same as p4
+
+
+BOND
+c3-c   328.30   1.508       same as c -c3
+c3-c3  303.10   1.535       same as c3-c3
+c3-hc  337.30   1.092       same as c3-hc
+c3-os  301.50   1.439       same as c3-os
+c -o   648.00   1.214       same as c -o 
+c3-oh  314.10   1.426       same as c3-oh
+oh-ho  369.60   0.974       same as ho-oh
+os-p4  311.60   1.636       same as os-p4
+p4 -o  456.40   1.503       same as o -p4
+
+ANGLE
+c3-c -o    68.030     123.110   same as c3-c -o 
+c3-c3-oh   67.720     109.430   same as c3-c3-oh
+c3-c3-hc   46.370     110.050   same as c3-c3-hc
+c3-os-p4   77.590     117.480   same as c3-os-p4
+c -c3-c3   63.790     110.530   same as c -c3-c3
+c -c3-hc   47.200     109.680   same as c -c3-hc
+c -c3-os   68.030     109.820   same as c -c3-os
+o-c -o     78.170     130.380   same as o -c -o 
+c3-c3-os   67.780     108.420   same as c3-c3-os
+c3-oh-ho   47.090     108.160   same as c3-oh-ho
+oh-c3-hc   51.070     109.500   same as hc-c3-oh
+hc-c3-hc   39.430     108.350   same as hc-c3-hc
+hc-c3-os   50.870     108.700   same as hc-c3-os
+os-p4 -o   43.100     116.670   same as o -p4-os
+o-p4 -o    45.060     117.220   same as o -p4-o 
+
+DIHE
+c3-c3-oh-ho   1    0.160         0.000          -3.000      same as ho-oh-c3-c3
+c3-c3-oh-ho   1    0.250         0.000           1.000      same as ho-oh-c3-c3
+c3-os-p4 -o   1    1.050       180.000           2.000      same as X -os-p4-X 
+c -c3-c3-oh   1    0.156         0.000           3.000      same as X -c3-c3-X 
+c -c3-c3-hc   1    0.156         0.000           3.000      same as X -c3-c3-X 
+c -c3-os-p4   1    0.383         0.000           3.000      same as X -c3-os-X 
+o-c -c3-c3    1    0.000       180.000           2.000      same as X -c -c3-X 
+o-c -c3-hc    1    0.800         0.000          -1.000      same as hc-c3-c -o 
+o-c -c3-hc    1    0.080       180.000           3.000      same as hc-c3-c -o 
+o-c -c3-os    1    0.100       180.000           2.000      same as X -c -c3-X 
+c3-c3-os-p4   1    0.383         0.000           3.000      same as X -c3-os-X 
+oh-c3-c3-hc   1    0.100         0.000          -3.000      same as hc-c3-c3-oh
+oh-c3-c3-hc   1    0.250         0.000           1.000      same as hc-c3-c3-oh
+oh-c3-c3-os   1    0.144         0.000          -3.000      same as os-c3-c3-oh
+oh-c3-c3-os   1    1.175         0.000           2.000      same as os-c3-c3-oh
+ho-oh-c3-hc   1    0.167         0.000           3.000      same as X -c3-oh-X 
+hc-c3-c3-hc   1    0.150         0.000           3.000      same as hc-c3-c3-hc
+hc-c3-c3-os   1    0.100         0.000          -3.000      same as hc-c3-c3-os
+hc-c3-c3-os   1    0.250         0.000           1.000      same as hc-c3-c3-os
+hc-c3-os-p4   1    0.383         0.000           3.000      same as X -c3-os-X 
+
+IMPROPER
+c3-o-c -os         1.1          180.0         2.0          Using default value
+
+NONBON
+c3          1.9080  0.1094             same as c3 
+c           1.9080  0.0860             same as c  
+o           1.6612  0.2100             same as o  
+oh          1.7210  0.2104             same as oh 
+ho          1.4870  0.0157             same as ho 
+hc          1.4870  0.0157             same as hc 
+os          1.6837  0.1700             same as os 
+p4          2.1000  0.2000             same as p4 
+c3          1.9080  0.1094             same as c3
+c           1.9080  0.0860             same as c
+o           1.6612  0.2100             same as o
+oh          1.7210  0.2104             same as oh
+ho          1.4870  0.0157             same as ho
+hc          1.4870  0.0157             same as hc
+os          1.6837  0.1700             same as os
+p4          2.1000  0.2000             same as p4
+
+
+

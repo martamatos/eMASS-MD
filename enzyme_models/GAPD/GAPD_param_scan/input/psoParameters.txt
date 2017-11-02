@@ -1,0 +1,20 @@
+num_Cpus	1
+temperature_correction	False
+num_trial	100
+num_generations	2000
+val_pop_size	20
+bestFitnessCutoff	1.1
+val_neigh_size	3
+val_inertia	1
+val_cogn_rate	2.1
+val_soc_rate	2.1
+use_Keep_Best	True
+use_Random_Replace	True
+percent_Rand	0.05
+lower_bound	-6
+upper_bound	9
+num_func_var	12
+filesWithFunctions	[/home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_scan/input/absRateFor.txt, /home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_scan/input/absRateRev.txt, /home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_scan/input/relRateFor_g3p.txt, /home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_scan/input/relRateFor_nad.txt, /home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_scan/input/relRateFor_pi.txt, /home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_scan/input/relRateRev_13dpg.txt, /home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_scan/input/relRateRev_nadh.txt, /home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_scan/input/haldaneRatio_1.txt, /home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_scan/input/KdRatio_nad.txt, /home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_scan/input/customRatio_1.txt]
+value_row	-1
+function_row	-2
+data_row_high	-2

@@ -1,0 +1,1 @@
+$AMBERHOME/bin/MMPBSA.py -O -i mmpbsa_pb.in -o frame_None/FINAL_RESULTS_MMPBSA.dat -sp 0_complex_prep/complex_solv.prmtop -cp 0_complex_prep/complex_vac.prmtop -rp 0_complex_prep/receptor_vac.prmtop -lp 0_complex_prep/ligand_vac.prmtop -y /home/marta/G6PD/3_MD_post_dock/1_APO/1_G6P/cl111/G6PD_WT_APO_G6P_docked_cl111_100.crd

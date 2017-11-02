@@ -1,0 +1,123 @@
+!!index array str
+ "2PG"
+!entry.2PG.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "O1" "o" 0 1 131072 1 8 -0.890541
+ "C2" "c" 0 1 131072 2 6 0.855882
+ "O6" "o" 0 1 131072 3 8 -0.890541
+ "C1" "c3" 0 1 131072 4 6 0.327816
+ "C3" "c3" 0 1 131072 5 6 0.280902
+ "O7" "oh" 0 1 131072 6 8 -0.796975
+ "H1" "ho" 0 1 131072 7 1 0.378961
+ "H2" "h1" 0 1 131072 8 1 -0.023091
+ "H3" "h1" 0 1 131072 9 1 -0.023091
+ "H4" "h1" 0 1 131072 10 1 -0.031039
+ "O2" "os" 0 1 131072 11 8 -0.641403
+ "P" "p5" 0 1 131072 12 15 1.355390
+ "O4" "o" 0 1 131072 13 8 -0.967423
+ "O5" "o" 0 1 131072 14 8 -0.967423
+ "O3" "o" 0 1 131072 15 8 -0.967423
+!entry.2PG.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "O1" "o" 0 -1 0.0
+ "C2" "c" 0 -1 0.0
+ "O6" "o" 0 -1 0.0
+ "C1" "c3" 0 -1 0.0
+ "C3" "c3" 0 -1 0.0
+ "O7" "oh" 0 -1 0.0
+ "H1" "ho" 0 -1 0.0
+ "H2" "h1" 0 -1 0.0
+ "H3" "h1" 0 -1 0.0
+ "H4" "h1" 0 -1 0.0
+ "O2" "os" 0 -1 0.0
+ "P" "p5" 0 -1 0.0
+ "O4" "o" 0 -1 0.0
+ "O5" "o" 0 -1 0.0
+ "O3" "o" 0 -1 0.0
+!entry.2PG.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.2PG.unit.childsequence single int
+ 2
+!entry.2PG.unit.connect array int
+ 1
+ 15
+!entry.2PG.unit.connectivity table  int atom1x  int atom2x  int flags
+ 1 2 1
+ 2 3 1
+ 2 4 1
+ 4 5 1
+ 4 10 1
+ 4 11 1
+ 5 6 1
+ 5 8 1
+ 5 9 1
+ 6 7 1
+ 11 12 1
+ 12 13 1
+ 12 14 1
+ 12 15 1
+!entry.2PG.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+ "R" 1 "A" 2
+ "R" 1 "A" 3
+ "R" 1 "A" 4
+ "R" 1 "A" 5
+ "R" 1 "A" 6
+ "R" 1 "A" 7
+ "R" 1 "A" 8
+ "R" 1 "A" 9
+ "R" 1 "A" 10
+ "R" 1 "A" 11
+ "R" 1 "A" 12
+ "R" 1 "A" 13
+ "R" 1 "A" 14
+ "R" 1 "A" 15
+!entry.2PG.unit.name single str
+ "2PG"
+!entry.2PG.unit.positions table  dbl x  dbl y  dbl z
+ 3.540003 1.419779 1.933042E-06
+ 4.027101 1.360757 1.144238
+ 3.573151 0.701875 2.098088
+ 5.303181 2.223736 1.431251
+ 5.122272 3.642538 0.899321
+ 4.072286 4.346608 1.603326
+ 4.065327 5.220932 1.242183
+ 6.056460 4.173598 1.007340
+ 4.861254 3.576549 -0.151745
+ 5.442193 2.268743 2.505358
+ 6.429242 1.668643 0.816220
+ 8.040613 2.161681 1.203307
+ 8.215725 3.497994 0.496138
+ 8.062611 2.265699 2.713569
+ 8.857588 1.036632 0.614309
+!entry.2PG.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 1 15 0 0 0 0
+!entry.2PG.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "2PG" 1 16 1 "?" 0
+!entry.2PG.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.2PG.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.2PG.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

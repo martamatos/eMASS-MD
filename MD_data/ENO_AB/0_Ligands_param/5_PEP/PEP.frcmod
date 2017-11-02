@@ -1,0 +1,57 @@
+remark goes here
+MASS
+C  12.010        0.616               same as c  
+O2 16.000        0.434               same as o  
+CD 12.010        0.360               same as c2 
+CM 12.010        0.360               same as c2 
+HA 1.008         0.135               same as hc 
+OS 16.000        0.465               same as os 
+P  30.970        1.538               same as p4 
+
+BOND
+C -O2  648.00   1.214       same as c -o 
+C -CD  449.90   1.406       same as c -c2
+CD-CM  387.90   1.453       same as cc-ce
+CD-OS  392.60   1.357       same as c2-os
+CM-HA  344.30   1.087       same as c2-hc
+OS-P   311.60   1.636       same as os-p4
+P -O2  456.40   1.503       same as o -p4
+
+ANGLE
+C -CD-CM   67.930     120.700   same as c -c2-c2
+C -CD-OS   70.229     117.340   Calculated with empirical approach
+O2-C -O2   78.170     130.380   same as o -c -o 
+O2-C -CD   72.770     119.120   same as c2-c -o 
+CD-CM-HA   50.300     119.700   same as c2-c2-hc
+CD-OS-P    77.310     126.370   ATTN, same as c2-os-p5
+CM-CD-OS   71.040     121.890   same as c2-c2-os
+HA-CM-HA   37.810     118.920   same as hc-c2-hc
+OS-P -O2   43.100     116.670   same as o -p4-os
+O2-P -O2   45.060     117.220   same as o -p4-o 
+
+DIHE
+C -CD-CM-HA   1    6.650       180.000           2.000      same as X -c2-c2-X 
+C -CD-OS-P    1    1.050       180.000           2.000      same as X -c2-os-X 
+O2-C -CD-CM   1    2.175       180.000          -2.000      same as c2-c2-c -o 
+O2-C -CD-CM   1    0.300         0.000           3.000      same as c2-c2-c -o 
+O2-C -CD-OS   1    2.175       180.000           2.000      same as X -c -c2-X 
+CD-OS-P -O2   1    1.050       180.000           2.000      same as X -os-p4-X 
+CM-CD-OS-P    1    1.050       180.000           2.000      same as X -c2-os-X 
+HA-CM-CD-OS   1    6.650       180.000           2.000      same as X -c2-c2-X 
+
+IMPROPER
+C -CD-C -O2         1.1          180.0         2.0          Using default value
+C -CM-CD-OS         1.1          180.0         2.0          Using default value
+CD-HA-CM-HA         1.1          180.0         2.0          Using default value
+
+NONBON
+  C           1.9080  0.0860             same as c  
+  O2          1.6612  0.2100             same as o  
+  CD          1.9080  0.0860             same as ce 
+  CM          1.9080  0.0860             same as cc 
+  HA          1.4870  0.0157             same as hc 
+  OS          1.6837  0.1700             same as os 
+  P           2.1000  0.2000             same as p4 
+
+
+

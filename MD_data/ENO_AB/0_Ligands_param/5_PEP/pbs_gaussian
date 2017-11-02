@@ -1,0 +1,15 @@
+#PBS -q regular
+#PBS -l mppwidth=48
+#PBS -l mppnppn=12
+#PBS -l walltime=05:00:00
+#PBS -N PEP
+#PBS -e my_job.$PBS_JOBID.err
+#PBS -o my_job.$PBS_JOBID.out
+#PBS -V
+
+module load g09
+
+cd /global/homes/n/nmih/marta/PEP
+g09 PEP.gau > PEP.out
+#g09 EFZ_restart.gau > EFZ.out
+
