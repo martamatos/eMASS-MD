@@ -3,15 +3,15 @@
 Here you can find all code used in chapter 4 of my PhD thesis together with some data. The remaining data will soon be uploaded to [Zenodo](zenodo.org).
 
 
-###Overview
+### Overview
 
-#####eMASS-MDpy
+##### eMASS-MDpy
 Contains all Python code used to analyse the data and produce the plots in the thesis.
 
-#####enzyme_models
+##### enzyme_models
 Contains all the code to generate the enzyme-level kinetic models and some of the generated data.
 
-#####MD_data
+##### MD_data
 Constains some of the Molecular Dynamics data.
 
 
@@ -25,18 +25,18 @@ To analyse the results, the code in eMASS-MDpy was used, and the package require
 
 
 
-###Reproducing results
+### Reproducing results
 
 
-#####To reproduce the parameter scan, and in particular figure 4.5 in the thesis
+##### To reproduce the parameter scan, and in particular figure 4.5 in the thesis
 
-######To reproduce the plot based on the existing data:
+###### To reproduce the plot based on the existing data:
 
 Run plot_parameter_scan.py in eMASS-MDpy/src/kinetics_integration. Here you need to change the `main_dir` variable to match the folder where you have all the enzyme-level models data (at the bottom of the file). 
 The output plot will be stored in eMASS-MD/enzyme_models/plots.
 
 
-######To reproduce the plot from scratch:
+###### To reproduce the plot from scratch:
 
 1. use the respective enzyme Mathematica notebook: enzyme_models/enzyme_name/enzyme_name.nb 
 2. in the notebook change `pathMASSef` to where your MASSef folder is (needed to get the enzyme data properly)
@@ -63,17 +63,17 @@ The output plot will be stored in eMASS-MD/enzyme_models/plots.
 8. Finally, to reproduce figure 4.5 in the thesis, run plot_parameter_scan.py in eMASS-MDpy/src/kinetics_integration. Here you need to change the "main_dir" variable to match the folder where you have all the enzyme-level models data (at the bottom of the file). The output plot will be stored in eMASS-MD/enzyme_models/plots.
 
 
-#####To reproduce figures 4.6-4.8
+##### To reproduce figures 4.6-4.8
 
 
-######To reproduce the plots based on the existing data:
+###### To reproduce the plots based on the existing data:
 
 For each enzyme, go to eMASS-MDpy/src/run_kinetic_analyses and run enzyme_name.py file. Here, you need to change the variable base_folder (at the bottom of the file). It might take a while to run.
  
 The output plots will be stored in eMASS-MD/enzyme_models/enzyme_name/enzyme_name_param_inf/output in the following folders: plots, entropy, and clustermaps. 
 
 
-######To reproduce the plot from scratch:
+###### To reproduce the plot from scratch:
 
 1. use the respective enzyme Mathematica notebook: enzyme_models/enzyme_name/enzyme_name.nb 
 2. in the notebook change pathMASSef to where your MASSef folder is (needed to get the enzyme data properly)
@@ -100,7 +100,7 @@ The output plots will be stored in eMASS-MD/enzyme_models/enzyme_name/enzyme_nam
 8. For each enzyme, go to eMASS-MDpy/src/run_kinetic_analyses and run enzyme_name.py file. Here, you need to change the variable base_folder (at the bottom of the file). It might take a while to run. The output plots will be stored in eMASS-MD/enzyme_models/enzyme_name/enzyme_name_param_inf/output in the following folders: plots, entropy, and clustermaps. 
 
 
-#####To reproduce figures 4.9-4.11:
+##### To reproduce figures 4.9-4.11:
 
 Assuming you have completed the previous section, in this part you need to either generate the enzyme-level kinetic models and simulate them using the notebooks model_building.nb and model_simulation.nb or download the data from zenodo.
 After that, for each enzyme, go to eMASS-MDpy/src/enzyme_kinetics and run enzyme_name.py file. Here, you need to change the variable base_folder and set the boolean variable time_courses to True and the others to False (otherwise it's going to run the analyses in the previous section). It takes a while to run. The output plots will be stored in eMASS-MD/enzyme_models/enzyme_name/enzyme_name_param_inf/output/model_simulations/plots.
