@@ -31,8 +31,6 @@ Contains custom scripts to analyze the results of integrating MD with enzyme-lev
 
 
 ### Requirements:
- - [MDanalysis](http://www.mdanalysis.org/)
- - [MDTraj](http://mdtraj.org/1.6.2/)
  - Jinja2==2.8
  - matplotlib==1.5.1
  - [MDAnalysis==0.14.0](http://www.mdanalysis.org/)
