@@ -214,6 +214,7 @@ def _write_clusters(dock_base_folder, frames_cluster_df, protein, ligand, cluste
 
 def _set_representations(f_cl, mol_i, ligand_resname, binding_residues=None):
     #ligand_resname = '2PG'
+
     ligand = re.findall("(\w{3})$", ligand_resname)[0]
 
     f_cl.write('mol addrep %s\n' % mol_i)
@@ -421,6 +422,6 @@ def cluster_docking_poses(dock_base_folder, ref_pdb, frame, protein, chain_str, 
     _viz_clusters_vmd(dock_base_folder, protein, ligand, ligand_resname, frames_cluster_df, cluster_and_counts,
                       ordered_clusters, ref_pdb, binding_residues)
 
-    return ['cl' + item for item in ordered_clusters[:3]]
+    return ['cl' + item for item in ordered_clusters[:5]]
 
 

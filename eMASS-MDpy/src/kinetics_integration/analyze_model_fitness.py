@@ -69,7 +69,7 @@ def plot_n_good_models_dist(file_in_base, file_out, model_type_list, n_ensembles
     ax.set_ylim(0, 110)
     ax.set_xticklabels(column_labels, rotation=0)
     ax.set_xlabel(x_label)
-    ax.set_ylabel('number of valid models')
+    ax.set_ylabel('number of models with ssld$<0.1$')
     ax.grid(True)
 
     plt.tight_layout()
@@ -131,9 +131,9 @@ def plot_fitness_dist(file_in_base, file_out, model_type_list, n_ensembles, ssd_
     #sns.boxplot(data=[fitness_dic[key] for key in model_type_list], ax=ax)
     ax.set_xticklabels(column_labels, rotation=0)
     ax.set_xlabel(x_label)
-    ax.set_ylabel('ssd order of magnitude ($10^y)$')
+    ax.set_ylabel('ssld order of magnitude ($10^y)$')
     ax.grid(True)
-    plt.plot((-1, 9), (0, 0), color='black')
+    plt.plot((-1, 9), (np.log10(0.1), np.log10(0.1)), color='black')
 
     plt.tight_layout()
     #print file_out

@@ -204,7 +204,7 @@ loadamberparams /home/marta/GAPDH/0_Ligands_param/1_G3P/G3P.frcmod
 loadOff /home/marta/GAPDH/0_Ligands_param/1_G3P/G3P.off
 
 #NAD
-loadamberparams /home/marta/GAPDH/0_Ligands_param/3_NAD/frcmod.NAD
+loadamberparams /home/marta/GAPDH/0_Ligands_param/3_NAD/NAD.frcmod
 loadOff /home/marta/GAPDH/0_Ligands_param/3_NAD/NAD.off
 
 ###########################################################

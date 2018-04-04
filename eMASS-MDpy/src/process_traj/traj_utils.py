@@ -151,10 +151,45 @@ def extract_pdb_frames_from_traj(prmtop, traj_file, frame_list, base_file_out, l
         os.remove(file_out)
 
 
+def extract_traj_subset(prmtop, traj_file, traj_format, frame_start, frame_end):
+    """
 
-prmtop = '/home/mrama/Desktop/MD/ENO_AB/3_MD_post_dock/1_MG/1_2PG/cl000/ENO_AB_WT_MG_2PG_docked.prmtop'
-traj_file = '/home/mrama/Desktop/MD/ENO_AB/3_MD_post_dock/1_MG/1_2PG/cl000/ENO_AB_WT_MG_2PG_docked_cl000_merged_100.dcd'
-frame_list = range(250, 502)
-ligand = '2PG'
-base_file_out = '/home/mrama/Desktop/MD/ENO_AB/2_Dock/1_MG/1_2PG/dock_prep/ENO_AB_WT_MG'
-extract_pdb_frames_from_traj(prmtop, traj_file, frame_list, base_file_out, ligand)
+    Given an MD trajectory it extracts the frames between frame_start and frame_end and substitutes the original
+    trajectory.
+
+    :param prmtop: path+name for prmtop file
+    :param traj_file: MD trajectory file path+name
+    :param traj_format: format of the MD trajectory, e.g. crd or dcd
+    :param frame_start: first frame to be extracted
+    :param frame_end: last frame to be extracted
+    :return: None
+    """
+
+    file_out = './temp.in'
+    with open(file_out, 'w') as f_out:
+        f_out.write(''.join(['trajin ', traj_file, '.', traj_format, ' ', str(frame_start), ' ', str(frame_end), '\n']))
+        f_out.write(''.join(['trajout ', traj_file, '_subset_', str(frame_start), '_', str(frame_end), '.', traj_format, ' ', traj_format, '\n']))
+        f_out.write('go\n')
+
+    subprocess.call(''.join(['$AMBERHOME/bin/cpptraj -i ', file_out, ' -p ', prmtop]), shell=True)
+
+    if os.path.isfile(''.join([traj_file, '_subset_', str(frame_start), '_', str(frame_end), '.', traj_format])):
+        os.remove(''.join([traj_file, '.', traj_format]))
+
+    os.rename(''.join([traj_file, '_subset_', str(frame_start), '_', str(frame_end), '.', traj_format]),
+              ''.join([traj_file, '.', traj_format]))
+
+
+
+prmtop = '/home/mrama/Desktop/MD/eMASS-MD_complete_data/MD_data/TalB/3_MD_post_dock2016/2_HALO/2_F6P/cl311_2/TALB_WT_HALO_S7P_remS7P_F6P_docked.prmtop'
+traj_file = '/home/mrama/Desktop/MD/eMASS-MD_complete_data/MD_data/TalB/3_MD_post_dock2016/2_HALO/2_F6P/cl311_2/TALB_WT_HALO_S7P_remS7P_F6P_docked_cl311_2_1_10'
+#frame_list = range(250, 502)
+#ligand = '2PG'
+#base_file_out = '/home/mrama/Desktop/MD/ENO_AB/2_Dock/1_MG/1_2PG/dock_prep/ENO_AB_WT_MG'
+#extract_pdb_frames_from_traj(prmtop, traj_file, frame_list, base_file_out, ligand)
+
+
+traj_format = 'crd'
+frame_start = 0
+frame_end = 70
+#extract_traj_subset(prmtop, traj_file, traj_format, frame_start, frame_end)

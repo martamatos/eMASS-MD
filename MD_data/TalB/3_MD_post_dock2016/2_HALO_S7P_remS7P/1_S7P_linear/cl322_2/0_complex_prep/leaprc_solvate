@@ -207,7 +207,7 @@ loadOff /home/marta/TalB/0_Ligands_param/3_S7P_linear_noopt/S7P.off
 # load in PDB structure
 # 
 set default PBRadii bondi
-mol = loadpdb TALB_WT_HALO_S7P_remS7P-184_receptor_S7P_linear_docked.pdb
+mol = loadpdb TALB_WT_HALO_S7P_remS7P-184_receptor_S7P_docked.pdb
 ###########################################################
 
 ###########################################################

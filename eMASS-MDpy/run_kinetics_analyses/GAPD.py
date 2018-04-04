@@ -31,10 +31,10 @@ def run_fitness_analysis(base_folder, file_in_base, model_type_list, ssd_thresho
                             column_order, column_labels, x_label, scale_data, convert_to_ratios, color_list, filter=True)
 
 
-def analyze_gapd(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis, entropy_analysis,
-                 time_courses, param_inf_type):
+def analyze_gapd(base_folder, enzyme, ssd_threshold, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis,
+                 entropy_analysis,time_courses, param_inf_type):
 
-    ssd_threshold = 1
+
     scale_data = False
 
     column_order = [0, 2, 4, 5, 3, 1]
@@ -42,7 +42,7 @@ def analyze_gapd(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
     convert_to_ratios = True
 
     model_type_list = ['all',  'dKd', 'Keq', 'Kd', 'Km1', 'Km2', 'Km3', 'kcat']
-    column_labels = ['None', '$\Delta K_d$', '$K_{eq}$', '$K_d^{nad}$', '$K_m^{nad}$', '$K_m^{g3p}$', '$K_m^{pi}$', '$k_{cat}$']
+    column_labels = ['None', '$\Delta K_b$', '$K_{eq}$', '$K_d^{NAD}$', '$K_m^{NAD}$', '$K_m^{G3P}$', '$K_m^{PI}$', '$k_{cat}$']
     x_label = 'Data point removed'
 
     file_in_base = ''.join([base_folder, 'treated_data/rateconst_GAPD_'])
@@ -59,7 +59,7 @@ def analyze_gapd(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
         vmax = 9
 
         model_types = ['all', 'dKd']
-        n_model_ensembles = 100
+        n_model_ensembles = 1
 
         Keq_local = None
         #cluster_map_param_inf(file_in_base, file_out_base, ssd_threshold, convert_to_ratios, column_order, vmin, vmax,
@@ -111,7 +111,7 @@ def analyze_gapd(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
     if entropy_analysis:
         print 'analyzing entropy'
 
-        y_lims = [0.15, 0.25]
+        y_lims = [0., 1.]
 
         if not os.path.exists(''.join([base_folder, 'entropy'])):
             os.makedirs(''.join([base_folder, 'entropy']))
@@ -121,7 +121,7 @@ def analyze_gapd(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
 
         plot_entropy_only = False
         n_model_ensembles = 100
-        bin_width_list = [3]
+        bin_width_list = [1]
         fixed_size = False
         Keq_local = None
         limit = 100
@@ -133,6 +133,16 @@ def analyze_gapd(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
                                  fixed_size=fixed_size, n_samples_per_bin=None)
         """
 
+        file_out_base = ''.join([base_folder, 'entropy/GAPD_rateconst_'])
+        column_order_rateconst = [0, 1, 4, 5, 8, 9, 10, 11, 6, 7, 2, 3]
+        n_variables_rateconst = len(column_order_rateconst)
+        calculate_enzyme_entropy(file_in_base, file_out_base, n_model_ensembles, model_type_list,
+                                 column_order_rateconst, n_variables_rateconst, ssd_threshold, Keq_local, False, limit,
+                                 bin_width_list, column_labels, y_lims, x_label, color_list,
+                                 plot_entropy_only=plot_entropy_only, fixed_size=fixed_size, n_samples_per_bin=None)
+
+
+        limit = 30
         file_out_base = ''.join([base_folder, 'entropy/GAPD_rateconst_'])
         column_order_rateconst = [0, 1, 4, 5, 8, 9, 10, 11, 6, 7, 2, 3]
         n_variables_rateconst = len(column_order_rateconst)
@@ -155,7 +165,7 @@ def analyze_gapd(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
         x_lims = [0, 10]
 
         time_point_list = [0, 10]
-        plot_type_list = ['enz', 'mets', 'flux']
+        plot_type_list = ['mets']#'enz', 'mets', 'flux']
 
         for perturb in perturbation_list:
             for plot_type in plot_type_list:
@@ -170,8 +180,8 @@ def analyze_gapd(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
                     mets_order = ['g3p', 'nad', 'pi', '13dpg', 'nadh']
                     y_label = 'Concentration (mol/L)'
                     y_lims = [[0.0000030, 0.0000045], [0.000220, 0.000235], [0.0014, 0.0016], [0.000085, 0.000092], [0.00232, 0.00235]]
-                    y_lims_timecourses = [[2.42*10**-3, 2.5*10**-3], [2.38*10**-2, 2.39*10**-2],
-                                          [7*10**-5, 1.22*10**-4], [1.8*10**-4, 2.5*10**-4], [4*10**-5, 8*10**-5]]
+                    y_lims_timecourses = [[2.43*10**-3, 2.48*10**-3], [2.38*10**-2, 2.39*10**-2],
+                                          [9*10**-5, 1.22*10**-4], [1.8*10**-4, 2.7*10**-4], [3*10**-5, 5.5*10**-5]]
                     # y_lims_timecourses = None
                     y_lims=None
                     plot_spacings = [0.89, 0.15, 0.15, 0.98]
@@ -218,18 +228,22 @@ def analyze_gapd(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
 
 if __name__ == '__main__' :
     enzyme = 'GAPD'
+    ssd_threshold = 0.1
     Keq = 0.452  # to filter by keq
     #Keq = ''
     param_inf_type = ''
     e_total = 6.875*10**-5
 
-    clustermaps = True
+    clustermaps = False
     fitness_analysis = True
-    keq_range_analysis = True
-    entropy_analysis = True
+    keq_range_analysis = False
+    entropy_analysis = False
     time_courses = False
 
-    base_folder = '/home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/GAPD/GAPD_param_inf/output/'
+    base_folder = '/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/GAPD/GAPD_param_inf2/output/'
 
-    analyze_gapd(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis, entropy_analysis,
-                 time_courses, param_inf_type)
+    analyze_gapd(base_folder, enzyme, ssd_threshold, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis,
+                  entropy_analysis, time_courses, param_inf_type)
+
+
+    #/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_0_abs_ssd.csv

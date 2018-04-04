@@ -31,10 +31,10 @@ def run_fitness_analysis(base_folder, file_in_base, model_type_list, ssd_thresho
                             column_labels, x_label, scale_data, convert_to_ratios, color_list, filter=True)
 
 
-def analyze_talb(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis, entropy_analysis,
+def analyze_talb(base_folder, enzyme, ssd_threshold, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis, entropy_analysis,
                  time_courses, param_inf_type):
 
-    ssd_threshold = 1
+
     scale_data = False
     column_order = [0, 3, 5, 2, 4, 1]
     n_variables = len(column_order)
@@ -42,7 +42,7 @@ def analyze_talb(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
     convert_to_ratios = True
 
     model_type_list = ['all', 'dKd',  'Keq', 'Km1', 'Km2', 'Km3', 'Km4', 'kcat', 'Ki']
-    column_labels = ['None', '$\Delta K_d$', '$K_{eq}$', '$K_m^{g3p}$', '$K_m^{e4p}$', '$K_m^{f6p}$', '$K_m^{s7p}$', '$k_{cat}$', '$K_i$']
+    column_labels = ['None', '$\Delta K_b$', '$K_{eq}$', '$K_m^{G3P}$', '$K_m^{E4P}$', '$K_m^{F6P}$', '$K_m^{S7P}$', '$k_{cat}$', '$K_i$']
     x_label = 'Data point removed'
 
     file_in_base = ''.join([base_folder, 'treated_data/rateconst_TALA2_'])
@@ -58,7 +58,7 @@ def analyze_talb(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
         vmax = 9
 
         model_types = ['all', 'dKd']
-        n_model_ensembles = 100
+        n_model_ensembles = 1
 
         Keq_local = None
         #cluster_map_param_inf(file_in_base, file_out_base, ssd_threshold, convert_to_ratios, column_order, vmin, vmax,
@@ -108,7 +108,7 @@ def analyze_talb(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
                                       zorder_list)
     if entropy_analysis:
 
-        y_lims = [0.15, 0.25]
+        y_lims = [0.13, 0.19]
 
         if not os.path.exists(''.join([base_folder, 'entropy'])):
             os.makedirs(''.join([base_folder, 'entropy']))
@@ -147,7 +147,7 @@ def analyze_talb(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
                                  column_order_rateconst, n_variables_rateconst, ssd_threshold, Keq_local, False, limit,
                                  bin_width_list, column_labels, y_lims, x_label, color_list,
                                  plot_entropy_only=plot_entropy_only, fixed_size=fixed_size, n_samples_per_bin=None)
-        limit = 60
+        limit = 30
         calculate_enzyme_entropy(file_in_base, file_out_base, n_model_ensembles, model_type_list,
                                  column_order_rateconst, n_variables_rateconst, ssd_threshold, Keq_local, False, limit,
                                  bin_width_list, column_labels, y_lims, x_label, color_list,
@@ -158,15 +158,15 @@ def analyze_talb(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
         n_model_ensembles = 100
         plot_only = False
 
-        subs_list = ['f6p', 'e4p']
-        prod_list = ['s7p' 'g3p']
+        subs_list = ['s7p' 'g3p']
+        prod_list = ['f6p', 'e4p']
         perturbation_list = ['noPerturb']
 
         filter_models = False
         x_lims = [0, 100]
 
         time_point_list = [0, 100]
-        plot_type_list = ['enz', 'mets', 'flux']
+        plot_type_list = ['mets'] #'enz', 'mets', 'flux']
 
         for perturb in perturbation_list:
 
@@ -186,7 +186,8 @@ def analyze_talb(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
                     #y_lims_timecourses = [[5.95*10**-4, 6.15*10**-4], [9.5*10**-5, 1.15*10**-4], [2.05*10**-4, 2.2*10**-4],
                     #                      [2.6*10**-4, 2.8*10**-4], [2.32*10**-3, 2.34*10**-3]]
                     y_lims_timecourses = [[2.4*10**-3, 2.6*10**-3], [5*10**-5, 10**-4], [1.9*10**-4, 3*10**-4],
-                                          [0, 10**-5], [8*10**-4, 9*10**-4]]
+                                           [8*10**-4, 9*10**-4]]
+                    #y_lims_timecourses = None
                     plot_spacings = [0.89, 0.15, 0.16, 0.98]
                     fig_size = (6,4)
 
@@ -231,18 +232,20 @@ def analyze_talb(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysi
 
 if __name__ == '__main__' :
     enzyme = 'TALA2'
-    Keq = 0.762
+    ssd_threshold = 0.1
+    Keq = 1.31
     #Keq = ''
     param_inf_type = ''
     e_total = 5.4*10**-6
 
-    clustermaps = True
+    clustermaps = False
     fitness_analysis = True
-    keq_range_analysis = True
-    entropy_analysis = True
+    keq_range_analysis = False
+    entropy_analysis = False
     time_courses = False
 
-    base_folder = '/home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/TALA2/TALA2_param_inf/output/'
 
-    analyze_talb(base_folder, enzyme, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis, entropy_analysis,
-                 time_courses, param_inf_type)
+    base_folder = '/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/TALA2/TALA2_param_inf2/output/'
+
+    analyze_talb(base_folder, enzyme, ssd_threshold, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis,
+                 entropy_analysis, time_courses, param_inf_type)

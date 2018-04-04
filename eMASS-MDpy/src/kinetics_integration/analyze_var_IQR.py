@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
-from src.kinetics_integration.plots_definitions import entropy_plot_single_defs
+from src.kinetics_integration.plots_definitions import get_elementary_keq_range_scatter_defs
 from src.kinetics_integration.utils import import_rateconstants
 
 
@@ -28,7 +28,7 @@ def _get_mad(ekeq_range_dic, key, y_data, n_keqs):
 def _plot_keq_iqr(ekeq_range_dic, n_model_types, n_keqs, column_labels, file_out, x_labels, color_list,
                   plot_type='boxplot', zorder_list=None):
 
-    entropy_plot_single_defs()
+    get_elementary_keq_range_scatter_defs()
 
     if plot_type == 'scatter':
         if not zorder_list:
@@ -71,8 +71,9 @@ def _plot_keq_iqr(ekeq_range_dic, n_model_types, n_keqs, column_labels, file_out
                    loc='upper center',
                    bbox_to_anchor=(0.5, 1.25))
 
-        fig.subplots_adjust(top=0.85, bottom=0.18, left=0.12, right=0.99, hspace=0.7)
+        fig.subplots_adjust(top=0.85, bottom=0.2, left=0.12, right=0.99, hspace=0.7)
         plt.savefig(''.join([file_out, '_scatter.pdf']))
+        plt.savefig(''.join([file_out, '_scatter.png']))
         plt.close()
 
     if plot_type == 'boxplot':
@@ -96,6 +97,7 @@ def _plot_keq_iqr(ekeq_range_dic, n_model_types, n_keqs, column_labels, file_out
 
         plt.tight_layout()
         plt.savefig(''.join([file_out, '_boxplot.pdf']))
+        plt.savefig(''.join([file_out, '_boxplot.png']))
         plt.close()
 
 

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15450,        369]
-NotebookOptionsPosition[     14710,        338]
-NotebookOutlinePosition[     15065,        354]
-CellTagsIndexPosition[     15022,        351]
+NotebookDataLength[     49396,       1382]
+NotebookOptionsPosition[     40753,       1148]
+NotebookOutlinePosition[     41108,       1164]
+CellTagsIndexPosition[     41065,       1161]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,6 +24,8 @@ Cell[BoxData[
   3.640093333126033*^9, 3.640093334996044*^9}, {3.64032346627951*^9, 
   3.640323466979537*^9}, {3.695129818290565*^9, 3.695129818760935*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{"<<", "Toolbox`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "Toolbox`Style`"}], "\[IndentingNewLine]", 
@@ -33,8 +35,8 @@ Cell[BoxData[{
     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"enzModelsDir", " ", "=", " ", 
-  "\"\</home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/\>\""}\
-], "\[IndentingNewLine]", 
+  "\"\</home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\>\""}], "\
+\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"mainDir", "=", 
    RowBox[{"enzModelsDir", "<>", "\"\<code_data/\>\""}]}], 
@@ -58,7 +60,14 @@ Cell[BoxData[{
   3.693759040490933*^9, 3.6937590496803627`*^9}, {3.693910853126341*^9, 
   3.693910858816224*^9}, {3.694103656789948*^9, 3.694103657452764*^9}, {
   3.6941897736239843`*^9, 3.6941897739961033`*^9}, {3.718431870628613*^9, 
-  3.718431873031212*^9}, {3.718431917253207*^9, 3.7184319349994*^9}}],
+  3.718431873031212*^9}, {3.718431917253207*^9, 3.7184319349994*^9}, {
+  3.730351401296183*^9, 3.730351408760517*^9}}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+\"\>"], "Output",
+ CellChangeTimes->{3.7303514134990053`*^9, 3.730358635669842*^9, 
+  3.730375984180197*^9, 3.73054788805168*^9}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -90,13 +99,13 @@ Cell[BoxData[{
   RowBox[{"inputDir", " ", "=", " ", 
    RowBox[{
    "enzModelsDir", "<>", 
-    "\"\<ENO/ENO_param_inf/output/model_simulations/models/\>\""}]}], 
+    "\"\<ENO/ENO_param_inf2/output/model_simulations/models/\>\""}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"outputDirBase", " ", "=", " ", 
    RowBox[{
    "enzModelsDir", "<>", 
-    "\"\</ENO/ENO_param_inf/output/model_simulations/data/\>\""}]}], 
+    "\"\</ENO/ENO_param_inf2/output/model_simulations/data/\>\""}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -292,7 +301,7 @@ Cell[BoxData[{
    3.709443311538067*^9, 3.709443332818104*^9}, {3.709617497775387*^9, 
    3.709617499321971*^9}, {3.718431941668344*^9, 3.71843202844771*^9}, {
    3.7184320933084593`*^9, 3.71843209347631*^9}, 3.718432206650217*^9, 
-   3.7184325964016943`*^9}],
+   3.7184325964016943`*^9, {3.730351413084578*^9, 3.7303514159319363`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -300,26 +309,826 @@ Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"4", ",", "5"}], "}"}]], "Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617514028036*^9}],
+ CellChangeTimes->{3.7305478930489073`*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"4", ",", "5"}], "}"}]], "Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617514169571*^9}],
+ CellChangeTimes->{3.730547893130281*^9}],
 
 Cell[BoxData["5.19`"], "Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617514183563*^9}],
+ CellChangeTimes->{3.730547893160296*^9}],
 
 Cell[BoxData["5.19`"], "Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617514214459*^9}]
+ CellChangeTimes->{3.730547893173533*^9}],
+
+Cell[BoxData["\<\"model all, 0 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547902417714*^9}],
+
+Cell[BoxData["\<\"model dKd, 0 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305479034034357`*^9}],
+
+Cell[BoxData["\<\"model all, 1 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547913746703*^9}],
+
+Cell[BoxData["\<\"model dKd, 1 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547916429583*^9}],
+
+Cell[BoxData["\<\"model all, 2 - 93, 93, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547925909356*^9}],
+
+Cell[BoxData["\<\"model dKd, 2 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547930403441*^9}],
+
+Cell[BoxData["\<\"model all, 3 - 89, 89, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305479388192177`*^9}],
+
+Cell[BoxData["\<\"model dKd, 3 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054794466693*^9}],
+
+Cell[BoxData["\<\"model all, 4 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054795127172*^9}],
+
+Cell[BoxData["\<\"model dKd, 4 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547958524026*^9}],
+
+Cell[BoxData["\<\"model all, 5 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547964084034*^9}],
+
+Cell[BoxData["\<\"model dKd, 5 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547973619697*^9}],
+
+Cell[BoxData["\<\"model all, 6 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547978486137*^9}],
+
+Cell[BoxData["\<\"model dKd, 6 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547989233273*^9}],
+
+Cell[BoxData["\<\"model all, 7 - 89, 89, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730547992904969*^9}],
+
+Cell[BoxData["\<\"model dKd, 7 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548006587058*^9}],
+
+Cell[BoxData["\<\"model all, 8 - 94, 94, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548008991263*^9}],
+
+Cell[BoxData["\<\"model dKd, 8 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548023839706*^9}],
+
+Cell[BoxData["\<\"model all, 9 - 93, 93, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548025124785*^9}],
+
+Cell[BoxData["\<\"model all, 10 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305480417347403`*^9}],
+
+Cell[BoxData["\<\"model dKd, 9 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548041837281*^9}],
+
+Cell[BoxData["\<\"model all, 11 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548058767035*^9}],
+
+Cell[BoxData["\<\"model dKd, 10 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548061320142*^9}],
+
+Cell[BoxData["\<\"model all, 12 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305480750037193`*^9}],
+
+Cell[BoxData["\<\"model dKd, 11 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305480803254433`*^9}],
+
+Cell[BoxData["\<\"model all, 13 - 78, 78, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548089644812*^9}],
+
+Cell[BoxData["\<\"model dKd, 12 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548099302681*^9}],
+
+Cell[BoxData["\<\"model all, 14 - 89, 89, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548107124667*^9}],
+
+Cell[BoxData["\<\"model dKd, 13 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548119759192*^9}],
+
+Cell[BoxData["\<\"model all, 15 - 85, 85, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305481236508417`*^9}],
+
+Cell[BoxData["\<\"model dKd, 14 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548139654442*^9}],
+
+Cell[BoxData["\<\"model all, 16 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548141878426*^9}],
+
+Cell[BoxData["\<\"model dKd, 15 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548160485753*^9}],
+
+Cell[BoxData["\<\"model all, 17 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054816055558*^9}],
+
+Cell[BoxData["\<\"model all, 18 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548180236171*^9}],
+
+Cell[BoxData["\<\"model dKd, 16 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548182363905*^9}],
+
+Cell[BoxData["\<\"model all, 19 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305482001416607`*^9}],
+
+Cell[BoxData["\<\"model dKd, 17 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305482048119097`*^9}],
+
+Cell[BoxData["\<\"model all, 20 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548221188877*^9}],
+
+Cell[BoxData["\<\"model dKd, 18 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548227068948*^9}],
+
+Cell[BoxData["\<\"model all, 21 - 93, 93, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548242704187*^9}],
+
+Cell[BoxData["\<\"model dKd, 19 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054825000736*^9}],
+
+Cell[BoxData["\<\"model all, 22 - 86, 86, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054826484336*^9}],
+
+Cell[BoxData["\<\"model dKd, 20 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548277659956*^9}],
+
+Cell[BoxData["\<\"model all, 23 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548292297773*^9}],
+
+Cell[BoxData["\<\"model dKd, 21 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548305837521*^9}],
+
+Cell[BoxData["\<\"model all, 24 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305483213346148`*^9}],
+
+Cell[BoxData["\<\"model dKd, 22 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548342462552*^9}],
+
+Cell[BoxData["\<\"model all, 25 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548360092918*^9}],
+
+Cell[BoxData["\<\"model dKd, 23 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548386515912*^9}],
+
+Cell[BoxData["\<\"model all, 26 - 89, 89, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548390372202*^9}],
+
+Cell[BoxData["\<\"model all, 27 - 93, 93, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548428803708*^9}],
+
+Cell[BoxData["\<\"model dKd, 24 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054843120198*^9}],
+
+Cell[BoxData["\<\"model all, 28 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054846293102*^9}],
+
+Cell[BoxData["\<\"model dKd, 25 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548466946196*^9}],
+
+Cell[BoxData["\<\"model all, 29 - 90, 90, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548495351533*^9}],
+
+Cell[BoxData["\<\"model dKd, 26 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305485014151506`*^9}],
+
+Cell[BoxData["\<\"model all, 30 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548528221097*^9}],
+
+Cell[BoxData["\<\"model dKd, 27 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305485364228992`*^9}],
+
+Cell[BoxData["\<\"model all, 31 - 90, 90, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548559379627*^9}],
+
+Cell[BoxData["\<\"model dKd, 28 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548571379475*^9}],
+
+Cell[BoxData["\<\"model all, 32 - 94, 94, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548593835497*^9}],
+
+Cell[BoxData["\<\"model dKd, 29 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548606508659*^9}],
+
+Cell[BoxData["\<\"model all, 33 - 93, 93, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548626198045*^9}],
+
+Cell[BoxData["\<\"model dKd, 30 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305486427329597`*^9}],
+
+Cell[BoxData["\<\"model all, 34 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548660033902*^9}],
+
+Cell[BoxData["\<\"model dKd, 31 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305486794202137`*^9}],
+
+Cell[BoxData["\<\"model all, 35 - 94, 94, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548697396553*^9}],
+
+Cell[BoxData["\<\"model dKd, 32 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548718270218*^9}],
+
+Cell[BoxData["\<\"model all, 36 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054873215641*^9}],
+
+Cell[BoxData["\<\"model dKd, 33 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548759880974*^9}],
+
+Cell[BoxData["\<\"model all, 37 - 93, 93, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548781353026*^9}],
+
+Cell[BoxData["\<\"model dKd, 34 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548830991074*^9}],
+
+Cell[BoxData["\<\"model all, 38 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548840694254*^9}],
+
+Cell[BoxData["\<\"model dKd, 35 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548891379178*^9}],
+
+Cell[BoxData["\<\"model all, 39 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548899623275*^9}],
+
+Cell[BoxData["\<\"model dKd, 36 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054894469582*^9}],
+
+Cell[BoxData["\<\"model all, 40 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548954460107*^9}],
+
+Cell[BoxData["\<\"model dKd, 37 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549016647666*^9}],
+
+Cell[BoxData["\<\"model all, 41 - 89, 89, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549019656538*^9}],
+
+Cell[BoxData["\<\"model all, 42 - 94, 94, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305490716351223`*^9}],
+
+Cell[BoxData["\<\"model dKd, 38 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549074630082*^9}],
+
+Cell[BoxData["\<\"model dKd, 39 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305491232446404`*^9}],
+
+Cell[BoxData["\<\"model all, 43 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549133006192*^9}],
+
+Cell[BoxData["\<\"model dKd, 40 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549169007203*^9}],
+
+Cell[BoxData["\<\"model all, 44 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549189937937*^9}],
+
+Cell[BoxData["\<\"model dKd, 41 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549232147073*^9}],
+
+Cell[BoxData["\<\"model all, 45 - 90, 90, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549245894394*^9}],
+
+Cell[BoxData["\<\"model all, 46 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549290502014*^9}],
+
+Cell[BoxData["\<\"model dKd, 42 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549292006485*^9}],
+
+Cell[BoxData["\<\"model all, 47 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305493348308983`*^9}],
+
+Cell[BoxData["\<\"model dKd, 43 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305493435000668`*^9}],
+
+Cell[BoxData["\<\"model all, 48 - 90, 90, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549389922031*^9}],
+
+Cell[BoxData["\<\"model dKd, 44 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305494019071836`*^9}],
+
+Cell[BoxData["\<\"model all, 49 - 96, 96, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549441578511*^9}],
+
+Cell[BoxData["\<\"model dKd, 45 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549451946842*^9}],
+
+Cell[BoxData["\<\"model all, 50 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549479667674*^9}],
+
+Cell[BoxData["\<\"model dKd, 46 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549491106964*^9}],
+
+Cell[BoxData["\<\"model all, 51 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549517380569*^9}],
+
+Cell[BoxData["\<\"model dKd, 47 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305495301541643`*^9}],
+
+Cell[BoxData["\<\"model all, 52 - 84, 84, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549552567047*^9}],
+
+Cell[BoxData["\<\"model dKd, 48 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305495706913967`*^9}],
+
+Cell[BoxData["\<\"model all, 53 - 95, 95, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305495906948833`*^9}],
+
+Cell[BoxData["\<\"model dKd, 49 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549609673953*^9}],
+
+Cell[BoxData["\<\"model all, 54 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054962757487*^9}],
+
+Cell[BoxData["\<\"model dKd, 50 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549651949956*^9}],
+
+Cell[BoxData["\<\"model all, 55 - 93, 93, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549666823937*^9}],
+
+Cell[BoxData["\<\"model dKd, 51 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549696085393*^9}],
+
+Cell[BoxData["\<\"model all, 56 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549709082806*^9}],
+
+Cell[BoxData["\<\"model dKd, 52 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305497374244347`*^9}],
+
+Cell[BoxData["\<\"model all, 57 - 95, 95, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549749873592*^9}],
+
+Cell[BoxData["\<\"model dKd, 53 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305497813549643`*^9}],
+
+Cell[BoxData["\<\"model all, 58 - 84, 84, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549786393084*^9}],
+
+Cell[BoxData["\<\"model dKd, 54 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549836481305*^9}],
+
+Cell[BoxData["\<\"model all, 59 - 93, 93, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549837812006*^9}],
+
+Cell[BoxData["\<\"model all, 60 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549901323306*^9}],
+
+Cell[BoxData["\<\"model dKd, 55 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549901730901*^9}],
+
+Cell[BoxData["\<\"model all, 61 - 90, 90, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305499591901207`*^9}],
+
+Cell[BoxData["\<\"model dKd, 56 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054996609592*^9}],
+
+Cell[BoxData["\<\"model all, 62 - 89, 89, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550024611699*^9}],
+
+Cell[BoxData["\<\"model dKd, 57 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305500372760687`*^9}],
+
+Cell[BoxData["\<\"model all, 63 - 94, 94, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305500897972507`*^9}],
+
+Cell[BoxData["\<\"model dKd, 58 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550109075536*^9}],
+
+Cell[BoxData["\<\"model all, 64 - 90, 90, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550142139243*^9}],
+
+Cell[BoxData["\<\"model dKd, 59 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550168609049*^9}],
+
+Cell[BoxData["\<\"model all, 65 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550204608563*^9}],
+
+Cell[BoxData["\<\"model dKd, 60 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550234211988*^9}],
+
+Cell[BoxData["\<\"model all, 66 - 89, 89, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550260618971*^9}],
+
+Cell[BoxData["\<\"model dKd, 61 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550292477934*^9}],
+
+Cell[BoxData["\<\"model all, 67 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550315746594*^9}],
+
+Cell[BoxData["\<\"model dKd, 62 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550371612213*^9}],
+
+Cell[BoxData["\<\"model all, 68 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550390582973*^9}],
+
+Cell[BoxData["\<\"model dKd, 63 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550424721725*^9}],
+
+Cell[BoxData["\<\"model all, 69 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550435840043*^9}],
+
+Cell[BoxData["\<\"model dKd, 64 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550480285568*^9}],
+
+Cell[BoxData["\<\"model all, 70 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305504876472063`*^9}],
+
+Cell[BoxData["\<\"model dKd, 65 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550531829508*^9}],
+
+Cell[BoxData["\<\"model all, 71 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305505343939247`*^9}],
+
+Cell[BoxData["\<\"model all, 72 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305505793902683`*^9}],
+
+Cell[BoxData["\<\"model dKd, 66 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305505826564074`*^9}],
+
+Cell[BoxData["\<\"model all, 73 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305506374652147`*^9}],
+
+Cell[BoxData["\<\"model dKd, 67 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550649526957*^9}],
+
+Cell[BoxData["\<\"model all, 74 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550690606842*^9}],
+
+Cell[BoxData["\<\"model dKd, 68 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550708998645*^9}],
+
+Cell[BoxData["\<\"model all, 75 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550738380568*^9}],
+
+Cell[BoxData["\<\"model dKd, 69 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305507640659647`*^9}],
+
+Cell[BoxData["\<\"model all, 76 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550789566503*^9}],
+
+Cell[BoxData["\<\"model dKd, 70 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550817673739*^9}],
+
+Cell[BoxData["\<\"model all, 77 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550840514841*^9}],
+
+Cell[BoxData["\<\"model dKd, 71 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550871818675*^9}],
+
+Cell[BoxData["\<\"model all, 78 - 84, 84, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550890209394*^9}],
+
+Cell[BoxData["\<\"model dKd, 72 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550929243656*^9}],
+
+Cell[BoxData["\<\"model all, 79 - 96, 96, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550946028553*^9}],
+
+Cell[BoxData["\<\"model dKd, 73 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550988902534*^9}],
+
+Cell[BoxData["\<\"model all, 80 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305509981887283`*^9}],
+
+Cell[BoxData["\<\"model dKd, 74 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551046661455*^9}],
+
+Cell[BoxData["\<\"model all, 81 - 90, 90, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551052186977*^9}],
+
+Cell[BoxData["\<\"model all, 82 - 86, 86, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551103098715*^9}],
+
+Cell[BoxData["\<\"model dKd, 75 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551104995273*^9}],
+
+Cell[BoxData["\<\"model all, 83 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305511575591707`*^9}],
+
+Cell[BoxData["\<\"model dKd, 76 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551166546187*^9}],
+
+Cell[BoxData["\<\"model all, 84 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305512109385777`*^9}],
+
+Cell[BoxData["\<\"model dKd, 77 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055122474949*^9}],
+
+Cell[BoxData["\<\"model all, 85 - 89, 89, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551264763069*^9}],
+
+Cell[BoxData["\<\"model dKd, 78 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305512871882343`*^9}],
+
+Cell[BoxData["\<\"model all, 86 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551323907545*^9}],
+
+Cell[BoxData["\<\"model dKd, 79 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551357701137*^9}],
+
+Cell[BoxData["\<\"model all, 87 - 86, 86, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551384255459*^9}],
+
+Cell[BoxData["\<\"model dKd, 80 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551421964738*^9}],
+
+Cell[BoxData["\<\"model all, 88 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305514418735027`*^9}],
+
+Cell[BoxData["\<\"model dKd, 81 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305514841032333`*^9}],
+
+Cell[BoxData["\<\"model all, 89 - 88, 88, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551500650654*^9}],
+
+Cell[BoxData["\<\"model dKd, 82 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551546871801*^9}],
+
+Cell[BoxData["\<\"model all, 90 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551555876686*^9}],
+
+Cell[BoxData["\<\"model dKd, 83 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551597847488*^9}],
+
+Cell[BoxData["\<\"model all, 91 - 95, 95, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305516040392313`*^9}],
+
+Cell[BoxData["\<\"model dKd, 84 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551654621559*^9}],
+
+Cell[BoxData["\<\"model all, 92 - 93, 93, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305516593507767`*^9}],
+
+Cell[BoxData["\<\"model all, 93 - 91, 91, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551717620749*^9}],
+
+Cell[BoxData["\<\"model dKd, 85 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305517183314457`*^9}],
+
+Cell[BoxData["\<\"model all, 94 - 92, 92, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551775915283*^9}],
+
+Cell[BoxData["\<\"model dKd, 86 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551781237267*^9}],
+
+Cell[BoxData["\<\"model all, 95 - 94, 94, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551835934112*^9}],
+
+Cell[BoxData["\<\"model dKd, 87 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551843239168*^9}],
+
+Cell[BoxData["\<\"model all, 96 - 87, 87, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551892371531*^9}],
+
+Cell[BoxData["\<\"model dKd, 88 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055190872231*^9}],
+
+Cell[BoxData["\<\"model all, 97 - 93, 93, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055195301413*^9}],
+
+Cell[BoxData["\<\"model dKd, 89 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551972950844*^9}],
+
+Cell[BoxData["\<\"model all, 98 - 86, 86, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055200901991*^9}],
+
+Cell[BoxData["\<\"model dKd, 90 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305520380853863`*^9}],
+
+Cell[BoxData["\<\"model all, 99 - 89, 89, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552068012603*^9}],
+
+Cell[BoxData["\<\"model dKd, 91 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552101173284*^9}],
+
+Cell[BoxData["\<\"model dKd, 92 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552161707869*^9}],
+
+Cell[BoxData["\<\"model dKd, 93 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552221759694*^9}],
+
+Cell[BoxData["\<\"model dKd, 94 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552283830818*^9}],
+
+Cell[BoxData["\<\"model dKd, 95 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305523470107203`*^9}],
+
+Cell[BoxData["\<\"model dKd, 96 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552410608334*^9}],
+
+Cell[BoxData["\<\"model dKd, 97 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552480103541*^9}],
+
+Cell[BoxData["\<\"model dKd, 98 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305525535365*^9}],
+
+Cell[BoxData["\<\"model dKd, 99 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552622306782*^9}]
 }, Open  ]],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"6496.930211`", ",", "Null"}], "}"}]], "Output",
+  RowBox[{"4732.307514`", ",", "Null"}], "}"}]], "Output",
  CellChangeTimes->{
   3.695543857895523*^9, 3.695547406324583*^9, 3.695548231030645*^9, 
    3.695549138589231*^9, 3.695552800862327*^9, 3.695558904432675*^9, 
@@ -331,14 +1140,15 @@ Cell[BoxData[
    3.709442948426729*^9, 3.7094429690417347`*^9}, 3.709443027307425*^9, 
    3.7094431811286*^9, {3.709443308404669*^9, 3.70944333080732*^9}, 
    3.7094433805699873`*^9, 3.709445551775827*^9, 3.709549205653784*^9, 
-   3.709549309094804*^9, 3.70955940674872*^9, 3.709624010866346*^9}]
+   3.709549309094804*^9, 3.70955940674872*^9, 3.709624010866346*^9, 
+   3.7303556042795477`*^9, 3.730380199808441*^9, 3.730552625292407*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 Evaluator->"Local2",
-WindowSize->{1262, 931},
-WindowMargins->{{273, Automatic}, {60, 57}},
+WindowSize->{954, 573},
+WindowMargins->{{Automatic, 3}, {-149, 624}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -354,20 +1164,223 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 261, 4, 32, "Input"],
-Cell[822, 26, 1589, 34, 237, "Input"],
 Cell[CellGroupData[{
-Cell[2436, 64, 170, 2, 65, "Section"],
-Cell[CellGroupData[{
-Cell[2631, 70, 293, 7, 70, "Subsection"],
-Cell[CellGroupData[{
-Cell[2949, 81, 10319, 213, 1097, "Input"],
-Cell[CellGroupData[{
-Cell[13293, 298, 136, 4, 26, "Print"],
-Cell[13432, 304, 136, 4, 26, "Print"],
-Cell[13571, 310, 95, 2, 24, "Print"],
-Cell[13669, 314, 95, 2, 24, "Print"]
+Cell[844, 28, 1633, 35, 237, "Input"],
+Cell[2480, 65, 209, 3, 32, "Output"]
 }, Open  ]],
-Cell[13779, 319, 891, 14, 34, "Output"]
+Cell[CellGroupData[{
+Cell[2726, 73, 170, 2, 65, "Section"],
+Cell[CellGroupData[{
+Cell[2921, 79, 293, 7, 70, "Subsection"],
+Cell[CellGroupData[{
+Cell[3239, 90, 10369, 213, 1120, "Input"],
+Cell[CellGroupData[{
+Cell[13633, 307, 138, 4, 26, "Print"],
+Cell[13774, 313, 136, 4, 26, "Print"],
+Cell[13913, 319, 95, 2, 24, "Print"],
+Cell[14011, 323, 95, 2, 24, "Print"],
+Cell[14109, 327, 123, 2, 26, "Print"],
+Cell[14235, 331, 127, 2, 26, "Print"],
+Cell[14365, 335, 123, 2, 26, "Print"],
+Cell[14491, 339, 125, 2, 26, "Print"],
+Cell[14619, 343, 123, 2, 26, "Print"],
+Cell[14745, 347, 123, 2, 26, "Print"],
+Cell[14871, 351, 125, 2, 26, "Print"],
+Cell[14999, 355, 124, 2, 26, "Print"],
+Cell[15126, 359, 122, 2, 26, "Print"],
+Cell[15251, 363, 125, 2, 26, "Print"],
+Cell[15379, 367, 123, 2, 26, "Print"],
+Cell[15505, 371, 125, 2, 26, "Print"],
+Cell[15633, 375, 123, 2, 26, "Print"],
+Cell[15759, 379, 125, 2, 26, "Print"],
+Cell[15887, 383, 123, 2, 26, "Print"],
+Cell[16013, 387, 125, 2, 26, "Print"],
+Cell[16141, 391, 123, 2, 26, "Print"],
+Cell[16267, 395, 125, 2, 26, "Print"],
+Cell[16395, 399, 123, 2, 26, "Print"],
+Cell[16521, 403, 126, 2, 26, "Print"],
+Cell[16650, 407, 125, 2, 26, "Print"],
+Cell[16778, 411, 124, 2, 26, "Print"],
+Cell[16905, 415, 126, 2, 26, "Print"],
+Cell[17034, 419, 126, 2, 26, "Print"],
+Cell[17163, 423, 128, 2, 26, "Print"],
+Cell[17294, 427, 124, 2, 26, "Print"],
+Cell[17421, 431, 124, 2, 26, "Print"],
+Cell[17548, 435, 124, 2, 26, "Print"],
+Cell[17675, 439, 126, 2, 26, "Print"],
+Cell[17804, 443, 126, 2, 26, "Print"],
+Cell[17933, 447, 126, 2, 26, "Print"],
+Cell[18062, 451, 124, 2, 26, "Print"],
+Cell[18189, 455, 126, 2, 26, "Print"],
+Cell[18318, 459, 123, 2, 26, "Print"],
+Cell[18444, 463, 124, 2, 26, "Print"],
+Cell[18571, 467, 126, 2, 26, "Print"],
+Cell[18700, 471, 126, 2, 26, "Print"],
+Cell[18829, 475, 128, 2, 26, "Print"],
+Cell[18960, 479, 124, 2, 26, "Print"],
+Cell[19087, 483, 126, 2, 26, "Print"],
+Cell[19216, 487, 124, 2, 26, "Print"],
+Cell[19343, 491, 123, 2, 26, "Print"],
+Cell[19469, 495, 123, 2, 26, "Print"],
+Cell[19595, 499, 126, 2, 26, "Print"],
+Cell[19724, 503, 124, 2, 26, "Print"],
+Cell[19851, 507, 126, 2, 26, "Print"],
+Cell[19980, 511, 126, 2, 26, "Print"],
+Cell[20109, 515, 126, 2, 26, "Print"],
+Cell[20238, 519, 124, 2, 26, "Print"],
+Cell[20365, 523, 126, 2, 26, "Print"],
+Cell[20494, 527, 124, 2, 26, "Print"],
+Cell[20621, 531, 124, 2, 26, "Print"],
+Cell[20748, 535, 125, 2, 26, "Print"],
+Cell[20876, 539, 123, 2, 26, "Print"],
+Cell[21002, 543, 126, 2, 26, "Print"],
+Cell[21131, 547, 124, 2, 26, "Print"],
+Cell[21258, 551, 128, 2, 26, "Print"],
+Cell[21389, 555, 124, 2, 26, "Print"],
+Cell[21516, 559, 126, 2, 26, "Print"],
+Cell[21645, 563, 124, 2, 26, "Print"],
+Cell[21772, 567, 126, 2, 26, "Print"],
+Cell[21901, 571, 124, 2, 26, "Print"],
+Cell[22028, 575, 126, 2, 26, "Print"],
+Cell[22157, 579, 124, 2, 26, "Print"],
+Cell[22284, 583, 128, 2, 26, "Print"],
+Cell[22415, 587, 124, 2, 26, "Print"],
+Cell[22542, 591, 128, 2, 26, "Print"],
+Cell[22673, 595, 124, 2, 26, "Print"],
+Cell[22800, 599, 126, 2, 26, "Print"],
+Cell[22929, 603, 123, 2, 26, "Print"],
+Cell[23055, 607, 126, 2, 26, "Print"],
+Cell[23184, 611, 124, 2, 26, "Print"],
+Cell[23311, 615, 126, 2, 26, "Print"],
+Cell[23440, 619, 124, 2, 26, "Print"],
+Cell[23567, 623, 126, 2, 26, "Print"],
+Cell[23696, 627, 124, 2, 26, "Print"],
+Cell[23823, 631, 125, 2, 26, "Print"],
+Cell[23951, 635, 124, 2, 26, "Print"],
+Cell[24078, 639, 126, 2, 26, "Print"],
+Cell[24207, 643, 124, 2, 26, "Print"],
+Cell[24334, 647, 126, 2, 26, "Print"],
+Cell[24463, 651, 126, 2, 26, "Print"],
+Cell[24592, 655, 128, 2, 26, "Print"],
+Cell[24723, 659, 124, 2, 26, "Print"],
+Cell[24850, 663, 126, 2, 26, "Print"],
+Cell[24979, 667, 124, 2, 26, "Print"],
+Cell[25106, 671, 126, 2, 26, "Print"],
+Cell[25235, 675, 124, 2, 26, "Print"],
+Cell[25362, 679, 124, 2, 26, "Print"],
+Cell[25489, 683, 126, 2, 26, "Print"],
+Cell[25618, 687, 126, 2, 26, "Print"],
+Cell[25747, 691, 128, 2, 26, "Print"],
+Cell[25878, 695, 124, 2, 26, "Print"],
+Cell[26005, 699, 128, 2, 26, "Print"],
+Cell[26136, 703, 124, 2, 26, "Print"],
+Cell[26263, 707, 126, 2, 26, "Print"],
+Cell[26392, 711, 124, 2, 26, "Print"],
+Cell[26519, 715, 126, 2, 26, "Print"],
+Cell[26648, 719, 124, 2, 26, "Print"],
+Cell[26775, 723, 128, 2, 26, "Print"],
+Cell[26906, 727, 124, 2, 26, "Print"],
+Cell[27033, 731, 128, 2, 26, "Print"],
+Cell[27164, 735, 126, 2, 26, "Print"],
+Cell[27293, 739, 126, 2, 26, "Print"],
+Cell[27422, 743, 123, 2, 26, "Print"],
+Cell[27548, 747, 126, 2, 26, "Print"],
+Cell[27677, 751, 124, 2, 26, "Print"],
+Cell[27804, 755, 126, 2, 26, "Print"],
+Cell[27933, 759, 124, 2, 26, "Print"],
+Cell[28060, 763, 128, 2, 26, "Print"],
+Cell[28191, 767, 124, 2, 26, "Print"],
+Cell[28318, 771, 128, 2, 26, "Print"],
+Cell[28449, 775, 124, 2, 26, "Print"],
+Cell[28576, 779, 124, 2, 26, "Print"],
+Cell[28703, 783, 124, 2, 26, "Print"],
+Cell[28830, 787, 124, 2, 26, "Print"],
+Cell[28957, 791, 126, 2, 26, "Print"],
+Cell[29086, 795, 126, 2, 26, "Print"],
+Cell[29215, 799, 125, 2, 26, "Print"],
+Cell[29343, 803, 124, 2, 26, "Print"],
+Cell[29470, 807, 128, 2, 26, "Print"],
+Cell[29601, 811, 126, 2, 26, "Print"],
+Cell[29730, 815, 126, 2, 26, "Print"],
+Cell[29859, 819, 124, 2, 26, "Print"],
+Cell[29986, 823, 124, 2, 26, "Print"],
+Cell[30113, 827, 124, 2, 26, "Print"],
+Cell[30240, 831, 126, 2, 26, "Print"],
+Cell[30369, 835, 124, 2, 26, "Print"],
+Cell[30496, 839, 126, 2, 26, "Print"],
+Cell[30625, 843, 124, 2, 26, "Print"],
+Cell[30752, 847, 126, 2, 26, "Print"],
+Cell[30881, 851, 124, 2, 26, "Print"],
+Cell[31008, 855, 126, 2, 26, "Print"],
+Cell[31137, 859, 124, 2, 26, "Print"],
+Cell[31264, 863, 126, 2, 26, "Print"],
+Cell[31393, 867, 126, 2, 26, "Print"],
+Cell[31522, 871, 126, 2, 26, "Print"],
+Cell[31651, 875, 126, 2, 26, "Print"],
+Cell[31780, 879, 126, 2, 26, "Print"],
+Cell[31909, 883, 128, 2, 26, "Print"],
+Cell[32040, 887, 126, 2, 26, "Print"],
+Cell[32169, 891, 126, 2, 26, "Print"],
+Cell[32298, 895, 124, 2, 26, "Print"],
+Cell[32425, 899, 126, 2, 26, "Print"],
+Cell[32554, 903, 124, 2, 26, "Print"],
+Cell[32681, 907, 128, 2, 26, "Print"],
+Cell[32812, 911, 124, 2, 26, "Print"],
+Cell[32939, 915, 126, 2, 26, "Print"],
+Cell[33068, 919, 124, 2, 26, "Print"],
+Cell[33195, 923, 124, 2, 26, "Print"],
+Cell[33322, 927, 124, 2, 26, "Print"],
+Cell[33449, 931, 126, 2, 26, "Print"],
+Cell[33578, 935, 124, 2, 26, "Print"],
+Cell[33705, 939, 126, 2, 26, "Print"],
+Cell[33834, 943, 126, 2, 26, "Print"],
+Cell[33963, 947, 126, 2, 26, "Print"],
+Cell[34092, 951, 124, 2, 26, "Print"],
+Cell[34219, 955, 124, 2, 26, "Print"],
+Cell[34346, 959, 126, 2, 26, "Print"],
+Cell[34475, 963, 126, 2, 26, "Print"],
+Cell[34604, 967, 124, 2, 26, "Print"],
+Cell[34731, 971, 126, 2, 26, "Print"],
+Cell[34860, 975, 125, 2, 26, "Print"],
+Cell[34988, 979, 124, 2, 26, "Print"],
+Cell[35115, 983, 128, 2, 26, "Print"],
+Cell[35246, 987, 124, 2, 26, "Print"],
+Cell[35373, 991, 126, 2, 26, "Print"],
+Cell[35502, 995, 124, 2, 26, "Print"],
+Cell[35629, 999, 126, 2, 26, "Print"],
+Cell[35758, 1003, 126, 2, 26, "Print"],
+Cell[35887, 1007, 126, 2, 26, "Print"],
+Cell[36016, 1011, 124, 2, 26, "Print"],
+Cell[36143, 1015, 124, 2, 26, "Print"],
+Cell[36270, 1019, 124, 2, 26, "Print"],
+Cell[36397, 1023, 126, 2, 26, "Print"],
+Cell[36526, 1027, 126, 2, 26, "Print"],
+Cell[36655, 1031, 126, 2, 26, "Print"],
+Cell[36784, 1035, 126, 2, 26, "Print"],
+Cell[36913, 1039, 124, 2, 26, "Print"],
+Cell[37040, 1043, 128, 2, 26, "Print"],
+Cell[37171, 1047, 124, 2, 26, "Print"],
+Cell[37298, 1051, 126, 2, 26, "Print"],
+Cell[37427, 1055, 124, 2, 26, "Print"],
+Cell[37554, 1059, 126, 2, 26, "Print"],
+Cell[37683, 1063, 124, 2, 26, "Print"],
+Cell[37810, 1067, 125, 2, 26, "Print"],
+Cell[37938, 1071, 123, 2, 26, "Print"],
+Cell[38064, 1075, 126, 2, 26, "Print"],
+Cell[38193, 1079, 123, 2, 26, "Print"],
+Cell[38319, 1083, 128, 2, 26, "Print"],
+Cell[38450, 1087, 124, 2, 26, "Print"],
+Cell[38577, 1091, 126, 2, 26, "Print"],
+Cell[38706, 1095, 126, 2, 26, "Print"],
+Cell[38835, 1099, 126, 2, 26, "Print"],
+Cell[38964, 1103, 126, 2, 26, "Print"],
+Cell[39093, 1107, 128, 2, 26, "Print"],
+Cell[39224, 1111, 126, 2, 26, "Print"],
+Cell[39353, 1115, 126, 2, 26, "Print"],
+Cell[39482, 1119, 124, 2, 26, "Print"],
+Cell[39609, 1123, 126, 2, 26, "Print"]
+}, Open  ]],
+Cell[39750, 1128, 963, 15, 34, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

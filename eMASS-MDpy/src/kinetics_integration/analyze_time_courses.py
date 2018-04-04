@@ -38,8 +38,11 @@ def plot_timecourses(data_df_nodKd, data_df_dKd, file_out_base, species_list, en
     elif not legend_label and not mets_order:
         legend_label = species_list
 
+    legend_label = [label.upper() for label in legend_label]
+
     n_species = len(species_list)
     fig, ax_list = plt.subplots(n_species, 2,  figsize=(6.5, 5), sharex=True, sharey=False)
+    #fig, ax_list = plt.subplots(n_species, 2,  figsize=(6.5, 7), sharex=True, sharey=False)
 
     for i, met in enumerate(mets_order):
         ax_list[i, 0].plot(data_df_nodKd['t'].values, data_df_nodKd[met].values, c=COLOR_LIST[i])
@@ -51,18 +54,17 @@ def plot_timecourses(data_df_nodKd, data_df_dKd, file_out_base, species_list, en
             ax_list[i, 1].set_ylim(y_lims[i])
         ax_list[i, 1].set_yticklabels('')
 
-    plt.sca(ax_list[0, 0])
-    fig.gca().get_yaxis().set_major_formatter(ScalarFormatter(useOffset=False))
-    plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-    plt.sca(ax_list[1, 0])
-    fig.gca().get_yaxis().set_major_formatter(ScalarFormatter(useOffset=False))
-    plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+    for i in range(n_species):
+        plt.sca(ax_list[i, 0])
+        fig.gca().get_yaxis().set_major_formatter(ScalarFormatter(useOffset=False))
+        plt.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
+
 
     fig.add_subplot(111, frameon=False)
     # hide tick and tick label of the big axes
     plt.tick_params(labelcolor='none', top='off', bottom='off', left='off', right='off')
     plt.xlabel("Time (s)")
-    plt.ylabel("Concentration (mol/L)")
+    plt.ylabel("Concentration (M)")
 
     fig.legend(
         [plt.Line2D((0, 1), (0, 0), color=COLOR_LIST[i], linestyle='-', linewidth=2) for i in range(len(species_list))],
@@ -70,10 +72,12 @@ def plot_timecourses(data_df_nodKd, data_df_dKd, file_out_base, species_list, en
         numpoints=1,
         ncol=2,
         loc='center',
-        bbox_to_anchor=(0.55, 0.95))
+        bbox_to_anchor=(0.5, 0.94))
 
-    fig.subplots_adjust(bottom=0.15, top=0.9, left=0.12, right=0.96, wspace=0.16, hspace=0.2)
+    #fig.subplots_adjust(bottom=0.1, top=0.88, left=0.12, right=0.96, wspace=0.15, hspace=0.25)
+    fig.subplots_adjust(bottom=0.15, top=0.88, left=0.12, right=0.96, wspace=0.15, hspace=0.25)
     plt.savefig(''.join([file_out_base, '_', str(ensemble_i), '_', str(Keq), '.pdf']))
+    plt.savefig(''.join([file_out_base, '_', str(ensemble_i), '_', str(Keq), '.png']))
     plt.close()
 
 
@@ -85,7 +89,7 @@ def _subplot_filtered(ax, data_df, species_list, x_lims, y_lims, title):
     ax.set_ylim(y_lims)
     ax.set_xlabel('Time (s)')
     # ax.set_ylabel('Flux (mol/L.s)')
-    ax.set_ylabel('Concentration (mol/L)')
+    ax.set_ylabel('Concentration (M')
     ax.set_title(title)
 
 
@@ -130,6 +134,7 @@ def _plot_single(data_df, model_types, species_list, colorlist_swapped, file_out
     #plt.tight_layout()
     #plt.xticks(rotation=70)
     plt.savefig(''.join([file_out_base, '_single.pdf']))
+    plt.savefig(''.join([file_out_base, '_single.png']))
     plt.close()
 
     return fig, ax
@@ -186,6 +191,7 @@ def _plot_subplots(data_df, model_types, species_list, colorlist_swapped, file_o
     fig.subplots_adjust(top=0.85, wspace=0.4, hspace=0.5)
 
     plt.savefig(''.join([file_out_base, '_multiple.pdf']))
+    plt.savefig(''.join([file_out_base, '_multiple.png']))
     plt.close()
 
     return fig, ax
@@ -262,7 +268,7 @@ def plot_single_time_point_boxplot(data_df, file_out_base, species_list, y_lims,
                     palette=colorlist_swapped, ax=ax[species_i])
 
         ax[species_i].set_xlabel(species)
-        ax[species_i].set_ylabel('Concentration (mol/L)')
+        ax[species_i].set_ylabel('Concentration (M)')
         if y_lims:
             ax[species_i].set_ylim(y_lims[species_i])
         ax[species_i].legend_.remove()
@@ -529,7 +535,7 @@ def time_course_analysis(file_in_base, file_out_base, species_list, Keq, subs_li
             _save_dic_as_dataframe(median_dic_dKd, file_out_median, label_median_dKd)
             _save_dic_as_dataframe(median_dic_nodKd, file_out_median, label_median_nodKd)
 
-        y_label = 'Median concentration at steady-state (mol/L)'
+        y_label = 'Median concentration at steady-state (M)'
         _plot_aggregated_boxplots(median_dic_dKd, median_dic_nodKd, file_out_median, y_lims, y_label, plot_spacings,
                                   fig_size)
 

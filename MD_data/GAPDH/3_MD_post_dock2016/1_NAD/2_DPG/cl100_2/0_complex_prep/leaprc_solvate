@@ -204,14 +204,14 @@ loadamberparams /home/marta/GAPDH/0_Ligands_param/2_13DPG/13DPG.frcmod
 loadOff /home/marta/GAPDH/0_Ligands_param/2_13DPG/13DPG.off
 
 #NAD
-loadamberparams /home/marta/GAPDH/0_Ligands_param/3_NAD/frcmod.NAD
-loadOff /home/marta/GAPDH/0_Ligands_param/3_NAD/NAD.off
+loadamberparams /home/marta/GAPDH/0_Ligands_param/5_NADH/NADH.frcmod
+loadOff /home/marta/GAPDH/0_Ligands_param/5_NADH/NADH.off
 
 ###########################################################
 # load in PDB structure
 # 
 set default PBRadii bondi
-mol = loadpdb GAPDH_WT_NAD-026_receptor_13DPG_docked.pdb
+mol = loadpdb GAPDH_WT_NAD-139_receptor_13DPG_docked.pdb
 ###########################################################
 
 ###########################################################

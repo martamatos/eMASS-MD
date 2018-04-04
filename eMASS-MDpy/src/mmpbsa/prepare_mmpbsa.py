@@ -396,21 +396,36 @@ def mmpbsa_per_frame_eno_ab():
     enzyme = 'ENO_AB'
     form = 'MG'
     form_folder = '_'.join(['1', form])
-    ligand = '2PG'
-    ligand_folder = '_'.join(['1', ligand])
+    ligand = 'PEP'
+    ligand_folder = '_'.join(['2', ligand])
 
     #cl_frames = OrderedDict((('cl101', 70), ('cl302', 70), ('cl322', 140)))  # 725 G6PD
-    cl_frames = {'cl000': 500}  # 725 G6PD
+    cl_frames = {#'cl302_11': 70, 'cl302_12': 70, 'cl302_13': 70, 'cl302_14': 70, 'cl302_15': 70}
+                #'cl302_16': 70, 'cl302_17': 70, 'cl302_19': 70, 'cl302_20': 70,
+                #'cl202': 70} #, 'cl302_18': 70,
+                #'cl202_2': 70, 'cl202_3': 70, 'cl202_4': 70, 'cl202_5': 70,
+                #'cl202_6': 70} #, 
+                'cl302_16': 70, 'cl302_17': 70, 'cl302_19': 70, 'cl302_20': 70}
+
+    """cl_frames = {'cl302': 70, 'cl302_2': 70, 'cl302_3': 70, 'cl302_4': 70, 'cl302_5': 70,
+                 'cl302_6': 70, 'cl302_7': 70, 'cl302_8': 70, 'cl302_9': 70,
+                 'cl312': 70, 'cl312_2': 70, 'cl312_3': 70, 'cl312_4': 70, 'cl312_5': 70,
+                 'cl312_6': 70, 'cl312_7': 70, 'cl312_8': 70, 'cl312_9': 70, 'cl312_10': 70,
+                 'cl402': 70, 'cl402_2': 70, 'cl402_3': 70, 'cl402_4': 70, 'cl402_5': 70,
+                 'cl402_6': 70, 'cl402_7': 70, 'cl402_8': 70, 'cl402_9': 70, 'cl402_10': 70,
+                 'cl313': 70, 'cl313_2': 70, 'cl313_3': 70, 'cl313_4': 70, 'cl313_5': 70,
+                 'cl313_6': 70, 'cl313_7': 70, 'cl313_8': 70, 'cl313_9': 70, 'cl313_10': 70}"""
+
     # md_sim_list = ['1']
-    md_sim_list = ['combined']
+    md_sim_list = ['1' for i in range(len(cl_frames))]
 
     base_form = '_'.join(['ENO_AB_WT_APO', ligand, 'docked'])
     base_dir = '/'.join(['/home/marta', enzyme])
     scripts_dir = '/home/marta/scripts/mmpbsa_scripts'
     cpp_names = ['complex_solv', 'complex_vac', 'ligand_vac', 'receptor_vac']
-    traj_format_list = ['dcd']
+    traj_format_list = ['crd' for i in range(len(cl_frames))]
     traj_format_i = 0
-    traj_type = '100'
+    traj_type = '10'
 
     for i, (cl, n_frames) in enumerate(cl_frames.items()):
         traj_format = traj_format_list[i]
@@ -437,7 +452,6 @@ def mmpbsa_per_frame_eno_ab():
                 frame_dir = ''.join([mmpbsa_dir, '/frame_', str(frame)])
 
                 # generate cpptraj files
-                #ligand = 'DPG,NAD'
                 prep_cpptraj_files(mmpbsa_dir, md_traj_name, ligand, cpp_names, frame)
 
                 # generate pdb files for complex_solv/vac receptor/ligand_vac
@@ -447,8 +461,8 @@ def mmpbsa_per_frame_eno_ab():
 
                 # prep the complex for mmpbsa
                 ligands = [ligand, 'MG']
-                #ligand_params_list = ['/'.join([base_dir, '0_Ligands_param', '2_PEP_liz']),
-                ligand_params_list = ['/'.join([base_dir, '0_Ligands_param', '7_2PG_liz']),
+                ligand_params_list = ['/'.join([base_dir, '0_Ligands_param', '2_PEP_liz']),
+                #ligand_params_list = ['/'.join([base_dir, '0_Ligands_param', '7_2PG_liz']),
                                       '/'.join([base_dir, '0_Ligands_param', '3_MG'])]
                 #ligand_params = '/'.join([base_dir, '0_Ligands_param', '3_S7P_linear_noopt'])
 
@@ -484,7 +498,7 @@ def mmpbsa_per_frame_eno_ab():
                 rmtree('0_complex_prep')
                 # mmpbsa takes about 1min
                 #time.sleep(15)
-
+        """
         else:
 
             mmpbsa_dir = '/'.join([mmpbsa_base_dir,  cl])
@@ -537,7 +551,7 @@ def mmpbsa_per_frame_eno_ab():
             # run mmpbsa for the current frame
             os.chmod('./run_mmpbsa.sh', 0755)
             subprocess.call('nohup ./run_mmpbsa.sh &', shell=True)
-
+        """
         traj_format_i += 1
 
 
@@ -553,16 +567,23 @@ def mmpbsa_per_frame_gapdh():
     ligand = '13DPG'
     ligand_folder = '_'.join(['2', ligand])
 
-    cl_frames = {'cl220_2': 140}  # 725 G6PD
-    md_sim_list = ['1']
+    cl_frames = {'cl201': 70, 'cl201_2': 70, 'cl201_3': 70, 'cl201_4': 70, 'cl201_5': 70}
+    #cl_frames = {'cl001': 70, 'cl001_2': 70, 'cl001_3': 70, 'cl001_4': 70, 'cl001_5': 70,
+    #             'cl012': 70, 'cl012_2': 70, 'cl012_3': 70, 'cl012_4': 70, 'cl012_5': 70,
+    #             'cl010': 70, 'cl010_2': 70, 'cl010_3': 70, 'cl010_4': 70, 'cl010_5': 70,
+    #             'cl000': 70, 'cl000_2': 70, 'cl000_3': 70, 'cl000_4': 70, 'cl000_5': 70}
+
+
+    md_sim_list = ['1' for i in range(len(cl_frames))]
 
     base_form = '_'.join(['GAPDH_WT_NAD', ligand, 'docked'])
+    #base_form = '_'.join(['GAPDH_WT_NAD_rem3PG', ligand, 'docked'])
     base_dir = '/'.join(['/home/marta', enzyme])
     scripts_dir = '/home/marta/scripts/mmpbsa_scripts'
     cpp_names = ['complex_solv', 'complex_vac', 'ligand_vac', 'receptor_vac']
-    traj_format_list = ['crd']
+    traj_format_list = ['crd' for i in range(len(cl_frames))]
     traj_format_i = 0
-    traj_type = '100'
+    traj_type = '10'
 
     for i, (cl, n_frames) in enumerate(cl_frames.items()):
         traj_format = traj_format_list[i]
@@ -590,6 +611,7 @@ def mmpbsa_per_frame_gapdh():
 
                 # generate cpptraj files
                 ligand = 'NAD,DPG'
+                #ligand = 'NAD,G3P'
                 prep_cpptraj_files(mmpbsa_dir, md_traj_name, ligand, cpp_names, frame)
 
                 # generate pdb files for complex_solv/vac receptor/ligand_vac
@@ -600,7 +622,7 @@ def mmpbsa_per_frame_gapdh():
                 # prep the complex for mmpbsa
                 #ligands = ['G3P', 'NAD']
                 ligands = ['13DPG', 'NAD']
-                #ligands = ['NAD']
+
                 #ligand_params_list = ['/'.join([base_dir, '0_Ligands_param', '1_G3P']),
                 #                      '/'.join([base_dir, '0_Ligands_param', '3_NAD'])]
                 ligand_params_list = ['/'.join([base_dir, '0_Ligands_param', '2_13DPG']),
@@ -707,10 +729,12 @@ def mmpbsa_per_frame_talb():
     ligand = 'F6P'
     ligand_folder = '_'.join(['2', ligand])
 
-    #cl_frames = OrderedDict((('cl101', 70), ('cl302', 70), ('cl322', 140)))  # 725 G6PD
-    cl_frames = {'cl311_2': 140}  # 725 G6PD
+    cl_frames = {'cl201': 70, 'cl201_2': 70, 'cl201_3': 70, 'cl201_4': 70, 'cl201_5': 70,
+                 'cl311': 70, 'cl311_2': 70, 'cl311_3': 70, 'cl311_4': 70, 'cl311_5': 70,
+                 'cl301': 70, 'cl301_2': 70, 'cl301_3': 70, 'cl301_4': 70, 'cl301_5': 70}
+
     # md_sim_list = ['1']
-    md_sim_list = ['1']
+    md_sim_list = ['1' for i in range(len(cl_frames))]
 
     #base_form = '_'.join(['TALB_WT_APO', ligand, 'docked'])
     base_form = '_'.join(['TALB_WT_HALO_S7P_remS7P', ligand, 'docked'])
@@ -718,9 +742,9 @@ def mmpbsa_per_frame_talb():
     base_dir = '/'.join(['/home/marta', enzyme])
     scripts_dir = '/home/marta/scripts/mmpbsa_scripts'
     cpp_names = ['complex_solv', 'complex_vac', 'ligand_vac', 'receptor_vac']
-    traj_format_list = ['crd']
+    traj_format_list = ['crd' for i in range(len(cl_frames))]
     traj_format_i = 0
-    traj_type = '100'
+    traj_type = '10'
 
     for i, (cl, n_frames) in enumerate(cl_frames.items()):
         traj_format = traj_format_list[i]
@@ -747,7 +771,7 @@ def mmpbsa_per_frame_talb():
                 frame_dir = ''.join([mmpbsa_dir, '/frame_', str(frame)])
 
                 # generate cpptraj files
-                #ligand = 'S7P'
+                ligand = 'F6P'
                 prep_cpptraj_files(mmpbsa_dir, md_traj_name, ligand, cpp_names, frame)
 
                 # generate pdb files for complex_solv/vac receptor/ligand_vac
@@ -793,7 +817,7 @@ def mmpbsa_per_frame_talb():
                 # mmpbsa takes about 1min
                 #time.sleep(15)
 
-        else:
+        """else:
 
             mmpbsa_dir = '/'.join([mmpbsa_base_dir,  cl])
             os.chdir(scripts_dir)
@@ -843,7 +867,7 @@ def mmpbsa_per_frame_talb():
 
             # run mmpbsa for the current frame
             os.chmod('./run_mmpbsa.sh', 0755)
-            subprocess.call('nohup ./run_mmpbsa.sh &', shell=True)
+            subprocess.call('nohup ./run_mmpbsa.sh &', shell=True)"""
 
         traj_format_i += 1
 

@@ -211,7 +211,7 @@ loadOff /home/marta/GAPDH/0_Ligands_param/5_NADH/NADH.off
 # load in PDB structure
 # 
 set default PBRadii bondi
-mol = loadpdb GAPDH_WT_NAD_rem3PG-010_receptor_13DPG_docked.pdb
+mol = loadpdb GAPDH_WT_NAD_rem3PG-140_receptor_13DPG_docked.pdb
 ###########################################################
 
 ###########################################################
@@ -225,9 +225,9 @@ mol = loadpdb GAPDH_WT_NAD_rem3PG-010_receptor_13DPG_docked.pdb
 charge mol
 addIons mol Na+ 0
 solvatebox mol TIP3PBOX 12
-savepdb mol GAPDH_WT_NAD_rem3PG_13DPG_docked_watbox.pdb
+savepdb mol GAPDH_WT_NAD_remG3P_13DPG_docked_watbox.pdb
 
-saveamberparm mol GAPDH_WT_NAD_rem3PG_13DPG_docked.prmtop GAPDH_WT_NAD_rem3PG_13DPG_docked.inpcrd
+saveamberparm mol GAPDH_WT_NAD_remG3P_13DPG_docked.prmtop GAPDH_WT_NAD_remG3P_13DPG_docked.inpcrd
 ###########################################################
 
 

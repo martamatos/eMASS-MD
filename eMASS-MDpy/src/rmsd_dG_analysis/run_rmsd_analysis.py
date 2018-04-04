@@ -24,14 +24,15 @@ def gather_rmsd_plots(root_dir, form_list, ligand_list, cluster_list, n_frames_p
     ligand_folder_list = ['_'.join([str(i+1), ligand]) for i, ligand in enumerate(ligand_list)]
 
     n_rows = len(form_list)*n_frames_per_form_per_ligand
-    fig, ax = plt.subplots(nrows=n_rows, ncols=len(ligand_list)*2, figsize=[25, n_rows*3], sharex=False, sharey=True)
+
+    fig, ax = plt.subplots(nrows=n_rows, ncols=len(ligand_list)*2, figsize=[25, n_rows*4], sharex=False, sharey=True)
     min_rmsd = 10**10
     max_rmsd = -10**10
 
     for ligand_i in range(len(ligand_list)):
         for form_i in range(len(form_list)):
             for cluster_i, cluster in enumerate(cluster_list[form_i][ligand_i]):
-                for group_i, group in enumerate([ligand_list[ligand_i], 'backbone_100']):
+                for group_i, group in enumerate([ligand_list[ligand_i], 'backbone_10']):
 
                     if group == 'S7P_linear':
                         group = 'S7P'
@@ -92,7 +93,7 @@ def plot_rmsd_values_scatter(data_df, file_out, substrate, product):
     xtick_labels_product.insert(0, '')
 
 
-    fig, ax = plt.subplots(nrows=2, ncols=2, figsize=(8,6), sharex=True, sharey=False)
+    fig, ax = plt.subplots(nrows=2, ncols=2, figsize=(14,10), sharex=True, sharey=False)
 
     ax[0, 0].errorbar(x=range(len(rmsd_backbone_substrate_avg_list)), y=rmsd_backbone_substrate_avg_list, yerr=rmsd_backbone_substrate_std_list, fmt='o',  color='#377eb8', markersize=8)
     ax[1, 0].errorbar(x=range(len(rmsd_substrate_avg_list)), y=rmsd_substrate_avg_list, yerr=rmsd_substrate_std_list, fmt='o',  color='#377eb8', markersize=8)
@@ -150,7 +151,7 @@ def sumup_rmsd(form_list, ligand_list, cluster_list, root_dir, file_out):
     for form_i in range(len(form_list)):
         for ligand_i in range(len(ligand_list)):
             for cluster_i, cluster in enumerate(cluster_list[form_i][ligand_i]):
-                for group_i, group in enumerate([ligand_list[ligand_i], 'backbone_100']):
+                for group_i, group in enumerate([ligand_list[ligand_i], 'backbone_10']):
 
                     if group == 'S7P_linear':
                         group = 'S7P'
@@ -159,7 +160,7 @@ def sumup_rmsd(form_list, ligand_list, cluster_list, root_dir, file_out):
                     file_name = ''.join(['rmsd_', group, '_', cluster])
                     file_in = ''.join([base_dir, file_name, '.dat'])
 
-                    if group == 'backbone_100':
+                    if group == 'backbone_10':
                         group = 'backbone'
                     if group == 'S7P':
                         group = 'S7P_linear'
@@ -223,16 +224,32 @@ def analyze_GAPD(base_dir):
     file_out = ''.join([base_dir, '/GAPDH/3_MD_post_dock2016/GAPD_rmsd_sumup'])
     form_list = ['NAD', 'NAD_remG3P']
     ligand_list = ['G3P', 'DPG']
-    cluster_list = [[['cl000', 'cl000_2', 'cl001', 'cl001_2', 'cl012', 'cl012_2'],
-                     ['cl100', 'cl100_2', 'cl101', 'cl101_2', 'cl220', 'cl220_2']],
-                    [['cl010', 'cl010_2', 'cl100', 'cl100_2', 'cl200', 'cl200_2'],
-                     ['cl100', 'cl100_2', 'cl120', 'cl120_2', 'cl210', 'cl210_2']]]
+    cluster_list = [[['cl000', 'cl000_2', 'cl000_3', 'cl000_4', 'cl000_5',
+                      'cl001', 'cl001_2', 'cl001_3', 'cl001_4', 'cl001_5',
+                      'cl012', 'cl012_2', 'cl012_3', 'cl012_4', 'cl012_5',
+                      'cl010', 'cl010_2', 'cl010_3', 'cl010_4', 'cl010_5',
+                      'cl002', 'cl002_2', 'cl002_3', 'cl002_4', 'cl002_5'],
+                     ['cl100', 'cl100_2', 'cl100_3', 'cl100_4', 'cl100_5',
+                      'cl101', 'cl101_2', 'cl101_3', 'cl101_4', 'cl101_5',
+                      'cl220', 'cl220_2', 'cl220_3', 'cl220_4', 'cl220_5',
+                      'cl120', 'cl120_2', 'cl120_3', 'cl120_4', 'cl120_5',
+                      'cl201', 'cl201_2', 'cl201_3', 'cl201_4', 'cl201_5']],
+                    [['cl000', 'cl000_2', 'cl000_3', 'cl000_4', 'cl000_5',
+                      'cl010', 'cl010_2', 'cl010_3', 'cl010_4', 'cl010_5',
+                      'cl100', 'cl100_2', 'cl100_3', 'cl100_4', 'cl100_5',
+                      'cl200', 'cl200_2', 'cl200_3', 'cl200_4', 'cl200_5',
+                      'cl200_6', 'cl200_7', 'cl200_8', 'cl200_9', 'cl200_10'],
+                     ['cl100', 'cl100_2', 'cl100_3', 'cl100_4', 'cl100_5',
+                      'cl120', 'cl120_2', 'cl120_3', 'cl120_4', 'cl120_5',
+                      'cl210', 'cl210_2', 'cl210_3', 'cl210_4', 'cl210_5',
+                      'cl220', 'cl220_2', 'cl220_3', 'cl220_4', 'cl220_5',
+                      'cl110', 'cl110_2', 'cl110_3', 'cl110_4', 'cl110_5']]]
 
 
     sumup_rmsd(form_list, ligand_list, cluster_list, root_dir, file_out)
 
     file_out = ''.join([base_dir, '/GAPDH/3_MD_post_dock2016/GAPD_all_rmsd'])
-    n_frames_per_form_per_ligand = 6
+    n_frames_per_form_per_ligand = 25
     gather_rmsd_plots(root_dir, form_list, ligand_list, cluster_list, n_frames_per_form_per_ligand, file_out)
 
     # this file is a modified version of enzyme_name_rmsd_sumup where the first column was changed, everything else is the same
@@ -249,14 +266,31 @@ def analyze_TALB(base_dir):
     file_out = ''.join([base_dir, '/TalB/3_MD_post_dock2016/TALB_rmsd_sumup'])
     form_list = ['APO', 'HALO_S7P_remS7P']
     ligand_list = ['S7P_linear', 'F6P']
-    cluster_list = [[['cl101', 'cl101_2', 'cl102', 'cl102_2', 'cl212', 'cl212_2'],
-                     ['cl202', 'cl202_2', 'cl212', 'cl212_2', 'cl321', 'cl321_2']],
-                    [['cl101', 'cl101_2', 'cl302', 'cl302_2', 'cl322', 'cl322_2'],
-                     ['cl101', 'cl101_2', 'cl201', 'cl201_2', 'cl311', 'cl311_2']]]
+    cluster_list = [[['cl101', 'cl101_2', 'cl101_3', 'cl101_4', 'cl101_5',
+                      'cl102', 'cl102_2', 'cl102_3', 'cl102_4', 'cl102_5',
+                      'cl212', 'cl212_2', 'cl212_3', 'cl212_4', 'cl212_5',
+                      'cl213', 'cl213_2', 'cl213_3', 'cl213_4', 'cl213_5',
+                      'cl211', 'cl211_2', 'cl211_3', 'cl211_4', 'cl211_5'],
+                     ['cl202', 'cl202_2', 'cl202_3', 'cl202_4', 'cl202_5',
+                      'cl212', 'cl212_2', 'cl212_3', 'cl212_4', 'cl212_5',
+                      'cl312', 'cl312_2', 'cl312_3', 'cl312_4', 'cl312_5',
+                      'cl201', 'cl201_2', 'cl201_3', 'cl201_4', 'cl201_5',
+                      'cl101', 'cl101_2', 'cl101_3', 'cl101_4', 'cl101_5']],
+                    [['cl101', 'cl101_2', 'cl101_3', 'cl101_4', 'cl101_5',
+                      'cl302', 'cl302_2', 'cl302_3', 'cl302_4', 'cl302_5',
+                      'cl322', 'cl322_2', 'cl322_3', 'cl322_4', 'cl322_5',
+                      'cl131', 'cl131_2', 'cl131_3', 'cl131_4', 'cl131_5',
+                      'cl122', 'cl122_2', 'cl122_3', 'cl122_4', 'cl122_5'],
+                     ['cl101', 'cl101_2', 'cl101_3', 'cl101_4', 'cl101_5',
+                      'cl201', 'cl201_2', 'cl201_3', 'cl201_4', 'cl201_5',
+                      'cl311', 'cl311_2', 'cl311_3', 'cl311_4', 'cl311_5',
+                      'cl301', 'cl301_2', 'cl301_3', 'cl301_4', 'cl301_5',
+                      'cl211', 'cl211_2', 'cl211_3', 'cl211_4', 'cl211_5']]]
+
     sumup_rmsd(form_list, ligand_list, cluster_list, root_dir, file_out)
 
     file_out = ''.join([base_dir, '/TalB/3_MD_post_dock2016/TALB_all_rmsd'])
-    n_frames_per_form_per_ligand = 6
+    n_frames_per_form_per_ligand = 25
     gather_rmsd_plots(root_dir, form_list, ligand_list, cluster_list, n_frames_per_form_per_ligand, file_out)
 
     # this file is a modified version of enzyme_name_rmsd_sumup where the first column was changed, everything else is the same
@@ -268,10 +302,10 @@ def analyze_TALB(base_dir):
 
 
 def main():
-    base_dir = '/home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/MD_data'
+    base_dir = '/home/mrama/Desktop/MD/eMASS-MD_complete_data/MD_data'
 
-    analyze_ENO(base_dir)
-    analyze_ENO_AB(base_dir)
+    #analyze_ENO(base_dir)
+    #analyze_ENO_AB(base_dir)
     analyze_GAPD(base_dir)
     analyze_TALB(base_dir)
 

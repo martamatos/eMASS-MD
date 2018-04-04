@@ -35,10 +35,10 @@ def run_fitness_analysis(base_folder, file_in_base, model_type_list, ssd_thresho
                             column_labels, x_label, scale_data, convert_to_ratios, color_list, filter=True)
 
 
-def analyze_eno(base_folder, enzyme, n_model_ensembles, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis,
-                entropy_analysis, time_courses, param_inf_type):
+def analyze_eno(base_folder, enzyme, ssd_threshold, n_model_ensembles, Keq, e_total, clustermaps, fitness_analysis,
+                keq_range_analysis, entropy_analysis, time_courses, param_inf_type):
 
-    ssd_threshold = 1
+
     scale_data = False
 
     column_order = [0, 2, 1]
@@ -47,7 +47,7 @@ def analyze_eno(base_folder, enzyme, n_model_ensembles, Keq, e_total, clustermap
     convert_to_ratios = True
 
     model_type_list = ['all', 'dKd', 'Keq', 'Km', 'kcat']
-    column_labels = ['None', '$\Delta K_d$', '$K_{eq}$', '$K_m^{2pg}$', '$k_{cat}$']
+    column_labels = ['None', '$\Delta K_b$', '$K_{eq}$', '$K_m^{2PG}$', '$k_{cat}$']
     x_label = 'Data point removed'
 
     file_in_base = ''.join([base_folder, 'treated_data/rateconst_ENO_'])
@@ -62,7 +62,7 @@ def analyze_eno(base_folder, enzyme, n_model_ensembles, Keq, e_total, clustermap
         vmax = 9
 
         model_types = ['all', 'dKd']
-        #n_model_ensembles = 100
+        n_model_ensembles = 1
 
         Keq_local = None
         fig_size = (4, 6)
@@ -115,7 +115,8 @@ def analyze_eno(base_folder, enzyme, n_model_ensembles, Keq, e_total, clustermap
         plot_entropy_only = False
         bin_width_list = [3]
         fixed_size = False
-        y_lims = [0.1, 0.5]
+        #y_lims = [0.1, 0.5]
+        y_lims = [-0.1, 0.5]
         Keq_local = None
 
         # start try
@@ -144,12 +145,13 @@ def analyze_eno(base_folder, enzyme, n_model_ensembles, Keq, e_total, clustermap
         column_order_rateconst = [0, 1, 4, 5, 2, 3]
         n_variables_rateconst = len(column_order_rateconst)
         limit = 100
+
         calculate_enzyme_entropy(file_in_base, file_out_base, n_model_ensembles, model_type_list,
                                  column_order_rateconst, n_variables_rateconst, ssd_threshold, Keq_local, False, limit,
                                  bin_width_list, column_labels, y_lims, x_label, color_list,
                                  plot_entropy_only=plot_entropy_only, fixed_size=fixed_size, n_samples_per_bin=None)
 
-        limit = 45
+        limit = 50
 
         calculate_enzyme_entropy(file_in_base, file_out_base, n_model_ensembles, model_type_list,
                                  column_order_rateconst, n_variables_rateconst, ssd_threshold, Keq_local, False, limit,
@@ -221,21 +223,57 @@ def analyze_eno(base_folder, enzyme, n_model_ensembles, Keq, e_total, clustermap
                 time_course_analysis(file_in_base, file_out_base, species_list, Keq, subs_list, prod_list, mets_order,
                                      legend_label, n_model_ensembles, plot_type, time_point_list, plot_spacings,
                                      fig_size, y_lims=y_lims, y_lims_timecourses=y_lims, plot_only=plot_only)
+
+
+
+def plot_para_scan_clustermaps(base_folder):
+
+    vmin = -6
+    vmax = 9
+
+    dKd_list = ['0.000000000001', '0.00000000001',
+                '0.0000000001', '0.000000001',
+                '0.00000001', '0.0000001',
+                '0.000001', '0.00001', '0.0001',
+                '0.001', '0.01', '0.1',
+                '1.', '10.',
+                '100.', '1000.', '10000.',
+                '100000.', '1000000.', '10000000.',
+                '100000000.', '1000000000.', '10000000000.',
+                '100000000000.', '1000000000000.']
+
+
+    model_types = ['_'.join(['customRatio_1', dKd]) for dKd  in dKd_list]
+
+    n_model_ensembles = 10
+
+    Keq_local = None
+    fig_size = (4, 6)
+    file_in_base = ''.join([base_folder, 'treated_data/rateconst_ENO_'])
+    file_out_base = ''.join([base_folder, 'clustermaps/ENO_rateconst_', param_inf_type])
+    column_order_rateconst = [0, 1, 4, 5, 2, 3]
+    cluster_map_param_inf(file_in_base, file_out_base, ssd_threshold, False, column_order_rateconst, vmin, vmax,
+                          model_types, n_model_ensembles, fig_size, Keq=Keq_local)
+
 if __name__ == '__main__':
     enzyme = 'ENO'
+    ssd_threshold = 0.1
     e_total = 1.93*10**-5
     Keq = 5.19
     #Keq = ''
     param_inf_type = ''
 
-    clustermaps = True
+    clustermaps = False
     fitness_analysis = True
-    keq_range_analysis = True
-    entropy_analysis = True
+    keq_range_analysis = False
+    entropy_analysis = False
     time_courses = False
     n_model_ensembles = 100
 
-    base_folder = '/home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/ENO/ENO_param_inf/output/'
+    base_folder = '/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/ENO/ENO_param_inf2/output/'
 
-    analyze_eno(base_folder, enzyme, n_model_ensembles, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis,
+    analyze_eno(base_folder, enzyme, ssd_threshold, n_model_ensembles, Keq, e_total, clustermaps, fitness_analysis, keq_range_analysis,
                 entropy_analysis, time_courses, param_inf_type)
+
+    #base_folder = '/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/ENO/ENO_param_scan2/output/'
+    #plot_para_scan_clustermaps(base_folder)

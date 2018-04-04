@@ -1,6 +1,6 @@
 NPT production no vel info
  &cntrl
-   imin=0, dt=0.0015, nstlim=14000000,
+   imin=0, dt=0.0015, nstlim=700000,
    ntpr=100, ntwx=1000, ntwr=100,
    ioutfm=0,
    irest=0, ntx=1,

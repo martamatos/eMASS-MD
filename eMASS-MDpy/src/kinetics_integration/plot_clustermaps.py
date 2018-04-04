@@ -8,13 +8,14 @@ from src.kinetics_integration.utils import import_rateconstants
 def _cluster_map_general(data_df, file_out, v_min, v_max, fig_size=(4, 6)):
 
     clustermap_defs()
+
     fig, ax = plt.subplots(1, 1)
-    res = sns.clustermap(data=data_df, metric='euclidean', col_cluster=False, vmin=0, vmax=9, figsize=fig_size,
-                         yticklabels=False, cmap='Reds', cbar_kws={'ticks': [0, 3, 6, 9]})
+    res = sns.clustermap(data=data_df, metric='euclidean', col_cluster=False, vmin=v_min, vmax=v_max, figsize=fig_size,
+                         yticklabels=False, cmap='Reds', cbar_kws={'ticks': [-6, -3, 0, 3, 6, 9]})
 
     plt.tick_params(labelsize=18)
     plt.savefig(''.join([file_out, '_clustermap.pdf']))
-    #plt.savefig(''.join([file_out, '_clustermap.png']))
+    plt.savefig(''.join([file_out, '_clustermap.png']))
 
     plt.close()
 

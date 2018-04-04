@@ -204,7 +204,7 @@ loadamberparams /home/marta/GAPDH/0_Ligands_param/1_G3P/G3P.frcmod
 loadOff /home/marta/GAPDH/0_Ligands_param/1_G3P/G3P.off
 
 #NAD
-loadamberparams /home/marta/GAPDH/0_Ligands_param/3_NAD/frcmod.NAD
+loadamberparams /home/marta/GAPDH/0_Ligands_param/3_NAD/NAD.frcmod
 loadOff /home/marta/GAPDH/0_Ligands_param/3_NAD/NAD.off
 
 ###########################################################
@@ -226,9 +226,9 @@ relax mol
 charge mol
 addIons mol Na+ 0
 solvatebox mol TIP3PBOX 12
-#savepdb mol GAPDH_WT_NAD_G3P_docked_watbox.pdb
+savepdb mol GAPDH_WT_NAD_G3P_docked_watbox.pdb
 
-#saveamberparm mol GAPDH_WT_NAD_G3P_docked.prmtop GAPDH_WT_NAD_G3P_docked.inpcrd
+saveamberparm mol GAPDH_WT_NAD_G3P_docked.prmtop GAPDH_WT_NAD_G3P_docked.inpcrd
 ###########################################################
 
 

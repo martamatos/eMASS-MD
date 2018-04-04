@@ -44,10 +44,10 @@ def convert_all_rst_to_pdb(base_dir, prmtop):
 
 
 if __name__ == '__main__':
-    enzyme = 'ENO_AB'
-    form = 'MG'
-    form_folder = '_'.join(['1', form])
-    ligand = 'PEP'
+    enzyme = 'TalB'
+    form = 'HALO'
+    form_folder = '_'.join(['2', form])
+    ligand = 'F6P'
     #ligand_list = ['NPD', 'G6P']
     ligand_folder = '_'.join(['2', ligand])
     #ligand_folder = ''
@@ -56,29 +56,33 @@ if __name__ == '__main__':
     # ADK1 - ATP
     #binding_residues = ['122', '12', '9', '14', '13']
     # ENO
-    binding_residues = ['340', '391', '369', '207', '370', '368', '367', '338']
-    # G6PD1
-    #binding_residues = ['234', '176', '146', '237', '180', '238', '177', '233', '376', '345', '338', '221', '214', '343']
+    #binding_residues = ['340', '391', '369', '207', '370', '368', '367', '338']
     # GAPDH
     #binding_residues = ['148', '147', '149', '207', '208', '230', '175']
     # TALB
-    #binding_residues = ['179', '226', '224', '130', '152', '174', '15', '33', '240', '30', '93']
+    binding_residues = ['179', '226', '224', '130', '152', '174', '15', '33', '240', '30', '93']
     #binding_residues = None
 
 
     md_numbered = '1'  # None or string
 
-    #base_form = '_'.join([enzyme, 'WT', form, '13DPG', 'docked'])
-    base_form = '_'.join(['ENO_AB', 'WT', 'APO', ligand, 'docked'])
-    #base_form = '_'.join(['TALB_WT_HALO_S7P_remS7P_F6P_docked'])
-    base_folder = '/'.join(['/home/mrama/Desktop/MD', enzyme, '3_MD_post_dock2016', form_folder, ligand_folder])
+    #base_form = '_'.join(['TALB', 'WT', form, ligand, 'docked'])
+    #base_form = '_'.join(['GAPDH', 'WT', 'NAD_rem3PG', ligand, 'docked'])
+    base_form = '_'.join(['TALB_WT_HALO_S7P_remS7P_F6P_docked'])
+    base_folder = '/'.join(['/home/mrama/Desktop/MD/eMASS-MD_complete_data/MD_data', enzyme, '3_MD_post_dock2016', form_folder, ligand_folder])
     #base_folder = '/'.join(['/home/mrama/Desktop/MD', enzyme, '3_MD_post_dock2016', form_folder])
 
-    cl_list = ['cl302', 'cl312', 'cl402']
+    cl_list = ['cl101', 'cl101_2', 'cl101_3', 'cl101_4', 'cl101_5',
+               'cl201', 'cl201_2', 'cl201_3', 'cl201_4', 'cl201_5',
+               'cl211', 'cl211_2', 'cl211_3', 'cl211_4', 'cl211_5',
+               'cl301', 'cl301_2', 'cl301_3', 'cl301_4', 'cl301_5',
+               'cl311', 'cl311_2', 'cl311_3', 'cl311_4', 'cl311_5']
+
     #server = 'sbrgstructure.dynamic.ucsd.edu'
     server = 'ssb3.ucsd.edu'
-    traj_format_list = ['crd', 'crd', 'crd']
-    traj_type = '100'
+    traj_format_list = ['crd' for i in range(len(cl_list))]
+    traj_type = '10'
+    #traj_format_list[0] = 'dcd'
 
     copy_from_server = False
 
@@ -103,7 +107,7 @@ if __name__ == '__main__':
         traj = ''.join([to_folder, '/', base_form, '_', cl, '_', traj_type, '.', traj_format]) if not md_numbered \
             else ''.join([to_folder, '/',  base_form, '_', cl, '_', md_numbered, '_', traj_type, '.', traj_format])
         prmtop = ''.join([to_folder, '/',  base_form, '.prmtop'])
-
+        print(traj)
         #convert trajectory format from crd to dcd
         if traj_format == 'crd':
             convert_traj(traj, prmtop, format_out='dcd', remove_orig=True)
@@ -144,7 +148,7 @@ if __name__ == '__main__':
         file_out = ''.join([to_folder, '/rmsd_backbone_average_', traj_type])
         average_rmsd_from_file('.'.join([file_rmsd, 'dat']), file_out)
 
-        ligand_list = ['PEP']
+        ligand_list = ['F6P']
         for ligand in ligand_list:
             file_out = ''.join([to_folder, '/rmsd_', ligand, '_', cl])
             calculate_traj_rmsd_fit(traj, prmtop, file_out, selection=' '.join(['resname', ligand]))
@@ -155,6 +159,6 @@ if __name__ == '__main__':
             atom_pairs = dist_backbone_ligand(traj, prmtop, ligand, file_out)
 
         # write vmd scripts
-        ligand = 'PEP'
+        ligand = 'F6P'
         file_out = '/'.join([to_folder, 'load_traj.tcl'])
         write_vmd_script(traj, prmtop, file_out, ligand, atom_pairs=atom_pairs, binding_residues=binding_residues)

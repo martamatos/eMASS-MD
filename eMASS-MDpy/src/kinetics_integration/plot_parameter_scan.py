@@ -53,9 +53,9 @@ def plot_ssd_heatmap(file_in_list, plot_file, enzyme_list):
     print xtick_labels
 
     cbar_ax = fig.add_axes([0.3, 0.95, 0.5, 0.04])
-
+    print data_df_median
     sns.heatmap(data_df_median.apply(np.log10), ax=ax, xticklabels=xtick_labels, cbar_ax=cbar_ax,
-                cmap='RdBu_r', center=0, vmin=-17, vmax=17, cbar_kws={'orientation': 'horizontal'})
+                cmap='Reds', vmin=-8, vmax=2, cbar_kws={'orientation': 'horizontal'})
 
     ax.set_xlabel('$\Delta K_b$ value')
     plt.sca(ax)
@@ -76,6 +76,7 @@ def plot_ssd_heatmap(file_in_list, plot_file, enzyme_list):
 
     fig.subplots_adjust(top=0.83, bottom=0.33, left=0.12, right=0.99, wspace=0.4)
     plt.savefig(''.join([plot_file, '.pdf']), dpi=300)
+    plt.savefig(''.join([plot_file, '.png']), dpi=300)
     plt.close()
     print(''.join([plot_file, '.pdf']))
 
@@ -91,7 +92,7 @@ def param_scan_heatmap(main_dir, enzyme_name_list):
 
     file_in_list = []
     for enzyme_name in enzyme_name_list:
-        file_in = ''.join([main_dir, enzyme_name, '/', enzyme_name, '_param_scan/output/treated_data/param_scan_ssd.csv'])
+        file_in = ''.join([main_dir, enzyme_name, '/', enzyme_name, '_param_scan2/output/treated_data/param_scan_ssd.csv'])
         file_in_list.append(file_in)
 
     plot_file = ''.join([main_dir, 'plots/param_scan_heatmap_ssd'])
@@ -102,7 +103,7 @@ def param_scan_heatmap(main_dir, enzyme_name_list):
 
 def main():
 
-    main_dir = '/home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/'
+    main_dir = '/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/'
     enzyme_name_list = ['ENO', 'GAPD', 'TALA2']
     param_scan_heatmap(main_dir, enzyme_name_list)
 

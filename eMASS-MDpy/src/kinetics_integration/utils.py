@@ -27,6 +27,8 @@ def set_df_column_labels(data_df, column_order=None, convert_to_ratios=False):
         columns_reordered = [column_labels[entry] for entry in column_order]
         data_df = data_df[columns_reordered]
 
+    #data_df.columns = column_labels[:2]
+
     return data_df
 
 

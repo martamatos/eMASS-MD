@@ -87,7 +87,7 @@ def run_ENO_param_scan_ensemble():
                 '0.00000001', '0.0000001',
                 '0.000001', '0.00001', '0.0001',
                 '0.001', '0.01', '0.1',
-                '0.00000175', '1.', '10.',
+                '1.', '10.',
                 '100.', '1000.', '10000.',
                 '100000.', '1000000.', '10000000.',
                 '100000000.', '1000000000.', '10000000000.',
@@ -96,7 +96,7 @@ def run_ENO_param_scan_ensemble():
     n_trials = 100
     walltime = '24:00:00'
     qsub = True
-    n_ensembles = 1
+    n_ensembles = 10
 
     for i, dKd in enumerate(dKd_list):
         fit_label = '_'.join([dataset, dKd])
@@ -153,7 +153,7 @@ def run_GAPD_param_scan_ensemble():
                 '0.00000001', '0.0000001',
                 '0.000001', '0.00001', '0.0001',
                 '0.001', '0.01', '0.1',
-                '0.00000109', '1.', '10.',
+                '0.5', '1.', '10.',
                 '100.', '1000.', '10000.',
                 '100000.', '1000000.', '10000000.',
                 '100000000.', '1000000000.', '10000000000.',
@@ -220,7 +220,7 @@ def run_TALA2_param_scan_ensemble():
                 '0.00000001', '0.0000001',
                 '0.000001', '0.00001', '0.0001',
                 '0.001', '0.01', '0.1',
-                '1.', '10.', '7.33',
+                '1.', '10.', '1299934',
                 '100.', '1000.', '10000.',
                 '100000.', '1000000.', '10000000.',
                 '100000000.', '1000000000.', '10000000000.',
@@ -250,11 +250,12 @@ def run_TALA2_param_influence():
     python_packages_path = '/zhome/89/0/90554/.local/lib/python2.6/site-packages'
     enzyme = 'TALA2'
     enzyme_folder = 'TALA2_param_inf'
-    dataset_list = ['all', 'dKd', 'Km1', 'Km2', 'Km3', 'Km4', 'kcat', 'Ki', 'Keq']
+    #dataset_list = ['all', 'dKd', 'Km1', 'Km2', 'Km3', 'Km4', 'kcat', 'Ki', 'Keq']
+    dataset_list = ['Km3', 'Km4', 'kcat', 'Ki', 'Keq']
 
 
     n_trials = 100
-    walltime = '12:00:00'
+    walltime = '48:00:00'
     qsub = True
     n_ensembles = 100
     n_models_block = 2

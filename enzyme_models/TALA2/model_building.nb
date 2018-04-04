@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     90427,       2304]
-NotebookOptionsPosition[     81657,       2071]
-NotebookOutlinePosition[     81998,       2086]
-CellTagsIndexPosition[     81955,       2083]
+NotebookDataLength[     87360,       2264]
+NotebookOptionsPosition[     78466,       2026]
+NotebookOutlinePosition[     78807,       2041]
+CellTagsIndexPosition[     78764,       2038]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -29,6 +29,8 @@ Cell[BoxData[
    3.682053452353827*^9}, {3.682159217598268*^9, 3.682159221631666*^9}, {
    3.7095428088893948`*^9, 3.7095428126944036`*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{"<<", "Toolbox`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "Toolbox`Style`"}], "\[IndentingNewLine]", 
@@ -41,8 +43,8 @@ Cell[BoxData[{
     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"enzModelsDir", " ", "=", " ", 
-  "\"\</home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/\>\""}\
-], "\[IndentingNewLine]", 
+  "\"\</home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\>\""}], "\
+\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"mainDir", "=", 
    RowBox[{"enzModelsDir", "<>", "\"\<code_data/\>\""}]}], 
@@ -50,7 +52,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"baseDir", "=", 
-    RowBox[{"enzModelsDir", "<>", " ", "\"\<TALA2/TALA2_param_inf/\>\""}]}], 
+    RowBox[{"enzModelsDir", "<>", " ", "\"\<TALA2/TALA2_param_inf2/\>\""}]}], 
    ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"dataDir", " ", "=", " ", 
@@ -145,7 +147,7 @@ Cell[BoxData[{
       Selectable->False]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"fitCutoff", "=", "1"}], ";"}], 
+   RowBox[{"fitCutoff", "=", "0.1"}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -155,24 +157,24 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"rxn", " ", "=", " ", 
     RowBox[{
-    "str2mass", "[", "\"\<TALA2: e4p[c] + f6p[c] <-> g3p[c] + s7p[c]\>\"", 
+    "str2mass", "[", "\"\<TALA2: g3p[c] + s7p[c] <-> e4p[c] + f6p[c]\>\"", 
      "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"catalyticBranch", "=", 
     RowBox[{"{", 
      RowBox[{
-     "\"\<E_TALA2[c] + f6p[c] <=> E_TALA2[c]&f6p\>\"", ",", 
+     "\"\<E_TALA2[c] + s7p[c] <=> E_TALA2[c]&s7p\>\"", ",", 
       "\[IndentingNewLine]", "\t\t\t\t", 
-      "\"\<E_TALA2[c]&f6p <=> E_TALA2[c]&mod&g3p\>\"", ",", 
+      "\"\<E_TALA2[c]&s7p <=> E_TALA2[c]&mod&e4p\>\"", ",", 
       "\[IndentingNewLine]", "\t\t\t\t", 
-      "\"\<E_TALA2[c]&mod&g3p <=> E_TALA2[c]&mod + g3p[c]\>\"", ",", 
+      "\"\<E_TALA2[c]&mod&e4p <=> E_TALA2[c]&mod + e4p[c]\>\"", ",", 
       "\[IndentingNewLine]", "                                      ", 
-      "\"\<E_TALA2[c]&mod + e4p[c] <=> E_TALA2[c]&mod&e4p\>\"", ",", 
+      "\"\<E_TALA2[c]&mod + g3p[c] <=> E_TALA2[c]&mod&g3p\>\"", ",", 
       "\[IndentingNewLine]", "\t\t\t\t", 
-      "\"\<E_TALA2[c]&mod&e4p <=> E_TALA2[c]&s7p\>\"", ",", 
+      "\"\<E_TALA2[c]&mod&g3p <=> E_TALA2[c]&f6p\>\"", ",", 
       "\[IndentingNewLine]", "\t\t\t\t", 
-      "\"\<E_TALA2[c]&s7p <=> E_TALA2[c] + s7p[c]\>\""}], "}"}]}], ";"}], 
+      "\"\<E_TALA2[c]&f6p <=> E_TALA2[c] + f6p[c]\>\""}], "}"}]}], ";"}], 
   "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"activatorlist", "=", 
@@ -188,36 +190,33 @@ Cell[BoxData[{
    RowBox[{"nInhibitionSites", " ", "=", " ", "0"}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   RowBox[{"inhibition", " ", "=", " ", 
+  RowBox[{"inhibition", " ", "=", " ", 
+   RowBox[{"{", 
     RowBox[{"{", 
-     RowBox[{"{", 
-      RowBox[{
-      "1", ",", "\"\<Kic\>\"", ",", "\"\<pi\>\"", ",", "0.019`", ",", 
-       RowBox[{"{", 
-        RowBox[{"0.016`", ",", "0.022`"}], "}"}], ",", 
-       RowBox[{"{", "}"}], ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-          "\"\<Competitive\>\"", ",", "\"\<e4p\>\"", ",", "0.00009`"}], "}"}],
-          ",", 
-         RowBox[{"{", 
-          RowBox[{
-          "\"\<Competitive\>\"", ",", "\"\<g3p\>\"", ",", "0.000038`"}], 
-          "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"\"\<Competitive\>\"", ",", "\"\<f6p\>\"", ",", "0.0012`"}],
-           "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{
-          "\"\<Competitive\>\"", ",", "\"\<s7p\>\"", ",", "0.000285`"}], 
-          "}"}]}], "}"}], ",", "\"\<M\>\"", ",", "8.5`", ",", "30", ",", 
-       RowBox[{"{", 
+     RowBox[{"1", ",", "\"\<Kic\>\"", ",", "\"\<pi\>\"", ",", "0.019`", ",", 
+      RowBox[{"{", 
+       RowBox[{"0.016`", ",", "0.022`"}], "}"}], ",", 
+      RowBox[{"{", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
         RowBox[{"{", 
-         RowBox[{"\"\<glygly\>\"", ",", "0.05`"}], "}"}], "}"}], ",", 
-       RowBox[{"{", "}"}]}], "}"}], "}"}]}], ";"}], 
+         RowBox[{"\"\<Competitive\>\"", ",", "\"\<e4p\>\"", ",", "0.00009`"}],
+          "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Competitive\>\"", ",", "\"\<g3p\>\"", ",", "0.000038`"}], "}"}],
+         ",", 
+        RowBox[{"{", 
+         RowBox[{"\"\<Competitive\>\"", ",", "\"\<f6p\>\"", ",", "0.0012`"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Competitive\>\"", ",", "\"\<s7p\>\"", ",", "0.000285`"}], 
+         "}"}]}], "}"}], ",", "\"\<M\>\"", ",", "8.5`", ",", "30", ",", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"\"\<glygly\>\"", ",", "0.05`"}], "}"}], "}"}], ",", 
+      RowBox[{"{", "}"}]}], "}"}], "}"}]}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"eTotal", "=", 
@@ -258,7 +257,43 @@ Cell[BoxData[{
    3.709441121255672*^9, 3.709441133462165*^9}, {3.709533873701704*^9, 
    3.709533896011339*^9}, {3.709534138954464*^9, 3.709534142226054*^9}, {
    3.71843111224118*^9, 3.718431123155881*^9}, {3.718431286236212*^9, 
-   3.7184313158018208`*^9}, {3.7184317246093473`*^9, 3.718431724891346*^9}}],
+   3.7184313158018208`*^9}, {3.7184317246093473`*^9, 3.718431724891346*^9}, {
+   3.730552915923235*^9, 3.73055292351228*^9}, {3.730556112712634*^9, 
+   3.730556113490098*^9}, {3.730569655319491*^9, 3.730569704998624*^9}}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+\"\>"], "Output",
+ CellChangeTimes->{3.730552931954277*^9, 3.7305561891277103`*^9, 
+  3.730566727952075*^9, 3.730569712683584*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "\<\"Kic\"\>", ",", "\<\"pi\"\>", ",", "0.019`", ",", 
+    RowBox[{"{", 
+     RowBox[{"0.016`", ",", "0.022`"}], "}"}], ",", 
+    RowBox[{"{", "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\<\"Competitive\"\>", ",", "\<\"e4p\"\>", ",", "0.00009`"}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Competitive\"\>", ",", "\<\"g3p\"\>", ",", "0.000038`"}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Competitive\"\>", ",", "\<\"f6p\"\>", ",", "0.0012`"}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Competitive\"\>", ",", "\<\"s7p\"\>", ",", "0.000285`"}], 
+       "}"}]}], "}"}], ",", "\<\"M\"\>", ",", "8.5`", ",", "30", ",", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{"\<\"glygly\"\>", ",", "0.05`"}], "}"}], "}"}], ",", 
+    RowBox[{"{", "}"}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.730552931954277*^9, 3.7305561891277103`*^9, 
+  3.730566727952075*^9, 3.730569712715673*^9}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -266,8 +301,6 @@ Cell["Build base model", "Section",
  CellChangeTimes->{{3.639732418939518*^9, 3.639732426478991*^9}, 
    3.6399119286948357`*^9, 3.6755086697702827`*^9, {3.68215665443184*^9, 
    3.682156655766983*^9}, {3.682158853618226*^9, 3.682158856618361*^9}}],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
@@ -320,354 +353,6 @@ Cell[BoxData[{
    3.694184738084241*^9, 3.694184738703046*^9}, {3.7094402279016047`*^9, 
    3.709440244736122*^9}, {3.709440423739497*^9, 3.709440424711669*^9}, {
    3.709534049899376*^9, 3.709534115657433*^9}, 3.70953414565998*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   InterpretationBox[
-    OverscriptBox[
-     RowBox[{
-      RowBox[{
-       InterpretationBox[
-        UnderoverscriptBox[
-         StyleBox[
-          RowBox[{
-           SuperscriptBox[
-            StyleBox["TALA2",
-             StripOnInput->False,
-             ShowSyntaxStyles->False,
-             AutoSpacing->False,
-             ZeroWidthTimes->True,
-             LineColor->RGBColor[0, 0, 0],
-             FrontFaceColor->RGBColor[0, 0, 0],
-             BackFaceColor->RGBColor[0, 0, 0],
-             GraphicsColor->RGBColor[0, 0, 0],
-             FontColor->RGBColor[0, 0, 0]], 
-            StyleBox["c",
-             StripOnInput->False,
-             ShowSyntaxStyles->False,
-             AutoSpacing->False,
-             ZeroWidthTimes->True,
-             LineColor->RGBColor[0, 0, 0],
-             FrontFaceColor->RGBColor[0, 0, 0],
-             BackFaceColor->RGBColor[0, 0, 0],
-             GraphicsColor->RGBColor[0, 0, 0],
-             FontColor->RGBColor[0, 0, 0]]], "&", 
-           InterpretationBox[
-            SuperscriptBox[
-             StyleBox["mod",
-              StripOnInput->False,
-              ShowSyntaxStyles->False,
-              AutoSpacing->False,
-              ZeroWidthTimes->True,
-              LineColor->RGBColor[0, 0, 0],
-              FrontFaceColor->RGBColor[0, 0, 0],
-              BackFaceColor->RGBColor[0, 0, 0],
-              GraphicsColor->RGBColor[0, 0, 0],
-              FontColor->RGBColor[0, 0, 0]], 
-             StyleBox["c",
-              StripOnInput->False,
-              ShowSyntaxStyles->False,
-              AutoSpacing->False,
-              ZeroWidthTimes->True,
-              LineColor->RGBColor[0, 0, 0],
-              FrontFaceColor->RGBColor[0, 0, 0],
-              BackFaceColor->RGBColor[0, 0, 0],
-              GraphicsColor->RGBColor[0, 0, 0],
-              FontColor->RGBColor[0, 0, 0]]],
-            Toolbox`metabolite["mod", "c"],
-            Editable->False,
-            Selectable->False]}],
-          Background->RGBColor[0.9, 0.9, 0.9]], "", ""],
-        Toolbox`enzyme[{
-         "ID" -> "TALA2", "Compartment" -> "c", "BoundCatalytic" -> {
-            Toolbox`Private`wrap[Toolbox`metabolite]["mod", "c"]}, 
-          "BoundActivators" -> {}, "BoundInhibitors" -> {}, "CatalyticSites" -> 
-          DirectedInfinity[1], "ActivationSites" -> 0, "InhibitionSites" -> 
-          0}],
-        Editable->False,
-        Selectable->False], "+", 
-       InterpretationBox[
-        SuperscriptBox[
-         StyleBox["pi",
-          StripOnInput->False,
-          ShowSyntaxStyles->False,
-          AutoSpacing->False,
-          ZeroWidthTimes->True,
-          LineColor->RGBColor[0, 0, 0],
-          FrontFaceColor->RGBColor[0, 0, 0],
-          BackFaceColor->RGBColor[0, 0, 0],
-          GraphicsColor->RGBColor[0, 0, 0],
-          FontColor->RGBColor[0, 0, 0]], 
-         StyleBox["c",
-          StripOnInput->False,
-          ShowSyntaxStyles->False,
-          AutoSpacing->False,
-          ZeroWidthTimes->True,
-          LineColor->RGBColor[0, 0, 0],
-          FrontFaceColor->RGBColor[0, 0, 0],
-          BackFaceColor->RGBColor[0, 0, 0],
-          GraphicsColor->RGBColor[0, 0, 0],
-          FontColor->RGBColor[0, 0, 0]]],
-        Toolbox`metabolite["pi", "c"],
-        Editable->False,
-        Selectable->False]}], "\[Equilibrium]", 
-      InterpretationBox[
-       UnderoverscriptBox[
-        StyleBox[
-         RowBox[{
-          SuperscriptBox[
-           StyleBox["TALA2",
-            StripOnInput->False,
-            ShowSyntaxStyles->False,
-            AutoSpacing->False,
-            ZeroWidthTimes->True,
-            LineColor->RGBColor[0, 0, 0],
-            FrontFaceColor->RGBColor[0, 0, 0],
-            BackFaceColor->RGBColor[0, 0, 0],
-            GraphicsColor->RGBColor[0, 0, 0],
-            FontColor->RGBColor[0, 0, 0]], 
-           StyleBox["c",
-            StripOnInput->False,
-            ShowSyntaxStyles->False,
-            AutoSpacing->False,
-            ZeroWidthTimes->True,
-            LineColor->RGBColor[0, 0, 0],
-            FrontFaceColor->RGBColor[0, 0, 0],
-            BackFaceColor->RGBColor[0, 0, 0],
-            GraphicsColor->RGBColor[0, 0, 0],
-            FontColor->RGBColor[0, 0, 0]]], "&", 
-          InterpretationBox[
-           SuperscriptBox[
-            StyleBox["mod",
-             StripOnInput->False,
-             ShowSyntaxStyles->False,
-             AutoSpacing->False,
-             ZeroWidthTimes->True,
-             LineColor->RGBColor[0, 0, 0],
-             FrontFaceColor->RGBColor[0, 0, 0],
-             BackFaceColor->RGBColor[0, 0, 0],
-             GraphicsColor->RGBColor[0, 0, 0],
-             FontColor->RGBColor[0, 0, 0]], 
-            StyleBox["c",
-             StripOnInput->False,
-             ShowSyntaxStyles->False,
-             AutoSpacing->False,
-             ZeroWidthTimes->True,
-             LineColor->RGBColor[0, 0, 0],
-             FrontFaceColor->RGBColor[0, 0, 0],
-             BackFaceColor->RGBColor[0, 0, 0],
-             GraphicsColor->RGBColor[0, 0, 0],
-             FontColor->RGBColor[0, 0, 0]]],
-           Toolbox`metabolite["mod", "c"],
-           Editable->False,
-           Selectable->False], "&", 
-          InterpretationBox[
-           SuperscriptBox[
-            StyleBox["pi",
-             StripOnInput->False,
-             ShowSyntaxStyles->False,
-             AutoSpacing->False,
-             ZeroWidthTimes->True,
-             LineColor->RGBColor[0, 0, 0],
-             FrontFaceColor->RGBColor[0, 0, 0],
-             BackFaceColor->RGBColor[0, 0, 0],
-             GraphicsColor->RGBColor[0, 0, 0],
-             FontColor->RGBColor[0, 0, 0]], 
-            StyleBox["c",
-             StripOnInput->False,
-             ShowSyntaxStyles->False,
-             AutoSpacing->False,
-             ZeroWidthTimes->True,
-             LineColor->RGBColor[0, 0, 0],
-             FrontFaceColor->RGBColor[0, 0, 0],
-             BackFaceColor->RGBColor[0, 0, 0],
-             GraphicsColor->RGBColor[0, 0, 0],
-             FontColor->RGBColor[0, 0, 0]]],
-           Toolbox`metabolite["pi", "c"],
-           Editable->False,
-           Selectable->False]}],
-         Background->RGBColor[0.9, 0.9, 0.9]], "", ""],
-       Toolbox`enzyme[{
-        "ID" -> "TALA2", "Compartment" -> "c", "BoundCatalytic" -> {
-           Toolbox`Private`wrap[Toolbox`metabolite]["mod", "c"], 
-           Toolbox`Private`wrap[Toolbox`metabolite]["pi", "c"]}, 
-         "BoundActivators" -> {}, "BoundInhibitors" -> {}, "CatalyticSites" -> 
-         DirectedInfinity[1], "ActivationSites" -> 0, "InhibitionSites" -> 0}],
-       Editable->False,
-       Selectable->False]}], 
-     StyleBox[
-      RowBox[{"TALA2_Kic", "_pi", "_", "1", "_e4p"}],
-      StripOnInput->False,
-      ShowSyntaxStyles->False,
-      AutoSpacing->False,
-      ZeroWidthTimes->True,
-      LineColor->RGBColor[0, 0, 0],
-      FrontFaceColor->RGBColor[0, 0, 0],
-      BackFaceColor->RGBColor[0, 0, 0],
-      GraphicsColor->RGBColor[0, 0, 0],
-      FontColor->RGBColor[0, 0, 0]]],
-    Toolbox`reaction["TALA2_Kic_pi_1_e4p", {
-      Toolbox`enzyme[{"ID" -> "TALA2", "Compartment" -> "c", "BoundCatalytic" -> {
-          Toolbox`Private`wrap[Toolbox`metabolite]["mod", "c"]}, 
-        "BoundActivators" -> {}, "BoundInhibitors" -> {}, "CatalyticSites" -> 
-        DirectedInfinity[1], "ActivationSites" -> 0, "InhibitionSites" -> 0}], 
-      Toolbox`metabolite["pi", "c"]}, {
-      Toolbox`enzyme[{"ID" -> "TALA2", "Compartment" -> "c", "BoundCatalytic" -> {
-          Toolbox`Private`wrap[Toolbox`metabolite]["mod", "c"], 
-          Toolbox`Private`wrap[Toolbox`metabolite]["pi", "c"]}, 
-        "BoundActivators" -> {}, "BoundInhibitors" -> {}, "CatalyticSites" -> 
-        DirectedInfinity[1], "ActivationSites" -> 0, "InhibitionSites" -> 
-        0}]}, {1, 1, 1}, True],
-    Editable->False,
-    Selectable->False], ",", 
-   InterpretationBox[
-    OverscriptBox[
-     RowBox[{
-      RowBox[{
-       InterpretationBox[
-        UnderoverscriptBox[
-         StyleBox[
-          SuperscriptBox[
-           StyleBox["TALA2",
-            StripOnInput->False,
-            ShowSyntaxStyles->False,
-            AutoSpacing->False,
-            ZeroWidthTimes->True,
-            LineColor->RGBColor[0, 0, 0],
-            FrontFaceColor->RGBColor[0, 0, 0],
-            BackFaceColor->RGBColor[0, 0, 0],
-            GraphicsColor->RGBColor[0, 0, 0],
-            FontColor->RGBColor[0, 0, 0]], 
-           StyleBox["c",
-            StripOnInput->False,
-            ShowSyntaxStyles->False,
-            AutoSpacing->False,
-            ZeroWidthTimes->True,
-            LineColor->RGBColor[0, 0, 0],
-            FrontFaceColor->RGBColor[0, 0, 0],
-            BackFaceColor->RGBColor[0, 0, 0],
-            GraphicsColor->RGBColor[0, 0, 0],
-            FontColor->RGBColor[0, 0, 0]]],
-          Background->RGBColor[0.9, 0.9, 0.9]], "", ""],
-        Toolbox`enzyme[{
-         "ID" -> "TALA2", "Compartment" -> "c", "BoundCatalytic" -> {}, 
-          "BoundActivators" -> {}, "BoundInhibitors" -> {}, "CatalyticSites" -> 
-          DirectedInfinity[1], "ActivationSites" -> 0, "InhibitionSites" -> 
-          0}],
-        Editable->False,
-        Selectable->False], "+", 
-       InterpretationBox[
-        SuperscriptBox[
-         StyleBox["pi",
-          StripOnInput->False,
-          ShowSyntaxStyles->False,
-          AutoSpacing->False,
-          ZeroWidthTimes->True,
-          LineColor->RGBColor[0, 0, 0],
-          FrontFaceColor->RGBColor[0, 0, 0],
-          BackFaceColor->RGBColor[0, 0, 0],
-          GraphicsColor->RGBColor[0, 0, 0],
-          FontColor->RGBColor[0, 0, 0]], 
-         StyleBox["c",
-          StripOnInput->False,
-          ShowSyntaxStyles->False,
-          AutoSpacing->False,
-          ZeroWidthTimes->True,
-          LineColor->RGBColor[0, 0, 0],
-          FrontFaceColor->RGBColor[0, 0, 0],
-          BackFaceColor->RGBColor[0, 0, 0],
-          GraphicsColor->RGBColor[0, 0, 0],
-          FontColor->RGBColor[0, 0, 0]]],
-        Toolbox`metabolite["pi", "c"],
-        Editable->False,
-        Selectable->False]}], "\[Equilibrium]", 
-      InterpretationBox[
-       UnderoverscriptBox[
-        StyleBox[
-         RowBox[{
-          SuperscriptBox[
-           StyleBox["TALA2",
-            StripOnInput->False,
-            ShowSyntaxStyles->False,
-            AutoSpacing->False,
-            ZeroWidthTimes->True,
-            LineColor->RGBColor[0, 0, 0],
-            FrontFaceColor->RGBColor[0, 0, 0],
-            BackFaceColor->RGBColor[0, 0, 0],
-            GraphicsColor->RGBColor[0, 0, 0],
-            FontColor->RGBColor[0, 0, 0]], 
-           StyleBox["c",
-            StripOnInput->False,
-            ShowSyntaxStyles->False,
-            AutoSpacing->False,
-            ZeroWidthTimes->True,
-            LineColor->RGBColor[0, 0, 0],
-            FrontFaceColor->RGBColor[0, 0, 0],
-            BackFaceColor->RGBColor[0, 0, 0],
-            GraphicsColor->RGBColor[0, 0, 0],
-            FontColor->RGBColor[0, 0, 0]]], "&", 
-          InterpretationBox[
-           SuperscriptBox[
-            StyleBox["pi",
-             StripOnInput->False,
-             ShowSyntaxStyles->False,
-             AutoSpacing->False,
-             ZeroWidthTimes->True,
-             LineColor->RGBColor[0, 0, 0],
-             FrontFaceColor->RGBColor[0, 0, 0],
-             BackFaceColor->RGBColor[0, 0, 0],
-             GraphicsColor->RGBColor[0, 0, 0],
-             FontColor->RGBColor[0, 0, 0]], 
-            StyleBox["c",
-             StripOnInput->False,
-             ShowSyntaxStyles->False,
-             AutoSpacing->False,
-             ZeroWidthTimes->True,
-             LineColor->RGBColor[0, 0, 0],
-             FrontFaceColor->RGBColor[0, 0, 0],
-             BackFaceColor->RGBColor[0, 0, 0],
-             GraphicsColor->RGBColor[0, 0, 0],
-             FontColor->RGBColor[0, 0, 0]]],
-           Toolbox`metabolite["pi", "c"],
-           Editable->False,
-           Selectable->False]}],
-         Background->RGBColor[0.9, 0.9, 0.9]], "", ""],
-       Toolbox`enzyme[{
-        "ID" -> "TALA2", "Compartment" -> "c", "BoundCatalytic" -> {
-           Toolbox`Private`wrap[Toolbox`metabolite]["pi", "c"]}, 
-         "BoundActivators" -> {}, "BoundInhibitors" -> {}, "CatalyticSites" -> 
-         DirectedInfinity[1], "ActivationSites" -> 0, "InhibitionSites" -> 0}],
-       Editable->False,
-       Selectable->False]}], 
-     StyleBox[
-      RowBox[{"TALA2_Kic", "_pi", "_", "2", "_e4p"}],
-      StripOnInput->False,
-      ShowSyntaxStyles->False,
-      AutoSpacing->False,
-      ZeroWidthTimes->True,
-      LineColor->RGBColor[0, 0, 0],
-      FrontFaceColor->RGBColor[0, 0, 0],
-      BackFaceColor->RGBColor[0, 0, 0],
-      GraphicsColor->RGBColor[0, 0, 0],
-      FontColor->RGBColor[0, 0, 0]]],
-    Toolbox`reaction["TALA2_Kic_pi_2_e4p", {
-      Toolbox`enzyme[{
-       "ID" -> "TALA2", "Compartment" -> "c", "BoundCatalytic" -> {}, 
-        "BoundActivators" -> {}, "BoundInhibitors" -> {}, "CatalyticSites" -> 
-        DirectedInfinity[1], "ActivationSites" -> 0, "InhibitionSites" -> 0}], 
-      Toolbox`metabolite["pi", "c"]}, {
-      Toolbox`enzyme[{"ID" -> "TALA2", "Compartment" -> "c", "BoundCatalytic" -> {
-          Toolbox`Private`wrap[Toolbox`metabolite]["pi", "c"]}, 
-        "BoundActivators" -> {}, "BoundInhibitors" -> {}, "CatalyticSites" -> 
-        DirectedInfinity[1], "ActivationSites" -> 0, "InhibitionSites" -> 
-        0}]}, {1, 1, 1}, True],
-    Editable->False,
-    Selectable->False]}], "}"}]], "Print",
- CellChangeTimes->{3.709534156251289*^9, 3.709541329469239*^9, 
-  3.709542596027727*^9, 3.709542639527151*^9, 3.709542835039933*^9, 
-  3.709617409415516*^9}]
-}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -949,7 +634,79 @@ Cell[BoxData[
   3.695543438353135*^9, 3.709440452239759*^9, 3.709441148567769*^9, 
   3.709533921157681*^9, 3.709534157917079*^9, 3.7095413299950733`*^9, 
   3.709542597861581*^9, 3.709542640149789*^9, 3.709542835695861*^9, 
-  3.709617411573123*^9}]
+  3.709617411573123*^9, 3.730552933251512*^9, 3.730556190485223*^9, 
+  3.730566729218663*^9, 3.730569714847332*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Import", "@", "KeqData"}]], "Input",
+ CellChangeTimes->{{3.730566681367481*^9, 3.730566687473085*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"reaction\"\>", ",", "\<\"Keq\"\>", 
+       ",", "\<\"keq units\"\>", ",", "\<\"notes\"\>"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"ENO\"\>", ",", "5.19`", ",", "\<\"\"\>", 
+       ",", "\<\"from equilibrator, pH=7.5, ionic strength (M) = 0.25\"\>"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"GAPD\"\>", ",", "0.452`", ",", "\<\"\"\>", 
+       ",", "\<\"from equilibrator, pH=7.5, ionic strength (M) = 0.25\"\>"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"TALA2\"\>", ",", "1.31`", ",", "\<\"\"\>", 
+       ",", "\<\"from equilibrator, pH=7.5, ionic strength (M) = 0.25, s7p \
+\[RightArrow] g3p: 1.31\"\>"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"reaction\"\>", ",", "\<\"Keq\"\>", 
+       ",", "\<\"keq units\"\>", ",", "\<\"notes\"\>"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"PGK\"\>", ",", "0.00059`", ",", "\<\"\"\>", 
+       ",", "\<\"from equilibrator, pH=7, ionic strength (M) = 0.1\"\>"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"FBA1\"\>", ",", "0.00072`", ",", "\<\"Mole^-1 Liter\"\>", 
+       ",", "\<\"from equilibrator, pH=7, ionic strength (M) = 0.1, EC: \
+4.1.2.13\"\>"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"GAPD\"\>", ",", "0.0431`", ",", "\<\"Mole Liter^-1\"\>", 
+       ",", "\<\"from equilibrator, pH=7, ionic strength (M) = 0.1, EC: \
+1.2.1.12\"\>"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"PGMd\"\>", ",", "5.49`", ",", "\<\"\"\>", 
+       ",", "\<\"from equilibrator, pH=7, ionic strength (M) = 0.1, EC: \
+5.4.2.1\"\>"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"PGMi\"\>", ",", "5.49`", ",", "\<\"\"\>", 
+       ",", "\<\"from equilibrator, pH=7, ionic strength (M) = 0.1, EC: \
+5.4.2.1\"\>"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"ENO\"\>", ",", "5.2`", ",", "\<\"\"\>", 
+       ",", "\<\"from equilibrator, pH=7, ionic strength (M) = 0.1, EC: \
+4.2.1.11\"\>"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"PYK1\"\>", ",", "71000.`", ",", "\<\"\"\>", 
+       ",", "\<\"from equilibrator, pH=7, ionic strength (M) = 0.1, EC: \
+2.7.1.40\"\>"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"PYK2\"\>", ",", "71000.`", ",", "\<\"\"\>", 
+       ",", "\<\"from equilibrator, pH=7, ionic strength (M) = 0.1, EC: \
+2.7.1.40\"\>"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"TPI\"\>", ",", "0.11`", ",", "\<\"\"\>", 
+       ",", "\<\"from equilibrator, pH=7, ionic strength (M) = 0.1, EC: \
+5.3.1.1\"\>"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.730566683430644*^9, 3.7305666878895607`*^9}, 
+   3.730566729818329*^9, 3.730569716859188*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -978,11 +735,8 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"dataTypeList", "=", 
     RowBox[{"{", 
-     RowBox[{
-     "\"\<Keq\>\"", ",", "\"\<dKd\>\"", ",", "\"\<Km1\>\"", ",", 
-      "\"\<Km2\>\"", ",", "\"\<Km3\>\"", ",", "\"\<Km4\>\"", ",", 
-      "\"\<kcat\>\"", ",", "\"\<Ki\>\"", ",", " ", "\"\<all\>\""}], "}"}]}], 
-   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+     RowBox[{"\"\<dKd\>\"", ",", " ", "\"\<all\>\""}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"nEnsembles", " ", "=", "99"}], ";"}], 
@@ -1062,1015 +816,1216 @@ Cell[BoxData[{
    3.695540594993105*^9}, {3.695543307760806*^9, 3.695543338131892*^9}, {
    3.709440132180089*^9, 3.709440172259548*^9}, 3.709441140284436*^9, 
    3.70953417759019*^9, {3.709542851437389*^9, 3.709542851810875*^9}, {
-   3.718431142095386*^9, 3.718431187853125*^9}}],
+   3.718431142095386*^9, 3.718431187853125*^9}, {3.7305529369852324`*^9, 
+   3.730552939369137*^9}}],
 
 Cell[CellGroupData[{
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_0.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_0.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096174411331873`*^9}],
+ CellChangeTimes->{3.730569724926869*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_9.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_13.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617441146031*^9}],
+ CellChangeTimes->{3.7305697250338917`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_18.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_13.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617441166091*^9}],
+ CellChangeTimes->{3.730569743237803*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_27.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_0.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096174411895237`*^9}],
+ CellChangeTimes->{3.730569746007156*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_9.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_14.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096174810969954`*^9}],
+ CellChangeTimes->{3.73056976215726*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_27.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_1.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096174823624573`*^9}],
+ CellChangeTimes->{3.730569763325713*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_18.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_14.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617482720932*^9}],
+ CellChangeTimes->{3.73056977830727*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_0.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_1.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617484099648*^9}],
+ CellChangeTimes->{3.730569784803485*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_28.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_15.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617514517848*^9}],
+ CellChangeTimes->{3.730569797987838*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_10.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_2.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617517793049*^9}],
+ CellChangeTimes->{3.730569805037471*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_19.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_15.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70961752376565*^9}],
+ CellChangeTimes->{3.730569819390629*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_1.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_2.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617524100162*^9}],
+ CellChangeTimes->{3.730569822441029*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_10.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_16.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096175656027937`*^9}],
+ CellChangeTimes->{3.730569836214365*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_28.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_3.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096175663964233`*^9}],
+ CellChangeTimes->{3.7305698377174883`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_1.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_16.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096175731314487`*^9}],
+ CellChangeTimes->{3.730569855529112*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_19.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_3.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096175822176447`*^9}],
+ CellChangeTimes->{3.730569855653212*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_11.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_4.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617612744989*^9}],
+ CellChangeTimes->{3.7305698732866592`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_29.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_17.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617613852387*^9}],
+ CellChangeTimes->{3.730569875008244*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_2.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_4.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70961762347225*^9}],
+ CellChangeTimes->{3.730569891858832*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_20.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_17.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617637400301*^9}],
+ CellChangeTimes->{3.7305698951422997`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_11.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_5.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70961766085789*^9}],
+ CellChangeTimes->{3.73056991249684*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_29.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_18.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096176618692093`*^9}],
+ CellChangeTimes->{3.730569915607626*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_2.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_5.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096176774673977`*^9}],
+ CellChangeTimes->{3.730569929025496*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_20.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_18.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617687046835*^9}],
+ CellChangeTimes->{3.7305699335686817`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_12.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_6.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096177144428864`*^9}],
+ CellChangeTimes->{3.730569945630828*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_30.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_19.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096177197109013`*^9}],
+ CellChangeTimes->{3.7305699530639057`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_3.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_6.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096177326726913`*^9}],
+ CellChangeTimes->{3.7305699651862698`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_21.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_19.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617738831378*^9}],
+ CellChangeTimes->{3.7305699779548798`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_12.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_7.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617762101372*^9}],
+ CellChangeTimes->{3.730569985726368*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_30.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_20.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617766480473*^9}],
+ CellChangeTimes->{3.7305699983476458`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_3.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_7.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617774959269*^9}],
+ CellChangeTimes->{3.730570006132318*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_21.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_20.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096177927698717`*^9}],
+ CellChangeTimes->{3.730570018101942*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_31.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_8.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096178225048447`*^9}],
+ CellChangeTimes->{3.730570027726091*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_13.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_21.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617825264297*^9}],
+ CellChangeTimes->{3.730570040040286*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_4.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_8.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617845590958*^9}],
+ CellChangeTimes->{3.730570047446269*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_22.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_21.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617862432353*^9}],
+ CellChangeTimes->{3.730570059958343*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_31.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_9.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096178848406153`*^9}],
+ CellChangeTimes->{3.730570064382551*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_13.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_22.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096178850277233`*^9}],
+ CellChangeTimes->{3.730570075428537*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_4.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_9.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70961790400638*^9}],
+ CellChangeTimes->{3.730570083912545*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_22.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_22.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617928281746*^9}],
+ CellChangeTimes->{3.7305700946997643`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_32.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_10.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617960489999*^9}],
+ CellChangeTimes->{3.730570102723114*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_14.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_23.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709617961991868*^9}],
+ CellChangeTimes->{3.730570111589802*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_5.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_10.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096179828116302`*^9}],
+ CellChangeTimes->{3.730570122006319*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_23.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_23.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618013327037*^9}],
+ CellChangeTimes->{3.730570129010839*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_32.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_11.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70961803575228*^9}],
+ CellChangeTimes->{3.730570141375812*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_14.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_24.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096180391093493`*^9}],
+ CellChangeTimes->{3.730570147943418*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_5.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_11.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618062659134*^9}],
+ CellChangeTimes->{3.730570161923276*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_23.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_24.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618095425898*^9}],
+ CellChangeTimes->{3.7305701698325377`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_33.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_12.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618132768158*^9}],
+ CellChangeTimes->{3.730570188184289*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_15.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_25.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096181341139593`*^9}],
+ CellChangeTimes->{3.7305701957822104`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_6.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_12.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618152282765*^9}],
+ CellChangeTimes->{3.730570212363627*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_24.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_25.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618190261133*^9}],
+ CellChangeTimes->{3.730570220973146*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_33.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_26.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096182168344*^9}],
+ CellChangeTimes->{3.7305702351803083`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_15.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_39.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096182417330017`*^9}],
+ CellChangeTimes->{3.730570243809078*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_6.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_26.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096182443812647`*^9}],
+ CellChangeTimes->{3.730570256702261*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_24.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_39.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096182875127172`*^9}],
+ CellChangeTimes->{3.730570265531433*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_34.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_27.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618314041382*^9}],
+ CellChangeTimes->{3.7305702786338987`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_16.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_40.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096183371611633`*^9}],
+ CellChangeTimes->{3.730570285303307*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_7.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_27.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618337806355*^9}],
+ CellChangeTimes->{3.7305702985279083`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_25.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_40.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618386808442*^9}],
+ CellChangeTimes->{3.7305703089357843`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_34.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_28.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618409734449*^9}],
+ CellChangeTimes->{3.7305703216788054`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_7.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_41.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096184157151527`*^9}],
+ CellChangeTimes->{3.730570332613453*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_16.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_28.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618423191202*^9}],
+ CellChangeTimes->{3.730570343102767*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_25.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_41.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618480286148*^9}],
+ CellChangeTimes->{3.730570355044283*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_35.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_29.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618517377282*^9}],
+ CellChangeTimes->{3.730570365165183*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_8.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_42.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618528660837*^9}],
+ CellChangeTimes->{3.730570376801759*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_17.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_29.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618532617279*^9}],
+ CellChangeTimes->{3.730570387646964*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_26.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_42.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618583980254*^9}],
+ CellChangeTimes->{3.7305703988127403`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_35.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_30.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096186152859497`*^9}],
+ CellChangeTimes->{3.730570406001253*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_8.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_43.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618625612282*^9}],
+ CellChangeTimes->{3.7305704205574007`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_17.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_30.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618629559801*^9}],
+ CellChangeTimes->{3.7305704300430613`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_26.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_43.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618680885672*^9}],
+ CellChangeTimes->{3.730570442084734*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_44.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_31.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618723541103*^9}],
+ CellChangeTimes->{3.7305704517561207`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_36.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_44.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618723559403*^9}],
+ CellChangeTimes->{3.730570465301704*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_52.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_31.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618725096746*^9}],
+ CellChangeTimes->{3.730570471953978*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_60.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_44.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618798256057*^9}],
+ CellChangeTimes->{3.73057048564427*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_44.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_32.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618826894239*^9}],
+ CellChangeTimes->{3.7305704935851192`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_52.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_45.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096188274205647`*^9}],
+ CellChangeTimes->{3.7305705083160667`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_36.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_32.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096188334455023`*^9}],
+ CellChangeTimes->{3.730570516236988*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_60.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_45.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709618908976934*^9}],
+ CellChangeTimes->{3.7305705304557743`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_53.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_33.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096189467676697`*^9}],
+ CellChangeTimes->{3.730570540556171*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_45.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_46.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096189475653067`*^9}],
+ CellChangeTimes->{3.730570553225665*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_37.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_33.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096189491641817`*^9}],
+ CellChangeTimes->{3.7305705633112097`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_61.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_46.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619032630148*^9}],
+ CellChangeTimes->{3.730570574459828*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_37.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_34.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619046620743*^9}],
+ CellChangeTimes->{3.7305705844862833`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_53.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_47.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619052025375*^9}],
+ CellChangeTimes->{3.730570595727566*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_45.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_34.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619059091621*^9}],
+ CellChangeTimes->{3.730570605969836*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_61.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_47.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619123207946*^9}],
+ CellChangeTimes->{3.730570617354409*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_38.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_35.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619133468854*^9}],
+ CellChangeTimes->{3.7305706277831707`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_54.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_48.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096191411033697`*^9}],
+ CellChangeTimes->{3.730570639922868*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_46.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_35.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619150587214*^9}],
+ CellChangeTimes->{3.730570651239512*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_62.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_48.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619205873213*^9}],
+ CellChangeTimes->{3.730570660782832*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_38.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_36.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619217666683*^9}],
+ CellChangeTimes->{3.730570675608425*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_54.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_49.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619220992432*^9}],
+ CellChangeTimes->{3.7305706825668373`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_46.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_36.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619237374308*^9}],
+ CellChangeTimes->{3.730570696426816*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_62.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_49.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619293049878*^9}],
+ CellChangeTimes->{3.730570703376521*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_55.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_37.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619297527605*^9}],
+ CellChangeTimes->{3.730570719224556*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_39.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_50.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096193011599197`*^9}],
+ CellChangeTimes->{3.730570722701517*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_47.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_50.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619319174343*^9}],
+ CellChangeTimes->{3.730570744422257*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_63.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_37.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619376791329*^9}],
+ CellChangeTimes->{3.7305707445532093`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_39.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_38.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619381718256*^9}],
+ CellChangeTimes->{3.730570765987997*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_55.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_51.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619384110573*^9}],
+ CellChangeTimes->{3.730570767392555*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_47.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_51.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619397540553*^9}],
+ CellChangeTimes->{3.730570785149911*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_63.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_38.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619451834775*^9}],
+ CellChangeTimes->{3.730570785479229*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_40.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_52.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096194694541883`*^9}],
+ CellChangeTimes->{3.730570802827042*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_56.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_64.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619469956427*^9}],
+ CellChangeTimes->{3.730570803127383*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_48.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_64.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619480212164*^9}],
+ CellChangeTimes->{3.730570822252871*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_40.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_52.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619566583518*^9}],
+ CellChangeTimes->{3.73057082325774*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_64.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_53.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619569309441*^9}],
+ CellChangeTimes->{3.730570844150619*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_56.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_65.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096195722847767`*^9}],
+ CellChangeTimes->{3.730570844745343*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_48.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_53.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619589069207*^9}],
+ CellChangeTimes->{3.730570860348116*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_64.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_65.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619649221643*^9}],
+ CellChangeTimes->{3.730570866938181*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_41.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_54.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619665287795*^9}],
+ CellChangeTimes->{3.730570884677733*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_57.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_66.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096196681866093`*^9}],
+ CellChangeTimes->{3.730570890802438*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_49.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_54.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096196774044733`*^9}],
+ CellChangeTimes->{3.73057090567047*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_65.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_66.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619746280212*^9}],
+ CellChangeTimes->{3.7305709137396507`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_57.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_55.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096197607323227`*^9}],
+ CellChangeTimes->{3.730570933589959*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_41.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_67.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619766700068*^9}],
+ CellChangeTimes->{3.730570944907555*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_49.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_55.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096197872821836`*^9}],
+ CellChangeTimes->{3.730570960635683*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_65.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_67.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619843810446*^9}],
+ CellChangeTimes->{3.7305709720231533`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_42.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_56.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619854774919*^9}],
+ CellChangeTimes->{3.730570986449779*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_58.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_68.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70961986071373*^9}],
+ CellChangeTimes->{3.730570996878683*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_50.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_56.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70961987898879*^9}],
+ CellChangeTimes->{3.730571014485474*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_42.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_68.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619934368079*^9}],
+ CellChangeTimes->{3.730571020865284*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_66.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_57.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096199393900633`*^9}],
+ CellChangeTimes->{3.7305710384857807`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_58.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_69.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619941214383*^9}],
+ CellChangeTimes->{3.7305710447636347`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_50.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_57.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709619961583359*^9}],
+ CellChangeTimes->{3.730571067356103*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_43.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_69.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096200188164387`*^9}],
+ CellChangeTimes->{3.730571072550215*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_66.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_58.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096200266852207`*^9}],
+ CellChangeTimes->{3.730571093307341*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_59.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_70.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096200274227*^9}],
+ CellChangeTimes->{3.730571096359138*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_51.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_58.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620050703862*^9}],
+ CellChangeTimes->{3.730571112918927*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_43.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_70.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620098920515*^9}],
+ CellChangeTimes->{3.7305711162690487`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_59.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_59.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620113541889*^9}],
+ CellChangeTimes->{3.730571132781213*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_67.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_71.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620120177094*^9}],
+ CellChangeTimes->{3.7305711368614683`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_51.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_59.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620145121587*^9}],
+ CellChangeTimes->{3.7305711552126226`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_68.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_71.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620202775885*^9}],
+ CellChangeTimes->{3.730571156197082*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_76.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_60.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620207886547*^9}],
+ CellChangeTimes->{3.730571184457402*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_67.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_72.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620210760577*^9}],
+ CellChangeTimes->{3.7305711880792933`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_84.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_60.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620235010022*^9}],
+ CellChangeTimes->{3.730571205181053*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_68.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_72.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620281464837*^9}],
+ CellChangeTimes->{3.730571213533318*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_92.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_61.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620288828702*^9}],
+ CellChangeTimes->{3.730571233335815*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_76.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_73.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620295464168*^9}],
+ CellChangeTimes->{3.730571237653874*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_84.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_61.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620320116179*^9}],
+ CellChangeTimes->{3.730571258969318*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_69.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_73.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096203756632032`*^9}],
+ CellChangeTimes->{3.7305712605767717`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_92.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_62.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620384935864*^9}],
+ CellChangeTimes->{3.7305712853738823`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_85.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_74.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70962040465697*^9}],
+ CellChangeTimes->{3.7305712885544567`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_77.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_62.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620405212837*^9}],
+ CellChangeTimes->{3.730571316053323*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_69.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_74.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620470195814*^9}],
+ CellChangeTimes->{3.730571316635787*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_93.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_75.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096204813382397`*^9}],
+ CellChangeTimes->{3.730571346376358*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_85.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_63.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620486936531*^9}],
+ CellChangeTimes->{3.730571347070262*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_77.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_63.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620494355485*^9}],
+ CellChangeTimes->{3.730571372310966*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_86.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_75.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620565381268*^9}],
+ CellChangeTimes->{3.7305713745707493`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_70.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_76.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096205745888653`*^9}],
+ CellChangeTimes->{3.730571400683742*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_93.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_88.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620580180798*^9}],
+ CellChangeTimes->{3.7305714007651567`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_78.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_76.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620585467409*^9}],
+ CellChangeTimes->{3.730571423316918*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_86.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_88.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620638046639*^9}],
+ CellChangeTimes->{3.7305714237670794`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_70.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_77.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096206626341333`*^9}],
+ CellChangeTimes->{3.7305714474695272`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_94.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_89.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70962066948323*^9}],
+ CellChangeTimes->{3.7305714503439217`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_78.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_77.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096206750648003`*^9}],
+ CellChangeTimes->{3.73057147207051*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_87.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_89.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096207316793118`*^9}],
+ CellChangeTimes->{3.730571474441359*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_94.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_78.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620751032372*^9}],
+ CellChangeTimes->{3.730571494293034*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_71.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_90.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620755067156*^9}],
+ CellChangeTimes->{3.7305714982567787`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_79.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_78.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620773196624*^9}],
+ CellChangeTimes->{3.7305715141064787`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_87.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_90.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096208258684597`*^9}],
+ CellChangeTimes->{3.730571521011746*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_95.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_79.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70962083132521*^9}],
+ CellChangeTimes->{3.7305715361062927`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_71.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_91.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620845642783*^9}],
+ CellChangeTimes->{3.730571544015279*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_79.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_79.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620869748081*^9}],
+ CellChangeTimes->{3.730571560591776*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_95.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_91.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620923445745*^9}],
+ CellChangeTimes->{3.730571564806669*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_88.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_80.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620925946453*^9}],
+ CellChangeTimes->{3.730571582106514*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_72.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_92.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620942392641*^9}],
+ CellChangeTimes->{3.730571586410159*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_80.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_80.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709620963359055*^9}],
+ CellChangeTimes->{3.730571605394602*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_88.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_92.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096210128547487`*^9}],
+ CellChangeTimes->{3.73057160759866*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_72.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_81.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621025257633*^9}],
+ CellChangeTimes->{3.730571626214211*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_96.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_93.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096210310243263`*^9}],
+ CellChangeTimes->{3.730571629368338*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_80.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_81.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70962106795583*^9}],
+ CellChangeTimes->{3.730571648599411*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_96.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_93.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621116214736*^9}],
+ CellChangeTimes->{3.730571651008129*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_89.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_82.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621118376669*^9}],
+ CellChangeTimes->{3.73057166795849*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_73.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_94.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621134465107*^9}],
+ CellChangeTimes->{3.730571673126585*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_81.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_82.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096211709104652`*^9}],
+ CellChangeTimes->{3.730571691465276*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_89.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_94.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621199125854*^9}],
+ CellChangeTimes->{3.730571695253289*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_97.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_83.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621214888144*^9}],
+ CellChangeTimes->{3.730571711428986*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_73.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_95.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096212157053537`*^9}],
+ CellChangeTimes->{3.730571715912393*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_81.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_83.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621256303166*^9}],
+ CellChangeTimes->{3.73057173426516*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_90.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_95.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.70962127715729*^9}],
+ CellChangeTimes->{3.730571737939966*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_74.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_84.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621299562624*^9}],
+ CellChangeTimes->{3.730571754194867*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_97.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_96.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621302417705*^9}],
+ CellChangeTimes->{3.730571758095117*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_82.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_84.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096213406571093`*^9}],
+ CellChangeTimes->{3.730571775333914*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_90.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_96.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621354161888*^9}],
+ CellChangeTimes->{3.730571780370483*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_74.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_85.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621379394538*^9}],
+ CellChangeTimes->{3.730571797958289*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_98.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_97.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096213907750187`*^9}],
+ CellChangeTimes->{3.73057180497631*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_82.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_85.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621414288239*^9}],
+ CellChangeTimes->{3.730571817349593*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_91.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_97.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096214451709967`*^9}],
+ CellChangeTimes->{3.730571827014718*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_75.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_86.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621468737568*^9}],
+ CellChangeTimes->{3.730571837513259*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_98.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_98.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096214717288*^9}],
+ CellChangeTimes->{3.730571849475672*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_83.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_86.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096214967136*^9}],
+ CellChangeTimes->{3.730571859803431*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_91.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_98.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621529218589*^9}],
+ CellChangeTimes->{3.7305718706623697`*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_all_99.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_87.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096215518179293`*^9}],
+ CellChangeTimes->{3.73057188405847*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_75.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_dKd_99.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.7096215572085333`*^9}],
+ CellChangeTimes->{3.730571892523705*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_83.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_87.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621569748254*^9}],
+ CellChangeTimes->{3.730571907847433*^9}],
 
-Cell[BoxData["\<\"/home/mrama/Desktop/MD/kinetics/TALA2/TALA2_param_inf/\
-output/treated_data/rateconst_TALA2_dKd_99.csv\"\>"], "Print",
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+TALA2/TALA2_param_inf2/output/treated_data/rateconst_TALA2_all_99.csv\"\>"], \
+"Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.709621628388341*^9}]
+ CellChangeTimes->{3.730571914202812*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1265, 873},
-WindowMargins->{{170, Automatic}, {Automatic, 71}},
+WindowSize->{714, 423},
+WindowMargins->{{Automatic, 462}, {Automatic, 130}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -2086,223 +2041,228 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 559, 9, 34, "Input"],
-Cell[1120, 31, 8944, 229, 1165, "Input"],
 Cell[CellGroupData[{
-Cell[10089, 264, 248, 3, 65, "Section"],
-Cell[CellGroupData[{
-Cell[10362, 271, 2167, 50, 303, "Input"],
-Cell[12532, 323, 13652, 345, 53, "Print"]
+Cell[1142, 33, 9024, 228, 1143, "Input"],
+Cell[10169, 263, 210, 3, 32, "Output"],
+Cell[10382, 268, 1046, 26, 34, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26221, 673, 849, 21, 145, "Input"],
-Cell[27073, 696, 8731, 255, 63, "Output"]
+Cell[11465, 299, 248, 3, 65, "Section"],
+Cell[11716, 304, 2167, 50, 280, "Input"],
+Cell[CellGroupData[{
+Cell[13908, 358, 849, 21, 145, "Input"],
+Cell[14760, 381, 8822, 256, 37, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23619, 642, 126, 2, 32, "Input"],
+Cell[23748, 646, 2784, 62, 149, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35853, 957, 330, 11, 65, "Section"],
+Cell[26581, 714, 330, 11, 65, "Section"],
 Cell[CellGroupData[{
-Cell[36208, 972, 4711, 92, 553, "Input"],
+Cell[26936, 729, 4602, 90, 645, "Input"],
 Cell[CellGroupData[{
-Cell[40944, 1068, 201, 3, 24, "Print"],
-Cell[41148, 1073, 199, 3, 24, "Print"],
-Cell[41350, 1078, 200, 3, 24, "Print"],
-Cell[41553, 1083, 202, 3, 24, "Print"],
-Cell[41758, 1088, 201, 3, 24, "Print"],
-Cell[41962, 1093, 202, 3, 24, "Print"],
-Cell[42167, 1098, 200, 3, 24, "Print"],
-Cell[42370, 1103, 199, 3, 24, "Print"],
-Cell[42572, 1108, 200, 3, 24, "Print"],
-Cell[42775, 1113, 200, 3, 24, "Print"],
-Cell[42978, 1118, 199, 3, 24, "Print"],
-Cell[43180, 1123, 199, 3, 24, "Print"],
-Cell[43382, 1128, 202, 3, 24, "Print"],
-Cell[43587, 1133, 202, 3, 24, "Print"],
-Cell[43792, 1138, 201, 3, 24, "Print"],
-Cell[43996, 1143, 202, 3, 24, "Print"],
-Cell[44201, 1148, 200, 3, 24, "Print"],
-Cell[44404, 1153, 200, 3, 24, "Print"],
-Cell[44607, 1158, 198, 3, 24, "Print"],
-Cell[44808, 1163, 200, 3, 24, "Print"],
-Cell[45011, 1168, 199, 3, 24, "Print"],
-Cell[45213, 1173, 202, 3, 24, "Print"],
-Cell[45418, 1178, 201, 3, 24, "Print"],
-Cell[45622, 1183, 200, 3, 24, "Print"],
-Cell[45825, 1188, 202, 3, 24, "Print"],
-Cell[46030, 1193, 202, 3, 24, "Print"],
-Cell[46235, 1198, 201, 3, 24, "Print"],
-Cell[46439, 1203, 200, 3, 24, "Print"],
-Cell[46642, 1208, 200, 3, 24, "Print"],
-Cell[46845, 1213, 200, 3, 24, "Print"],
-Cell[47048, 1218, 199, 3, 24, "Print"],
-Cell[47250, 1223, 202, 3, 24, "Print"],
-Cell[47455, 1228, 202, 3, 24, "Print"],
-Cell[47660, 1233, 200, 3, 24, "Print"],
-Cell[47863, 1238, 199, 3, 24, "Print"],
-Cell[48065, 1243, 200, 3, 24, "Print"],
-Cell[48268, 1248, 202, 3, 24, "Print"],
-Cell[48473, 1253, 202, 3, 24, "Print"],
-Cell[48678, 1258, 198, 3, 24, "Print"],
-Cell[48879, 1263, 200, 3, 24, "Print"],
-Cell[49082, 1268, 200, 3, 24, "Print"],
-Cell[49285, 1273, 200, 3, 24, "Print"],
-Cell[49488, 1278, 201, 3, 24, "Print"],
-Cell[49692, 1283, 200, 3, 24, "Print"],
-Cell[49895, 1288, 199, 3, 24, "Print"],
-Cell[50097, 1293, 202, 3, 24, "Print"],
-Cell[50302, 1298, 199, 3, 24, "Print"],
-Cell[50504, 1303, 200, 3, 24, "Print"],
-Cell[50707, 1308, 200, 3, 24, "Print"],
-Cell[50910, 1313, 202, 3, 24, "Print"],
-Cell[51115, 1318, 199, 3, 24, "Print"],
-Cell[51317, 1323, 200, 3, 24, "Print"],
-Cell[51520, 1328, 198, 3, 24, "Print"],
-Cell[51721, 1333, 202, 3, 24, "Print"],
-Cell[51926, 1338, 201, 3, 24, "Print"],
-Cell[52130, 1343, 202, 3, 24, "Print"],
-Cell[52335, 1348, 200, 3, 24, "Print"],
-Cell[52538, 1353, 202, 3, 24, "Print"],
-Cell[52743, 1358, 199, 3, 24, "Print"],
-Cell[52945, 1363, 200, 3, 24, "Print"],
-Cell[53148, 1368, 200, 3, 24, "Print"],
-Cell[53351, 1373, 201, 3, 24, "Print"],
-Cell[53555, 1378, 200, 3, 24, "Print"],
-Cell[53758, 1383, 200, 3, 24, "Print"],
-Cell[53961, 1388, 200, 3, 24, "Print"],
-Cell[54164, 1393, 199, 3, 24, "Print"],
-Cell[54366, 1398, 200, 3, 24, "Print"],
-Cell[54569, 1403, 200, 3, 24, "Print"],
-Cell[54772, 1408, 202, 3, 24, "Print"],
-Cell[54977, 1413, 199, 3, 24, "Print"],
-Cell[55179, 1418, 200, 3, 24, "Print"],
-Cell[55382, 1423, 200, 3, 24, "Print"],
-Cell[55585, 1428, 200, 3, 24, "Print"],
-Cell[55788, 1433, 200, 3, 24, "Print"],
-Cell[55991, 1438, 200, 3, 24, "Print"],
-Cell[56194, 1443, 200, 3, 24, "Print"],
-Cell[56397, 1448, 200, 3, 24, "Print"],
-Cell[56600, 1453, 202, 3, 24, "Print"],
-Cell[56805, 1458, 202, 3, 24, "Print"],
-Cell[57010, 1463, 200, 3, 24, "Print"],
-Cell[57213, 1468, 202, 3, 24, "Print"],
-Cell[57418, 1473, 202, 3, 24, "Print"],
-Cell[57623, 1478, 202, 3, 24, "Print"],
-Cell[57828, 1483, 200, 3, 24, "Print"],
-Cell[58031, 1488, 200, 3, 24, "Print"],
-Cell[58234, 1493, 200, 3, 24, "Print"],
-Cell[58437, 1498, 200, 3, 24, "Print"],
-Cell[58640, 1503, 200, 3, 24, "Print"],
-Cell[58843, 1508, 200, 3, 24, "Print"],
-Cell[59046, 1513, 202, 3, 24, "Print"],
-Cell[59251, 1518, 200, 3, 24, "Print"],
-Cell[59454, 1523, 200, 3, 24, "Print"],
-Cell[59657, 1528, 200, 3, 24, "Print"],
-Cell[59860, 1533, 200, 3, 24, "Print"],
-Cell[60063, 1538, 200, 3, 24, "Print"],
-Cell[60266, 1543, 200, 3, 24, "Print"],
-Cell[60469, 1548, 200, 3, 24, "Print"],
-Cell[60672, 1553, 202, 3, 24, "Print"],
-Cell[60877, 1558, 200, 3, 24, "Print"],
-Cell[61080, 1563, 200, 3, 24, "Print"],
-Cell[61283, 1568, 200, 3, 24, "Print"],
-Cell[61486, 1573, 200, 3, 24, "Print"],
-Cell[61689, 1578, 200, 3, 24, "Print"],
-Cell[61892, 1583, 200, 3, 24, "Print"],
-Cell[62095, 1588, 202, 3, 24, "Print"],
-Cell[62300, 1593, 200, 3, 24, "Print"],
-Cell[62503, 1598, 200, 3, 24, "Print"],
-Cell[62706, 1603, 200, 3, 24, "Print"],
-Cell[62909, 1608, 200, 3, 24, "Print"],
-Cell[63112, 1613, 202, 3, 24, "Print"],
-Cell[63317, 1618, 200, 3, 24, "Print"],
-Cell[63520, 1623, 200, 3, 24, "Print"],
-Cell[63723, 1628, 200, 3, 24, "Print"],
-Cell[63926, 1633, 202, 3, 24, "Print"],
-Cell[64131, 1638, 202, 3, 24, "Print"],
-Cell[64336, 1643, 200, 3, 24, "Print"],
-Cell[64539, 1648, 202, 3, 24, "Print"],
-Cell[64744, 1653, 200, 3, 24, "Print"],
-Cell[64947, 1658, 202, 3, 24, "Print"],
-Cell[65152, 1663, 200, 3, 24, "Print"],
-Cell[65355, 1668, 200, 3, 24, "Print"],
-Cell[65558, 1673, 199, 3, 24, "Print"],
-Cell[65760, 1678, 199, 3, 24, "Print"],
-Cell[65962, 1683, 200, 3, 24, "Print"],
-Cell[66165, 1688, 202, 3, 24, "Print"],
-Cell[66370, 1693, 200, 3, 24, "Print"],
-Cell[66573, 1698, 200, 3, 24, "Print"],
-Cell[66776, 1703, 202, 3, 24, "Print"],
-Cell[66981, 1708, 202, 3, 24, "Print"],
-Cell[67186, 1713, 198, 3, 24, "Print"],
-Cell[67387, 1718, 200, 3, 24, "Print"],
-Cell[67590, 1723, 200, 3, 24, "Print"],
-Cell[67793, 1728, 200, 3, 24, "Print"],
-Cell[67996, 1733, 200, 3, 24, "Print"],
-Cell[68199, 1738, 200, 3, 24, "Print"],
-Cell[68402, 1743, 200, 3, 24, "Print"],
-Cell[68605, 1748, 200, 3, 24, "Print"],
-Cell[68808, 1753, 200, 3, 24, "Print"],
-Cell[69011, 1758, 200, 3, 24, "Print"],
-Cell[69214, 1763, 200, 3, 24, "Print"],
-Cell[69417, 1768, 200, 3, 24, "Print"],
-Cell[69620, 1773, 200, 3, 24, "Print"],
-Cell[69823, 1778, 200, 3, 24, "Print"],
-Cell[70026, 1783, 202, 3, 24, "Print"],
-Cell[70231, 1788, 200, 3, 24, "Print"],
-Cell[70434, 1793, 199, 3, 24, "Print"],
-Cell[70636, 1798, 200, 3, 24, "Print"],
-Cell[70839, 1803, 200, 3, 24, "Print"],
-Cell[71042, 1808, 202, 3, 24, "Print"],
-Cell[71247, 1813, 200, 3, 24, "Print"],
-Cell[71450, 1818, 200, 3, 24, "Print"],
-Cell[71653, 1823, 200, 3, 24, "Print"],
-Cell[71856, 1828, 202, 3, 24, "Print"],
-Cell[72061, 1833, 200, 3, 24, "Print"],
-Cell[72264, 1838, 200, 3, 24, "Print"],
-Cell[72467, 1843, 200, 3, 24, "Print"],
-Cell[72670, 1848, 202, 3, 24, "Print"],
-Cell[72875, 1853, 199, 3, 24, "Print"],
-Cell[73077, 1858, 202, 3, 24, "Print"],
-Cell[73282, 1863, 202, 3, 24, "Print"],
-Cell[73487, 1868, 200, 3, 24, "Print"],
-Cell[73690, 1873, 200, 3, 24, "Print"],
-Cell[73893, 1878, 200, 3, 24, "Print"],
-Cell[74096, 1883, 202, 3, 24, "Print"],
-Cell[74301, 1888, 199, 3, 24, "Print"],
-Cell[74503, 1893, 200, 3, 24, "Print"],
-Cell[74706, 1898, 200, 3, 24, "Print"],
-Cell[74909, 1903, 200, 3, 24, "Print"],
-Cell[75112, 1908, 200, 3, 24, "Print"],
-Cell[75315, 1913, 200, 3, 24, "Print"],
-Cell[75518, 1918, 200, 3, 24, "Print"],
-Cell[75721, 1923, 202, 3, 24, "Print"],
-Cell[75926, 1928, 200, 3, 24, "Print"],
-Cell[76129, 1933, 202, 3, 24, "Print"],
-Cell[76334, 1938, 199, 3, 24, "Print"],
-Cell[76536, 1943, 200, 3, 24, "Print"],
-Cell[76739, 1948, 200, 3, 24, "Print"],
-Cell[76942, 1953, 200, 3, 24, "Print"],
-Cell[77145, 1958, 202, 3, 24, "Print"],
-Cell[77350, 1963, 200, 3, 24, "Print"],
-Cell[77553, 1968, 200, 3, 24, "Print"],
-Cell[77756, 1973, 202, 3, 24, "Print"],
-Cell[77961, 1978, 200, 3, 24, "Print"],
-Cell[78164, 1983, 199, 3, 24, "Print"],
-Cell[78366, 1988, 200, 3, 24, "Print"],
-Cell[78569, 1993, 200, 3, 24, "Print"],
-Cell[78772, 1998, 202, 3, 24, "Print"],
-Cell[78977, 2003, 200, 3, 24, "Print"],
-Cell[79180, 2008, 200, 3, 24, "Print"],
-Cell[79383, 2013, 202, 3, 24, "Print"],
-Cell[79588, 2018, 200, 3, 24, "Print"],
-Cell[79791, 2023, 202, 3, 24, "Print"],
-Cell[79996, 2028, 200, 3, 24, "Print"],
-Cell[80199, 2033, 198, 3, 24, "Print"],
-Cell[80400, 2038, 198, 3, 24, "Print"],
-Cell[80601, 2043, 200, 3, 24, "Print"],
-Cell[80804, 2048, 202, 3, 24, "Print"],
-Cell[81009, 2053, 202, 3, 24, "Print"],
-Cell[81214, 2058, 200, 3, 24, "Print"],
-Cell[81417, 2063, 200, 3, 24, "Print"]
+Cell[31563, 823, 230, 4, 24, "Print"],
+Cell[31796, 829, 233, 4, 24, "Print"],
+Cell[32032, 835, 231, 4, 24, "Print"],
+Cell[32266, 841, 230, 4, 24, "Print"],
+Cell[32499, 847, 230, 4, 24, "Print"],
+Cell[32732, 853, 230, 4, 24, "Print"],
+Cell[32965, 859, 230, 4, 24, "Print"],
+Cell[33198, 865, 230, 4, 24, "Print"],
+Cell[33431, 871, 231, 4, 24, "Print"],
+Cell[33665, 877, 230, 4, 24, "Print"],
+Cell[33898, 883, 231, 4, 24, "Print"],
+Cell[34132, 889, 230, 4, 24, "Print"],
+Cell[34365, 895, 231, 4, 24, "Print"],
+Cell[34599, 901, 232, 4, 24, "Print"],
+Cell[34834, 907, 231, 4, 24, "Print"],
+Cell[35068, 913, 230, 4, 24, "Print"],
+Cell[35301, 919, 232, 4, 24, "Print"],
+Cell[35536, 925, 231, 4, 24, "Print"],
+Cell[35770, 931, 230, 4, 24, "Print"],
+Cell[36003, 937, 233, 4, 24, "Print"],
+Cell[36239, 943, 229, 4, 24, "Print"],
+Cell[36471, 949, 231, 4, 24, "Print"],
+Cell[36705, 955, 230, 4, 24, "Print"],
+Cell[36938, 961, 233, 4, 24, "Print"],
+Cell[37174, 967, 230, 4, 24, "Print"],
+Cell[37407, 973, 233, 4, 24, "Print"],
+Cell[37643, 979, 232, 4, 24, "Print"],
+Cell[37878, 985, 233, 4, 24, "Print"],
+Cell[38114, 991, 230, 4, 24, "Print"],
+Cell[38347, 997, 233, 4, 24, "Print"],
+Cell[38583, 1003, 230, 4, 24, "Print"],
+Cell[38816, 1009, 231, 4, 24, "Print"],
+Cell[39050, 1015, 230, 4, 24, "Print"],
+Cell[39283, 1021, 231, 4, 24, "Print"],
+Cell[39517, 1027, 230, 4, 24, "Print"],
+Cell[39750, 1033, 231, 4, 24, "Print"],
+Cell[39984, 1039, 230, 4, 24, "Print"],
+Cell[40217, 1045, 231, 4, 24, "Print"],
+Cell[40451, 1051, 230, 4, 24, "Print"],
+Cell[40684, 1057, 233, 4, 24, "Print"],
+Cell[40920, 1063, 231, 4, 24, "Print"],
+Cell[41154, 1069, 231, 4, 24, "Print"],
+Cell[41388, 1075, 231, 4, 24, "Print"],
+Cell[41622, 1081, 231, 4, 24, "Print"],
+Cell[41856, 1087, 231, 4, 24, "Print"],
+Cell[42090, 1093, 231, 4, 24, "Print"],
+Cell[42324, 1099, 231, 4, 24, "Print"],
+Cell[42558, 1105, 233, 4, 24, "Print"],
+Cell[42794, 1111, 231, 4, 24, "Print"],
+Cell[43028, 1117, 233, 4, 24, "Print"],
+Cell[43264, 1123, 231, 4, 24, "Print"],
+Cell[43498, 1129, 231, 4, 24, "Print"],
+Cell[43732, 1135, 233, 4, 24, "Print"],
+Cell[43968, 1141, 231, 4, 24, "Print"],
+Cell[44202, 1147, 231, 4, 24, "Print"],
+Cell[44436, 1153, 231, 4, 24, "Print"],
+Cell[44670, 1159, 233, 4, 24, "Print"],
+Cell[44906, 1165, 231, 4, 24, "Print"],
+Cell[45140, 1171, 233, 4, 24, "Print"],
+Cell[45376, 1177, 233, 4, 24, "Print"],
+Cell[45612, 1183, 233, 4, 24, "Print"],
+Cell[45848, 1189, 231, 4, 24, "Print"],
+Cell[46082, 1195, 231, 4, 24, "Print"],
+Cell[46316, 1201, 231, 4, 24, "Print"],
+Cell[46550, 1207, 231, 4, 24, "Print"],
+Cell[46784, 1213, 231, 4, 24, "Print"],
+Cell[47018, 1219, 231, 4, 24, "Print"],
+Cell[47252, 1225, 233, 4, 24, "Print"],
+Cell[47488, 1231, 231, 4, 24, "Print"],
+Cell[47722, 1237, 233, 4, 24, "Print"],
+Cell[47958, 1243, 233, 4, 24, "Print"],
+Cell[48194, 1249, 231, 4, 24, "Print"],
+Cell[48428, 1255, 233, 4, 24, "Print"],
+Cell[48664, 1261, 231, 4, 24, "Print"],
+Cell[48898, 1267, 231, 4, 24, "Print"],
+Cell[49132, 1273, 230, 4, 24, "Print"],
+Cell[49365, 1279, 233, 4, 45, "Print"],
+Cell[49601, 1285, 233, 4, 45, "Print"],
+Cell[49837, 1291, 231, 4, 45, "Print"],
+Cell[50071, 1297, 233, 4, 45, "Print"],
+Cell[50307, 1303, 231, 4, 45, "Print"],
+Cell[50541, 1309, 231, 4, 45, "Print"],
+Cell[50775, 1315, 233, 4, 45, "Print"],
+Cell[51011, 1321, 231, 4, 45, "Print"],
+Cell[51245, 1327, 233, 4, 45, "Print"],
+Cell[51481, 1333, 231, 4, 24, "Print"],
+Cell[51715, 1339, 231, 4, 24, "Print"],
+Cell[51949, 1345, 231, 4, 24, "Print"],
+Cell[52183, 1351, 233, 4, 24, "Print"],
+Cell[52419, 1357, 231, 4, 24, "Print"],
+Cell[52653, 1363, 231, 4, 24, "Print"],
+Cell[52887, 1369, 231, 4, 24, "Print"],
+Cell[53121, 1375, 231, 4, 24, "Print"],
+Cell[53355, 1381, 233, 4, 24, "Print"],
+Cell[53591, 1387, 231, 4, 24, "Print"],
+Cell[53825, 1393, 231, 4, 24, "Print"],
+Cell[54059, 1399, 231, 4, 24, "Print"],
+Cell[54293, 1405, 231, 4, 24, "Print"],
+Cell[54527, 1411, 231, 4, 24, "Print"],
+Cell[54761, 1417, 233, 4, 24, "Print"],
+Cell[54997, 1423, 231, 4, 24, "Print"],
+Cell[55231, 1429, 231, 4, 24, "Print"],
+Cell[55465, 1435, 231, 4, 24, "Print"],
+Cell[55699, 1441, 231, 4, 24, "Print"],
+Cell[55933, 1447, 231, 4, 24, "Print"],
+Cell[56167, 1453, 231, 4, 24, "Print"],
+Cell[56401, 1459, 231, 4, 24, "Print"],
+Cell[56635, 1465, 230, 4, 24, "Print"],
+Cell[56868, 1471, 231, 4, 24, "Print"],
+Cell[57102, 1477, 231, 4, 24, "Print"],
+Cell[57336, 1483, 231, 4, 24, "Print"],
+Cell[57570, 1489, 231, 4, 24, "Print"],
+Cell[57804, 1495, 231, 4, 24, "Print"],
+Cell[58038, 1501, 231, 4, 24, "Print"],
+Cell[58272, 1507, 230, 4, 24, "Print"],
+Cell[58505, 1513, 233, 4, 24, "Print"],
+Cell[58741, 1519, 231, 4, 24, "Print"],
+Cell[58975, 1525, 231, 4, 24, "Print"],
+Cell[59209, 1531, 231, 4, 24, "Print"],
+Cell[59443, 1537, 233, 4, 24, "Print"],
+Cell[59679, 1543, 231, 4, 24, "Print"],
+Cell[59913, 1549, 231, 4, 24, "Print"],
+Cell[60147, 1555, 231, 4, 24, "Print"],
+Cell[60381, 1561, 231, 4, 24, "Print"],
+Cell[60615, 1567, 233, 4, 24, "Print"],
+Cell[60851, 1573, 233, 4, 24, "Print"],
+Cell[61087, 1579, 231, 4, 24, "Print"],
+Cell[61321, 1585, 231, 4, 24, "Print"],
+Cell[61555, 1591, 231, 4, 24, "Print"],
+Cell[61789, 1597, 231, 4, 24, "Print"],
+Cell[62023, 1603, 231, 4, 24, "Print"],
+Cell[62257, 1609, 233, 4, 24, "Print"],
+Cell[62493, 1615, 231, 4, 24, "Print"],
+Cell[62727, 1621, 233, 4, 24, "Print"],
+Cell[62963, 1627, 233, 4, 24, "Print"],
+Cell[63199, 1633, 231, 4, 24, "Print"],
+Cell[63433, 1639, 231, 4, 24, "Print"],
+Cell[63667, 1645, 233, 4, 24, "Print"],
+Cell[63903, 1651, 231, 4, 24, "Print"],
+Cell[64137, 1657, 231, 4, 24, "Print"],
+Cell[64371, 1663, 231, 4, 24, "Print"],
+Cell[64605, 1669, 231, 4, 24, "Print"],
+Cell[64839, 1675, 231, 4, 24, "Print"],
+Cell[65073, 1681, 233, 4, 24, "Print"],
+Cell[65309, 1687, 233, 4, 24, "Print"],
+Cell[65545, 1693, 233, 4, 24, "Print"],
+Cell[65781, 1699, 231, 4, 24, "Print"],
+Cell[66015, 1705, 231, 4, 24, "Print"],
+Cell[66249, 1711, 231, 4, 24, "Print"],
+Cell[66483, 1717, 231, 4, 24, "Print"],
+Cell[66717, 1723, 231, 4, 24, "Print"],
+Cell[66951, 1729, 233, 4, 24, "Print"],
+Cell[67187, 1735, 231, 4, 24, "Print"],
+Cell[67421, 1741, 233, 4, 24, "Print"],
+Cell[67657, 1747, 231, 4, 24, "Print"],
+Cell[67891, 1753, 233, 4, 45, "Print"],
+Cell[68127, 1759, 233, 4, 45, "Print"],
+Cell[68363, 1765, 233, 4, 45, "Print"],
+Cell[68599, 1771, 230, 4, 45, "Print"],
+Cell[68832, 1777, 231, 4, 45, "Print"],
+Cell[69066, 1783, 231, 4, 45, "Print"],
+Cell[69300, 1789, 233, 4, 45, "Print"],
+Cell[69536, 1795, 233, 4, 45, "Print"],
+Cell[69772, 1801, 231, 4, 45, "Print"],
+Cell[70006, 1807, 233, 4, 45, "Print"],
+Cell[70242, 1813, 231, 4, 45, "Print"],
+Cell[70476, 1819, 231, 4, 45, "Print"],
+Cell[70710, 1825, 231, 4, 45, "Print"],
+Cell[70944, 1831, 231, 4, 45, "Print"],
+Cell[71178, 1837, 231, 4, 45, "Print"],
+Cell[71412, 1843, 231, 4, 45, "Print"],
+Cell[71646, 1849, 230, 4, 45, "Print"],
+Cell[71879, 1855, 231, 4, 45, "Print"],
+Cell[72113, 1861, 231, 4, 45, "Print"],
+Cell[72347, 1867, 231, 4, 45, "Print"],
+Cell[72581, 1873, 231, 4, 45, "Print"],
+Cell[72815, 1879, 230, 4, 45, "Print"],
+Cell[73048, 1885, 231, 4, 45, "Print"],
+Cell[73282, 1891, 231, 4, 45, "Print"],
+Cell[73516, 1897, 231, 4, 45, "Print"],
+Cell[73750, 1903, 231, 4, 45, "Print"],
+Cell[73984, 1909, 231, 4, 45, "Print"],
+Cell[74218, 1915, 230, 4, 45, "Print"],
+Cell[74451, 1921, 231, 4, 45, "Print"],
+Cell[74685, 1927, 231, 4, 45, "Print"],
+Cell[74919, 1933, 231, 4, 45, "Print"],
+Cell[75153, 1939, 231, 4, 45, "Print"],
+Cell[75387, 1945, 231, 4, 45, "Print"],
+Cell[75621, 1951, 231, 4, 45, "Print"],
+Cell[75855, 1957, 230, 4, 45, "Print"],
+Cell[76088, 1963, 231, 4, 45, "Print"],
+Cell[76322, 1969, 231, 4, 45, "Print"],
+Cell[76556, 1975, 231, 4, 45, "Print"],
+Cell[76790, 1981, 231, 4, 45, "Print"],
+Cell[77024, 1987, 231, 4, 45, "Print"],
+Cell[77258, 1993, 233, 4, 45, "Print"],
+Cell[77494, 1999, 230, 4, 45, "Print"],
+Cell[77727, 2005, 231, 4, 45, "Print"],
+Cell[77961, 2011, 231, 4, 45, "Print"],
+Cell[78195, 2017, 231, 4, 45, "Print"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

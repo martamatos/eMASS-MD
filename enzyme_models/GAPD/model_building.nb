@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     24336,        639]
-NotebookOptionsPosition[     23711,        613]
-NotebookOutlinePosition[     24051,        628]
-CellTagsIndexPosition[     24008,        625]
+NotebookDataLength[     78934,       2060]
+NotebookOptionsPosition[     70236,       1827]
+NotebookOutlinePosition[     70574,       1842]
+CellTagsIndexPosition[     70531,       1839]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,6 +28,8 @@ Cell[BoxData[
    3.676970240113895*^9, 3.6769702447737637`*^9}, {3.682053449390788*^9, 
    3.682053452353827*^9}, {3.682159217598268*^9, 3.682159221631666*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{"<<", "Toolbox`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "Toolbox`Style`"}], "\[IndentingNewLine]", 
@@ -40,8 +42,8 @@ Cell[BoxData[{
     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"enzModelsDir", " ", "=", " ", 
-  "\"\</home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/\>\""}\
-], "\[IndentingNewLine]", 
+  "\"\</home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\>\""}], "\
+\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"mainDir", "=", 
    RowBox[{"enzModelsDir", "<>", "\"\<code_data/\>\""}]}], 
@@ -49,7 +51,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"baseDir", "=", " ", 
-    RowBox[{"enzModelsDir", "<>", "\"\<GAPD/GAPD_param_inf/\>\""}]}], ";"}], 
+    RowBox[{"enzModelsDir", "<>", "\"\<GAPD/GAPD_param_inf2/\>\""}]}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"dataDir", " ", "=", " ", 
@@ -144,7 +146,7 @@ Cell[BoxData[{
       Selectable->False]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"fitCutoff", "=", "1"}], ";"}], 
+   RowBox[{"fitCutoff", "=", "0.1"}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -234,7 +236,14 @@ Cell[BoxData[{
    3.709441121255672*^9, 3.709441133462165*^9}, {3.7096176135807133`*^9, 
    3.709617636695094*^9}, 3.709617718646123*^9, {3.718430942951435*^9, 
    3.718430958528714*^9}, {3.718431364297*^9, 3.718431370797943*^9}, {
-   3.7184316756687317`*^9, 3.718431705392458*^9}}],
+   3.7184316756687317`*^9, 3.718431705392458*^9}, {3.730363664570359*^9, 
+   3.7303636857073517`*^9}}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+\"\>"], "Output",
+ CellChangeTimes->{{3.7303636859684973`*^9, 3.730363697414502*^9}, 
+   3.730548279517139*^9}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -496,7 +505,8 @@ Cell[BoxData[
   3.695543438353135*^9, 3.709440452239759*^9, 3.709441148567769*^9, 
   3.709533093425695*^9, 3.709533139181012*^9, 3.70953321497635*^9, 
   3.709545858023945*^9, 3.709545888741804*^9, 3.709613184110984*^9, 
-  3.709617658213376*^9, 3.709617777975464*^9, 3.7096276028340178`*^9}]
+  3.709617658213376*^9, 3.709617777975464*^9, 3.7096276028340178`*^9, 
+  3.730363698752433*^9, 3.730548296693519*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -515,6 +525,8 @@ Cell[TextData[{
    3.6399119286948357`*^9, 3.6755086697702827`*^9, {3.68215665443184*^9, 
    3.682156671319798*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
   RowBox[{
@@ -524,10 +536,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"dataTypeList", "=", 
      RowBox[{"{", 
-      RowBox[{
-      "\"\<Keq\>\"", ",", "\"\<dKd\>\"", ",", "\"\<Km1\>\"", ",", 
-       "\"\<Km2\>\"", ",", "\"\<Km3\>\"", ",", "\"\<Kd\>\"", ",", 
-       "\"\<kcat\>\"", ",", " ", "\"\<all\>\""}], "}"}]}], ";"}], 
+      RowBox[{"\"\<dKd\>\"", ",", "\"\<all\>\""}], "}"}]}], ";"}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"nEnsembles", " ", "=", "99"}], ";"}], "\[IndentingNewLine]", 
@@ -608,11 +617,1216 @@ Cell[BoxData[
    3.709440132180089*^9, 3.709440172259548*^9}, 3.709441140284436*^9, 
    3.7095330957950573`*^9, {3.7095458629422894`*^9, 3.70954586307206*^9}, 
    3.7096178769687223`*^9, {3.718430981603587*^9, 3.7184310012622223`*^9}, {
-   3.718431033461214*^9, 3.718431037723535*^9}}]
+   3.718431033461214*^9, 3.718431037723535*^9}, {3.730548308629685*^9, 
+   3.730548310903103*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_0.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548323272847*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_13.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548323448411*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_0.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548362566325*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_13.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548363856069*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_1.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548405475597*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_14.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548406332841*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_1.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548443224422*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_14.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305484464696703`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_2.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548472536969*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_15.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548474319027*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_2.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305485038245897`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_15.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548505433961*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_3.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305485341397*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_16.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548535704113*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_3.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548562683288*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_16.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548565248402*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_4.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548592775579*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_17.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305485952770157`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_4.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548621276363*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_17.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548623237178*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_5.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548649111562*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_18.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305486516860723`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_5.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548678573256*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_18.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548680808029*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_19.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548710629517*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_6.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548710766445*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_19.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548739889824*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_6.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548739960701*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_20.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305487808607388`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_7.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305487883729897`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_20.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305488348156347`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_7.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305488363831663`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_21.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548876397469*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_8.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305488807072487`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_21.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054891628126*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_8.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730548924048108*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_22.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054895830739*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_9.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305489677618513`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_22.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549007559122*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_9.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549013987392*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_23.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549047947446*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_10.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549049246869*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_23.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549083048582*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_10.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549089571437*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_24.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305491213540983`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_11.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549124050432*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_24.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549159777931*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_11.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549168973427*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_25.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549198890476*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_12.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549208958921*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_25.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305492380197363`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_12.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549253281548*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_26.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549274260274*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_39.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549295347046*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_26.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305493092118196`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_39.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305493351233053`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_27.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549351392961*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_40.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549374531281*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_27.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549385820607*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_40.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549414589087*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_28.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549417428947*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_41.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305494460250797`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_28.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549448105649*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_41.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305494720785093`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_29.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305494749605*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_42.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549498771893*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_29.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549501807233*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_42.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549525388083*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_30.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054952777949*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_43.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305495526950607`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_30.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549553893849*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_43.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549579513977*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_31.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549579934886*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_44.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549607149366*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_31.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549607373168*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_44.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549634354439*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_32.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549634556199*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_45.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549660400176*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_32.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549662940734*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_45.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549688896586*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_33.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549692069087*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_46.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305497166057787`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_33.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549719338664*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_46.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549743185644*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_34.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054974612885*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_47.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305497691746264`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_34.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549773133342*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_47.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549796233263*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_35.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549801193178*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_48.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549835816709*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_35.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549841914199*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_48.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549880588357*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_36.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549886067863*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_49.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549924979926*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_36.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549925942873*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_37.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73054996350063*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_49.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730549968235952*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_37.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550007456808*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_50.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550008995111*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_38.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550048094797*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_50.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550049626683*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_38.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305500916676483`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_51.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055009491005*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_52.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550132509997*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_51.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550134296125*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_52.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305501671558247`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_64.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550180230871*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_53.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550200412858*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_64.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550221992132*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_53.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550236260038*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_65.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550266212088*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_54.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055027401322*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_65.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550307685115*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_54.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550320828783*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_66.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550356749775*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_55.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550368207945*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_66.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305503942291527`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_55.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550397774979*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_67.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550420491094*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_56.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550424377728*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_67.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055044618554*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_56.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550450377544*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_68.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055047820823*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_57.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550481199277*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_68.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550506891465*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_57.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055050921531*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_69.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305505326773643`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_58.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550535339999*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_69.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550559045034*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_58.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550561131543*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_70.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550584679038*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_59.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550588900301*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_70.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055061975653*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_59.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550624556448*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_71.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305506500864964`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_60.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550653511161*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_71.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550680793188*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_60.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550685086597*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_72.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305507101926537`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_61.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305507128070393`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_72.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305507362426157`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_61.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550738638996*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_73.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550762759375*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_62.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550766562508*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_73.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550788827484*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_62.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550792740902*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_74.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305508149475117`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_63.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550819643375*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_74.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550839755806*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_63.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550845293939*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_75.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550867039707*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_76.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550871926217*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_75.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305508946264143`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_76.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550900087563*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_88.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305509226659317`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_77.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550926496833*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_88.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550950987267*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_77.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550954951581*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_89.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055097718864*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_78.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730550982189189*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_89.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055100347303*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_78.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551008844977*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_90.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055103039741*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_79.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551036148427*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_90.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551057572138*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_79.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551064138731*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_91.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551084846759*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_80.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055109172165*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_91.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551111962327*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_80.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551119157283*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_92.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551139843691*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_81.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551148025731*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_92.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551168585471*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_81.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551175951371*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_93.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305511945660963`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_82.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551202533346*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_93.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551220605288*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_82.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305512287249403`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_94.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551246405789*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_83.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551255174008*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_94.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305512744237013`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_83.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305512841148987`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_95.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551303711307*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_84.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551312239335*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_95.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551333753923*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_84.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055134406384*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_96.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551364589965*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_85.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551374385537*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_96.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305513927854652`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_85.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305514038686*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_97.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551419646245*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_86.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551431233142*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_97.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551445435225*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_86.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551456292725*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_98.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305514719016848`*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_87.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551486076812*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_98.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551501773026*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_87.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551514582942*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_dKd_99.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551528508162*^9}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+GAPD/GAPD_param_inf2/output/treated_data/rateconst_GAPD_all_99.csv\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551552026993*^9}]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{954, 1021},
-WindowMargins->{{946, Automatic}, {3, Automatic}},
+WindowSize->{954, 573},
+WindowMargins->{{Automatic, 3}, {Automatic, 24}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -628,18 +1842,225 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 505, 8, 34, "Input"],
-Cell[1066, 30, 8017, 206, 1143, "Input"],
 Cell[CellGroupData[{
-Cell[9108, 240, 248, 3, 65, "Section"],
-Cell[9359, 245, 1604, 35, 259, "Input"],
+Cell[1088, 32, 8067, 207, 1143, "Input"],
+Cell[9158, 241, 191, 3, 32, "Output"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[10988, 284, 849, 21, 145, "Input"],
-Cell[11840, 307, 6554, 191, 36, "Output"]
+Cell[9386, 249, 248, 3, 65, "Section"],
+Cell[9637, 254, 1604, 35, 259, "Input"],
+Cell[CellGroupData[{
+Cell[11266, 293, 849, 21, 145, "Input"],
+Cell[12118, 316, 6601, 192, 36, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18443, 504, 330, 11, 65, "Section"],
-Cell[18776, 517, 4919, 93, 598, "Input"]
+Cell[18768, 514, 330, 11, 65, "Section"],
+Cell[CellGroupData[{
+Cell[19123, 529, 4821, 91, 598, "Input"],
+Cell[CellGroupData[{
+Cell[23969, 624, 227, 4, 45, "Print"],
+Cell[24199, 630, 228, 4, 45, "Print"],
+Cell[24430, 636, 227, 4, 45, "Print"],
+Cell[24660, 642, 228, 4, 45, "Print"],
+Cell[24891, 648, 227, 4, 45, "Print"],
+Cell[25121, 654, 228, 4, 45, "Print"],
+Cell[25352, 660, 227, 4, 45, "Print"],
+Cell[25582, 666, 230, 4, 45, "Print"],
+Cell[25815, 672, 227, 4, 45, "Print"],
+Cell[26045, 678, 228, 4, 45, "Print"],
+Cell[26276, 684, 229, 4, 45, "Print"],
+Cell[26508, 690, 228, 4, 45, "Print"],
+Cell[26739, 696, 225, 4, 45, "Print"],
+Cell[26967, 702, 228, 4, 45, "Print"],
+Cell[27198, 708, 227, 4, 45, "Print"],
+Cell[27428, 714, 228, 4, 45, "Print"],
+Cell[27659, 720, 227, 4, 45, "Print"],
+Cell[27889, 726, 230, 4, 45, "Print"],
+Cell[28122, 732, 227, 4, 45, "Print"],
+Cell[28352, 738, 228, 4, 45, "Print"],
+Cell[28583, 744, 227, 4, 45, "Print"],
+Cell[28813, 750, 230, 4, 45, "Print"],
+Cell[29046, 756, 227, 4, 45, "Print"],
+Cell[29276, 762, 228, 4, 45, "Print"],
+Cell[29507, 768, 228, 4, 45, "Print"],
+Cell[29738, 774, 227, 4, 45, "Print"],
+Cell[29968, 780, 228, 4, 45, "Print"],
+Cell[30199, 786, 227, 4, 45, "Print"],
+Cell[30429, 792, 230, 4, 45, "Print"],
+Cell[30662, 798, 229, 4, 45, "Print"],
+Cell[30894, 804, 230, 4, 45, "Print"],
+Cell[31127, 810, 229, 4, 45, "Print"],
+Cell[31359, 816, 228, 4, 45, "Print"],
+Cell[31590, 822, 229, 4, 45, "Print"],
+Cell[31822, 828, 227, 4, 45, "Print"],
+Cell[32052, 834, 227, 4, 45, "Print"],
+Cell[32282, 840, 227, 4, 45, "Print"],
+Cell[32512, 846, 229, 4, 45, "Print"],
+Cell[32744, 852, 228, 4, 45, "Print"],
+Cell[32975, 858, 227, 4, 45, "Print"],
+Cell[33205, 864, 228, 4, 45, "Print"],
+Cell[33436, 870, 228, 4, 45, "Print"],
+Cell[33667, 876, 228, 4, 45, "Print"],
+Cell[33898, 882, 228, 4, 45, "Print"],
+Cell[34129, 888, 230, 4, 45, "Print"],
+Cell[34362, 894, 228, 4, 45, "Print"],
+Cell[34593, 900, 228, 4, 45, "Print"],
+Cell[34824, 906, 228, 4, 45, "Print"],
+Cell[35055, 912, 228, 4, 45, "Print"],
+Cell[35286, 918, 228, 4, 45, "Print"],
+Cell[35517, 924, 230, 4, 45, "Print"],
+Cell[35750, 930, 228, 4, 45, "Print"],
+Cell[35981, 936, 228, 4, 45, "Print"],
+Cell[36212, 942, 228, 4, 45, "Print"],
+Cell[36443, 948, 230, 4, 45, "Print"],
+Cell[36676, 954, 230, 4, 45, "Print"],
+Cell[36909, 960, 228, 4, 45, "Print"],
+Cell[37140, 966, 228, 4, 45, "Print"],
+Cell[37371, 972, 228, 4, 45, "Print"],
+Cell[37602, 978, 228, 4, 45, "Print"],
+Cell[37833, 984, 228, 4, 45, "Print"],
+Cell[38064, 990, 230, 4, 45, "Print"],
+Cell[38297, 996, 228, 4, 45, "Print"],
+Cell[38528, 1002, 230, 4, 45, "Print"],
+Cell[38761, 1008, 226, 4, 45, "Print"],
+Cell[38990, 1014, 228, 4, 45, "Print"],
+Cell[39221, 1020, 228, 4, 45, "Print"],
+Cell[39452, 1026, 228, 4, 45, "Print"],
+Cell[39683, 1032, 227, 4, 45, "Print"],
+Cell[39913, 1038, 230, 4, 45, "Print"],
+Cell[40146, 1044, 228, 4, 45, "Print"],
+Cell[40377, 1050, 228, 4, 45, "Print"],
+Cell[40608, 1056, 228, 4, 45, "Print"],
+Cell[40839, 1062, 228, 4, 45, "Print"],
+Cell[41070, 1068, 228, 4, 45, "Print"],
+Cell[41301, 1074, 228, 4, 45, "Print"],
+Cell[41532, 1080, 228, 4, 45, "Print"],
+Cell[41763, 1086, 228, 4, 45, "Print"],
+Cell[41994, 1092, 228, 4, 45, "Print"],
+Cell[42225, 1098, 228, 4, 45, "Print"],
+Cell[42456, 1104, 228, 4, 45, "Print"],
+Cell[42687, 1110, 230, 4, 45, "Print"],
+Cell[42920, 1116, 228, 4, 45, "Print"],
+Cell[43151, 1122, 228, 4, 45, "Print"],
+Cell[43382, 1128, 227, 4, 45, "Print"],
+Cell[43612, 1134, 230, 4, 45, "Print"],
+Cell[43845, 1140, 228, 4, 45, "Print"],
+Cell[44076, 1146, 228, 4, 45, "Print"],
+Cell[44307, 1152, 228, 4, 45, "Print"],
+Cell[44538, 1158, 228, 4, 45, "Print"],
+Cell[44769, 1164, 228, 4, 45, "Print"],
+Cell[45000, 1170, 228, 4, 45, "Print"],
+Cell[45231, 1176, 228, 4, 45, "Print"],
+Cell[45462, 1182, 228, 4, 45, "Print"],
+Cell[45693, 1188, 228, 4, 45, "Print"],
+Cell[45924, 1194, 227, 4, 45, "Print"],
+Cell[46154, 1200, 228, 4, 45, "Print"],
+Cell[46385, 1206, 228, 4, 45, "Print"],
+Cell[46616, 1212, 228, 4, 45, "Print"],
+Cell[46847, 1218, 228, 4, 45, "Print"],
+Cell[47078, 1224, 228, 4, 45, "Print"],
+Cell[47309, 1230, 230, 4, 45, "Print"],
+Cell[47542, 1236, 227, 4, 45, "Print"],
+Cell[47772, 1242, 228, 4, 45, "Print"],
+Cell[48003, 1248, 228, 4, 45, "Print"],
+Cell[48234, 1254, 230, 4, 45, "Print"],
+Cell[48467, 1260, 228, 4, 45, "Print"],
+Cell[48698, 1266, 228, 4, 45, "Print"],
+Cell[48929, 1272, 228, 4, 45, "Print"],
+Cell[49160, 1278, 228, 4, 45, "Print"],
+Cell[49391, 1284, 228, 4, 45, "Print"],
+Cell[49622, 1290, 227, 4, 45, "Print"],
+Cell[49852, 1296, 228, 4, 45, "Print"],
+Cell[50083, 1302, 228, 4, 45, "Print"],
+Cell[50314, 1308, 228, 4, 45, "Print"],
+Cell[50545, 1314, 228, 4, 45, "Print"],
+Cell[50776, 1320, 230, 4, 45, "Print"],
+Cell[51009, 1326, 228, 4, 45, "Print"],
+Cell[51240, 1332, 228, 4, 45, "Print"],
+Cell[51471, 1338, 228, 4, 45, "Print"],
+Cell[51702, 1344, 227, 4, 45, "Print"],
+Cell[51932, 1350, 228, 4, 45, "Print"],
+Cell[52163, 1356, 227, 4, 45, "Print"],
+Cell[52393, 1362, 228, 4, 45, "Print"],
+Cell[52624, 1368, 228, 4, 45, "Print"],
+Cell[52855, 1374, 227, 4, 45, "Print"],
+Cell[53085, 1380, 230, 4, 45, "Print"],
+Cell[53318, 1386, 228, 4, 45, "Print"],
+Cell[53549, 1392, 228, 4, 45, "Print"],
+Cell[53780, 1398, 228, 4, 45, "Print"],
+Cell[54011, 1404, 228, 4, 45, "Print"],
+Cell[54242, 1410, 228, 4, 45, "Print"],
+Cell[54473, 1416, 227, 4, 45, "Print"],
+Cell[54703, 1422, 228, 4, 45, "Print"],
+Cell[54934, 1428, 230, 4, 45, "Print"],
+Cell[55167, 1434, 228, 4, 45, "Print"],
+Cell[55398, 1440, 228, 4, 45, "Print"],
+Cell[55629, 1446, 228, 4, 45, "Print"],
+Cell[55860, 1452, 230, 4, 45, "Print"],
+Cell[56093, 1458, 230, 4, 45, "Print"],
+Cell[56326, 1464, 230, 4, 45, "Print"],
+Cell[56559, 1470, 228, 4, 45, "Print"],
+Cell[56790, 1476, 228, 4, 45, "Print"],
+Cell[57021, 1482, 228, 4, 45, "Print"],
+Cell[57252, 1488, 228, 4, 45, "Print"],
+Cell[57483, 1494, 228, 4, 45, "Print"],
+Cell[57714, 1500, 230, 4, 45, "Print"],
+Cell[57947, 1506, 228, 4, 45, "Print"],
+Cell[58178, 1512, 228, 4, 45, "Print"],
+Cell[58409, 1518, 228, 4, 45, "Print"],
+Cell[58640, 1524, 228, 4, 45, "Print"],
+Cell[58871, 1530, 228, 4, 45, "Print"],
+Cell[59102, 1536, 230, 4, 45, "Print"],
+Cell[59335, 1542, 228, 4, 45, "Print"],
+Cell[59566, 1548, 230, 4, 45, "Print"],
+Cell[59799, 1554, 228, 4, 45, "Print"],
+Cell[60030, 1560, 228, 4, 45, "Print"],
+Cell[60261, 1566, 228, 4, 45, "Print"],
+Cell[60492, 1572, 227, 4, 45, "Print"],
+Cell[60722, 1578, 228, 4, 45, "Print"],
+Cell[60953, 1584, 227, 4, 45, "Print"],
+Cell[61183, 1590, 228, 4, 45, "Print"],
+Cell[61414, 1596, 227, 4, 45, "Print"],
+Cell[61644, 1602, 228, 4, 45, "Print"],
+Cell[61875, 1608, 228, 4, 45, "Print"],
+Cell[62106, 1614, 228, 4, 45, "Print"],
+Cell[62337, 1620, 228, 4, 45, "Print"],
+Cell[62568, 1626, 227, 4, 45, "Print"],
+Cell[62798, 1632, 228, 4, 45, "Print"],
+Cell[63029, 1638, 228, 4, 45, "Print"],
+Cell[63260, 1644, 228, 4, 45, "Print"],
+Cell[63491, 1650, 228, 4, 45, "Print"],
+Cell[63722, 1656, 228, 4, 45, "Print"],
+Cell[63953, 1662, 228, 4, 45, "Print"],
+Cell[64184, 1668, 230, 4, 45, "Print"],
+Cell[64417, 1674, 228, 4, 45, "Print"],
+Cell[64648, 1680, 228, 4, 45, "Print"],
+Cell[64879, 1686, 230, 4, 45, "Print"],
+Cell[65112, 1692, 228, 4, 45, "Print"],
+Cell[65343, 1698, 228, 4, 45, "Print"],
+Cell[65574, 1704, 230, 4, 45, "Print"],
+Cell[65807, 1710, 230, 4, 45, "Print"],
+Cell[66040, 1716, 228, 4, 45, "Print"],
+Cell[66271, 1722, 228, 4, 45, "Print"],
+Cell[66502, 1728, 228, 4, 45, "Print"],
+Cell[66733, 1734, 227, 4, 45, "Print"],
+Cell[66963, 1740, 228, 4, 45, "Print"],
+Cell[67194, 1746, 228, 4, 45, "Print"],
+Cell[67425, 1752, 230, 4, 45, "Print"],
+Cell[67658, 1758, 226, 4, 45, "Print"],
+Cell[67887, 1764, 228, 4, 45, "Print"],
+Cell[68118, 1770, 228, 4, 45, "Print"],
+Cell[68349, 1776, 228, 4, 45, "Print"],
+Cell[68580, 1782, 228, 4, 45, "Print"],
+Cell[68811, 1788, 230, 4, 45, "Print"],
+Cell[69044, 1794, 228, 4, 45, "Print"],
+Cell[69275, 1800, 228, 4, 45, "Print"],
+Cell[69506, 1806, 228, 4, 45, "Print"],
+Cell[69737, 1812, 228, 4, 45, "Print"],
+Cell[69968, 1818, 228, 4, 45, "Print"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]

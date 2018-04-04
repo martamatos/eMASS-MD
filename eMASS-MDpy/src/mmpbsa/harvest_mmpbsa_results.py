@@ -27,13 +27,13 @@ def harvest_mmpbsa_perframe(base_dir, n_frames, file_out):
     deltaG_df = pd.DataFrame.from_dict(deltaG_all, orient='index')
     deltaG_df.index.name = 'frame'
     deltaG_df.columns = ['deltaG']
-
+    """
     deltaG_df.plot()
     plt.xlabel('frame number')
     plt.ylabel('Delta G')
     plt.savefig(''.join([base_dir, '/', file_out, '.pdf']))
     plt.savefig(''.join([base_dir, '/', file_out, '.png']))
-    plt.close()
+    plt.close()"""
 
     dG_avg = deltaG_df.mean(axis=0)
     dG_std = deltaG_df.std(axis=0)
@@ -124,8 +124,8 @@ def scp_mmpbsa_res(server, from_folder, to_folder):
 
     with SCPClient(ssh.get_transport(), sanitize=lambda x: x) as scp:
         scp.get(''.join([from_folder, '/*.dat']), to_folder, preserve_times=True, recursive=True)
-        scp.get(''.join([from_folder, '/*.pdf']), to_folder, preserve_times=True, recursive=True)
-        scp.get(''.join([from_folder, '/*.png']), to_folder, preserve_times=True, recursive=True)
+        #scp.get(''.join([from_folder, '/*.pdf']), to_folder, preserve_times=True, recursive=True)
+        #scp.get(''.join([from_folder, '/*.png']), to_folder, preserve_times=True, recursive=True)
 
 
 def run_harvest_per_frame(enzyme_dir, clusters, file_out, n_frames_list, per_frame_folder):
@@ -146,7 +146,7 @@ def copy_to_local_machine(desktop_dir, enzyme_dir, clusters, server, per_frame_f
         cl_dir = '/'.join([base_dir, cl, per_frame_folder])
 
         to_folder = ''.join([desktop_dir, enzyme_dir])
-        print to_folder
+        print cl_dir
         if not os.path.isdir(to_folder):
             os.makedirs(to_folder)
         scp_mmpbsa_res(server, cl_dir, to_folder)
@@ -155,22 +155,26 @@ def copy_to_local_machine(desktop_dir, enzyme_dir, clusters, server, per_frame_f
 # to delete
 def run_harvest():
 
-    base_dir = '/home/marta/ENO_1E9I/4_MMPBSA2016/1_APO/2_PEP'
-    clusters = ['cl110_2', 'cl100_2', 'cl000_2']
-    file_out = 'ENO_1E9I_WT_APO_PEP_2_dG_sumup'
+    base_dir = '/home/marta/GAPDH/4_MMPBSA2016/2_NAD/1_G3P'
+    clusters = ['cl100', 'cl100_2', 'cl100_3', 'cl100_4', 'cl100_5',
+                'cl101', 'cl101_2', 'cl101_3', 'cl101_4', 'cl101_5'
+                'cl120', 'cl120_2', 'cl120_3', 'cl120_4', 'cl120_5'
+                'cl220', 'cl220_2', 'cl220_3', 'cl220_4', 'cl220_5']
+    file_out = 'GAPDH_WT_NAD_G3P_sumup'
     average_dG(base_dir, clusters,  file_out)
 
 
 if __name__ == '__main__':
 
     enzyme_dir = 'ENO_AB/4_MMPBSA2016/1_MG/2_PEP'
-    clusters = ['cl000', 'cl302', 'cl312', 'cl402']
-    file_out = 'ENO_AB_WT_APO_PEP'
-    n_frames_list = [500, 140, 140, 140]
+    clusters = ['cl302_16', 'cl302_17', 'cl302_19', 'cl302_20']
+
+    file_out = 'ENO_AB_WT_PEP_docked'
+    n_frames_list = [70 for i in range(len(clusters))]
     per_frame_folder = 'per_frame'
 
     #run_harvest_per_frame(enzyme_dir, clusters, file_out, n_frames_list, per_frame_folder)
 
-    server = '137.110.115.63'
-    desktop_dir = '/home/mrama/Desktop/MD/'
+    server = '137.110.115.254'
+    desktop_dir = '/home/mrama/Desktop/MD/eMASS-MD_complete_data/MD_data/'
     copy_to_local_machine(desktop_dir, enzyme_dir, clusters, server, per_frame_folder)

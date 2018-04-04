@@ -4,7 +4,7 @@ import seaborn as sns
 COLOR_LIST = sns.color_palette("Set1")
 
 
-def get_keq_bins_fixed_width(data_df, bin_width):
+def get_keq_bins_fixed_width(data_df, bin_width, lb=-6, ub=9):
     """
     Given a pandas dataframe and a bin width, it bins the dataframe columns using bins with the width specified.
 
@@ -20,15 +20,19 @@ def get_keq_bins_fixed_width(data_df, bin_width):
     pattern_count_dic = {}
     pattern_dic_by_model = {}
     max_keq = data_df.max().max()
-    min_keq = abs(data_df.min().min())
-    assert 10 ** min_keq >= 10. ** -15 and 10 ** max_keq <= 10. ** 15
+    min_keq = data_df.min().min()
+    #print(min_keq, max_keq)
+    #print(lb, ub)
+    assert min_keq >= lb and max_keq <= ub
 
-    n_pos_bins = int(max_keq / bin_width) if max_keq % bin_width == 0 else int(max_keq / bin_width) + 1
-    n_neg_bins = int(min_keq / bin_width) if min_keq % bin_width == 0 else int(min_keq / bin_width) + 1
+    n_pos_bins = int(ub / bin_width) if ub % bin_width == 0 else int(ub / bin_width) + 1
+    n_neg_bins = int(abs(lb) / bin_width) if lb % bin_width == 0 else int(abs(lb) / bin_width) + 1
 
     pos_bins_limits = [[i * bin_width, (i + 1) * bin_width] for i in range(n_pos_bins)]
+    #print('positive bins', pos_bins_limits)
 
     neg_bins_limits = [[-i * bin_width, -(i + 1) * bin_width] for i in range(n_neg_bins)]
+    #print('negative bins', neg_bins_limits)
 
     for i in data_df.index.values:
         pattern_temp = []
@@ -36,18 +40,22 @@ def get_keq_bins_fixed_width(data_df, bin_width):
             keq_val = data_df.ix[i, j]
             if keq_val < 0:
                 for bin_i in range(n_neg_bins):
-                    if neg_bins_limits[bin_i][0] >= keq_val > neg_bins_limits[bin_i][1]:
+                    if neg_bins_limits[bin_i][0] > keq_val >= neg_bins_limits[bin_i][1]:
                         pattern_temp.append(-bin_i - 1)
             elif keq_val >= 0:
                 for bin_i in range(n_pos_bins):
                     if pos_bins_limits[bin_i][0] <= keq_val < pos_bins_limits[bin_i][1]:
                         pattern_temp.append(bin_i + 1)
+                if keq_val == 9.:
+                    pattern_temp.append(bin_i +1)
             else:
                 'oooops------------'
                 'oooops------------'
                 'oooops------------'
                 'oooops------------'
                 'oooops------------'
+
+        assert len(data_df.ix[i, :].values) == len(pattern_temp)
 
         pattern_temp = tuple(pattern_temp)
         if pattern_temp in pattern_count_dic:
@@ -190,7 +198,7 @@ def get_keq_bins_fixed_size(data_df, file_out, n_samples_per_bin=5):
     return pattern_count_dic, pattern_dic_by_model
 
 
-def bin_keqs(data_df, bin_width=None, fixed_size=False, n_samples_per_bin=5, file_out=None):
+def bin_keqs(data_df, bin_width=None, fixed_size=False, n_samples_per_bin=5, lb=-6, ub=9, file_out=None):
     """
 
     Given the bin_width and a dataframe with n sets of k elementary equilibrium constants  or rate constants (a model),
@@ -212,13 +220,15 @@ def bin_keqs(data_df, bin_width=None, fixed_size=False, n_samples_per_bin=5, fil
         pattern_count_dic, pattern_dic_by_model = get_keq_bins_fixed_size(data_df, file_out,
                                                                           n_samples_per_bin=n_samples_per_bin)
     elif bin_width:
-        pattern_count_dic, pattern_dic_by_model = get_keq_bins_fixed_width(data_df, bin_width)
+        pattern_count_dic, pattern_dic_by_model = get_keq_bins_fixed_width(data_df, bin_width, lb, ub)
 
     else:
-        print 'hummm... something went wrong on choosing the binning'
+        print('hummm... something went wrong on choosing the binning')
         return
 
     pattern_count_df = pd.DataFrame.from_dict(pattern_count_dic, orient='index')
     pattern_by_model_df = pd.DataFrame.from_dict(pattern_dic_by_model, orient='index')
+
+    pattern_count_df.to_csv(''.join([file_out, '_pattern_count.csv']))
 
     return pattern_count_df, pattern_by_model_df.transpose()

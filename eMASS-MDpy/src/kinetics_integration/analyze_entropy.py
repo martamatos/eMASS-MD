@@ -86,7 +86,7 @@ def _plot_entropy_single(entropy_list, entropy_label, fixed_size, bin_width_list
     ax.set_ylim(y_lims)
 
     ref_median = np.median(entropy['None'].dropna())
-    dKd_median = np.median(entropy['$\Delta K_d$'].dropna())
+    dKd_median = np.median(entropy['$\Delta K_b$'].dropna())
 
     plt.plot((-1, 9), (ref_median, ref_median), linestyle='--', color='#e41a1c')
     plt.plot((-1, 9), (dKd_median, dKd_median), linestyle='--', color='#377eb8')
@@ -185,7 +185,10 @@ def calculate_enzyme_entropy(file_in_base, file_out_base, n_model_ensembles, mod
                         pattern_count_df, pattern_df_by_model = bin_keqs(data_df, fixed_size=fixed_size,
                                                                          n_samples_per_bin=None, file_out=file_out)
                     elif bin_width:
-                        pattern_count_df, pattern_df_by_model = bin_keqs(data_df, bin_width=bin_width)
+                        file_out = ''.join(
+                            [file_out_base, 'fixed_width_', str(bin_width), '_', model_type, '_',
+                             str(ensemble_i), '_', str(limit)])
+                        pattern_count_df, pattern_df_by_model = bin_keqs(data_df, bin_width=bin_width, file_out=file_out)
                     else:
                         pattern_count_df, pattern_df_by_model = bin_keqs(data_df)
 

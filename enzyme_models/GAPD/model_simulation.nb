@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14344,        328]
-NotebookOptionsPosition[     13857,        306]
-NotebookOutlinePosition[     14220,        322]
-CellTagsIndexPosition[     14177,        319]
+NotebookDataLength[     60707,       1564]
+NotebookOptionsPosition[     52023,       1330]
+NotebookOutlinePosition[     52382,       1346]
+CellTagsIndexPosition[     52339,       1343]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,17 +24,21 @@ Cell[BoxData[
   3.640093333126033*^9, 3.640093334996044*^9}, {3.64032346627951*^9, 
   3.640323466979537*^9}, {3.695129818290565*^9, 3.695129818760935*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{"<<", "Toolbox`"}], "\[IndentingNewLine]", 
- RowBox[{"<<", "Toolbox`Style`"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "Toolbox`Style`"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"SetDirectory", "[", 
     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"enzModelsDir", " ", "=", " ", 
-  "\"\</home/mrama/Dropbox/PhD_stuff/Projects/MD/eMASS-MD/enzyme_models/\>\""}\
-], "\[IndentingNewLine]", 
+  "\"\</home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\>\""}], "\
+\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"mainDir", "=", 
    RowBox[{"enzModelsDir", "<>", "\"\<code_data/\>\""}]}], 
@@ -58,7 +62,14 @@ Cell[BoxData[{
    3.693759040490933*^9, 3.6937590496803627`*^9}, {3.693910853126341*^9, 
    3.693910858816224*^9}, {3.694103656789948*^9, 3.694103657452764*^9}, {
    3.6941897736239843`*^9, 3.6941897739961033`*^9}, {3.709625462069421*^9, 
-   3.709625463414962*^9}, 3.718432126011401*^9}],
+   3.709625463414962*^9}, 3.718432126011401*^9, {3.730381073941485*^9, 
+   3.730381082576272*^9}}],
+
+Cell[BoxData["\<\"/home/mrama/Desktop/MD/eMASS-MD_complete_data/enzyme_models/\
+\"\>"], "Output",
+ CellChangeTimes->{{3.730381067311301*^9, 3.73038108765688*^9}, 
+   3.730551619246376*^9}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -77,6 +88,8 @@ Systematic simulations\
    3.6405075459214153`*^9}, {3.6939111762641373`*^9, 3.693911188640924*^9}, 
    3.709440567855864*^9}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{
@@ -88,13 +101,13 @@ Cell[BoxData[{
   RowBox[{"inputDir", " ", "=", " ", 
    RowBox[{
    "enzModelsDir", "<>", 
-    "\"\<GAPD/GAPD_param_inf/output/model_simulations/models/\>\""}]}], 
+    "\"\<GAPD/GAPD_param_inf2/output/model_simulations/models/\>\""}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"outputDirBase", " ", "=", 
    RowBox[{
    "enzModelsDir", "<>", " ", 
-    "\"\<GAPD/GAPD_param_inf/output/model_simulations/data/\>\""}]}], 
+    "\"\<GAPD/GAPD_param_inf2/output/model_simulations/data/\>\""}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -300,13 +313,1024 @@ Cell[BoxData[{
    3.709638704255932*^9}, 3.7096387737847977`*^9, {3.709639189504218*^9, 
    3.709639191230633*^9}, {3.709656349442844*^9, 3.709656351143771*^9}, {
    3.718432159346424*^9, 3.7184322398022346`*^9}, {3.7184324748926*^9, 
-   3.718432476688383*^9}}]
+   3.718432476688383*^9}, {3.7303810701902657`*^9, 3.7303810712909946`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"8", ",", "9", ",", "11", ",", "7", ",", "10"}], "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551625832872*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"8", ",", "9", ",", "11", ",", "7", ",", "10"}], "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551625930924*^9}],
+
+Cell[BoxData["0.452`"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551625964281*^9}],
+
+Cell[BoxData["0.452`"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551625977024*^9}],
+
+Cell[BoxData["\<\"model dKd, 0 - 100, 80, {3, 4, 20, 21, 22, 27, 28, 29, 32, \
+33, 35, 53, 55, 59, 61, 66, 78, 85, 90, 91}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551641401167*^9}],
+
+Cell[BoxData["\<\"model all, 0 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551644229446*^9}],
+
+Cell[BoxData["\<\"model dKd, 1 - 99, 69, {4, 8, 13, 17, 19, 22, 23, 24, 26, \
+27, 28, 30, 33, 35, 38, 40, 42, 47, 48, 52, 55, 59, 61, 68, 72, 73, 75, 77, \
+78, 85}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551659802775*^9}],
+
+Cell[BoxData["\<\"model all, 1 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551669277492*^9}],
+
+Cell[BoxData["\<\"model dKd, 2 - 100, 72, {2, 13, 14, 17, 18, 22, 25, 27, 35, \
+39, 45, 46, 52, 55, 57, 61, 63, 64, 66, 68, 70, 75, 82, 83, 89, 96, 97, 99}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551679358211*^9}],
+
+Cell[BoxData["\<\"model all, 2 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551696944269*^9}],
+
+Cell[BoxData["\<\"model dKd, 3 - 100, 73, {2, 3, 7, 9, 12, 14, 15, 20, 24, \
+25, 26, 27, 31, 33, 34, 36, 39, 40, 45, 52, 54, 66, 75, 83, 90, 94, \
+96}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305517003003683`*^9}],
+
+Cell[BoxData["\<\"model dKd, 4 - 100, 70, {3, 5, 6, 8, 9, 15, 16, 17, 25, 33, \
+35, 36, 40, 45, 46, 50, 51, 53, 55, 56, 59, 66, 67, 72, 75, 77, 78, 83, 96, \
+99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305517207091303`*^9}],
+
+Cell[BoxData["\<\"model all, 3 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551726647951*^9}],
+
+Cell[BoxData["\<\"model dKd, 5 - 100, 69, {4, 6, 8, 13, 16, 18, 20, 21, 25, \
+27, 30, 31, 32, 33, 36, 40, 42, 44, 49, 57, 61, 67, 68, 70, 73, 74, 75, 90, \
+93, 95, 100}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551742073675*^9}],
+
+Cell[BoxData["\<\"model all, 4 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551757029798*^9}],
+
+Cell[BoxData["\<\"model dKd, 6 - 100, 77, {11, 20, 23, 27, 31, 32, 38, 40, \
+44, 47, 49, 54, 61, 62, 64, 67, 72, 74, 75, 83, 93, 95, 96}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305517658479233`*^9}],
+
+Cell[BoxData["\<\"model all, 5 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055178859055*^9}],
+
+Cell[BoxData["\<\"model dKd, 7 - 100, 71, {3, 6, 7, 11, 12, 13, 22, 23, 24, \
+25, 31, 32, 33, 40, 41, 56, 59, 60, 64, 69, 70, 74, 76, 81, 85, 89, 90, 99, \
+100}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551789591772*^9}],
+
+Cell[BoxData["\<\"model dKd, 8 - 100, 76, {1, 5, 6, 10, 13, 15, 18, 20, 23, \
+25, 27, 29, 32, 39, 42, 47, 55, 66, 67, 70, 72, 95, 96, 97}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551815784102*^9}],
+
+Cell[BoxData["\<\"model all, 6 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305518212432337`*^9}],
+
+Cell[BoxData["\<\"model dKd, 9 - 100, 65, {4, 7, 9, 11, 15, 17, 20, 23, 24, \
+25, 28, 30, 33, 34, 37, 38, 39, 40, 42, 44, 49, 51, 52, 56, 57, 59, 62, 66, \
+69, 73, 79, 87, 92, 95, 99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551840091098*^9}],
+
+Cell[BoxData["\<\"model all, 7 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305518552227583`*^9}],
+
+Cell[BoxData["\<\"model dKd, 10 - 100, 69, {9, 10, 11, 13, 17, 19, 21, 23, \
+25, 26, 29, 32, 33, 34, 39, 42, 48, 49, 50, 53, 61, 64, 73, 77, 79, 80, 81, \
+83, 89, 95, 97}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551866604005*^9}],
+
+Cell[BoxData["\<\"model all, 8 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055189145512*^9}],
+
+Cell[BoxData["\<\"model dKd, 11 - 100, 72, {3, 5, 7, 8, 10, 14, 15, 25, 26, \
+33, 34, 35, 37, 39, 41, 43, 44, 50, 51, 57, 62, 63, 71, 78, 80, 88, 89, 99}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305518921336946`*^9}],
+
+Cell[BoxData["\<\"model dKd, 12 - 100, 69, {3, 4, 12, 13, 14, 15, 16, 22, 28, \
+30, 33, 34, 36, 40, 41, 43, 51, 54, 62, 65, 66, 67, 71, 72, 73, 77, 79, 81, \
+82, 96, 97}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551918923809*^9}],
+
+Cell[BoxData["\<\"model all, 9 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551929466735*^9}],
+
+Cell[BoxData["\<\"model dKd, 13 - 100, 79, {2, 4, 8, 9, 13, 16, 17, 20, 28, \
+31, 37, 38, 49, 50, 54, 59, 61, 68, 72, 87, 91}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551949546569*^9}],
+
+Cell[BoxData["\<\"model all, 10 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730551968743287*^9}],
+
+Cell[BoxData["\<\"model dKd, 14 - 100, 74, {4, 5, 7, 8, 10, 12, 16, 21, 25, \
+27, 32, 34, 40, 41, 43, 51, 54, 56, 59, 67, 70, 71, 83, 95, 96, 100}\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305519797025633`*^9}],
+
+Cell[BoxData["\<\"model all, 11 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552009876824*^9}],
+
+Cell[BoxData["\<\"model dKd, 15 - 100, 70, {2, 6, 8, 9, 10, 12, 13, 15, 24, \
+26, 29, 32, 34, 35, 38, 40, 42, 49, 50, 52, 60, 61, 63, 67, 76, 79, 86, 88, \
+93, 96}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305520100933847`*^9}],
+
+Cell[BoxData["\<\"model dKd, 16 - 99, 73, {2, 4, 7, 9, 10, 12, 23, 25, 32, \
+34, 36, 39, 40, 41, 42, 45, 51, 58, 61, 63, 67, 68, 76, 78, 80, 87}\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552040908746*^9}],
+
+Cell[BoxData["\<\"model all, 12 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552052956522*^9}],
+
+Cell[BoxData["\<\"model dKd, 17 - 100, 67, {1, 3, 7, 8, 13, 14, 15, 17, 19, \
+20, 28, 30, 33, 34, 41, 53, 54, 56, 58, 59, 60, 64, 70, 73, 75, 76, 78, 79, \
+87, 92, 94, 97, 100}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305520713810167`*^9}],
+
+Cell[BoxData["\<\"model all, 13 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305520964993343`*^9}],
+
+Cell[BoxData["\<\"model dKd, 18 - 100, 76, {2, 4, 5, 12, 16, 20, 29, 30, 36, \
+37, 41, 44, 45, 48, 53, 55, 61, 71, 72, 77, 82, 83, 87, 97}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552103012331*^9}],
+
+Cell[BoxData["\<\"model dKd, 19 - 99, 66, {2, 7, 9, 10, 12, 13, 14, 15, 17, \
+19, 20, 21, 26, 29, 32, 36, 40, 41, 55, 56, 58, 66, 69, 71, 72, 77, 79, 83, \
+91, 92, 94, 96, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305521313675833`*^9}],
+
+Cell[BoxData["\<\"model all, 14 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552137920549*^9}],
+
+Cell[BoxData["\<\"model dKd, 20 - 100, 66, {2, 3, 5, 6, 7, 9, 12, 13, 14, 15, \
+16, 19, 20, 21, 23, 24, 26, 29, 31, 32, 36, 37, 38, 41, 43, 61, 62, 66, 72, \
+75, 85, 86, 87, 90}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552161675065*^9}],
+
+Cell[BoxData["\<\"model all, 15 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552180619549*^9}],
+
+Cell[BoxData["\<\"model dKd, 21 - 100, 80, {3, 6, 9, 10, 11, 13, 15, 20, 26, \
+29, 30, 34, 49, 51, 55, 65, 66, 70, 78, 88}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305521971341257`*^9}],
+
+Cell[BoxData["\<\"model all, 16 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305522243150806`*^9}],
+
+Cell[BoxData["\<\"model dKd, 22 - 100, 69, {7, 8, 10, 12, 14, 17, 19, 21, 22, \
+23, 24, 25, 27, 28, 30, 32, 36, 39, 40, 54, 61, 69, 70, 71, 72, 74, 76, 84, \
+91, 93, 100}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305522286598463`*^9}],
+
+Cell[BoxData["\<\"model dKd, 23 - 100, 68, {1, 2, 3, 11, 13, 14, 15, 18, 20, \
+25, 28, 29, 37, 39, 40, 44, 45, 47, 48, 50, 56, 60, 64, 66, 70, 72, 74, 83, \
+84, 89, 90, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305522643015614`*^9}],
+
+Cell[BoxData["\<\"model all, 17 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305522731449757`*^9}],
+
+Cell[BoxData["\<\"model dKd, 24 - 100, 65, {5, 9, 10, 11, 14, 25, 29, 32, 36, \
+37, 38, 39, 42, 47, 48, 51, 53, 56, 58, 61, 66, 68, 69, 70, 71, 73, 78, 79, \
+82, 83, 85, 87, 90, 93, 95}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552296477285*^9}],
+
+Cell[BoxData["\<\"model all, 18 - 97, 97, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552320213037*^9}],
+
+Cell[BoxData["\<\"model dKd, 25 - 100, 68, {1, 6, 11, 12, 15, 16, 18, 20, 21, \
+23, 25, 28, 31, 32, 35, 36, 39, 45, 52, 54, 60, 62, 68, 74, 75, 77, 78, 84, \
+86, 87, 91, 92}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552331526142*^9}],
+
+Cell[BoxData["\<\"model dKd, 26 - 99, 70, {1, 2, 3, 11, 14, 16, 18, 19, 21, \
+25, 31, 35, 38, 40, 41, 46, 49, 51, 55, 61, 66, 67, 68, 69, 70, 72, 77, 85, \
+90}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305523677339993`*^9}],
+
+Cell[BoxData["\<\"model all, 19 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552370317603*^9}],
+
+Cell[BoxData["\<\"model dKd, 27 - 99, 71, {2, 4, 5, 7, 8, 11, 15, 16, 17, 24, \
+27, 31, 33, 43, 46, 47, 53, 61, 64, 66, 68, 74, 76, 77, 79, 81, 91, \
+96}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552405160677*^9}],
+
+Cell[BoxData["\<\"model all, 20 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552422442257*^9}],
+
+Cell[BoxData["\<\"model dKd, 28 - 99, 68, {3, 4, 6, 7, 9, 10, 11, 12, 14, 16, \
+21, 26, 27, 28, 30, 36, 37, 38, 48, 49, 50, 53, 58, 59, 61, 71, 85, 88, 91, \
+93, 97}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055244228239*^9}],
+
+Cell[BoxData["\<\"model all, 21 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552480512474*^9}],
+
+Cell[BoxData["\<\"model dKd, 29 - 100, 68, {1, 4, 7, 8, 11, 12, 13, 21, 22, \
+24, 28, 33, 35, 37, 38, 39, 45, 48, 53, 54, 55, 56, 59, 60, 63, 66, 70, 72, \
+79, 81, 82, 84}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552485597611*^9}],
+
+Cell[BoxData["\<\"model dKd, 30 - 100, 76, {1, 2, 5, 6, 10, 11, 21, 27, 29, \
+31, 32, 36, 41, 58, 59, 60, 65, 69, 74, 81, 87, 91, 94, 97}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305525342574167`*^9}],
+
+Cell[BoxData["\<\"model all, 22 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305525432016068`*^9}],
+
+Cell[BoxData["\<\"model dKd, 31 - 100, 72, {3, 9, 10, 11, 12, 13, 14, 15, 16, \
+17, 22, 25, 27, 32, 37, 38, 47, 50, 53, 56, 63, 64, 65, 66, 68, 83, 92, 95}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552580587331*^9}],
+
+Cell[BoxData["\<\"model all, 23 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552604126869*^9}],
+
+Cell[BoxData["\<\"model dKd, 32 - 100, 70, {1, 11, 12, 13, 14, 15, 17, 20, \
+21, 22, 23, 24, 28, 32, 35, 37, 41, 46, 49, 50, 53, 58, 63, 66, 71, 74, 75, \
+85, 94, 96}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552622810581*^9}],
+
+Cell[BoxData["\<\"model all, 24 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055266265799*^9}],
+
+Cell[BoxData["\<\"model dKd, 33 - 100, 73, {9, 11, 12, 17, 21, 26, 27, 29, \
+30, 31, 32, 33, 35, 36, 39, 41, 45, 46, 51, 55, 56, 57, 62, 64, 72, 82, 95}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552664991613*^9}],
+
+Cell[BoxData["\<\"model dKd, 34 - 100, 68, {4, 6, 14, 15, 16, 19, 22, 24, 26, \
+28, 29, 30, 31, 32, 40, 43, 48, 57, 61, 63, 65, 70, 72, 76, 81, 82, 84, 89, \
+90, 91, 93, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552705387763*^9}],
+
+Cell[BoxData["\<\"model all, 25 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552720390799*^9}],
+
+Cell[BoxData["\<\"model dKd, 35 - 99, 73, {1, 3, 9, 10, 12, 14, 21, 23, 24, \
+27, 28, 36, 40, 42, 46, 52, 54, 60, 70, 72, 77, 82, 89, 90, 91, 93}\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552748426169*^9}],
+
+Cell[BoxData["\<\"model all, 26 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552778793544*^9}],
+
+Cell[BoxData["\<\"model dKd, 36 - 100, 67, {2, 3, 4, 6, 7, 9, 13, 14, 18, 21, \
+26, 27, 28, 29, 31, 34, 38, 41, 43, 52, 53, 55, 56, 59, 68, 75, 83, 88, 94, \
+96, 97, 99, 100}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552790120616*^9}],
+
+Cell[BoxData["\<\"model dKd, 37 - 100, 78, {5, 12, 20, 28, 30, 34, 35, 41, \
+42, 48, 50, 52, 55, 58, 61, 65, 66, 77, 78, 90, 98, 99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552837524521*^9}],
+
+Cell[BoxData["\<\"model all, 27 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552838985592*^9}],
+
+Cell[BoxData["\<\"model dKd, 38 - 100, 72, {10, 11, 14, 15, 19, 21, 22, 23, \
+27, 28, 32, 37, 43, 44, 47, 51, 52, 53, 61, 66, 74, 76, 77, 92, 93, 95, 96, \
+97}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552883288312*^9}],
+
+Cell[BoxData["\<\"model all, 28 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552901352129*^9}],
+
+Cell[BoxData["\<\"model dKd, 39 - 99, 81, {4, 6, 10, 12, 13, 18, 29, 34, 39, \
+40, 43, 52, 61, 62, 63, 64, 74, 86}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730552934877493*^9}],
+
+Cell[BoxData["\<\"model all, 29 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305529676107388`*^9}],
+
+Cell[BoxData["\<\"model dKd, 40 - 99, 66, {2, 5, 6, 8, 9, 11, 19, 23, 27, 28, \
+29, 30, 35, 37, 38, 39, 44, 45, 49, 54, 55, 57, 59, 60, 70, 74, 77, 83, 85, \
+86, 92, 94, 99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055298344599*^9}],
+
+Cell[BoxData["\<\"model dKd, 41 - 100, 74, {1, 2, 9, 11, 12, 15, 21, 22, 24, \
+25, 26, 27, 33, 35, 37, 38, 41, 56, 71, 80, 87, 88, 91, 95, 96, 98}\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305530436553793`*^9}],
+
+Cell[BoxData["\<\"model all, 30 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553046591877*^9}],
+
+Cell[BoxData["\<\"model dKd, 42 - 100, 72, {4, 9, 11, 12, 14, 18, 19, 23, 27, \
+28, 34, 38, 41, 44, 46, 50, 54, 55, 57, 60, 61, 62, 63, 67, 68, 74, 76, 88}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553101615934*^9}],
+
+Cell[BoxData["\<\"model all, 31 - 97, 97, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553123593422*^9}],
+
+Cell[BoxData["\<\"model dKd, 43 - 100, 71, {8, 10, 11, 13, 14, 15, 20, 21, \
+25, 32, 36, 37, 43, 44, 47, 51, 56, 57, 59, 62, 65, 75, 76, 79, 88, 92, 96, \
+97, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553159133832*^9}],
+
+Cell[BoxData["\<\"model all, 32 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553204577153*^9}],
+
+Cell[BoxData["\<\"model dKd, 44 - 99, 66, {3, 5, 6, 7, 9, 12, 13, 14, 15, 19, \
+23, 26, 29, 30, 36, 38, 40, 42, 43, 49, 54, 57, 59, 69, 70, 71, 78, 79, 82, \
+88, 93, 95, 97}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305532144395638`*^9}],
+
+Cell[BoxData["\<\"model dKd, 45 - 100, 62, {7, 8, 10, 11, 12, 13, 16, 17, 18, \
+20, 22, 24, 26, 29, 31, 32, 34, 37, 39, 41, 43, 44, 45, 48, 53, 56, 59, 60, \
+61, 62, 65, 66, 68, 73, 74, 75, 79, 89}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553267804315*^9}],
+
+Cell[BoxData["\<\"model all, 33 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553286597022*^9}],
+
+Cell[BoxData["\<\"model dKd, 46 - 100, 63, {7, 9, 14, 15, 16, 18, 21, 22, 26, \
+28, 29, 30, 32, 36, 38, 39, 40, 44, 45, 46, 50, 52, 57, 58, 60, 61, 66, 71, \
+77, 79, 81, 83, 85, 91, 93, 94, 95}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305533221969967`*^9}],
+
+Cell[BoxData["\<\"model all, 34 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305533720980587`*^9}],
+
+Cell[BoxData["\<\"model dKd, 47 - 100, 73, {1, 2, 4, 5, 6, 8, 14, 16, 19, 23, \
+24, 30, 35, 49, 50, 59, 60, 61, 62, 66, 67, 69, 78, 79, 85, 88, 94}\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305533846312523`*^9}],
+
+Cell[BoxData["\<\"model dKd, 48 - 100, 67, {2, 4, 7, 9, 10, 13, 16, 17, 21, \
+23, 25, 35, 37, 39, 44, 49, 56, 59, 60, 61, 65, 68, 69, 71, 72, 74, 75, 77, \
+85, 88, 91, 92, 93}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553446641288*^9}],
+
+Cell[BoxData["\<\"model all, 35 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553460431759*^9}],
+
+Cell[BoxData["\<\"model dKd, 49 - 100, 69, {5, 6, 8, 10, 14, 16, 17, 19, 22, \
+23, 25, 27, 28, 30, 37, 38, 40, 41, 44, 46, 53, 59, 60, 63, 67, 70, 71, 72, \
+90, 91, 92}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305535078296556`*^9}],
+
+Cell[BoxData["\<\"model all, 36 - 97, 97, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553548964766*^9}],
+
+Cell[BoxData["\<\"model dKd, 50 - 98, 75, {3, 15, 18, 20, 24, 25, 27, 33, 36, \
+37, 43, 46, 51, 53, 55, 59, 61, 70, 80, 81, 91, 95, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553575923971*^9}],
+
+Cell[BoxData["\<\"model all, 37 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553636907065*^9}],
+
+Cell[BoxData["\<\"model dKd, 51 - 100, 71, {1, 4, 7, 11, 19, 20, 23, 25, 28, \
+32, 34, 35, 36, 41, 44, 45, 48, 51, 56, 57, 62, 67, 68, 69, 73, 78, 82, 89, \
+95}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553641439947*^9}],
+
+Cell[BoxData["\<\"model dKd, 52 - 100, 80, {5, 7, 9, 12, 13, 22, 27, 32, 33, \
+36, 39, 44, 52, 55, 59, 71, 84, 86, 90, 93}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055371310034*^9}],
+
+Cell[BoxData["\<\"model all, 38 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553726895206*^9}],
+
+Cell[BoxData["\<\"model dKd, 53 - 100, 66, {3, 4, 6, 7, 8, 9, 10, 11, 15, 16, \
+21, 25, 28, 29, 33, 36, 37, 39, 47, 48, 49, 50, 53, 55, 58, 66, 69, 73, 75, \
+76, 77, 82, 91, 92}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305537747140293`*^9}],
+
+Cell[BoxData["\<\"model all, 39 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553818369871*^9}],
+
+Cell[BoxData["\<\"model dKd, 54 - 99, 71, {7, 11, 15, 16, 18, 20, 21, 22, 23, \
+25, 30, 41, 47, 48, 53, 54, 55, 57, 59, 61, 63, 65, 67, 70, 73, 76, 80, 83}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553842530455*^9}],
+
+Cell[BoxData["\<\"model all, 40 - 97, 97, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305539152602167`*^9}],
+
+Cell[BoxData["\<\"model dKd, 55 - 100, 73, {6, 8, 12, 13, 15, 17, 18, 22, 27, \
+30, 34, 36, 37, 38, 40, 41, 54, 55, 58, 63, 65, 68, 70, 77, 91, 93, \
+96}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730553916735751*^9}],
+
+Cell[BoxData["\<\"model dKd, 56 - 100, 75, {1, 3, 4, 5, 6, 10, 11, 12, 13, \
+16, 18, 23, 26, 28, 34, 35, 36, 40, 48, 49, 54, 59, 60, 69, 100}\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305539916967907`*^9}],
+
+Cell[BoxData["\<\"model all, 41 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554013725966*^9}],
+
+Cell[BoxData["\<\"model dKd, 57 - 100, 67, {2, 3, 4, 6, 7, 9, 14, 16, 18, 21, \
+23, 25, 26, 27, 31, 32, 33, 36, 37, 47, 49, 64, 66, 68, 72, 79, 83, 84, 89, \
+90, 93, 94, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554060100567*^9}],
+
+Cell[BoxData["\<\"model all, 42 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305541117946787`*^9}],
+
+Cell[BoxData["\<\"model dKd, 58 - 100, 77, {5, 8, 12, 15, 17, 18, 24, 27, 28, \
+32, 35, 36, 38, 40, 42, 44, 46, 50, 52, 53, 56, 83, 89}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305541353666143`*^9}],
+
+Cell[BoxData["\<\"model all, 43 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554212819633*^9}],
+
+Cell[BoxData["\<\"model dKd, 59 - 99, 75, {3, 4, 6, 7, 10, 13, 16, 17, 19, \
+21, 24, 27, 29, 34, 40, 44, 59, 67, 73, 74, 76, 81, 84, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554213362294*^9}],
+
+Cell[BoxData["\<\"model dKd, 60 - 99, 70, {1, 3, 6, 7, 10, 16, 19, 23, 25, \
+29, 31, 33, 34, 41, 42, 44, 51, 52, 53, 55, 56, 62, 68, 72, 73, 77, 86, 90, \
+93}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554286733399*^9}],
+
+Cell[BoxData["\<\"model all, 44 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554321311322*^9}],
+
+Cell[BoxData["\<\"model dKd, 61 - 100, 68, {2, 5, 7, 11, 12, 13, 14, 15, 16, \
+19, 20, 21, 22, 24, 25, 28, 33, 38, 42, 44, 45, 48, 57, 65, 68, 69, 73, 78, \
+79, 80, 84, 89}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554376483714*^9}],
+
+Cell[BoxData["\<\"model all, 45 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554447040243*^9}],
+
+Cell[BoxData["\<\"model dKd, 62 - 99, 69, {4, 5, 8, 11, 13, 14, 15, 17, 18, \
+20, 21, 22, 23, 25, 29, 33, 41, 44, 53, 61, 62, 63, 65, 67, 76, 77, 84, 93, \
+95, 99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305544784700108`*^9}],
+
+Cell[BoxData["\<\"model dKd, 63 - 100, 71, {5, 8, 9, 11, 14, 24, 25, 27, 28, \
+29, 31, 32, 33, 34, 36, 39, 44, 48, 49, 56, 58, 63, 64, 68, 73, 75, 80, 87, \
+91}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554569230297*^9}],
+
+Cell[BoxData["\<\"model all, 46 - 95, 95, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554571333219*^9}],
+
+Cell[BoxData["\<\"model dKd, 64 - 100, 72, {6, 9, 12, 13, 17, 19, 21, 22, 30, \
+31, 32, 33, 35, 36, 37, 39, 40, 42, 56, 57, 62, 72, 73, 75, 85, 91, 97, 98}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305546557577763`*^9}],
+
+Cell[BoxData["\<\"model all, 47 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305546864588327`*^9}],
+
+Cell[BoxData["\<\"model dKd, 65 - 100, 64, {1, 2, 5, 6, 8, 9, 10, 11, 13, 20, \
+21, 24, 27, 29, 32, 33, 34, 37, 39, 45, 46, 47, 48, 55, 57, 58, 62, 67, 74, \
+75, 78, 79, 95, 96, 98, 99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554729634981*^9}],
+
+Cell[BoxData["\<\"model all, 48 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055480363197*^9}],
+
+Cell[BoxData["\<\"model dKd, 66 - 100, 72, {1, 6, 7, 8, 9, 11, 12, 14, 18, \
+25, 27, 30, 31, 33, 35, 36, 37, 45, 56, 59, 67, 76, 78, 80, 84, 88, 89, 95}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554814694482*^9}],
+
+Cell[BoxData["\<\"model dKd, 67 - 99, 65, {2, 3, 8, 10, 12, 13, 16, 19, 22, \
+23, 25, 31, 32, 33, 34, 35, 37, 38, 40, 42, 46, 52, 53, 55, 57, 58, 60, 65, \
+71, 73, 77, 91, 95, 99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055489517733*^9}],
+
+Cell[BoxData["\<\"model all, 49 - 97, 97, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554918782958*^9}],
+
+Cell[BoxData["\<\"model dKd, 68 - 100, 70, {3, 5, 6, 7, 8, 11, 13, 16, 17, \
+20, 23, 27, 28, 29, 31, 37, 39, 41, 42, 44, 54, 59, 63, 67, 69, 74, 80, 90, \
+96, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730554981897183*^9}],
+
+Cell[BoxData["\<\"model all, 50 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555038284069*^9}],
+
+Cell[BoxData["\<\"model dKd, 69 - 100, 74, {3, 5, 10, 12, 13, 14, 15, 17, 19, \
+22, 24, 25, 30, 32, 35, 39, 60, 61, 65, 66, 70, 75, 84, 85, 90, 99}\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305550719256153`*^9}],
+
+Cell[BoxData["\<\"model all, 51 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305551559176807`*^9}],
+
+Cell[BoxData["\<\"model dKd, 70 - 100, 71, {1, 2, 5, 9, 14, 15, 16, 17, 20, \
+21, 23, 27, 30, 34, 36, 38, 42, 45, 58, 63, 64, 69, 70, 76, 80, 81, 88, 97, \
+99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555157173936*^9}],
+
+Cell[BoxData["\<\"model dKd, 71 - 100, 69, {2, 4, 5, 8, 11, 15, 16, 17, 21, \
+22, 23, 24, 25, 27, 32, 36, 37, 39, 42, 44, 48, 50, 63, 68, 69, 70, 71, 73, \
+79, 82, 83}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555242010049*^9}],
+
+Cell[BoxData["\<\"model all, 52 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305552750255737`*^9}],
+
+Cell[BoxData["\<\"model dKd, 72 - 100, 68, {2, 5, 6, 9, 10, 14, 17, 18, 19, \
+24, 26, 27, 28, 33, 34, 35, 37, 38, 39, 43, 48, 52, 59, 61, 62, 63, 69, 73, \
+81, 88, 95, 96}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305553275453587`*^9}],
+
+Cell[BoxData["\<\"model all, 53 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055539687061*^9}],
+
+Cell[BoxData["\<\"model dKd, 73 - 100, 71, {3, 6, 7, 8, 15, 16, 19, 21, 22, \
+26, 27, 30, 32, 33, 35, 42, 59, 61, 62, 64, 69, 72, 75, 76, 79, 80, 88, 98, \
+100}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555414636402*^9}],
+
+Cell[BoxData["\<\"model dKd, 74 - 100, 69, {1, 2, 5, 7, 10, 11, 16, 18, 20, \
+22, 28, 29, 31, 33, 37, 40, 53, 54, 56, 61, 66, 73, 76, 81, 83, 85, 88, 90, \
+94, 95, 97}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555492972238*^9}],
+
+Cell[BoxData["\<\"model all, 54 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555508238052*^9}],
+
+Cell[BoxData["\<\"model dKd, 75 - 100, 76, {1, 5, 6, 14, 15, 18, 19, 25, 28, \
+32, 33, 36, 46, 50, 56, 60, 61, 63, 66, 67, 72, 75, 78, 82}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555579051503*^9}],
+
+Cell[BoxData["\<\"model all, 55 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555621920539*^9}],
+
+Cell[BoxData["\<\"model dKd, 76 - 100, 72, {6, 8, 9, 11, 13, 16, 19, 21, 23, \
+26, 30, 34, 35, 40, 41, 46, 51, 54, 55, 56, 61, 65, 71, 72, 76, 80, 82, 85}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305556640842943`*^9}],
+
+Cell[BoxData["\<\"model dKd, 77 - 99, 56, {1, 2, 3, 4, 7, 10, 11, 13, 15, 17, \
+18, 20, 21, 22, 23, 25, 28, 29, 31, 32, 37, 41, 42, 43, 47, 48, 50, 52, 53, \
+54, 57, 58, 62, 63, 64, 66, 68, 70, 71, 74, 78, 85, 95}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555735055492*^9}],
+
+Cell[BoxData["\<\"model all, 56 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305557372214127`*^9}],
+
+Cell[BoxData["\<\"model dKd, 78 - 100, 70, {5, 11, 13, 14, 16, 21, 22, 24, \
+25, 27, 34, 35, 36, 39, 40, 44, 45, 50, 54, 57, 66, 68, 70, 72, 74, 78, 84, \
+85, 88, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305558174209967`*^9}],
+
+Cell[BoxData["\<\"model all, 57 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555853630766*^9}],
+
+Cell[BoxData["\<\"model dKd, 79 - 100, 69, {4, 5, 6, 10, 12, 13, 14, 22, 24, \
+31, 32, 35, 37, 43, 45, 46, 50, 55, 58, 60, 64, 66, 72, 73, 77, 78, 79, 93, \
+95, 97, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555901790382*^9}],
+
+Cell[BoxData["\<\"model all, 58 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555973806912*^9}],
+
+Cell[BoxData["\<\"model dKd, 80 - 99, 70, {2, 3, 4, 5, 6, 13, 16, 21, 23, 24, \
+28, 30, 31, 33, 36, 43, 53, 55, 67, 69, 75, 77, 83, 85, 92, 93, 95, 96, 99}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730555987745846*^9}],
+
+Cell[BoxData["\<\"model dKd, 81 - 100, 68, {1, 3, 7, 8, 9, 12, 21, 23, 26, \
+30, 32, 33, 34, 35, 36, 38, 41, 42, 44, 46, 54, 55, 59, 62, 70, 74, 76, 77, \
+78, 82, 88, 99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556077501333*^9}],
+
+Cell[BoxData["\<\"model all, 59 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556095055274*^9}],
+
+Cell[BoxData["\<\"model dKd, 82 - 100, 69, {1, 3, 4, 5, 8, 12, 23, 30, 32, \
+33, 34, 38, 45, 51, 55, 62, 65, 69, 71, 73, 74, 75, 80, 81, 82, 83, 90, 91, \
+92, 93, 99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556163402953*^9}],
+
+Cell[BoxData["\<\"model all, 60 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556223407661*^9}],
+
+Cell[BoxData["\<\"model dKd, 83 - 100, 74, {9, 10, 11, 13, 15, 16, 17, 19, \
+22, 24, 33, 38, 42, 44, 48, 61, 67, 71, 72, 74, 76, 77, 78, 79, 80, \
+81}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305562699454947`*^9}],
+
+Cell[BoxData["\<\"model dKd, 84 - 99, 66, {1, 2, 3, 4, 9, 10, 16, 19, 20, 22, \
+25, 29, 30, 31, 36, 37, 38, 39, 47, 55, 57, 60, 63, 65, 72, 80, 82, 86, 87, \
+88, 89, 91, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055639029974*^9}],
+
+Cell[BoxData["\<\"model all, 61 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556392666472*^9}],
+
+Cell[BoxData["\<\"model dKd, 85 - 100, 69, {2, 3, 4, 7, 13, 15, 17, 19, 22, \
+28, 29, 31, 32, 35, 36, 38, 39, 40, 41, 43, 51, 52, 66, 67, 69, 73, 78, 82, \
+87, 93, 100}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556488929254*^9}],
+
+Cell[BoxData["\<\"model all, 62 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556533950344*^9}],
+
+Cell[BoxData["\<\"model dKd, 86 - 99, 67, {4, 6, 7, 8, 9, 10, 11, 12, 13, 17, \
+19, 23, 24, 30, 36, 37, 38, 39, 41, 42, 51, 54, 58, 64, 65, 74, 77, 80, 88, \
+95, 96, 99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556584958811*^9}],
+
+Cell[BoxData["\<\"model all, 63 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556674013514*^9}],
+
+Cell[BoxData["\<\"model dKd, 87 - 100, 76, {2, 4, 5, 10, 11, 13, 17, 18, 19, \
+20, 21, 22, 23, 27, 29, 33, 50, 55, 63, 70, 73, 78, 86, 88}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556692000923*^9}],
+
+Cell[BoxData["\<\"model dKd, 88 - 100, 74, {2, 3, 6, 7, 10, 11, 14, 15, 17, \
+18, 19, 28, 32, 40, 41, 57, 63, 64, 65, 69, 71, 73, 84, 96, 99, 100}\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556801239183*^9}],
+
+Cell[BoxData["\<\"model all, 64 - 97, 97, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556817698267*^9}],
+
+Cell[BoxData["\<\"model dKd, 89 - 100, 70, {4, 8, 9, 10, 11, 13, 15, 17, 18, \
+19, 23, 26, 28, 29, 30, 33, 34, 41, 46, 48, 56, 63, 72, 73, 77, 79, 86, 87, \
+93, 95}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556922796501*^9}],
+
+Cell[BoxData["\<\"model all, 65 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730556995361887*^9}],
+
+Cell[BoxData["\<\"model dKd, 90 - 100, 72, {2, 6, 14, 15, 17, 18, 21, 22, 28, \
+29, 31, 34, 36, 37, 41, 44, 45, 47, 48, 56, 59, 61, 65, 88, 92, 95, 98, 99}\"\
+\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730557034092802*^9}],
+
+Cell[BoxData["\<\"model dKd, 91 - 100, 75, {4, 6, 8, 9, 11, 14, 15, 17, 18, \
+22, 29, 34, 43, 44, 52, 55, 60, 64, 65, 70, 73, 82, 86, 91, 92}\"\>"], "Print",\
+
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730557134625731*^9}],
+
+Cell[BoxData["\<\"model all, 66 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730557145858078*^9}],
+
+Cell[BoxData["\<\"model dKd, 92 - 100, 76, {4, 9, 11, 12, 14, 15, 16, 22, 26, \
+27, 31, 40, 44, 49, 61, 63, 64, 68, 69, 70, 83, 86, 94, 100}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730557233839361*^9}],
+
+Cell[BoxData["\<\"model all, 67 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730557293497397*^9}],
+
+Cell[BoxData["\<\"model dKd, 93 - 100, 71, {1, 10, 13, 14, 15, 17, 18, 19, \
+21, 22, 23, 26, 27, 35, 36, 44, 52, 56, 60, 62, 64, 66, 70, 73, 74, 89, 93, \
+95, 100}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73055733065208*^9}],
+
+Cell[BoxData["\<\"model dKd, 94 - 100, 76, {2, 4, 7, 11, 15, 17, 19, 20, 21, \
+22, 24, 28, 32, 33, 34, 38, 42, 45, 51, 53, 59, 69, 79, 84}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730557439429873*^9}],
+
+Cell[BoxData["\<\"model all, 68 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305574685163317`*^9}],
+
+Cell[BoxData["\<\"model dKd, 95 - 100, 78, {3, 6, 16, 18, 19, 23, 25, 34, 37, \
+38, 41, 52, 57, 63, 65, 67, 68, 70, 72, 85, 97, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305642447919483`*^9}],
+
+Cell[BoxData["\<\"model all, 69 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730564320735537*^9}],
+
+Cell[BoxData["\<\"model dKd, 96 - 100, 73, {3, 4, 10, 12, 13, 15, 19, 20, 24, \
+25, 30, 32, 34, 36, 43, 48, 51, 52, 57, 61, 63, 73, 77, 79, 86, 92, \
+96}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305643360378513`*^9}],
+
+Cell[BoxData["\<\"model dKd, 97 - 100, 69, {1, 3, 6, 12, 13, 17, 18, 22, 25, \
+26, 29, 31, 32, 33, 36, 41, 43, 48, 61, 68, 73, 74, 76, 79, 80, 81, 83, 95, \
+96, 97, 99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730564422842092*^9}],
+
+Cell[BoxData["\<\"model all, 70 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730564449523323*^9}],
+
+Cell[BoxData["\<\"model dKd, 98 - 100, 70, {5, 6, 7, 12, 13, 14, 18, 21, 22, \
+26, 37, 45, 56, 58, 60, 61, 63, 64, 67, 68, 71, 73, 78, 81, 82, 89, 90, 93, \
+95, 98}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730564511446995*^9}],
+
+Cell[BoxData["\<\"model all, 71 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730564574187653*^9}],
+
+Cell[BoxData["\<\"model dKd, 99 - 100, 72, {3, 11, 13, 21, 23, 27, 29, 30, \
+31, 32, 34, 35, 36, 37, 41, 45, 57, 59, 68, 69, 70, 72, 75, 76, 84, 90, 95, \
+99}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730564601527732*^9}],
+
+Cell[BoxData["\<\"model all, 72 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730564678687194*^9}],
+
+Cell[BoxData["\<\"model all, 73 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730564800123445*^9}],
+
+Cell[BoxData["\<\"model all, 74 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305649091816597`*^9}],
+
+Cell[BoxData["\<\"model all, 75 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730565022917912*^9}],
+
+Cell[BoxData["\<\"model all, 76 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730565141222177*^9}],
+
+Cell[BoxData["\<\"model all, 77 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730565263809746*^9}],
+
+Cell[BoxData["\<\"model all, 78 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730565366586626*^9}],
+
+Cell[BoxData["\<\"model all, 79 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730565470925045*^9}],
+
+Cell[BoxData["\<\"model all, 80 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730565575730742*^9}],
+
+Cell[BoxData["\<\"model all, 81 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730565683659341*^9}],
+
+Cell[BoxData["\<\"model all, 82 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730565790932221*^9}],
+
+Cell[BoxData["\<\"model all, 83 - 97, 97, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730565897463443*^9}],
+
+Cell[BoxData["\<\"model all, 84 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305660101466312`*^9}],
+
+Cell[BoxData["\<\"model all, 85 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730566125885729*^9}],
+
+Cell[BoxData["\<\"model all, 86 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.73056624081359*^9}],
+
+Cell[BoxData["\<\"model all, 87 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730566354939522*^9}],
+
+Cell[BoxData["\<\"model all, 88 - 97, 97, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730566471501782*^9}],
+
+Cell[BoxData["\<\"model all, 89 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305665931180353`*^9}],
+
+Cell[BoxData["\<\"model all, 90 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730566712160348*^9}],
+
+Cell[BoxData["\<\"model all, 91 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730566860405986*^9}],
+
+Cell[BoxData["\<\"model all, 92 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305670083019943`*^9}],
+
+Cell[BoxData["\<\"model all, 93 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305671546661797`*^9}],
+
+Cell[BoxData["\<\"model all, 94 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730567303767076*^9}],
+
+Cell[BoxData["\<\"model all, 95 - 98, 98, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730567463229027*^9}],
+
+Cell[BoxData["\<\"model all, 96 - 97, 97, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730567621244931*^9}],
+
+Cell[BoxData["\<\"model all, 97 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730567777794215*^9}],
+
+Cell[BoxData["\<\"model all, 98 - 99, 99, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.7305679552227917`*^9}],
+
+Cell[BoxData["\<\"model all, 99 - 100, 100, {}\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.730568117306354*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"16495.788621`", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{3.730392727654152*^9, 3.730568121556529*^9}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 Evaluator->"Local2",
-WindowSize->{1256, 770},
-WindowMargins->{{595, Automatic}, {122, Automatic}},
+WindowSize->{714, 423},
+WindowMargins->{{Automatic, 3}, {Automatic, 24}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -322,12 +1346,224 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 261, 4, 32, "Input"],
-Cell[822, 26, 1576, 34, 237, "Input"],
 Cell[CellGroupData[{
-Cell[2423, 64, 170, 2, 65, "Section"],
+Cell[844, 28, 1660, 37, 259, "Input"],
+Cell[2507, 67, 188, 3, 32, "Output"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[2618, 70, 293, 7, 70, "Subsection"],
-Cell[2914, 79, 10915, 223, 1119, "Input"]
+Cell[2732, 75, 170, 2, 65, "Section"],
+Cell[CellGroupData[{
+Cell[2927, 81, 293, 7, 70, "Subsection"],
+Cell[CellGroupData[{
+Cell[3245, 92, 10967, 223, 1343, "Input"],
+Cell[CellGroupData[{
+Cell[14237, 319, 168, 4, 26, "Print"],
+Cell[14408, 325, 168, 4, 26, "Print"],
+Cell[14579, 331, 96, 2, 24, "Print"],
+Cell[14678, 335, 96, 2, 24, "Print"],
+Cell[14777, 339, 202, 3, 48, "Print"],
+Cell[14982, 344, 123, 2, 26, "Print"],
+Cell[15108, 348, 243, 4, 70, "Print"],
+Cell[15354, 354, 125, 2, 26, "Print"],
+Cell[15482, 358, 237, 4, 70, "Print"],
+Cell[15722, 364, 125, 2, 26, "Print"],
+Cell[15850, 368, 232, 4, 26, "Print"],
+Cell[16085, 374, 243, 4, 26, "Print"],
+Cell[16331, 380, 125, 2, 26, "Print"],
+Cell[16459, 384, 248, 4, 26, "Print"],
+Cell[16710, 390, 125, 2, 26, "Print"],
+Cell[16838, 394, 218, 3, 26, "Print"],
+Cell[17059, 399, 122, 2, 26, "Print"],
+Cell[17184, 403, 240, 4, 26, "Print"],
+Cell[17427, 409, 217, 3, 26, "Print"],
+Cell[17647, 414, 125, 2, 26, "Print"],
+Cell[17775, 418, 263, 4, 48, "Print"],
+Cell[18041, 424, 125, 2, 26, "Print"],
+Cell[18169, 428, 250, 4, 26, "Print"],
+Cell[18422, 434, 124, 2, 26, "Print"],
+Cell[18549, 438, 237, 4, 26, "Print"],
+Cell[18789, 444, 249, 4, 26, "Print"],
+Cell[19041, 450, 125, 2, 26, "Print"],
+Cell[19169, 454, 205, 3, 26, "Print"],
+Cell[19377, 459, 124, 2, 26, "Print"],
+Cell[19504, 463, 230, 4, 48, "Print"],
+Cell[19737, 469, 126, 2, 26, "Print"],
+Cell[19866, 473, 245, 4, 48, "Print"],
+Cell[20114, 479, 226, 4, 48, "Print"],
+Cell[20343, 485, 126, 2, 26, "Print"],
+Cell[20472, 489, 258, 4, 48, "Print"],
+Cell[20733, 495, 126, 2, 26, "Print"],
+Cell[20862, 499, 218, 3, 48, "Print"],
+Cell[21083, 504, 257, 4, 48, "Print"],
+Cell[21343, 510, 124, 2, 26, "Print"],
+Cell[21470, 514, 257, 4, 48, "Print"],
+Cell[21730, 520, 124, 2, 26, "Print"],
+Cell[21857, 524, 204, 3, 48, "Print"],
+Cell[22064, 529, 126, 2, 26, "Print"],
+Cell[22193, 533, 252, 4, 48, "Print"],
+Cell[22448, 539, 254, 4, 48, "Print"],
+Cell[22705, 545, 126, 2, 26, "Print"],
+Cell[22834, 549, 265, 4, 48, "Print"],
+Cell[23102, 555, 124, 2, 26, "Print"],
+Cell[23229, 559, 253, 4, 48, "Print"],
+Cell[23485, 565, 241, 4, 48, "Print"],
+Cell[23729, 571, 124, 2, 26, "Print"],
+Cell[23856, 575, 233, 4, 48, "Print"],
+Cell[24092, 581, 126, 2, 26, "Print"],
+Cell[24221, 585, 244, 4, 48, "Print"],
+Cell[24468, 591, 126, 2, 26, "Print"],
+Cell[24597, 595, 251, 4, 48, "Print"],
+Cell[24851, 601, 219, 3, 48, "Print"],
+Cell[25073, 606, 128, 2, 26, "Print"],
+Cell[25204, 610, 237, 4, 48, "Print"],
+Cell[25444, 616, 124, 2, 26, "Print"],
+Cell[25571, 620, 246, 4, 48, "Print"],
+Cell[25820, 626, 125, 2, 26, "Print"],
+Cell[25948, 630, 234, 4, 48, "Print"],
+Cell[26185, 636, 253, 4, 48, "Print"],
+Cell[26441, 642, 126, 2, 26, "Print"],
+Cell[26570, 646, 227, 4, 48, "Print"],
+Cell[26800, 652, 124, 2, 26, "Print"],
+Cell[26927, 656, 254, 4, 48, "Print"],
+Cell[27184, 662, 212, 3, 48, "Print"],
+Cell[27399, 667, 124, 2, 26, "Print"],
+Cell[27526, 671, 239, 4, 48, "Print"],
+Cell[27768, 677, 124, 2, 26, "Print"],
+Cell[27895, 681, 194, 3, 26, "Print"],
+Cell[28092, 686, 126, 2, 26, "Print"],
+Cell[28221, 690, 252, 4, 48, "Print"],
+Cell[28476, 696, 230, 4, 48, "Print"],
+Cell[28709, 702, 124, 2, 26, "Print"],
+Cell[28836, 706, 237, 4, 48, "Print"],
+Cell[29076, 712, 124, 2, 26, "Print"],
+Cell[29203, 716, 242, 4, 48, "Print"],
+Cell[29448, 722, 126, 2, 26, "Print"],
+Cell[29577, 726, 255, 4, 48, "Print"],
+Cell[29835, 732, 277, 4, 48, "Print"],
+Cell[30115, 738, 126, 2, 26, "Print"],
+Cell[30244, 742, 275, 4, 48, "Print"],
+Cell[30522, 748, 128, 2, 26, "Print"],
+Cell[30653, 752, 231, 4, 48, "Print"],
+Cell[30887, 758, 255, 4, 48, "Print"],
+Cell[31145, 764, 126, 2, 26, "Print"],
+Cell[31274, 768, 250, 4, 48, "Print"],
+Cell[31527, 774, 124, 2, 26, "Print"],
+Cell[31654, 778, 215, 3, 48, "Print"],
+Cell[31872, 783, 124, 2, 26, "Print"],
+Cell[31999, 787, 240, 4, 48, "Print"],
+Cell[32242, 793, 201, 3, 48, "Print"],
+Cell[32446, 798, 124, 2, 26, "Print"],
+Cell[32573, 802, 259, 4, 48, "Print"],
+Cell[32835, 808, 126, 2, 26, "Print"],
+Cell[32964, 812, 237, 4, 48, "Print"],
+Cell[33204, 818, 126, 2, 26, "Print"],
+Cell[33333, 822, 233, 4, 48, "Print"],
+Cell[33569, 828, 225, 4, 48, "Print"],
+Cell[33797, 834, 126, 2, 26, "Print"],
+Cell[33926, 838, 253, 4, 48, "Print"],
+Cell[34182, 844, 126, 2, 26, "Print"],
+Cell[34311, 848, 217, 3, 48, "Print"],
+Cell[34531, 853, 126, 2, 26, "Print"],
+Cell[34660, 857, 216, 3, 48, "Print"],
+Cell[34879, 862, 238, 4, 48, "Print"],
+Cell[35120, 868, 124, 2, 26, "Print"],
+Cell[35247, 872, 252, 4, 48, "Print"],
+Cell[35502, 878, 124, 2, 26, "Print"],
+Cell[35629, 882, 245, 4, 48, "Print"],
+Cell[35877, 888, 240, 4, 48, "Print"],
+Cell[36120, 894, 124, 2, 26, "Print"],
+Cell[36247, 898, 239, 4, 48, "Print"],
+Cell[36489, 904, 128, 2, 26, "Print"],
+Cell[36620, 908, 265, 4, 48, "Print"],
+Cell[36888, 914, 125, 2, 26, "Print"],
+Cell[37016, 918, 234, 4, 48, "Print"],
+Cell[37253, 924, 258, 4, 48, "Print"],
+Cell[37514, 930, 124, 2, 26, "Print"],
+Cell[37641, 934, 242, 4, 48, "Print"],
+Cell[37886, 940, 124, 2, 26, "Print"],
+Cell[38013, 944, 231, 4, 48, "Print"],
+Cell[38247, 950, 128, 2, 26, "Print"],
+Cell[38378, 954, 239, 4, 48, "Print"],
+Cell[38620, 960, 247, 4, 48, "Print"],
+Cell[38870, 966, 128, 2, 26, "Print"],
+Cell[39001, 970, 253, 4, 48, "Print"],
+Cell[39257, 976, 125, 2, 26, "Print"],
+Cell[39385, 980, 240, 4, 48, "Print"],
+Cell[39628, 986, 247, 4, 48, "Print"],
+Cell[39878, 992, 126, 2, 26, "Print"],
+Cell[40007, 996, 218, 3, 48, "Print"],
+Cell[40228, 1001, 124, 2, 26, "Print"],
+Cell[40355, 1005, 238, 4, 48, "Print"],
+Cell[40596, 1011, 293, 4, 70, "Print"],
+Cell[40892, 1017, 126, 2, 26, "Print"],
+Cell[41021, 1021, 248, 4, 48, "Print"],
+Cell[41272, 1027, 126, 2, 26, "Print"],
+Cell[41401, 1031, 248, 4, 48, "Print"],
+Cell[41652, 1037, 126, 2, 26, "Print"],
+Cell[41781, 1041, 237, 4, 48, "Print"],
+Cell[42021, 1047, 250, 4, 48, "Print"],
+Cell[42274, 1053, 124, 2, 26, "Print"],
+Cell[42401, 1057, 246, 4, 48, "Print"],
+Cell[42650, 1063, 124, 2, 26, "Print"],
+Cell[42777, 1067, 232, 4, 48, "Print"],
+Cell[43012, 1073, 252, 4, 48, "Print"],
+Cell[43267, 1079, 126, 2, 26, "Print"],
+Cell[43396, 1083, 248, 4, 48, "Print"],
+Cell[43647, 1089, 126, 2, 26, "Print"],
+Cell[43776, 1093, 249, 4, 48, "Print"],
+Cell[44028, 1099, 124, 2, 26, "Print"],
+Cell[44155, 1103, 218, 3, 48, "Print"],
+Cell[44376, 1108, 228, 4, 48, "Print"],
+Cell[44607, 1114, 124, 2, 26, "Print"],
+Cell[44734, 1118, 244, 4, 48, "Print"],
+Cell[44981, 1124, 126, 2, 26, "Print"],
+Cell[45110, 1128, 237, 4, 48, "Print"],
+Cell[45350, 1134, 223, 4, 48, "Print"],
+Cell[45576, 1140, 124, 2, 26, "Print"],
+Cell[45703, 1144, 220, 3, 48, "Print"],
+Cell[45926, 1149, 124, 2, 26, "Print"],
+Cell[46053, 1153, 242, 4, 48, "Print"],
+Cell[46298, 1159, 218, 3, 48, "Print"],
+Cell[46519, 1164, 126, 2, 26, "Print"],
+Cell[46648, 1168, 213, 3, 48, "Print"],
+Cell[46864, 1173, 126, 2, 26, "Print"],
+Cell[46993, 1177, 235, 4, 48, "Print"],
+Cell[47231, 1183, 248, 4, 48, "Print"],
+Cell[47482, 1189, 124, 2, 26, "Print"],
+Cell[47609, 1193, 244, 4, 48, "Print"],
+Cell[47856, 1199, 126, 2, 26, "Print"],
+Cell[47985, 1203, 238, 4, 48, "Print"],
+Cell[48226, 1209, 124, 2, 26, "Print"],
+Cell[48353, 1213, 126, 2, 26, "Print"],
+Cell[48482, 1217, 128, 2, 26, "Print"],
+Cell[48613, 1221, 126, 2, 26, "Print"],
+Cell[48742, 1225, 124, 2, 26, "Print"],
+Cell[48869, 1229, 126, 2, 26, "Print"],
+Cell[48998, 1233, 126, 2, 26, "Print"],
+Cell[49127, 1237, 126, 2, 26, "Print"],
+Cell[49256, 1241, 124, 2, 26, "Print"],
+Cell[49383, 1245, 126, 2, 26, "Print"],
+Cell[49512, 1249, 124, 2, 26, "Print"],
+Cell[49639, 1253, 124, 2, 26, "Print"],
+Cell[49766, 1257, 128, 2, 26, "Print"],
+Cell[49897, 1261, 126, 2, 26, "Print"],
+Cell[50026, 1265, 125, 2, 26, "Print"],
+Cell[50154, 1269, 124, 2, 26, "Print"],
+Cell[50281, 1273, 124, 2, 26, "Print"],
+Cell[50408, 1277, 128, 2, 26, "Print"],
+Cell[50539, 1281, 124, 2, 26, "Print"],
+Cell[50666, 1285, 124, 2, 26, "Print"],
+Cell[50793, 1289, 126, 2, 26, "Print"],
+Cell[50922, 1293, 126, 2, 26, "Print"],
+Cell[51051, 1297, 124, 2, 26, "Print"],
+Cell[51178, 1301, 124, 2, 26, "Print"],
+Cell[51305, 1305, 124, 2, 26, "Print"],
+Cell[51432, 1309, 126, 2, 26, "Print"],
+Cell[51561, 1313, 126, 2, 26, "Print"],
+Cell[51690, 1317, 126, 2, 26, "Print"]
+}, Open  ]],
+Cell[51831, 1322, 152, 3, 34, "Output"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
