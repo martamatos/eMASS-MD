@@ -1,0 +1,2774 @@
+common patterns: 0
+
+n patterns on ensemble 0: 30
+n UNIQUE patterns on ensemble 0: 30
+n patterns on ensemble 1: 30
+n UNIQUE patterns on ensemble 1: 30
+n patterns on ensemble 2: 26
+n UNIQUE patterns on ensemble 2: 26
+n patterns on ensemble 3: 26
+n UNIQUE patterns on ensemble 3: 26
+n patterns on ensemble 4: 28
+n UNIQUE patterns on ensemble 4: 28
+n patterns on ensemble 5: 28
+n UNIQUE patterns on ensemble 5: 28
+n patterns on ensemble 6: 27
+n UNIQUE patterns on ensemble 6: 27
+n patterns on ensemble 7: 27
+n UNIQUE patterns on ensemble 7: 27
+n patterns on ensemble 8: 29
+n UNIQUE patterns on ensemble 8: 29
+n patterns on ensemble 9: 29
+n UNIQUE patterns on ensemble 9: 29
+n patterns on ensemble 10: 30
+n UNIQUE patterns on ensemble 10: 30
+n patterns on ensemble 11: 30
+n UNIQUE patterns on ensemble 11: 30
+n patterns on ensemble 12: 26
+n UNIQUE patterns on ensemble 12: 26
+n patterns on ensemble 13: 26
+n UNIQUE patterns on ensemble 13: 26
+n patterns on ensemble 14: 30
+n UNIQUE patterns on ensemble 14: 30
+n patterns on ensemble 15: 30
+n UNIQUE patterns on ensemble 15: 30
+n patterns on ensemble 16: 33
+n UNIQUE patterns on ensemble 16: 33
+n patterns on ensemble 17: 33
+n UNIQUE patterns on ensemble 17: 33
+n patterns on ensemble 18: 30
+n UNIQUE patterns on ensemble 18: 30
+n patterns on ensemble 19: 30
+n UNIQUE patterns on ensemble 19: 30
+n patterns on ensemble 20: 31
+n UNIQUE patterns on ensemble 20: 31
+n patterns on ensemble 21: 31
+n UNIQUE patterns on ensemble 21: 31
+n patterns on ensemble 22: 29
+n UNIQUE patterns on ensemble 22: 29
+n patterns on ensemble 23: 29
+n UNIQUE patterns on ensemble 23: 29
+n patterns on ensemble 24: 32
+n UNIQUE patterns on ensemble 24: 32
+n patterns on ensemble 25: 32
+n UNIQUE patterns on ensemble 25: 32
+n patterns on ensemble 26: 27
+n UNIQUE patterns on ensemble 26: 27
+n patterns on ensemble 27: 27
+n UNIQUE patterns on ensemble 27: 27
+n patterns on ensemble 28: 32
+n UNIQUE patterns on ensemble 28: 32
+n patterns on ensemble 29: 32
+n UNIQUE patterns on ensemble 29: 32
+n patterns on ensemble 30: 28
+n UNIQUE patterns on ensemble 30: 28
+n patterns on ensemble 31: 28
+n UNIQUE patterns on ensemble 31: 28
+n patterns on ensemble 32: 26
+n UNIQUE patterns on ensemble 32: 26
+n patterns on ensemble 33: 26
+n UNIQUE patterns on ensemble 33: 26
+n patterns on ensemble 34: 32
+n UNIQUE patterns on ensemble 34: 32
+n patterns on ensemble 35: 32
+n UNIQUE patterns on ensemble 35: 32
+n patterns on ensemble 36: 28
+n UNIQUE patterns on ensemble 36: 28
+n patterns on ensemble 37: 28
+n UNIQUE patterns on ensemble 37: 28
+n patterns on ensemble 38: 27
+n UNIQUE patterns on ensemble 38: 27
+n patterns on ensemble 39: 27
+n UNIQUE patterns on ensemble 39: 27
+n patterns on ensemble 40: 29
+n UNIQUE patterns on ensemble 40: 29
+n patterns on ensemble 41: 29
+n UNIQUE patterns on ensemble 41: 29
+n patterns on ensemble 42: 36
+n UNIQUE patterns on ensemble 42: 36
+n patterns on ensemble 43: 36
+n UNIQUE patterns on ensemble 43: 36
+n patterns on ensemble 44: 29
+n UNIQUE patterns on ensemble 44: 29
+n patterns on ensemble 45: 29
+n UNIQUE patterns on ensemble 45: 29
+n patterns on ensemble 46: 31
+n UNIQUE patterns on ensemble 46: 31
+n patterns on ensemble 47: 31
+n UNIQUE patterns on ensemble 47: 31
+n patterns on ensemble 48: 27
+n UNIQUE patterns on ensemble 48: 27
+n patterns on ensemble 49: 27
+n UNIQUE patterns on ensemble 49: 27
+n patterns on ensemble 50: 29
+n UNIQUE patterns on ensemble 50: 29
+n patterns on ensemble 51: 29
+n UNIQUE patterns on ensemble 51: 29
+n patterns on ensemble 52: 31
+n UNIQUE patterns on ensemble 52: 31
+n patterns on ensemble 53: 31
+n UNIQUE patterns on ensemble 53: 31
+n patterns on ensemble 54: 31
+n UNIQUE patterns on ensemble 54: 31
+n patterns on ensemble 55: 31
+n UNIQUE patterns on ensemble 55: 31
+n patterns on ensemble 56: 32
+n UNIQUE patterns on ensemble 56: 32
+n patterns on ensemble 57: 32
+n UNIQUE patterns on ensemble 57: 32
+n patterns on ensemble 58: 29
+n UNIQUE patterns on ensemble 58: 29
+n patterns on ensemble 59: 29
+n UNIQUE patterns on ensemble 59: 29
+n patterns on ensemble 60: 28
+n UNIQUE patterns on ensemble 60: 28
+n patterns on ensemble 61: 28
+n UNIQUE patterns on ensemble 61: 28
+n patterns on ensemble 62: 29
+n UNIQUE patterns on ensemble 62: 29
+n patterns on ensemble 63: 29
+n UNIQUE patterns on ensemble 63: 29
+n patterns on ensemble 64: 29
+n UNIQUE patterns on ensemble 64: 29
+n patterns on ensemble 65: 29
+n UNIQUE patterns on ensemble 65: 29
+n patterns on ensemble 66: 29
+n UNIQUE patterns on ensemble 66: 29
+n patterns on ensemble 67: 29
+n UNIQUE patterns on ensemble 67: 29
+n patterns on ensemble 68: 29
+n UNIQUE patterns on ensemble 68: 29
+n patterns on ensemble 69: 29
+n UNIQUE patterns on ensemble 69: 29
+n patterns on ensemble 70: 27
+n UNIQUE patterns on ensemble 70: 27
+n patterns on ensemble 71: 27
+n UNIQUE patterns on ensemble 71: 27
+n patterns on ensemble 72: 29
+n UNIQUE patterns on ensemble 72: 29
+n patterns on ensemble 73: 29
+n UNIQUE patterns on ensemble 73: 29
+n patterns on ensemble 74: 30
+n UNIQUE patterns on ensemble 74: 30
+n patterns on ensemble 75: 30
+n UNIQUE patterns on ensemble 75: 30
+n patterns on ensemble 76: 28
+n UNIQUE patterns on ensemble 76: 28
+n patterns on ensemble 77: 28
+n UNIQUE patterns on ensemble 77: 28
+n patterns on ensemble 78: 29
+n UNIQUE patterns on ensemble 78: 29
+n patterns on ensemble 79: 29
+n UNIQUE patterns on ensemble 79: 29
+n patterns on ensemble 80: 28
+n UNIQUE patterns on ensemble 80: 28
+n patterns on ensemble 81: 28
+n UNIQUE patterns on ensemble 81: 28
+n patterns on ensemble 82: 33
+n UNIQUE patterns on ensemble 82: 33
+n patterns on ensemble 83: 33
+n UNIQUE patterns on ensemble 83: 33
+n patterns on ensemble 84: 30
+n UNIQUE patterns on ensemble 84: 30
+n patterns on ensemble 85: 30
+n UNIQUE patterns on ensemble 85: 30
+n patterns on ensemble 86: 30
+n UNIQUE patterns on ensemble 86: 30
+n patterns on ensemble 87: 30
+n UNIQUE patterns on ensemble 87: 30
+n patterns on ensemble 88: 26
+n UNIQUE patterns on ensemble 88: 26
+n patterns on ensemble 89: 26
+n UNIQUE patterns on ensemble 89: 26
+n patterns on ensemble 90: 31
+n UNIQUE patterns on ensemble 90: 31
+n patterns on ensemble 91: 31
+n UNIQUE patterns on ensemble 91: 31
+n patterns on ensemble 92: 36
+n UNIQUE patterns on ensemble 92: 36
+n patterns on ensemble 93: 36
+n UNIQUE patterns on ensemble 93: 36
+n patterns on ensemble 94: 32
+n UNIQUE patterns on ensemble 94: 32
+n patterns on ensemble 95: 32
+n UNIQUE patterns on ensemble 95: 32
+n patterns on ensemble 96: 31
+n UNIQUE patterns on ensemble 96: 31
+n patterns on ensemble 97: 31
+n UNIQUE patterns on ensemble 97: 31
+n patterns on ensemble 98: 29
+n UNIQUE patterns on ensemble 98: 29
+n patterns on ensemble 99: 29
+n UNIQUE patterns on ensemble 99: 29
+n patterns on ensemble 100: 28
+n UNIQUE patterns on ensemble 100: 28
+n patterns on ensemble 101: 28
+n UNIQUE patterns on ensemble 101: 28
+n patterns on ensemble 102: 27
+n UNIQUE patterns on ensemble 102: 27
+n patterns on ensemble 103: 27
+n UNIQUE patterns on ensemble 103: 27
+n patterns on ensemble 104: 30
+n UNIQUE patterns on ensemble 104: 30
+n patterns on ensemble 105: 30
+n UNIQUE patterns on ensemble 105: 30
+n patterns on ensemble 106: 28
+n UNIQUE patterns on ensemble 106: 28
+n patterns on ensemble 107: 28
+n UNIQUE patterns on ensemble 107: 28
+n patterns on ensemble 108: 30
+n UNIQUE patterns on ensemble 108: 30
+n patterns on ensemble 109: 30
+n UNIQUE patterns on ensemble 109: 30
+n patterns on ensemble 110: 29
+n UNIQUE patterns on ensemble 110: 29
+n patterns on ensemble 111: 29
+n UNIQUE patterns on ensemble 111: 29
+n patterns on ensemble 112: 32
+n UNIQUE patterns on ensemble 112: 32
+n patterns on ensemble 113: 32
+n UNIQUE patterns on ensemble 113: 32
+n patterns on ensemble 114: 26
+n UNIQUE patterns on ensemble 114: 26
+n patterns on ensemble 115: 26
+n UNIQUE patterns on ensemble 115: 26
+n patterns on ensemble 116: 30
+n UNIQUE patterns on ensemble 116: 30
+n patterns on ensemble 117: 30
+n UNIQUE patterns on ensemble 117: 30
+n patterns on ensemble 118: 28
+n UNIQUE patterns on ensemble 118: 28
+n patterns on ensemble 119: 28
+n UNIQUE patterns on ensemble 119: 28
+n patterns on ensemble 120: 27
+n UNIQUE patterns on ensemble 120: 27
+n patterns on ensemble 121: 27
+n UNIQUE patterns on ensemble 121: 27
+n patterns on ensemble 122: 26
+n UNIQUE patterns on ensemble 122: 26
+n patterns on ensemble 123: 26
+n UNIQUE patterns on ensemble 123: 26
+n patterns on ensemble 124: 27
+n UNIQUE patterns on ensemble 124: 27
+n patterns on ensemble 125: 27
+n UNIQUE patterns on ensemble 125: 27
+n patterns on ensemble 126: 27
+n UNIQUE patterns on ensemble 126: 27
+n patterns on ensemble 127: 27
+n UNIQUE patterns on ensemble 127: 27
+n patterns on ensemble 128: 23
+n UNIQUE patterns on ensemble 128: 23
+n patterns on ensemble 129: 23
+n UNIQUE patterns on ensemble 129: 23
+n patterns on ensemble 130: 33
+n UNIQUE patterns on ensemble 130: 33
+n patterns on ensemble 131: 33
+n UNIQUE patterns on ensemble 131: 33
+n patterns on ensemble 132: 26
+n UNIQUE patterns on ensemble 132: 26
+n patterns on ensemble 133: 26
+n UNIQUE patterns on ensemble 133: 26
+n patterns on ensemble 134: 28
+n UNIQUE patterns on ensemble 134: 28
+n patterns on ensemble 135: 28
+n UNIQUE patterns on ensemble 135: 28
+n patterns on ensemble 136: 33
+n UNIQUE patterns on ensemble 136: 33
+n patterns on ensemble 137: 33
+n UNIQUE patterns on ensemble 137: 33
+n patterns on ensemble 138: 30
+n UNIQUE patterns on ensemble 138: 30
+n patterns on ensemble 139: 30
+n UNIQUE patterns on ensemble 139: 30
+n patterns on ensemble 140: 28
+n UNIQUE patterns on ensemble 140: 28
+n patterns on ensemble 141: 28
+n UNIQUE patterns on ensemble 141: 28
+n patterns on ensemble 142: 31
+n UNIQUE patterns on ensemble 142: 31
+n patterns on ensemble 143: 31
+n UNIQUE patterns on ensemble 143: 31
+n patterns on ensemble 144: 26
+n UNIQUE patterns on ensemble 144: 26
+n patterns on ensemble 145: 26
+n UNIQUE patterns on ensemble 145: 26
+n patterns on ensemble 146: 29
+n UNIQUE patterns on ensemble 146: 29
+n patterns on ensemble 147: 29
+n UNIQUE patterns on ensemble 147: 29
+n patterns on ensemble 148: 30
+n UNIQUE patterns on ensemble 148: 30
+n patterns on ensemble 149: 30
+n UNIQUE patterns on ensemble 149: 30
+n patterns on ensemble 150: 26
+n UNIQUE patterns on ensemble 150: 26
+n patterns on ensemble 151: 26
+n UNIQUE patterns on ensemble 151: 26
+n patterns on ensemble 152: 34
+n UNIQUE patterns on ensemble 152: 34
+n patterns on ensemble 153: 34
+n UNIQUE patterns on ensemble 153: 34
+n patterns on ensemble 154: 33
+n UNIQUE patterns on ensemble 154: 33
+n patterns on ensemble 155: 33
+n UNIQUE patterns on ensemble 155: 33
+n patterns on ensemble 156: 28
+n UNIQUE patterns on ensemble 156: 28
+n patterns on ensemble 157: 28
+n UNIQUE patterns on ensemble 157: 28
+n patterns on ensemble 158: 30
+n UNIQUE patterns on ensemble 158: 30
+n patterns on ensemble 159: 30
+n UNIQUE patterns on ensemble 159: 30
+n patterns on ensemble 160: 30
+n UNIQUE patterns on ensemble 160: 30
+n patterns on ensemble 161: 30
+n UNIQUE patterns on ensemble 161: 30
+n patterns on ensemble 162: 31
+n UNIQUE patterns on ensemble 162: 31
+n patterns on ensemble 163: 31
+n UNIQUE patterns on ensemble 163: 31
+n patterns on ensemble 164: 28
+n UNIQUE patterns on ensemble 164: 28
+n patterns on ensemble 165: 28
+n UNIQUE patterns on ensemble 165: 28
+n patterns on ensemble 166: 28
+n UNIQUE patterns on ensemble 166: 28
+n patterns on ensemble 167: 28
+n UNIQUE patterns on ensemble 167: 28
+n patterns on ensemble 168: 26
+n UNIQUE patterns on ensemble 168: 26
+n patterns on ensemble 169: 26
+n UNIQUE patterns on ensemble 169: 26
+n patterns on ensemble 170: 31
+n UNIQUE patterns on ensemble 170: 31
+n patterns on ensemble 171: 31
+n UNIQUE patterns on ensemble 171: 31
+n patterns on ensemble 172: 31
+n UNIQUE patterns on ensemble 172: 31
+n patterns on ensemble 173: 31
+n UNIQUE patterns on ensemble 173: 31
+n patterns on ensemble 174: 30
+n UNIQUE patterns on ensemble 174: 30
+n patterns on ensemble 175: 30
+n UNIQUE patterns on ensemble 175: 30
+n patterns on ensemble 176: 36
+n UNIQUE patterns on ensemble 176: 36
+n patterns on ensemble 177: 36
+n UNIQUE patterns on ensemble 177: 36
+n patterns on ensemble 178: 28
+n UNIQUE patterns on ensemble 178: 28
+n patterns on ensemble 179: 28
+n UNIQUE patterns on ensemble 179: 28
+n patterns on ensemble 180: 31
+n UNIQUE patterns on ensemble 180: 31
+n patterns on ensemble 181: 31
+n UNIQUE patterns on ensemble 181: 31
+n patterns on ensemble 182: 30
+n UNIQUE patterns on ensemble 182: 30
+n patterns on ensemble 183: 30
+n UNIQUE patterns on ensemble 183: 30
+n patterns on ensemble 184: 27
+n UNIQUE patterns on ensemble 184: 27
+n patterns on ensemble 185: 27
+n UNIQUE patterns on ensemble 185: 27
+n patterns on ensemble 186: 34
+n UNIQUE patterns on ensemble 186: 34
+n patterns on ensemble 187: 34
+n UNIQUE patterns on ensemble 187: 34
+n patterns on ensemble 188: 31
+n UNIQUE patterns on ensemble 188: 31
+n patterns on ensemble 189: 31
+n UNIQUE patterns on ensemble 189: 31
+n patterns on ensemble 190: 28
+n UNIQUE patterns on ensemble 190: 28
+n patterns on ensemble 191: 28
+n UNIQUE patterns on ensemble 191: 28
+n patterns on ensemble 192: 29
+n UNIQUE patterns on ensemble 192: 29
+n patterns on ensemble 193: 29
+n UNIQUE patterns on ensemble 193: 29
+n patterns on ensemble 194: 31
+n UNIQUE patterns on ensemble 194: 31
+n patterns on ensemble 195: 31
+n UNIQUE patterns on ensemble 195: 31
+n patterns on ensemble 196: 35
+n UNIQUE patterns on ensemble 196: 35
+n patterns on ensemble 197: 35
+n UNIQUE patterns on ensemble 197: 35
+n patterns on ensemble 198: 70
+n UNIQUE patterns on ensemble 198: 70
+n patterns on ensemble 199: 70
+n UNIQUE patterns on ensemble 199: 70
+n patterns on ensemble 200: 70
+n UNIQUE patterns on ensemble 200: 70
+n patterns on ensemble 201: 70
+n UNIQUE patterns on ensemble 201: 70
+n patterns on ensemble 202: 72
+n UNIQUE patterns on ensemble 202: 72
+n patterns on ensemble 203: 72
+n UNIQUE patterns on ensemble 203: 72
+n patterns on ensemble 204: 69
+n UNIQUE patterns on ensemble 204: 69
+n patterns on ensemble 205: 69
+n UNIQUE patterns on ensemble 205: 69
+n patterns on ensemble 206: 62
+n UNIQUE patterns on ensemble 206: 62
+n patterns on ensemble 207: 62
+n UNIQUE patterns on ensemble 207: 62
+n patterns on ensemble 208: 76
+n UNIQUE patterns on ensemble 208: 76
+n patterns on ensemble 209: 76
+n UNIQUE patterns on ensemble 209: 76
+n patterns on ensemble 210: 70
+n UNIQUE patterns on ensemble 210: 70
+n patterns on ensemble 211: 70
+n UNIQUE patterns on ensemble 211: 70
+n patterns on ensemble 212: 63
+n UNIQUE patterns on ensemble 212: 63
+n patterns on ensemble 213: 63
+n UNIQUE patterns on ensemble 213: 63
+n patterns on ensemble 214: 68
+n UNIQUE patterns on ensemble 214: 68
+n patterns on ensemble 215: 68
+n UNIQUE patterns on ensemble 215: 68
+n patterns on ensemble 216: 67
+n UNIQUE patterns on ensemble 216: 67
+n patterns on ensemble 217: 67
+n UNIQUE patterns on ensemble 217: 67
+n patterns on ensemble 218: 71
+n UNIQUE patterns on ensemble 218: 71
+n patterns on ensemble 219: 71
+n UNIQUE patterns on ensemble 219: 71
+n patterns on ensemble 220: 69
+n UNIQUE patterns on ensemble 220: 69
+n patterns on ensemble 221: 69
+n UNIQUE patterns on ensemble 221: 69
+n patterns on ensemble 222: 70
+n UNIQUE patterns on ensemble 222: 70
+n patterns on ensemble 223: 70
+n UNIQUE patterns on ensemble 223: 70
+n patterns on ensemble 224: 73
+n UNIQUE patterns on ensemble 224: 73
+n patterns on ensemble 225: 73
+n UNIQUE patterns on ensemble 225: 73
+n patterns on ensemble 226: 73
+n UNIQUE patterns on ensemble 226: 73
+n patterns on ensemble 227: 73
+n UNIQUE patterns on ensemble 227: 73
+n patterns on ensemble 228: 66
+n UNIQUE patterns on ensemble 228: 66
+n patterns on ensemble 229: 66
+n UNIQUE patterns on ensemble 229: 66
+n patterns on ensemble 230: 74
+n UNIQUE patterns on ensemble 230: 74
+n patterns on ensemble 231: 74
+n UNIQUE patterns on ensemble 231: 74
+n patterns on ensemble 232: 71
+n UNIQUE patterns on ensemble 232: 71
+n patterns on ensemble 233: 71
+n UNIQUE patterns on ensemble 233: 71
+n patterns on ensemble 234: 73
+n UNIQUE patterns on ensemble 234: 73
+n patterns on ensemble 235: 73
+n UNIQUE patterns on ensemble 235: 73
+n patterns on ensemble 236: 65
+n UNIQUE patterns on ensemble 236: 65
+n patterns on ensemble 237: 65
+n UNIQUE patterns on ensemble 237: 65
+n patterns on ensemble 238: 73
+n UNIQUE patterns on ensemble 238: 73
+n patterns on ensemble 239: 73
+n UNIQUE patterns on ensemble 239: 73
+n patterns on ensemble 240: 76
+n UNIQUE patterns on ensemble 240: 76
+n patterns on ensemble 241: 76
+n UNIQUE patterns on ensemble 241: 76
+n patterns on ensemble 242: 71
+n UNIQUE patterns on ensemble 242: 71
+n patterns on ensemble 243: 71
+n UNIQUE patterns on ensemble 243: 71
+n patterns on ensemble 244: 68
+n UNIQUE patterns on ensemble 244: 68
+n patterns on ensemble 245: 68
+n UNIQUE patterns on ensemble 245: 68
+n patterns on ensemble 246: 70
+n UNIQUE patterns on ensemble 246: 70
+n patterns on ensemble 247: 70
+n UNIQUE patterns on ensemble 247: 70
+n patterns on ensemble 248: 73
+n UNIQUE patterns on ensemble 248: 73
+n patterns on ensemble 249: 73
+n UNIQUE patterns on ensemble 249: 73
+n patterns on ensemble 250: 67
+n UNIQUE patterns on ensemble 250: 67
+n patterns on ensemble 251: 67
+n UNIQUE patterns on ensemble 251: 67
+n patterns on ensemble 252: 68
+n UNIQUE patterns on ensemble 252: 68
+n patterns on ensemble 253: 68
+n UNIQUE patterns on ensemble 253: 68
+n patterns on ensemble 254: 72
+n UNIQUE patterns on ensemble 254: 72
+n patterns on ensemble 255: 72
+n UNIQUE patterns on ensemble 255: 72
+n patterns on ensemble 256: 67
+n UNIQUE patterns on ensemble 256: 67
+n patterns on ensemble 257: 67
+n UNIQUE patterns on ensemble 257: 67
+n patterns on ensemble 258: 69
+n UNIQUE patterns on ensemble 258: 69
+n patterns on ensemble 259: 69
+n UNIQUE patterns on ensemble 259: 69
+n patterns on ensemble 260: 67
+n UNIQUE patterns on ensemble 260: 67
+n patterns on ensemble 261: 67
+n UNIQUE patterns on ensemble 261: 67
+n patterns on ensemble 262: 71
+n UNIQUE patterns on ensemble 262: 71
+n patterns on ensemble 263: 71
+n UNIQUE patterns on ensemble 263: 71
+n patterns on ensemble 264: 79
+n UNIQUE patterns on ensemble 264: 79
+n patterns on ensemble 265: 79
+n UNIQUE patterns on ensemble 265: 79
+n patterns on ensemble 266: 73
+n UNIQUE patterns on ensemble 266: 73
+n patterns on ensemble 267: 73
+n UNIQUE patterns on ensemble 267: 73
+n patterns on ensemble 268: 71
+n UNIQUE patterns on ensemble 268: 71
+n patterns on ensemble 269: 71
+n UNIQUE patterns on ensemble 269: 71
+n patterns on ensemble 270: 70
+n UNIQUE patterns on ensemble 270: 70
+n patterns on ensemble 271: 70
+n UNIQUE patterns on ensemble 271: 70
+n patterns on ensemble 272: 77
+n UNIQUE patterns on ensemble 272: 77
+n patterns on ensemble 273: 77
+n UNIQUE patterns on ensemble 273: 77
+n patterns on ensemble 274: 74
+n UNIQUE patterns on ensemble 274: 74
+n patterns on ensemble 275: 74
+n UNIQUE patterns on ensemble 275: 74
+n patterns on ensemble 276: 62
+n UNIQUE patterns on ensemble 276: 62
+n patterns on ensemble 277: 62
+n UNIQUE patterns on ensemble 277: 62
+n patterns on ensemble 278: 71
+n UNIQUE patterns on ensemble 278: 71
+n patterns on ensemble 279: 71
+n UNIQUE patterns on ensemble 279: 71
+n patterns on ensemble 280: 67
+n UNIQUE patterns on ensemble 280: 67
+n patterns on ensemble 281: 67
+n UNIQUE patterns on ensemble 281: 67
+n patterns on ensemble 282: 73
+n UNIQUE patterns on ensemble 282: 73
+n patterns on ensemble 283: 73
+n UNIQUE patterns on ensemble 283: 73
+n patterns on ensemble 284: 77
+n UNIQUE patterns on ensemble 284: 77
+n patterns on ensemble 285: 77
+n UNIQUE patterns on ensemble 285: 77
+n patterns on ensemble 286: 61
+n UNIQUE patterns on ensemble 286: 61
+n patterns on ensemble 287: 61
+n UNIQUE patterns on ensemble 287: 61
+n patterns on ensemble 288: 70
+n UNIQUE patterns on ensemble 288: 70
+n patterns on ensemble 289: 70
+n UNIQUE patterns on ensemble 289: 70
+n patterns on ensemble 290: 70
+n UNIQUE patterns on ensemble 290: 70
+n patterns on ensemble 291: 70
+n UNIQUE patterns on ensemble 291: 70
+n patterns on ensemble 292: 70
+n UNIQUE patterns on ensemble 292: 70
+n patterns on ensemble 293: 70
+n UNIQUE patterns on ensemble 293: 70
+n patterns on ensemble 294: 74
+n UNIQUE patterns on ensemble 294: 74
+n patterns on ensemble 295: 74
+n UNIQUE patterns on ensemble 295: 74
+n patterns on ensemble 296: 71
+n UNIQUE patterns on ensemble 296: 71
+n patterns on ensemble 297: 71
+n UNIQUE patterns on ensemble 297: 71
+n patterns on ensemble 298: 72
+n UNIQUE patterns on ensemble 298: 72
+n patterns on ensemble 299: 72
+n UNIQUE patterns on ensemble 299: 72
+n patterns on ensemble 300: 73
+n UNIQUE patterns on ensemble 300: 73
+n patterns on ensemble 301: 73
+n UNIQUE patterns on ensemble 301: 73
+n patterns on ensemble 302: 70
+n UNIQUE patterns on ensemble 302: 70
+n patterns on ensemble 303: 70
+n UNIQUE patterns on ensemble 303: 70
+n patterns on ensemble 304: 69
+n UNIQUE patterns on ensemble 304: 69
+n patterns on ensemble 305: 69
+n UNIQUE patterns on ensemble 305: 69
+n patterns on ensemble 306: 68
+n UNIQUE patterns on ensemble 306: 68
+n patterns on ensemble 307: 68
+n UNIQUE patterns on ensemble 307: 68
+n patterns on ensemble 308: 70
+n UNIQUE patterns on ensemble 308: 70
+n patterns on ensemble 309: 70
+n UNIQUE patterns on ensemble 309: 70
+n patterns on ensemble 310: 73
+n UNIQUE patterns on ensemble 310: 73
+n patterns on ensemble 311: 73
+n UNIQUE patterns on ensemble 311: 73
+n patterns on ensemble 312: 69
+n UNIQUE patterns on ensemble 312: 69
+n patterns on ensemble 313: 69
+n UNIQUE patterns on ensemble 313: 69
+n patterns on ensemble 314: 70
+n UNIQUE patterns on ensemble 314: 70
+n patterns on ensemble 315: 70
+n UNIQUE patterns on ensemble 315: 70
+n patterns on ensemble 316: 73
+n UNIQUE patterns on ensemble 316: 73
+n patterns on ensemble 317: 73
+n UNIQUE patterns on ensemble 317: 73
+n patterns on ensemble 318: 66
+n UNIQUE patterns on ensemble 318: 66
+n patterns on ensemble 319: 66
+n UNIQUE patterns on ensemble 319: 66
+n patterns on ensemble 320: 71
+n UNIQUE patterns on ensemble 320: 71
+n patterns on ensemble 321: 71
+n UNIQUE patterns on ensemble 321: 71
+n patterns on ensemble 322: 65
+n UNIQUE patterns on ensemble 322: 65
+n patterns on ensemble 323: 65
+n UNIQUE patterns on ensemble 323: 65
+n patterns on ensemble 324: 75
+n UNIQUE patterns on ensemble 324: 75
+n patterns on ensemble 325: 75
+n UNIQUE patterns on ensemble 325: 75
+n patterns on ensemble 326: 77
+n UNIQUE patterns on ensemble 326: 77
+n patterns on ensemble 327: 77
+n UNIQUE patterns on ensemble 327: 77
+n patterns on ensemble 328: 66
+n UNIQUE patterns on ensemble 328: 66
+n patterns on ensemble 329: 66
+n UNIQUE patterns on ensemble 329: 66
+n patterns on ensemble 330: 78
+n UNIQUE patterns on ensemble 330: 78
+n patterns on ensemble 331: 78
+n UNIQUE patterns on ensemble 331: 78
+n patterns on ensemble 332: 72
+n UNIQUE patterns on ensemble 332: 72
+n patterns on ensemble 333: 72
+n UNIQUE patterns on ensemble 333: 72
+n patterns on ensemble 334: 68
+n UNIQUE patterns on ensemble 334: 68
+n patterns on ensemble 335: 68
+n UNIQUE patterns on ensemble 335: 68
+n patterns on ensemble 336: 67
+n UNIQUE patterns on ensemble 336: 67
+n patterns on ensemble 337: 67
+n UNIQUE patterns on ensemble 337: 67
+n patterns on ensemble 338: 76
+n UNIQUE patterns on ensemble 338: 76
+n patterns on ensemble 339: 76
+n UNIQUE patterns on ensemble 339: 76
+n patterns on ensemble 340: 67
+n UNIQUE patterns on ensemble 340: 67
+n patterns on ensemble 341: 67
+n UNIQUE patterns on ensemble 341: 67
+n patterns on ensemble 342: 79
+n UNIQUE patterns on ensemble 342: 79
+n patterns on ensemble 343: 79
+n UNIQUE patterns on ensemble 343: 79
+n patterns on ensemble 344: 66
+n UNIQUE patterns on ensemble 344: 66
+n patterns on ensemble 345: 66
+n UNIQUE patterns on ensemble 345: 66
+n patterns on ensemble 346: 67
+n UNIQUE patterns on ensemble 346: 67
+n patterns on ensemble 347: 67
+n UNIQUE patterns on ensemble 347: 67
+n patterns on ensemble 348: 73
+n UNIQUE patterns on ensemble 348: 73
+n patterns on ensemble 349: 73
+n UNIQUE patterns on ensemble 349: 73
+n patterns on ensemble 350: 74
+n UNIQUE patterns on ensemble 350: 74
+n patterns on ensemble 351: 74
+n UNIQUE patterns on ensemble 351: 74
+n patterns on ensemble 352: 67
+n UNIQUE patterns on ensemble 352: 67
+n patterns on ensemble 353: 67
+n UNIQUE patterns on ensemble 353: 67
+n patterns on ensemble 354: 76
+n UNIQUE patterns on ensemble 354: 76
+n patterns on ensemble 355: 76
+n UNIQUE patterns on ensemble 355: 76
+n patterns on ensemble 356: 74
+n UNIQUE patterns on ensemble 356: 74
+n patterns on ensemble 357: 74
+n UNIQUE patterns on ensemble 357: 74
+n patterns on ensemble 358: 74
+n UNIQUE patterns on ensemble 358: 74
+n patterns on ensemble 359: 74
+n UNIQUE patterns on ensemble 359: 74
+n patterns on ensemble 360: 68
+n UNIQUE patterns on ensemble 360: 68
+n patterns on ensemble 361: 68
+n UNIQUE patterns on ensemble 361: 68
+n patterns on ensemble 362: 72
+n UNIQUE patterns on ensemble 362: 72
+n patterns on ensemble 363: 72
+n UNIQUE patterns on ensemble 363: 72
+n patterns on ensemble 364: 65
+n UNIQUE patterns on ensemble 364: 65
+n patterns on ensemble 365: 65
+n UNIQUE patterns on ensemble 365: 65
+n patterns on ensemble 366: 72
+n UNIQUE patterns on ensemble 366: 72
+n patterns on ensemble 367: 72
+n UNIQUE patterns on ensemble 367: 72
+n patterns on ensemble 368: 73
+n UNIQUE patterns on ensemble 368: 73
+n patterns on ensemble 369: 73
+n UNIQUE patterns on ensemble 369: 73
+n patterns on ensemble 370: 75
+n UNIQUE patterns on ensemble 370: 75
+n patterns on ensemble 371: 75
+n UNIQUE patterns on ensemble 371: 75
+n patterns on ensemble 372: 71
+n UNIQUE patterns on ensemble 372: 71
+n patterns on ensemble 373: 71
+n UNIQUE patterns on ensemble 373: 71
+n patterns on ensemble 374: 71
+n UNIQUE patterns on ensemble 374: 71
+n patterns on ensemble 375: 71
+n UNIQUE patterns on ensemble 375: 71
+n patterns on ensemble 376: 72
+n UNIQUE patterns on ensemble 376: 72
+n patterns on ensemble 377: 72
+n UNIQUE patterns on ensemble 377: 72
+n patterns on ensemble 378: 73
+n UNIQUE patterns on ensemble 378: 73
+n patterns on ensemble 379: 73
+n UNIQUE patterns on ensemble 379: 73
+n patterns on ensemble 380: 76
+n UNIQUE patterns on ensemble 380: 76
+n patterns on ensemble 381: 76
+n UNIQUE patterns on ensemble 381: 76
+n patterns on ensemble 382: 63
+n UNIQUE patterns on ensemble 382: 63
+n patterns on ensemble 383: 63
+n UNIQUE patterns on ensemble 383: 63
+n patterns on ensemble 384: 67
+n UNIQUE patterns on ensemble 384: 67
+n patterns on ensemble 385: 67
+n UNIQUE patterns on ensemble 385: 67
+n patterns on ensemble 386: 71
+n UNIQUE patterns on ensemble 386: 71
+n patterns on ensemble 387: 71
+n UNIQUE patterns on ensemble 387: 71
+n patterns on ensemble 388: 74
+n UNIQUE patterns on ensemble 388: 74
+n patterns on ensemble 389: 74
+n UNIQUE patterns on ensemble 389: 74
+n patterns on ensemble 390: 78
+n UNIQUE patterns on ensemble 390: 78
+n patterns on ensemble 391: 78
+n UNIQUE patterns on ensemble 391: 78
+n patterns on ensemble 392: 72
+n UNIQUE patterns on ensemble 392: 72
+n patterns on ensemble 393: 72
+n UNIQUE patterns on ensemble 393: 72
+n patterns on ensemble 394: 68
+n UNIQUE patterns on ensemble 394: 68
+n patterns on ensemble 395: 68
+n UNIQUE patterns on ensemble 395: 68
+n patterns on ensemble 396: 55
+n UNIQUE patterns on ensemble 396: 55
+n patterns on ensemble 397: 55
+n UNIQUE patterns on ensemble 397: 55
+n patterns on ensemble 398: 62
+n UNIQUE patterns on ensemble 398: 62
+n patterns on ensemble 399: 62
+n UNIQUE patterns on ensemble 399: 62
+n patterns on ensemble 400: 56
+n UNIQUE patterns on ensemble 400: 56
+n patterns on ensemble 401: 56
+n UNIQUE patterns on ensemble 401: 56
+n patterns on ensemble 402: 61
+n UNIQUE patterns on ensemble 402: 61
+n patterns on ensemble 403: 61
+n UNIQUE patterns on ensemble 403: 61
+n patterns on ensemble 404: 61
+n UNIQUE patterns on ensemble 404: 61
+n patterns on ensemble 405: 61
+n UNIQUE patterns on ensemble 405: 61
+n patterns on ensemble 406: 71
+n UNIQUE patterns on ensemble 406: 71
+n patterns on ensemble 407: 71
+n UNIQUE patterns on ensemble 407: 71
+n patterns on ensemble 408: 71
+n UNIQUE patterns on ensemble 408: 71
+n patterns on ensemble 409: 71
+n UNIQUE patterns on ensemble 409: 71
+n patterns on ensemble 410: 75
+n UNIQUE patterns on ensemble 410: 75
+n patterns on ensemble 411: 75
+n UNIQUE patterns on ensemble 411: 75
+n patterns on ensemble 412: 67
+n UNIQUE patterns on ensemble 412: 67
+n patterns on ensemble 413: 67
+n UNIQUE patterns on ensemble 413: 67
+n patterns on ensemble 414: 66
+n UNIQUE patterns on ensemble 414: 66
+n patterns on ensemble 415: 66
+n UNIQUE patterns on ensemble 415: 66
+n patterns on ensemble 416: 64
+n UNIQUE patterns on ensemble 416: 64
+n patterns on ensemble 417: 64
+n UNIQUE patterns on ensemble 417: 64
+n patterns on ensemble 418: 59
+n UNIQUE patterns on ensemble 418: 59
+n patterns on ensemble 419: 59
+n UNIQUE patterns on ensemble 419: 59
+n patterns on ensemble 420: 61
+n UNIQUE patterns on ensemble 420: 61
+n patterns on ensemble 421: 61
+n UNIQUE patterns on ensemble 421: 61
+n patterns on ensemble 422: 63
+n UNIQUE patterns on ensemble 422: 63
+n patterns on ensemble 423: 63
+n UNIQUE patterns on ensemble 423: 63
+n patterns on ensemble 424: 67
+n UNIQUE patterns on ensemble 424: 67
+n patterns on ensemble 425: 67
+n UNIQUE patterns on ensemble 425: 67
+n patterns on ensemble 426: 59
+n UNIQUE patterns on ensemble 426: 59
+n patterns on ensemble 427: 59
+n UNIQUE patterns on ensemble 427: 59
+n patterns on ensemble 428: 61
+n UNIQUE patterns on ensemble 428: 61
+n patterns on ensemble 429: 61
+n UNIQUE patterns on ensemble 429: 61
+n patterns on ensemble 430: 62
+n UNIQUE patterns on ensemble 430: 62
+n patterns on ensemble 431: 62
+n UNIQUE patterns on ensemble 431: 62
+n patterns on ensemble 432: 70
+n UNIQUE patterns on ensemble 432: 70
+n patterns on ensemble 433: 70
+n UNIQUE patterns on ensemble 433: 70
+n patterns on ensemble 434: 60
+n UNIQUE patterns on ensemble 434: 60
+n patterns on ensemble 435: 60
+n UNIQUE patterns on ensemble 435: 60
+n patterns on ensemble 436: 64
+n UNIQUE patterns on ensemble 436: 64
+n patterns on ensemble 437: 64
+n UNIQUE patterns on ensemble 437: 64
+n patterns on ensemble 438: 71
+n UNIQUE patterns on ensemble 438: 71
+n patterns on ensemble 439: 71
+n UNIQUE patterns on ensemble 439: 71
+n patterns on ensemble 440: 62
+n UNIQUE patterns on ensemble 440: 62
+n patterns on ensemble 441: 62
+n UNIQUE patterns on ensemble 441: 62
+n patterns on ensemble 442: 63
+n UNIQUE patterns on ensemble 442: 63
+n patterns on ensemble 443: 63
+n UNIQUE patterns on ensemble 443: 63
+n patterns on ensemble 444: 66
+n UNIQUE patterns on ensemble 444: 66
+n patterns on ensemble 445: 66
+n UNIQUE patterns on ensemble 445: 66
+n patterns on ensemble 446: 72
+n UNIQUE patterns on ensemble 446: 72
+n patterns on ensemble 447: 72
+n UNIQUE patterns on ensemble 447: 72
+n patterns on ensemble 448: 65
+n UNIQUE patterns on ensemble 448: 65
+n patterns on ensemble 449: 65
+n UNIQUE patterns on ensemble 449: 65
+n patterns on ensemble 450: 77
+n UNIQUE patterns on ensemble 450: 77
+n patterns on ensemble 451: 77
+n UNIQUE patterns on ensemble 451: 77
+n patterns on ensemble 452: 63
+n UNIQUE patterns on ensemble 452: 63
+n patterns on ensemble 453: 63
+n UNIQUE patterns on ensemble 453: 63
+n patterns on ensemble 454: 71
+n UNIQUE patterns on ensemble 454: 71
+n patterns on ensemble 455: 71
+n UNIQUE patterns on ensemble 455: 71
+n patterns on ensemble 456: 58
+n UNIQUE patterns on ensemble 456: 58
+n patterns on ensemble 457: 58
+n UNIQUE patterns on ensemble 457: 58
+n patterns on ensemble 458: 65
+n UNIQUE patterns on ensemble 458: 65
+n patterns on ensemble 459: 65
+n UNIQUE patterns on ensemble 459: 65
+n patterns on ensemble 460: 60
+n UNIQUE patterns on ensemble 460: 60
+n patterns on ensemble 461: 60
+n UNIQUE patterns on ensemble 461: 60
+n patterns on ensemble 462: 65
+n UNIQUE patterns on ensemble 462: 65
+n patterns on ensemble 463: 65
+n UNIQUE patterns on ensemble 463: 65
+n patterns on ensemble 464: 67
+n UNIQUE patterns on ensemble 464: 67
+n patterns on ensemble 465: 67
+n UNIQUE patterns on ensemble 465: 67
+n patterns on ensemble 466: 60
+n UNIQUE patterns on ensemble 466: 60
+n patterns on ensemble 467: 60
+n UNIQUE patterns on ensemble 467: 60
+n patterns on ensemble 468: 72
+n UNIQUE patterns on ensemble 468: 72
+n patterns on ensemble 469: 72
+n UNIQUE patterns on ensemble 469: 72
+n patterns on ensemble 470: 62
+n UNIQUE patterns on ensemble 470: 62
+n patterns on ensemble 471: 62
+n UNIQUE patterns on ensemble 471: 62
+n patterns on ensemble 472: 56
+n UNIQUE patterns on ensemble 472: 56
+n patterns on ensemble 473: 56
+n UNIQUE patterns on ensemble 473: 56
+n patterns on ensemble 474: 73
+n UNIQUE patterns on ensemble 474: 73
+n patterns on ensemble 475: 73
+n UNIQUE patterns on ensemble 475: 73
+n patterns on ensemble 476: 70
+n UNIQUE patterns on ensemble 476: 70
+n patterns on ensemble 477: 70
+n UNIQUE patterns on ensemble 477: 70
+n patterns on ensemble 478: 71
+n UNIQUE patterns on ensemble 478: 71
+n patterns on ensemble 479: 71
+n UNIQUE patterns on ensemble 479: 71
+n patterns on ensemble 480: 60
+n UNIQUE patterns on ensemble 480: 60
+n patterns on ensemble 481: 60
+n UNIQUE patterns on ensemble 481: 60
+n patterns on ensemble 482: 69
+n UNIQUE patterns on ensemble 482: 69
+n patterns on ensemble 483: 69
+n UNIQUE patterns on ensemble 483: 69
+n patterns on ensemble 484: 60
+n UNIQUE patterns on ensemble 484: 60
+n patterns on ensemble 485: 60
+n UNIQUE patterns on ensemble 485: 60
+n patterns on ensemble 486: 66
+n UNIQUE patterns on ensemble 486: 66
+n patterns on ensemble 487: 66
+n UNIQUE patterns on ensemble 487: 66
+n patterns on ensemble 488: 63
+n UNIQUE patterns on ensemble 488: 63
+n patterns on ensemble 489: 63
+n UNIQUE patterns on ensemble 489: 63
+n patterns on ensemble 490: 64
+n UNIQUE patterns on ensemble 490: 64
+n patterns on ensemble 491: 64
+n UNIQUE patterns on ensemble 491: 64
+n patterns on ensemble 492: 69
+n UNIQUE patterns on ensemble 492: 69
+n patterns on ensemble 493: 69
+n UNIQUE patterns on ensemble 493: 69
+n patterns on ensemble 494: 58
+n UNIQUE patterns on ensemble 494: 58
+n patterns on ensemble 495: 58
+n UNIQUE patterns on ensemble 495: 58
+n patterns on ensemble 496: 68
+n UNIQUE patterns on ensemble 496: 68
+n patterns on ensemble 497: 68
+n UNIQUE patterns on ensemble 497: 68
+n patterns on ensemble 498: 69
+n UNIQUE patterns on ensemble 498: 69
+n patterns on ensemble 499: 69
+n UNIQUE patterns on ensemble 499: 69
+n patterns on ensemble 500: 58
+n UNIQUE patterns on ensemble 500: 58
+n patterns on ensemble 501: 58
+n UNIQUE patterns on ensemble 501: 58
+n patterns on ensemble 502: 65
+n UNIQUE patterns on ensemble 502: 65
+n patterns on ensemble 503: 65
+n UNIQUE patterns on ensemble 503: 65
+n patterns on ensemble 504: 70
+n UNIQUE patterns on ensemble 504: 70
+n patterns on ensemble 505: 70
+n UNIQUE patterns on ensemble 505: 70
+n patterns on ensemble 506: 63
+n UNIQUE patterns on ensemble 506: 63
+n patterns on ensemble 507: 63
+n UNIQUE patterns on ensemble 507: 63
+n patterns on ensemble 508: 61
+n UNIQUE patterns on ensemble 508: 61
+n patterns on ensemble 509: 61
+n UNIQUE patterns on ensemble 509: 61
+n patterns on ensemble 510: 65
+n UNIQUE patterns on ensemble 510: 65
+n patterns on ensemble 511: 65
+n UNIQUE patterns on ensemble 511: 65
+n patterns on ensemble 512: 63
+n UNIQUE patterns on ensemble 512: 63
+n patterns on ensemble 513: 63
+n UNIQUE patterns on ensemble 513: 63
+n patterns on ensemble 514: 68
+n UNIQUE patterns on ensemble 514: 68
+n patterns on ensemble 515: 68
+n UNIQUE patterns on ensemble 515: 68
+n patterns on ensemble 516: 75
+n UNIQUE patterns on ensemble 516: 75
+n patterns on ensemble 517: 75
+n UNIQUE patterns on ensemble 517: 75
+n patterns on ensemble 518: 63
+n UNIQUE patterns on ensemble 518: 63
+n patterns on ensemble 519: 63
+n UNIQUE patterns on ensemble 519: 63
+n patterns on ensemble 520: 63
+n UNIQUE patterns on ensemble 520: 63
+n patterns on ensemble 521: 63
+n UNIQUE patterns on ensemble 521: 63
+n patterns on ensemble 522: 65
+n UNIQUE patterns on ensemble 522: 65
+n patterns on ensemble 523: 65
+n UNIQUE patterns on ensemble 523: 65
+n patterns on ensemble 524: 63
+n UNIQUE patterns on ensemble 524: 63
+n patterns on ensemble 525: 63
+n UNIQUE patterns on ensemble 525: 63
+n patterns on ensemble 526: 63
+n UNIQUE patterns on ensemble 526: 63
+n patterns on ensemble 527: 63
+n UNIQUE patterns on ensemble 527: 63
+n patterns on ensemble 528: 61
+n UNIQUE patterns on ensemble 528: 61
+n patterns on ensemble 529: 61
+n UNIQUE patterns on ensemble 529: 61
+n patterns on ensemble 530: 66
+n UNIQUE patterns on ensemble 530: 66
+n patterns on ensemble 531: 66
+n UNIQUE patterns on ensemble 531: 66
+n patterns on ensemble 532: 70
+n UNIQUE patterns on ensemble 532: 70
+n patterns on ensemble 533: 70
+n UNIQUE patterns on ensemble 533: 70
+n patterns on ensemble 534: 63
+n UNIQUE patterns on ensemble 534: 63
+n patterns on ensemble 535: 63
+n UNIQUE patterns on ensemble 535: 63
+n patterns on ensemble 536: 57
+n UNIQUE patterns on ensemble 536: 57
+n patterns on ensemble 537: 57
+n UNIQUE patterns on ensemble 537: 57
+n patterns on ensemble 538: 65
+n UNIQUE patterns on ensemble 538: 65
+n patterns on ensemble 539: 65
+n UNIQUE patterns on ensemble 539: 65
+n patterns on ensemble 540: 72
+n UNIQUE patterns on ensemble 540: 72
+n patterns on ensemble 541: 72
+n UNIQUE patterns on ensemble 541: 72
+n patterns on ensemble 542: 65
+n UNIQUE patterns on ensemble 542: 65
+n patterns on ensemble 543: 65
+n UNIQUE patterns on ensemble 543: 65
+n patterns on ensemble 544: 61
+n UNIQUE patterns on ensemble 544: 61
+n patterns on ensemble 545: 61
+n UNIQUE patterns on ensemble 545: 61
+n patterns on ensemble 546: 65
+n UNIQUE patterns on ensemble 546: 65
+n patterns on ensemble 547: 65
+n UNIQUE patterns on ensemble 547: 65
+n patterns on ensemble 548: 63
+n UNIQUE patterns on ensemble 548: 63
+n patterns on ensemble 549: 63
+n UNIQUE patterns on ensemble 549: 63
+n patterns on ensemble 550: 58
+n UNIQUE patterns on ensemble 550: 58
+n patterns on ensemble 551: 58
+n UNIQUE patterns on ensemble 551: 58
+n patterns on ensemble 552: 69
+n UNIQUE patterns on ensemble 552: 69
+n patterns on ensemble 553: 69
+n UNIQUE patterns on ensemble 553: 69
+n patterns on ensemble 554: 60
+n UNIQUE patterns on ensemble 554: 60
+n patterns on ensemble 555: 60
+n UNIQUE patterns on ensemble 555: 60
+n patterns on ensemble 556: 67
+n UNIQUE patterns on ensemble 556: 67
+n patterns on ensemble 557: 67
+n UNIQUE patterns on ensemble 557: 67
+n patterns on ensemble 558: 63
+n UNIQUE patterns on ensemble 558: 63
+n patterns on ensemble 559: 63
+n UNIQUE patterns on ensemble 559: 63
+n patterns on ensemble 560: 60
+n UNIQUE patterns on ensemble 560: 60
+n patterns on ensemble 561: 60
+n UNIQUE patterns on ensemble 561: 60
+n patterns on ensemble 562: 58
+n UNIQUE patterns on ensemble 562: 58
+n patterns on ensemble 563: 58
+n UNIQUE patterns on ensemble 563: 58
+n patterns on ensemble 564: 70
+n UNIQUE patterns on ensemble 564: 70
+n patterns on ensemble 565: 70
+n UNIQUE patterns on ensemble 565: 70
+n patterns on ensemble 566: 68
+n UNIQUE patterns on ensemble 566: 68
+n patterns on ensemble 567: 68
+n UNIQUE patterns on ensemble 567: 68
+n patterns on ensemble 568: 61
+n UNIQUE patterns on ensemble 568: 61
+n patterns on ensemble 569: 61
+n UNIQUE patterns on ensemble 569: 61
+n patterns on ensemble 570: 66
+n UNIQUE patterns on ensemble 570: 66
+n patterns on ensemble 571: 66
+n UNIQUE patterns on ensemble 571: 66
+n patterns on ensemble 572: 69
+n UNIQUE patterns on ensemble 572: 69
+n patterns on ensemble 573: 69
+n UNIQUE patterns on ensemble 573: 69
+n patterns on ensemble 574: 63
+n UNIQUE patterns on ensemble 574: 63
+n patterns on ensemble 575: 63
+n UNIQUE patterns on ensemble 575: 63
+n patterns on ensemble 576: 66
+n UNIQUE patterns on ensemble 576: 66
+n patterns on ensemble 577: 66
+n UNIQUE patterns on ensemble 577: 66
+n patterns on ensemble 578: 60
+n UNIQUE patterns on ensemble 578: 60
+n patterns on ensemble 579: 60
+n UNIQUE patterns on ensemble 579: 60
+n patterns on ensemble 580: 58
+n UNIQUE patterns on ensemble 580: 58
+n patterns on ensemble 581: 58
+n UNIQUE patterns on ensemble 581: 58
+n patterns on ensemble 582: 62
+n UNIQUE patterns on ensemble 582: 62
+n patterns on ensemble 583: 62
+n UNIQUE patterns on ensemble 583: 62
+n patterns on ensemble 584: 66
+n UNIQUE patterns on ensemble 584: 66
+n patterns on ensemble 585: 66
+n UNIQUE patterns on ensemble 585: 66
+n patterns on ensemble 586: 59
+n UNIQUE patterns on ensemble 586: 59
+n patterns on ensemble 587: 59
+n UNIQUE patterns on ensemble 587: 59
+n patterns on ensemble 588: 62
+n UNIQUE patterns on ensemble 588: 62
+n patterns on ensemble 589: 62
+n UNIQUE patterns on ensemble 589: 62
+n patterns on ensemble 590: 58
+n UNIQUE patterns on ensemble 590: 58
+n patterns on ensemble 591: 58
+n UNIQUE patterns on ensemble 591: 58
+n patterns on ensemble 592: 64
+n UNIQUE patterns on ensemble 592: 64
+n patterns on ensemble 593: 64
+n UNIQUE patterns on ensemble 593: 64
+n patterns on ensemble 594: 60
+n UNIQUE patterns on ensemble 594: 60
+n patterns on ensemble 595: 60
+n UNIQUE patterns on ensemble 595: 60
+n patterns on ensemble 596: 60
+n UNIQUE patterns on ensemble 596: 60
+n patterns on ensemble 597: 60
+n UNIQUE patterns on ensemble 597: 60
+n patterns on ensemble 598: 63
+n UNIQUE patterns on ensemble 598: 63
+n patterns on ensemble 599: 63
+n UNIQUE patterns on ensemble 599: 63
+n patterns on ensemble 600: 58
+n UNIQUE patterns on ensemble 600: 58
+n patterns on ensemble 601: 58
+n UNIQUE patterns on ensemble 601: 58
+n patterns on ensemble 602: 61
+n UNIQUE patterns on ensemble 602: 61
+n patterns on ensemble 603: 61
+n UNIQUE patterns on ensemble 603: 61
+n patterns on ensemble 604: 54
+n UNIQUE patterns on ensemble 604: 54
+n patterns on ensemble 605: 54
+n UNIQUE patterns on ensemble 605: 54
+n patterns on ensemble 606: 57
+n UNIQUE patterns on ensemble 606: 57
+n patterns on ensemble 607: 57
+n UNIQUE patterns on ensemble 607: 57
+n patterns on ensemble 608: 58
+n UNIQUE patterns on ensemble 608: 58
+n patterns on ensemble 609: 58
+n UNIQUE patterns on ensemble 609: 58
+n patterns on ensemble 610: 58
+n UNIQUE patterns on ensemble 610: 58
+n patterns on ensemble 611: 58
+n UNIQUE patterns on ensemble 611: 58
+n patterns on ensemble 612: 57
+n UNIQUE patterns on ensemble 612: 57
+n patterns on ensemble 613: 57
+n UNIQUE patterns on ensemble 613: 57
+n patterns on ensemble 614: 65
+n UNIQUE patterns on ensemble 614: 65
+n patterns on ensemble 615: 65
+n UNIQUE patterns on ensemble 615: 65
+n patterns on ensemble 616: 59
+n UNIQUE patterns on ensemble 616: 59
+n patterns on ensemble 617: 59
+n UNIQUE patterns on ensemble 617: 59
+n patterns on ensemble 618: 57
+n UNIQUE patterns on ensemble 618: 57
+n patterns on ensemble 619: 57
+n UNIQUE patterns on ensemble 619: 57
+n patterns on ensemble 620: 54
+n UNIQUE patterns on ensemble 620: 54
+n patterns on ensemble 621: 54
+n UNIQUE patterns on ensemble 621: 54
+n patterns on ensemble 622: 63
+n UNIQUE patterns on ensemble 622: 63
+n patterns on ensemble 623: 63
+n UNIQUE patterns on ensemble 623: 63
+n patterns on ensemble 624: 47
+n UNIQUE patterns on ensemble 624: 47
+n patterns on ensemble 625: 47
+n UNIQUE patterns on ensemble 625: 47
+n patterns on ensemble 626: 62
+n UNIQUE patterns on ensemble 626: 62
+n patterns on ensemble 627: 62
+n UNIQUE patterns on ensemble 627: 62
+n patterns on ensemble 628: 60
+n UNIQUE patterns on ensemble 628: 60
+n patterns on ensemble 629: 60
+n UNIQUE patterns on ensemble 629: 60
+n patterns on ensemble 630: 62
+n UNIQUE patterns on ensemble 630: 62
+n patterns on ensemble 631: 62
+n UNIQUE patterns on ensemble 631: 62
+n patterns on ensemble 632: 55
+n UNIQUE patterns on ensemble 632: 55
+n patterns on ensemble 633: 55
+n UNIQUE patterns on ensemble 633: 55
+n patterns on ensemble 634: 59
+n UNIQUE patterns on ensemble 634: 59
+n patterns on ensemble 635: 59
+n UNIQUE patterns on ensemble 635: 59
+n patterns on ensemble 636: 56
+n UNIQUE patterns on ensemble 636: 56
+n patterns on ensemble 637: 56
+n UNIQUE patterns on ensemble 637: 56
+n patterns on ensemble 638: 54
+n UNIQUE patterns on ensemble 638: 54
+n patterns on ensemble 639: 54
+n UNIQUE patterns on ensemble 639: 54
+n patterns on ensemble 640: 59
+n UNIQUE patterns on ensemble 640: 59
+n patterns on ensemble 641: 59
+n UNIQUE patterns on ensemble 641: 59
+n patterns on ensemble 642: 64
+n UNIQUE patterns on ensemble 642: 64
+n patterns on ensemble 643: 64
+n UNIQUE patterns on ensemble 643: 64
+n patterns on ensemble 644: 56
+n UNIQUE patterns on ensemble 644: 56
+n patterns on ensemble 645: 56
+n UNIQUE patterns on ensemble 645: 56
+n patterns on ensemble 646: 55
+n UNIQUE patterns on ensemble 646: 55
+n patterns on ensemble 647: 55
+n UNIQUE patterns on ensemble 647: 55
+n patterns on ensemble 648: 68
+n UNIQUE patterns on ensemble 648: 68
+n patterns on ensemble 649: 68
+n UNIQUE patterns on ensemble 649: 68
+n patterns on ensemble 650: 59
+n UNIQUE patterns on ensemble 650: 59
+n patterns on ensemble 651: 59
+n UNIQUE patterns on ensemble 651: 59
+n patterns on ensemble 652: 62
+n UNIQUE patterns on ensemble 652: 62
+n patterns on ensemble 653: 62
+n UNIQUE patterns on ensemble 653: 62
+n patterns on ensemble 654: 54
+n UNIQUE patterns on ensemble 654: 54
+n patterns on ensemble 655: 54
+n UNIQUE patterns on ensemble 655: 54
+n patterns on ensemble 656: 59
+n UNIQUE patterns on ensemble 656: 59
+n patterns on ensemble 657: 59
+n UNIQUE patterns on ensemble 657: 59
+n patterns on ensemble 658: 58
+n UNIQUE patterns on ensemble 658: 58
+n patterns on ensemble 659: 58
+n UNIQUE patterns on ensemble 659: 58
+n patterns on ensemble 660: 62
+n UNIQUE patterns on ensemble 660: 62
+n patterns on ensemble 661: 62
+n UNIQUE patterns on ensemble 661: 62
+n patterns on ensemble 662: 65
+n UNIQUE patterns on ensemble 662: 65
+n patterns on ensemble 663: 65
+n UNIQUE patterns on ensemble 663: 65
+n patterns on ensemble 664: 60
+n UNIQUE patterns on ensemble 664: 60
+n patterns on ensemble 665: 60
+n UNIQUE patterns on ensemble 665: 60
+n patterns on ensemble 666: 63
+n UNIQUE patterns on ensemble 666: 63
+n patterns on ensemble 667: 63
+n UNIQUE patterns on ensemble 667: 63
+n patterns on ensemble 668: 50
+n UNIQUE patterns on ensemble 668: 50
+n patterns on ensemble 669: 50
+n UNIQUE patterns on ensemble 669: 50
+n patterns on ensemble 670: 56
+n UNIQUE patterns on ensemble 670: 56
+n patterns on ensemble 671: 56
+n UNIQUE patterns on ensemble 671: 56
+n patterns on ensemble 672: 69
+n UNIQUE patterns on ensemble 672: 69
+n patterns on ensemble 673: 69
+n UNIQUE patterns on ensemble 673: 69
+n patterns on ensemble 674: 69
+n UNIQUE patterns on ensemble 674: 69
+n patterns on ensemble 675: 69
+n UNIQUE patterns on ensemble 675: 69
+n patterns on ensemble 676: 62
+n UNIQUE patterns on ensemble 676: 62
+n patterns on ensemble 677: 62
+n UNIQUE patterns on ensemble 677: 62
+n patterns on ensemble 678: 56
+n UNIQUE patterns on ensemble 678: 56
+n patterns on ensemble 679: 56
+n UNIQUE patterns on ensemble 679: 56
+n patterns on ensemble 680: 55
+n UNIQUE patterns on ensemble 680: 55
+n patterns on ensemble 681: 55
+n UNIQUE patterns on ensemble 681: 55
+n patterns on ensemble 682: 59
+n UNIQUE patterns on ensemble 682: 59
+n patterns on ensemble 683: 59
+n UNIQUE patterns on ensemble 683: 59
+n patterns on ensemble 684: 63
+n UNIQUE patterns on ensemble 684: 63
+n patterns on ensemble 685: 63
+n UNIQUE patterns on ensemble 685: 63
+n patterns on ensemble 686: 53
+n UNIQUE patterns on ensemble 686: 53
+n patterns on ensemble 687: 53
+n UNIQUE patterns on ensemble 687: 53
+n patterns on ensemble 688: 59
+n UNIQUE patterns on ensemble 688: 59
+n patterns on ensemble 689: 59
+n UNIQUE patterns on ensemble 689: 59
+n patterns on ensemble 690: 55
+n UNIQUE patterns on ensemble 690: 55
+n patterns on ensemble 691: 55
+n UNIQUE patterns on ensemble 691: 55
+n patterns on ensemble 692: 64
+n UNIQUE patterns on ensemble 692: 64
+n patterns on ensemble 693: 64
+n UNIQUE patterns on ensemble 693: 64
+n patterns on ensemble 694: 52
+n UNIQUE patterns on ensemble 694: 52
+n patterns on ensemble 695: 52
+n UNIQUE patterns on ensemble 695: 52
+n patterns on ensemble 696: 60
+n UNIQUE patterns on ensemble 696: 60
+n patterns on ensemble 697: 60
+n UNIQUE patterns on ensemble 697: 60
+n patterns on ensemble 698: 61
+n UNIQUE patterns on ensemble 698: 61
+n patterns on ensemble 699: 61
+n UNIQUE patterns on ensemble 699: 61
+n patterns on ensemble 700: 57
+n UNIQUE patterns on ensemble 700: 57
+n patterns on ensemble 701: 57
+n UNIQUE patterns on ensemble 701: 57
+n patterns on ensemble 702: 67
+n UNIQUE patterns on ensemble 702: 67
+n patterns on ensemble 703: 67
+n UNIQUE patterns on ensemble 703: 67
+n patterns on ensemble 704: 60
+n UNIQUE patterns on ensemble 704: 60
+n patterns on ensemble 705: 60
+n UNIQUE patterns on ensemble 705: 60
+n patterns on ensemble 706: 60
+n UNIQUE patterns on ensemble 706: 60
+n patterns on ensemble 707: 60
+n UNIQUE patterns on ensemble 707: 60
+n patterns on ensemble 708: 61
+n UNIQUE patterns on ensemble 708: 61
+n patterns on ensemble 709: 61
+n UNIQUE patterns on ensemble 709: 61
+n patterns on ensemble 710: 59
+n UNIQUE patterns on ensemble 710: 59
+n patterns on ensemble 711: 59
+n UNIQUE patterns on ensemble 711: 59
+n patterns on ensemble 712: 67
+n UNIQUE patterns on ensemble 712: 67
+n patterns on ensemble 713: 67
+n UNIQUE patterns on ensemble 713: 67
+n patterns on ensemble 714: 58
+n UNIQUE patterns on ensemble 714: 58
+n patterns on ensemble 715: 58
+n UNIQUE patterns on ensemble 715: 58
+n patterns on ensemble 716: 59
+n UNIQUE patterns on ensemble 716: 59
+n patterns on ensemble 717: 59
+n UNIQUE patterns on ensemble 717: 59
+n patterns on ensemble 718: 54
+n UNIQUE patterns on ensemble 718: 54
+n patterns on ensemble 719: 54
+n UNIQUE patterns on ensemble 719: 54
+n patterns on ensemble 720: 59
+n UNIQUE patterns on ensemble 720: 59
+n patterns on ensemble 721: 59
+n UNIQUE patterns on ensemble 721: 59
+n patterns on ensemble 722: 59
+n UNIQUE patterns on ensemble 722: 59
+n patterns on ensemble 723: 59
+n UNIQUE patterns on ensemble 723: 59
+n patterns on ensemble 724: 62
+n UNIQUE patterns on ensemble 724: 62
+n patterns on ensemble 725: 62
+n UNIQUE patterns on ensemble 725: 62
+n patterns on ensemble 726: 59
+n UNIQUE patterns on ensemble 726: 59
+n patterns on ensemble 727: 59
+n UNIQUE patterns on ensemble 727: 59
+n patterns on ensemble 728: 52
+n UNIQUE patterns on ensemble 728: 52
+n patterns on ensemble 729: 52
+n UNIQUE patterns on ensemble 729: 52
+n patterns on ensemble 730: 61
+n UNIQUE patterns on ensemble 730: 61
+n patterns on ensemble 731: 61
+n UNIQUE patterns on ensemble 731: 61
+n patterns on ensemble 732: 63
+n UNIQUE patterns on ensemble 732: 63
+n patterns on ensemble 733: 63
+n UNIQUE patterns on ensemble 733: 63
+n patterns on ensemble 734: 61
+n UNIQUE patterns on ensemble 734: 61
+n patterns on ensemble 735: 61
+n UNIQUE patterns on ensemble 735: 61
+n patterns on ensemble 736: 59
+n UNIQUE patterns on ensemble 736: 59
+n patterns on ensemble 737: 59
+n UNIQUE patterns on ensemble 737: 59
+n patterns on ensemble 738: 62
+n UNIQUE patterns on ensemble 738: 62
+n patterns on ensemble 739: 62
+n UNIQUE patterns on ensemble 739: 62
+n patterns on ensemble 740: 57
+n UNIQUE patterns on ensemble 740: 57
+n patterns on ensemble 741: 57
+n UNIQUE patterns on ensemble 741: 57
+n patterns on ensemble 742: 55
+n UNIQUE patterns on ensemble 742: 55
+n patterns on ensemble 743: 55
+n UNIQUE patterns on ensemble 743: 55
+n patterns on ensemble 744: 61
+n UNIQUE patterns on ensemble 744: 61
+n patterns on ensemble 745: 61
+n UNIQUE patterns on ensemble 745: 61
+n patterns on ensemble 746: 63
+n UNIQUE patterns on ensemble 746: 63
+n patterns on ensemble 747: 63
+n UNIQUE patterns on ensemble 747: 63
+n patterns on ensemble 748: 63
+n UNIQUE patterns on ensemble 748: 63
+n patterns on ensemble 749: 63
+n UNIQUE patterns on ensemble 749: 63
+n patterns on ensemble 750: 63
+n UNIQUE patterns on ensemble 750: 63
+n patterns on ensemble 751: 63
+n UNIQUE patterns on ensemble 751: 63
+n patterns on ensemble 752: 61
+n UNIQUE patterns on ensemble 752: 61
+n patterns on ensemble 753: 61
+n UNIQUE patterns on ensemble 753: 61
+n patterns on ensemble 754: 62
+n UNIQUE patterns on ensemble 754: 62
+n patterns on ensemble 755: 62
+n UNIQUE patterns on ensemble 755: 62
+n patterns on ensemble 756: 63
+n UNIQUE patterns on ensemble 756: 63
+n patterns on ensemble 757: 63
+n UNIQUE patterns on ensemble 757: 63
+n patterns on ensemble 758: 58
+n UNIQUE patterns on ensemble 758: 58
+n patterns on ensemble 759: 58
+n UNIQUE patterns on ensemble 759: 58
+n patterns on ensemble 760: 60
+n UNIQUE patterns on ensemble 760: 60
+n patterns on ensemble 761: 60
+n UNIQUE patterns on ensemble 761: 60
+n patterns on ensemble 762: 60
+n UNIQUE patterns on ensemble 762: 60
+n patterns on ensemble 763: 60
+n UNIQUE patterns on ensemble 763: 60
+n patterns on ensemble 764: 62
+n UNIQUE patterns on ensemble 764: 62
+n patterns on ensemble 765: 62
+n UNIQUE patterns on ensemble 765: 62
+n patterns on ensemble 766: 59
+n UNIQUE patterns on ensemble 766: 59
+n patterns on ensemble 767: 59
+n UNIQUE patterns on ensemble 767: 59
+n patterns on ensemble 768: 54
+n UNIQUE patterns on ensemble 768: 54
+n patterns on ensemble 769: 54
+n UNIQUE patterns on ensemble 769: 54
+n patterns on ensemble 770: 58
+n UNIQUE patterns on ensemble 770: 58
+n patterns on ensemble 771: 58
+n UNIQUE patterns on ensemble 771: 58
+n patterns on ensemble 772: 59
+n UNIQUE patterns on ensemble 772: 59
+n patterns on ensemble 773: 59
+n UNIQUE patterns on ensemble 773: 59
+n patterns on ensemble 774: 56
+n UNIQUE patterns on ensemble 774: 56
+n patterns on ensemble 775: 56
+n UNIQUE patterns on ensemble 775: 56
+n patterns on ensemble 776: 63
+n UNIQUE patterns on ensemble 776: 63
+n patterns on ensemble 777: 63
+n UNIQUE patterns on ensemble 777: 63
+n patterns on ensemble 778: 64
+n UNIQUE patterns on ensemble 778: 64
+n patterns on ensemble 779: 64
+n UNIQUE patterns on ensemble 779: 64
+n patterns on ensemble 780: 64
+n UNIQUE patterns on ensemble 780: 64
+n patterns on ensemble 781: 64
+n UNIQUE patterns on ensemble 781: 64
+n patterns on ensemble 782: 59
+n UNIQUE patterns on ensemble 782: 59
+n patterns on ensemble 783: 59
+n UNIQUE patterns on ensemble 783: 59
+n patterns on ensemble 784: 61
+n UNIQUE patterns on ensemble 784: 61
+n patterns on ensemble 785: 61
+n UNIQUE patterns on ensemble 785: 61
+n patterns on ensemble 786: 57
+n UNIQUE patterns on ensemble 786: 57
+n patterns on ensemble 787: 57
+n UNIQUE patterns on ensemble 787: 57
+n patterns on ensemble 788: 61
+n UNIQUE patterns on ensemble 788: 61
+n patterns on ensemble 789: 61
+n UNIQUE patterns on ensemble 789: 61
+n patterns on ensemble 790: 60
+n UNIQUE patterns on ensemble 790: 60
+n patterns on ensemble 791: 60
+n UNIQUE patterns on ensemble 791: 60
+n patterns on ensemble 792: 72
+n UNIQUE patterns on ensemble 792: 72
+n patterns on ensemble 793: 72
+n UNIQUE patterns on ensemble 793: 72
+n patterns on ensemble 794: 78
+n UNIQUE patterns on ensemble 794: 78
+n patterns on ensemble 795: 78
+n UNIQUE patterns on ensemble 795: 78
+n patterns on ensemble 796: 76
+n UNIQUE patterns on ensemble 796: 76
+n patterns on ensemble 797: 76
+n UNIQUE patterns on ensemble 797: 76
+n patterns on ensemble 798: 75
+n UNIQUE patterns on ensemble 798: 75
+n patterns on ensemble 799: 75
+n UNIQUE patterns on ensemble 799: 75
+n patterns on ensemble 800: 74
+n UNIQUE patterns on ensemble 800: 74
+n patterns on ensemble 801: 74
+n UNIQUE patterns on ensemble 801: 74
+n patterns on ensemble 802: 81
+n UNIQUE patterns on ensemble 802: 81
+n patterns on ensemble 803: 81
+n UNIQUE patterns on ensemble 803: 81
+n patterns on ensemble 804: 69
+n UNIQUE patterns on ensemble 804: 69
+n patterns on ensemble 805: 69
+n UNIQUE patterns on ensemble 805: 69
+n patterns on ensemble 806: 64
+n UNIQUE patterns on ensemble 806: 64
+n patterns on ensemble 807: 64
+n UNIQUE patterns on ensemble 807: 64
+n patterns on ensemble 808: 75
+n UNIQUE patterns on ensemble 808: 75
+n patterns on ensemble 809: 75
+n UNIQUE patterns on ensemble 809: 75
+n patterns on ensemble 810: 73
+n UNIQUE patterns on ensemble 810: 73
+n patterns on ensemble 811: 73
+n UNIQUE patterns on ensemble 811: 73
+n patterns on ensemble 812: 70
+n UNIQUE patterns on ensemble 812: 70
+n patterns on ensemble 813: 70
+n UNIQUE patterns on ensemble 813: 70
+n patterns on ensemble 814: 67
+n UNIQUE patterns on ensemble 814: 67
+n patterns on ensemble 815: 67
+n UNIQUE patterns on ensemble 815: 67
+n patterns on ensemble 816: 74
+n UNIQUE patterns on ensemble 816: 74
+n patterns on ensemble 817: 74
+n UNIQUE patterns on ensemble 817: 74
+n patterns on ensemble 818: 69
+n UNIQUE patterns on ensemble 818: 69
+n patterns on ensemble 819: 69
+n UNIQUE patterns on ensemble 819: 69
+n patterns on ensemble 820: 74
+n UNIQUE patterns on ensemble 820: 74
+n patterns on ensemble 821: 74
+n UNIQUE patterns on ensemble 821: 74
+n patterns on ensemble 822: 74
+n UNIQUE patterns on ensemble 822: 74
+n patterns on ensemble 823: 74
+n UNIQUE patterns on ensemble 823: 74
+n patterns on ensemble 824: 75
+n UNIQUE patterns on ensemble 824: 75
+n patterns on ensemble 825: 75
+n UNIQUE patterns on ensemble 825: 75
+n patterns on ensemble 826: 68
+n UNIQUE patterns on ensemble 826: 68
+n patterns on ensemble 827: 68
+n UNIQUE patterns on ensemble 827: 68
+n patterns on ensemble 828: 71
+n UNIQUE patterns on ensemble 828: 71
+n patterns on ensemble 829: 71
+n UNIQUE patterns on ensemble 829: 71
+n patterns on ensemble 830: 70
+n UNIQUE patterns on ensemble 830: 70
+n patterns on ensemble 831: 70
+n UNIQUE patterns on ensemble 831: 70
+n patterns on ensemble 832: 72
+n UNIQUE patterns on ensemble 832: 72
+n patterns on ensemble 833: 72
+n UNIQUE patterns on ensemble 833: 72
+n patterns on ensemble 834: 67
+n UNIQUE patterns on ensemble 834: 67
+n patterns on ensemble 835: 67
+n UNIQUE patterns on ensemble 835: 67
+n patterns on ensemble 836: 64
+n UNIQUE patterns on ensemble 836: 64
+n patterns on ensemble 837: 64
+n UNIQUE patterns on ensemble 837: 64
+n patterns on ensemble 838: 71
+n UNIQUE patterns on ensemble 838: 71
+n patterns on ensemble 839: 71
+n UNIQUE patterns on ensemble 839: 71
+n patterns on ensemble 840: 78
+n UNIQUE patterns on ensemble 840: 78
+n patterns on ensemble 841: 78
+n UNIQUE patterns on ensemble 841: 78
+n patterns on ensemble 842: 76
+n UNIQUE patterns on ensemble 842: 76
+n patterns on ensemble 843: 76
+n UNIQUE patterns on ensemble 843: 76
+n patterns on ensemble 844: 70
+n UNIQUE patterns on ensemble 844: 70
+n patterns on ensemble 845: 70
+n UNIQUE patterns on ensemble 845: 70
+n patterns on ensemble 846: 70
+n UNIQUE patterns on ensemble 846: 70
+n patterns on ensemble 847: 70
+n UNIQUE patterns on ensemble 847: 70
+n patterns on ensemble 848: 61
+n UNIQUE patterns on ensemble 848: 61
+n patterns on ensemble 849: 61
+n UNIQUE patterns on ensemble 849: 61
+n patterns on ensemble 850: 79
+n UNIQUE patterns on ensemble 850: 79
+n patterns on ensemble 851: 79
+n UNIQUE patterns on ensemble 851: 79
+n patterns on ensemble 852: 75
+n UNIQUE patterns on ensemble 852: 75
+n patterns on ensemble 853: 75
+n UNIQUE patterns on ensemble 853: 75
+n patterns on ensemble 854: 72
+n UNIQUE patterns on ensemble 854: 72
+n patterns on ensemble 855: 72
+n UNIQUE patterns on ensemble 855: 72
+n patterns on ensemble 856: 64
+n UNIQUE patterns on ensemble 856: 64
+n patterns on ensemble 857: 64
+n UNIQUE patterns on ensemble 857: 64
+n patterns on ensemble 858: 79
+n UNIQUE patterns on ensemble 858: 79
+n patterns on ensemble 859: 79
+n UNIQUE patterns on ensemble 859: 79
+n patterns on ensemble 860: 70
+n UNIQUE patterns on ensemble 860: 70
+n patterns on ensemble 861: 70
+n UNIQUE patterns on ensemble 861: 70
+n patterns on ensemble 862: 67
+n UNIQUE patterns on ensemble 862: 67
+n patterns on ensemble 863: 67
+n UNIQUE patterns on ensemble 863: 67
+n patterns on ensemble 864: 69
+n UNIQUE patterns on ensemble 864: 69
+n patterns on ensemble 865: 69
+n UNIQUE patterns on ensemble 865: 69
+n patterns on ensemble 866: 74
+n UNIQUE patterns on ensemble 866: 74
+n patterns on ensemble 867: 74
+n UNIQUE patterns on ensemble 867: 74
+n patterns on ensemble 868: 76
+n UNIQUE patterns on ensemble 868: 76
+n patterns on ensemble 869: 76
+n UNIQUE patterns on ensemble 869: 76
+n patterns on ensemble 870: 69
+n UNIQUE patterns on ensemble 870: 69
+n patterns on ensemble 871: 69
+n UNIQUE patterns on ensemble 871: 69
+n patterns on ensemble 872: 67
+n UNIQUE patterns on ensemble 872: 67
+n patterns on ensemble 873: 67
+n UNIQUE patterns on ensemble 873: 67
+n patterns on ensemble 874: 71
+n UNIQUE patterns on ensemble 874: 71
+n patterns on ensemble 875: 71
+n UNIQUE patterns on ensemble 875: 71
+n patterns on ensemble 876: 76
+n UNIQUE patterns on ensemble 876: 76
+n patterns on ensemble 877: 76
+n UNIQUE patterns on ensemble 877: 76
+n patterns on ensemble 878: 70
+n UNIQUE patterns on ensemble 878: 70
+n patterns on ensemble 879: 70
+n UNIQUE patterns on ensemble 879: 70
+n patterns on ensemble 880: 71
+n UNIQUE patterns on ensemble 880: 71
+n patterns on ensemble 881: 71
+n UNIQUE patterns on ensemble 881: 71
+n patterns on ensemble 882: 75
+n UNIQUE patterns on ensemble 882: 75
+n patterns on ensemble 883: 75
+n UNIQUE patterns on ensemble 883: 75
+n patterns on ensemble 884: 63
+n UNIQUE patterns on ensemble 884: 63
+n patterns on ensemble 885: 63
+n UNIQUE patterns on ensemble 885: 63
+n patterns on ensemble 886: 66
+n UNIQUE patterns on ensemble 886: 66
+n patterns on ensemble 887: 66
+n UNIQUE patterns on ensemble 887: 66
+n patterns on ensemble 888: 75
+n UNIQUE patterns on ensemble 888: 75
+n patterns on ensemble 889: 75
+n UNIQUE patterns on ensemble 889: 75
+n patterns on ensemble 890: 74
+n UNIQUE patterns on ensemble 890: 74
+n patterns on ensemble 891: 74
+n UNIQUE patterns on ensemble 891: 74
+n patterns on ensemble 892: 75
+n UNIQUE patterns on ensemble 892: 75
+n patterns on ensemble 893: 75
+n UNIQUE patterns on ensemble 893: 75
+n patterns on ensemble 894: 76
+n UNIQUE patterns on ensemble 894: 76
+n patterns on ensemble 895: 76
+n UNIQUE patterns on ensemble 895: 76
+n patterns on ensemble 896: 67
+n UNIQUE patterns on ensemble 896: 67
+n patterns on ensemble 897: 67
+n UNIQUE patterns on ensemble 897: 67
+n patterns on ensemble 898: 74
+n UNIQUE patterns on ensemble 898: 74
+n patterns on ensemble 899: 74
+n UNIQUE patterns on ensemble 899: 74
+n patterns on ensemble 900: 64
+n UNIQUE patterns on ensemble 900: 64
+n patterns on ensemble 901: 64
+n UNIQUE patterns on ensemble 901: 64
+n patterns on ensemble 902: 70
+n UNIQUE patterns on ensemble 902: 70
+n patterns on ensemble 903: 70
+n UNIQUE patterns on ensemble 903: 70
+n patterns on ensemble 904: 73
+n UNIQUE patterns on ensemble 904: 73
+n patterns on ensemble 905: 73
+n UNIQUE patterns on ensemble 905: 73
+n patterns on ensemble 906: 72
+n UNIQUE patterns on ensemble 906: 72
+n patterns on ensemble 907: 72
+n UNIQUE patterns on ensemble 907: 72
+n patterns on ensemble 908: 72
+n UNIQUE patterns on ensemble 908: 72
+n patterns on ensemble 909: 72
+n UNIQUE patterns on ensemble 909: 72
+n patterns on ensemble 910: 76
+n UNIQUE patterns on ensemble 910: 76
+n patterns on ensemble 911: 76
+n UNIQUE patterns on ensemble 911: 76
+n patterns on ensemble 912: 64
+n UNIQUE patterns on ensemble 912: 64
+n patterns on ensemble 913: 64
+n UNIQUE patterns on ensemble 913: 64
+n patterns on ensemble 914: 71
+n UNIQUE patterns on ensemble 914: 71
+n patterns on ensemble 915: 71
+n UNIQUE patterns on ensemble 915: 71
+n patterns on ensemble 916: 81
+n UNIQUE patterns on ensemble 916: 81
+n patterns on ensemble 917: 81
+n UNIQUE patterns on ensemble 917: 81
+n patterns on ensemble 918: 72
+n UNIQUE patterns on ensemble 918: 72
+n patterns on ensemble 919: 72
+n UNIQUE patterns on ensemble 919: 72
+n patterns on ensemble 920: 74
+n UNIQUE patterns on ensemble 920: 74
+n patterns on ensemble 921: 74
+n UNIQUE patterns on ensemble 921: 74
+n patterns on ensemble 922: 67
+n UNIQUE patterns on ensemble 922: 67
+n patterns on ensemble 923: 67
+n UNIQUE patterns on ensemble 923: 67
+n patterns on ensemble 924: 70
+n UNIQUE patterns on ensemble 924: 70
+n patterns on ensemble 925: 70
+n UNIQUE patterns on ensemble 925: 70
+n patterns on ensemble 926: 70
+n UNIQUE patterns on ensemble 926: 70
+n patterns on ensemble 927: 70
+n UNIQUE patterns on ensemble 927: 70
+n patterns on ensemble 928: 66
+n UNIQUE patterns on ensemble 928: 66
+n patterns on ensemble 929: 66
+n UNIQUE patterns on ensemble 929: 66
+n patterns on ensemble 930: 77
+n UNIQUE patterns on ensemble 930: 77
+n patterns on ensemble 931: 77
+n UNIQUE patterns on ensemble 931: 77
+n patterns on ensemble 932: 79
+n UNIQUE patterns on ensemble 932: 79
+n patterns on ensemble 933: 79
+n UNIQUE patterns on ensemble 933: 79
+n patterns on ensemble 934: 71
+n UNIQUE patterns on ensemble 934: 71
+n patterns on ensemble 935: 71
+n UNIQUE patterns on ensemble 935: 71
+n patterns on ensemble 936: 70
+n UNIQUE patterns on ensemble 936: 70
+n patterns on ensemble 937: 70
+n UNIQUE patterns on ensemble 937: 70
+n patterns on ensemble 938: 72
+n UNIQUE patterns on ensemble 938: 72
+n patterns on ensemble 939: 72
+n UNIQUE patterns on ensemble 939: 72
+n patterns on ensemble 940: 76
+n UNIQUE patterns on ensemble 940: 76
+n patterns on ensemble 941: 76
+n UNIQUE patterns on ensemble 941: 76
+n patterns on ensemble 942: 75
+n UNIQUE patterns on ensemble 942: 75
+n patterns on ensemble 943: 75
+n UNIQUE patterns on ensemble 943: 75
+n patterns on ensemble 944: 74
+n UNIQUE patterns on ensemble 944: 74
+n patterns on ensemble 945: 74
+n UNIQUE patterns on ensemble 945: 74
+n patterns on ensemble 946: 74
+n UNIQUE patterns on ensemble 946: 74
+n patterns on ensemble 947: 74
+n UNIQUE patterns on ensemble 947: 74
+n patterns on ensemble 948: 70
+n UNIQUE patterns on ensemble 948: 70
+n patterns on ensemble 949: 70
+n UNIQUE patterns on ensemble 949: 70
+n patterns on ensemble 950: 70
+n UNIQUE patterns on ensemble 950: 70
+n patterns on ensemble 951: 70
+n UNIQUE patterns on ensemble 951: 70
+n patterns on ensemble 952: 73
+n UNIQUE patterns on ensemble 952: 73
+n patterns on ensemble 953: 73
+n UNIQUE patterns on ensemble 953: 73
+n patterns on ensemble 954: 72
+n UNIQUE patterns on ensemble 954: 72
+n patterns on ensemble 955: 72
+n UNIQUE patterns on ensemble 955: 72
+n patterns on ensemble 956: 75
+n UNIQUE patterns on ensemble 956: 75
+n patterns on ensemble 957: 75
+n UNIQUE patterns on ensemble 957: 75
+n patterns on ensemble 958: 75
+n UNIQUE patterns on ensemble 958: 75
+n patterns on ensemble 959: 75
+n UNIQUE patterns on ensemble 959: 75
+n patterns on ensemble 960: 76
+n UNIQUE patterns on ensemble 960: 76
+n patterns on ensemble 961: 76
+n UNIQUE patterns on ensemble 961: 76
+n patterns on ensemble 962: 71
+n UNIQUE patterns on ensemble 962: 71
+n patterns on ensemble 963: 71
+n UNIQUE patterns on ensemble 963: 71
+n patterns on ensemble 964: 75
+n UNIQUE patterns on ensemble 964: 75
+n patterns on ensemble 965: 75
+n UNIQUE patterns on ensemble 965: 75
+n patterns on ensemble 966: 69
+n UNIQUE patterns on ensemble 966: 69
+n patterns on ensemble 967: 69
+n UNIQUE patterns on ensemble 967: 69
+n patterns on ensemble 968: 77
+n UNIQUE patterns on ensemble 968: 77
+n patterns on ensemble 969: 77
+n UNIQUE patterns on ensemble 969: 77
+n patterns on ensemble 970: 64
+n UNIQUE patterns on ensemble 970: 64
+n patterns on ensemble 971: 64
+n UNIQUE patterns on ensemble 971: 64
+n patterns on ensemble 972: 71
+n UNIQUE patterns on ensemble 972: 71
+n patterns on ensemble 973: 71
+n UNIQUE patterns on ensemble 973: 71
+n patterns on ensemble 974: 73
+n UNIQUE patterns on ensemble 974: 73
+n patterns on ensemble 975: 73
+n UNIQUE patterns on ensemble 975: 73
+n patterns on ensemble 976: 66
+n UNIQUE patterns on ensemble 976: 66
+n patterns on ensemble 977: 66
+n UNIQUE patterns on ensemble 977: 66
+n patterns on ensemble 978: 74
+n UNIQUE patterns on ensemble 978: 74
+n patterns on ensemble 979: 74
+n UNIQUE patterns on ensemble 979: 74
+n patterns on ensemble 980: 64
+n UNIQUE patterns on ensemble 980: 64
+n patterns on ensemble 981: 64
+n UNIQUE patterns on ensemble 981: 64
+n patterns on ensemble 982: 67
+n UNIQUE patterns on ensemble 982: 67
+n patterns on ensemble 983: 67
+n UNIQUE patterns on ensemble 983: 67
+n patterns on ensemble 984: 72
+n UNIQUE patterns on ensemble 984: 72
+n patterns on ensemble 985: 72
+n UNIQUE patterns on ensemble 985: 72
+n patterns on ensemble 986: 65
+n UNIQUE patterns on ensemble 986: 65
+n patterns on ensemble 987: 65
+n UNIQUE patterns on ensemble 987: 65
+n patterns on ensemble 988: 71
+n UNIQUE patterns on ensemble 988: 71
+n patterns on ensemble 989: 71
+n UNIQUE patterns on ensemble 989: 71
+n patterns on ensemble 990: 34
+n UNIQUE patterns on ensemble 990: 34
+n patterns on ensemble 991: 34
+n UNIQUE patterns on ensemble 991: 34
+n patterns on ensemble 992: 26
+n UNIQUE patterns on ensemble 992: 26
+n patterns on ensemble 993: 26
+n UNIQUE patterns on ensemble 993: 26
+n patterns on ensemble 994: 29
+n UNIQUE patterns on ensemble 994: 29
+n patterns on ensemble 995: 29
+n UNIQUE patterns on ensemble 995: 29
+n patterns on ensemble 996: 24
+n UNIQUE patterns on ensemble 996: 24
+n patterns on ensemble 997: 24
+n UNIQUE patterns on ensemble 997: 24
+n patterns on ensemble 998: 26
+n UNIQUE patterns on ensemble 998: 26
+n patterns on ensemble 999: 26
+n UNIQUE patterns on ensemble 999: 26
+n patterns on ensemble 1000: 27
+n UNIQUE patterns on ensemble 1000: 27
+n patterns on ensemble 1001: 27
+n UNIQUE patterns on ensemble 1001: 27
+n patterns on ensemble 1002: 27
+n UNIQUE patterns on ensemble 1002: 27
+n patterns on ensemble 1003: 27
+n UNIQUE patterns on ensemble 1003: 27
+n patterns on ensemble 1004: 25
+n UNIQUE patterns on ensemble 1004: 25
+n patterns on ensemble 1005: 25
+n UNIQUE patterns on ensemble 1005: 25
+n patterns on ensemble 1006: 32
+n UNIQUE patterns on ensemble 1006: 32
+n patterns on ensemble 1007: 32
+n UNIQUE patterns on ensemble 1007: 32
+n patterns on ensemble 1008: 23
+n UNIQUE patterns on ensemble 1008: 23
+n patterns on ensemble 1009: 23
+n UNIQUE patterns on ensemble 1009: 23
+n patterns on ensemble 1010: 37
+n UNIQUE patterns on ensemble 1010: 37
+n patterns on ensemble 1011: 37
+n UNIQUE patterns on ensemble 1011: 37
+n patterns on ensemble 1012: 26
+n UNIQUE patterns on ensemble 1012: 26
+n patterns on ensemble 1013: 26
+n UNIQUE patterns on ensemble 1013: 26
+n patterns on ensemble 1014: 31
+n UNIQUE patterns on ensemble 1014: 31
+n patterns on ensemble 1015: 31
+n UNIQUE patterns on ensemble 1015: 31
+n patterns on ensemble 1016: 28
+n UNIQUE patterns on ensemble 1016: 28
+n patterns on ensemble 1017: 28
+n UNIQUE patterns on ensemble 1017: 28
+n patterns on ensemble 1018: 32
+n UNIQUE patterns on ensemble 1018: 32
+n patterns on ensemble 1019: 32
+n UNIQUE patterns on ensemble 1019: 32
+n patterns on ensemble 1020: 36
+n UNIQUE patterns on ensemble 1020: 36
+n patterns on ensemble 1021: 36
+n UNIQUE patterns on ensemble 1021: 36
+n patterns on ensemble 1022: 20
+n UNIQUE patterns on ensemble 1022: 20
+n patterns on ensemble 1023: 20
+n UNIQUE patterns on ensemble 1023: 20
+n patterns on ensemble 1024: 23
+n UNIQUE patterns on ensemble 1024: 23
+n patterns on ensemble 1025: 23
+n UNIQUE patterns on ensemble 1025: 23
+n patterns on ensemble 1026: 28
+n UNIQUE patterns on ensemble 1026: 28
+n patterns on ensemble 1027: 28
+n UNIQUE patterns on ensemble 1027: 28
+n patterns on ensemble 1028: 26
+n UNIQUE patterns on ensemble 1028: 26
+n patterns on ensemble 1029: 26
+n UNIQUE patterns on ensemble 1029: 26
+n patterns on ensemble 1030: 22
+n UNIQUE patterns on ensemble 1030: 22
+n patterns on ensemble 1031: 22
+n UNIQUE patterns on ensemble 1031: 22
+n patterns on ensemble 1032: 22
+n UNIQUE patterns on ensemble 1032: 22
+n patterns on ensemble 1033: 22
+n UNIQUE patterns on ensemble 1033: 22
+n patterns on ensemble 1034: 28
+n UNIQUE patterns on ensemble 1034: 28
+n patterns on ensemble 1035: 28
+n UNIQUE patterns on ensemble 1035: 28
+n patterns on ensemble 1036: 32
+n UNIQUE patterns on ensemble 1036: 32
+n patterns on ensemble 1037: 32
+n UNIQUE patterns on ensemble 1037: 32
+n patterns on ensemble 1038: 30
+n UNIQUE patterns on ensemble 1038: 30
+n patterns on ensemble 1039: 30
+n UNIQUE patterns on ensemble 1039: 30
+n patterns on ensemble 1040: 31
+n UNIQUE patterns on ensemble 1040: 31
+n patterns on ensemble 1041: 31
+n UNIQUE patterns on ensemble 1041: 31
+n patterns on ensemble 1042: 21
+n UNIQUE patterns on ensemble 1042: 21
+n patterns on ensemble 1043: 21
+n UNIQUE patterns on ensemble 1043: 21
+n patterns on ensemble 1044: 31
+n UNIQUE patterns on ensemble 1044: 31
+n patterns on ensemble 1045: 31
+n UNIQUE patterns on ensemble 1045: 31
+n patterns on ensemble 1046: 32
+n UNIQUE patterns on ensemble 1046: 32
+n patterns on ensemble 1047: 32
+n UNIQUE patterns on ensemble 1047: 32
+n patterns on ensemble 1048: 27
+n UNIQUE patterns on ensemble 1048: 27
+n patterns on ensemble 1049: 27
+n UNIQUE patterns on ensemble 1049: 27
+n patterns on ensemble 1050: 31
+n UNIQUE patterns on ensemble 1050: 31
+n patterns on ensemble 1051: 31
+n UNIQUE patterns on ensemble 1051: 31
+n patterns on ensemble 1052: 21
+n UNIQUE patterns on ensemble 1052: 21
+n patterns on ensemble 1053: 21
+n UNIQUE patterns on ensemble 1053: 21
+n patterns on ensemble 1054: 28
+n UNIQUE patterns on ensemble 1054: 28
+n patterns on ensemble 1055: 28
+n UNIQUE patterns on ensemble 1055: 28
+n patterns on ensemble 1056: 31
+n UNIQUE patterns on ensemble 1056: 31
+n patterns on ensemble 1057: 31
+n UNIQUE patterns on ensemble 1057: 31
+n patterns on ensemble 1058: 29
+n UNIQUE patterns on ensemble 1058: 29
+n patterns on ensemble 1059: 29
+n UNIQUE patterns on ensemble 1059: 29
+n patterns on ensemble 1060: 34
+n UNIQUE patterns on ensemble 1060: 34
+n patterns on ensemble 1061: 34
+n UNIQUE patterns on ensemble 1061: 34
+n patterns on ensemble 1062: 24
+n UNIQUE patterns on ensemble 1062: 24
+n patterns on ensemble 1063: 24
+n UNIQUE patterns on ensemble 1063: 24
+n patterns on ensemble 1064: 21
+n UNIQUE patterns on ensemble 1064: 21
+n patterns on ensemble 1065: 21
+n UNIQUE patterns on ensemble 1065: 21
+n patterns on ensemble 1066: 20
+n UNIQUE patterns on ensemble 1066: 20
+n patterns on ensemble 1067: 20
+n UNIQUE patterns on ensemble 1067: 20
+n patterns on ensemble 1068: 35
+n UNIQUE patterns on ensemble 1068: 35
+n patterns on ensemble 1069: 35
+n UNIQUE patterns on ensemble 1069: 35
+n patterns on ensemble 1070: 22
+n UNIQUE patterns on ensemble 1070: 22
+n patterns on ensemble 1071: 22
+n UNIQUE patterns on ensemble 1071: 22
+n patterns on ensemble 1072: 25
+n UNIQUE patterns on ensemble 1072: 25
+n patterns on ensemble 1073: 25
+n UNIQUE patterns on ensemble 1073: 25
+n patterns on ensemble 1074: 24
+n UNIQUE patterns on ensemble 1074: 24
+n patterns on ensemble 1075: 24
+n UNIQUE patterns on ensemble 1075: 24
+n patterns on ensemble 1076: 20
+n UNIQUE patterns on ensemble 1076: 20
+n patterns on ensemble 1077: 20
+n UNIQUE patterns on ensemble 1077: 20
+n patterns on ensemble 1078: 28
+n UNIQUE patterns on ensemble 1078: 28
+n patterns on ensemble 1079: 28
+n UNIQUE patterns on ensemble 1079: 28
+n patterns on ensemble 1080: 20
+n UNIQUE patterns on ensemble 1080: 20
+n patterns on ensemble 1081: 20
+n UNIQUE patterns on ensemble 1081: 20
+n patterns on ensemble 1082: 30
+n UNIQUE patterns on ensemble 1082: 30
+n patterns on ensemble 1083: 30
+n UNIQUE patterns on ensemble 1083: 30
+n patterns on ensemble 1084: 33
+n UNIQUE patterns on ensemble 1084: 33
+n patterns on ensemble 1085: 33
+n UNIQUE patterns on ensemble 1085: 33
+n patterns on ensemble 1086: 31
+n UNIQUE patterns on ensemble 1086: 31
+n patterns on ensemble 1087: 31
+n UNIQUE patterns on ensemble 1087: 31
+n patterns on ensemble 1088: 19
+n UNIQUE patterns on ensemble 1088: 19
+n patterns on ensemble 1089: 19
+n UNIQUE patterns on ensemble 1089: 19
+n patterns on ensemble 1090: 25
+n UNIQUE patterns on ensemble 1090: 25
+n patterns on ensemble 1091: 25
+n UNIQUE patterns on ensemble 1091: 25
+n patterns on ensemble 1092: 26
+n UNIQUE patterns on ensemble 1092: 26
+n patterns on ensemble 1093: 26
+n UNIQUE patterns on ensemble 1093: 26
+n patterns on ensemble 1094: 30
+n UNIQUE patterns on ensemble 1094: 30
+n patterns on ensemble 1095: 30
+n UNIQUE patterns on ensemble 1095: 30
+n patterns on ensemble 1096: 34
+n UNIQUE patterns on ensemble 1096: 34
+n patterns on ensemble 1097: 34
+n UNIQUE patterns on ensemble 1097: 34
+n patterns on ensemble 1098: 20
+n UNIQUE patterns on ensemble 1098: 20
+n patterns on ensemble 1099: 20
+n UNIQUE patterns on ensemble 1099: 20
+n patterns on ensemble 1100: 26
+n UNIQUE patterns on ensemble 1100: 26
+n patterns on ensemble 1101: 26
+n UNIQUE patterns on ensemble 1101: 26
+n patterns on ensemble 1102: 30
+n UNIQUE patterns on ensemble 1102: 30
+n patterns on ensemble 1103: 30
+n UNIQUE patterns on ensemble 1103: 30
+n patterns on ensemble 1104: 19
+n UNIQUE patterns on ensemble 1104: 19
+n patterns on ensemble 1105: 19
+n UNIQUE patterns on ensemble 1105: 19
+n patterns on ensemble 1106: 29
+n UNIQUE patterns on ensemble 1106: 29
+n patterns on ensemble 1107: 29
+n UNIQUE patterns on ensemble 1107: 29
+n patterns on ensemble 1108: 30
+n UNIQUE patterns on ensemble 1108: 30
+n patterns on ensemble 1109: 30
+n UNIQUE patterns on ensemble 1109: 30
+n patterns on ensemble 1110: 33
+n UNIQUE patterns on ensemble 1110: 33
+n patterns on ensemble 1111: 33
+n UNIQUE patterns on ensemble 1111: 33
+n patterns on ensemble 1112: 31
+n UNIQUE patterns on ensemble 1112: 31
+n patterns on ensemble 1113: 31
+n UNIQUE patterns on ensemble 1113: 31
+n patterns on ensemble 1114: 31
+n UNIQUE patterns on ensemble 1114: 31
+n patterns on ensemble 1115: 31
+n UNIQUE patterns on ensemble 1115: 31
+n patterns on ensemble 1116: 26
+n UNIQUE patterns on ensemble 1116: 26
+n patterns on ensemble 1117: 26
+n UNIQUE patterns on ensemble 1117: 26
+n patterns on ensemble 1118: 26
+n UNIQUE patterns on ensemble 1118: 26
+n patterns on ensemble 1119: 26
+n UNIQUE patterns on ensemble 1119: 26
+n patterns on ensemble 1120: 33
+n UNIQUE patterns on ensemble 1120: 33
+n patterns on ensemble 1121: 33
+n UNIQUE patterns on ensemble 1121: 33
+n patterns on ensemble 1122: 25
+n UNIQUE patterns on ensemble 1122: 25
+n patterns on ensemble 1123: 25
+n UNIQUE patterns on ensemble 1123: 25
+n patterns on ensemble 1124: 21
+n UNIQUE patterns on ensemble 1124: 21
+n patterns on ensemble 1125: 21
+n UNIQUE patterns on ensemble 1125: 21
+n patterns on ensemble 1126: 21
+n UNIQUE patterns on ensemble 1126: 21
+n patterns on ensemble 1127: 21
+n UNIQUE patterns on ensemble 1127: 21
+n patterns on ensemble 1128: 22
+n UNIQUE patterns on ensemble 1128: 22
+n patterns on ensemble 1129: 22
+n UNIQUE patterns on ensemble 1129: 22
+n patterns on ensemble 1130: 34
+n UNIQUE patterns on ensemble 1130: 34
+n patterns on ensemble 1131: 34
+n UNIQUE patterns on ensemble 1131: 34
+n patterns on ensemble 1132: 24
+n UNIQUE patterns on ensemble 1132: 24
+n patterns on ensemble 1133: 24
+n UNIQUE patterns on ensemble 1133: 24
+n patterns on ensemble 1134: 27
+n UNIQUE patterns on ensemble 1134: 27
+n patterns on ensemble 1135: 27
+n UNIQUE patterns on ensemble 1135: 27
+n patterns on ensemble 1136: 19
+n UNIQUE patterns on ensemble 1136: 19
+n patterns on ensemble 1137: 19
+n UNIQUE patterns on ensemble 1137: 19
+n patterns on ensemble 1138: 28
+n UNIQUE patterns on ensemble 1138: 28
+n patterns on ensemble 1139: 28
+n UNIQUE patterns on ensemble 1139: 28
+n patterns on ensemble 1140: 30
+n UNIQUE patterns on ensemble 1140: 30
+n patterns on ensemble 1141: 30
+n UNIQUE patterns on ensemble 1141: 30
+n patterns on ensemble 1142: 26
+n UNIQUE patterns on ensemble 1142: 26
+n patterns on ensemble 1143: 26
+n UNIQUE patterns on ensemble 1143: 26
+n patterns on ensemble 1144: 37
+n UNIQUE patterns on ensemble 1144: 37
+n patterns on ensemble 1145: 37
+n UNIQUE patterns on ensemble 1145: 37
+n patterns on ensemble 1146: 28
+n UNIQUE patterns on ensemble 1146: 28
+n patterns on ensemble 1147: 28
+n UNIQUE patterns on ensemble 1147: 28
+n patterns on ensemble 1148: 35
+n UNIQUE patterns on ensemble 1148: 35
+n patterns on ensemble 1149: 35
+n UNIQUE patterns on ensemble 1149: 35
+n patterns on ensemble 1150: 27
+n UNIQUE patterns on ensemble 1150: 27
+n patterns on ensemble 1151: 27
+n UNIQUE patterns on ensemble 1151: 27
+n patterns on ensemble 1152: 26
+n UNIQUE patterns on ensemble 1152: 26
+n patterns on ensemble 1153: 26
+n UNIQUE patterns on ensemble 1153: 26
+n patterns on ensemble 1154: 37
+n UNIQUE patterns on ensemble 1154: 37
+n patterns on ensemble 1155: 37
+n UNIQUE patterns on ensemble 1155: 37
+n patterns on ensemble 1156: 27
+n UNIQUE patterns on ensemble 1156: 27
+n patterns on ensemble 1157: 27
+n UNIQUE patterns on ensemble 1157: 27
+n patterns on ensemble 1158: 26
+n UNIQUE patterns on ensemble 1158: 26
+n patterns on ensemble 1159: 26
+n UNIQUE patterns on ensemble 1159: 26
+n patterns on ensemble 1160: 24
+n UNIQUE patterns on ensemble 1160: 24
+n patterns on ensemble 1161: 24
+n UNIQUE patterns on ensemble 1161: 24
+n patterns on ensemble 1162: 31
+n UNIQUE patterns on ensemble 1162: 31
+n patterns on ensemble 1163: 31
+n UNIQUE patterns on ensemble 1163: 31
+n patterns on ensemble 1164: 27
+n UNIQUE patterns on ensemble 1164: 27
+n patterns on ensemble 1165: 27
+n UNIQUE patterns on ensemble 1165: 27
+n patterns on ensemble 1166: 33
+n UNIQUE patterns on ensemble 1166: 33
+n patterns on ensemble 1167: 33
+n UNIQUE patterns on ensemble 1167: 33
+n patterns on ensemble 1168: 28
+n UNIQUE patterns on ensemble 1168: 28
+n patterns on ensemble 1169: 28
+n UNIQUE patterns on ensemble 1169: 28
+n patterns on ensemble 1170: 27
+n UNIQUE patterns on ensemble 1170: 27
+n patterns on ensemble 1171: 27
+n UNIQUE patterns on ensemble 1171: 27
+n patterns on ensemble 1172: 36
+n UNIQUE patterns on ensemble 1172: 36
+n patterns on ensemble 1173: 36
+n UNIQUE patterns on ensemble 1173: 36
+n patterns on ensemble 1174: 32
+n UNIQUE patterns on ensemble 1174: 32
+n patterns on ensemble 1175: 32
+n UNIQUE patterns on ensemble 1175: 32
+n patterns on ensemble 1176: 29
+n UNIQUE patterns on ensemble 1176: 29
+n patterns on ensemble 1177: 29
+n UNIQUE patterns on ensemble 1177: 29
+n patterns on ensemble 1178: 26
+n UNIQUE patterns on ensemble 1178: 26
+n patterns on ensemble 1179: 26
+n UNIQUE patterns on ensemble 1179: 26
+n patterns on ensemble 1180: 26
+n UNIQUE patterns on ensemble 1180: 26
+n patterns on ensemble 1181: 26
+n UNIQUE patterns on ensemble 1181: 26
+n patterns on ensemble 1182: 29
+n UNIQUE patterns on ensemble 1182: 29
+n patterns on ensemble 1183: 29
+n UNIQUE patterns on ensemble 1183: 29
+n patterns on ensemble 1184: 26
+n UNIQUE patterns on ensemble 1184: 26
+n patterns on ensemble 1185: 26
+n UNIQUE patterns on ensemble 1185: 26
+n patterns on ensemble 1186: 23
+n UNIQUE patterns on ensemble 1186: 23
+n patterns on ensemble 1187: 23
+n UNIQUE patterns on ensemble 1187: 23
+n patterns on ensemble 1188: 66
+n UNIQUE patterns on ensemble 1188: 66
+n patterns on ensemble 1189: 66
+n UNIQUE patterns on ensemble 1189: 66
+n patterns on ensemble 1190: 67
+n UNIQUE patterns on ensemble 1190: 67
+n patterns on ensemble 1191: 67
+n UNIQUE patterns on ensemble 1191: 67
+n patterns on ensemble 1192: 59
+n UNIQUE patterns on ensemble 1192: 59
+n patterns on ensemble 1193: 59
+n UNIQUE patterns on ensemble 1193: 59
+n patterns on ensemble 1194: 66
+n UNIQUE patterns on ensemble 1194: 66
+n patterns on ensemble 1195: 66
+n UNIQUE patterns on ensemble 1195: 66
+n patterns on ensemble 1196: 75
+n UNIQUE patterns on ensemble 1196: 75
+n patterns on ensemble 1197: 75
+n UNIQUE patterns on ensemble 1197: 75
+n patterns on ensemble 1198: 66
+n UNIQUE patterns on ensemble 1198: 66
+n patterns on ensemble 1199: 66
+n UNIQUE patterns on ensemble 1199: 66
+n patterns on ensemble 1200: 67
+n UNIQUE patterns on ensemble 1200: 67
+n patterns on ensemble 1201: 67
+n UNIQUE patterns on ensemble 1201: 67
+n patterns on ensemble 1202: 75
+n UNIQUE patterns on ensemble 1202: 75
+n patterns on ensemble 1203: 75
+n UNIQUE patterns on ensemble 1203: 75
+n patterns on ensemble 1204: 72
+n UNIQUE patterns on ensemble 1204: 72
+n patterns on ensemble 1205: 72
+n UNIQUE patterns on ensemble 1205: 72
+n patterns on ensemble 1206: 75
+n UNIQUE patterns on ensemble 1206: 75
+n patterns on ensemble 1207: 75
+n UNIQUE patterns on ensemble 1207: 75
+n patterns on ensemble 1208: 74
+n UNIQUE patterns on ensemble 1208: 74
+n patterns on ensemble 1209: 74
+n UNIQUE patterns on ensemble 1209: 74
+n patterns on ensemble 1210: 66
+n UNIQUE patterns on ensemble 1210: 66
+n patterns on ensemble 1211: 66
+n UNIQUE patterns on ensemble 1211: 66
+n patterns on ensemble 1212: 66
+n UNIQUE patterns on ensemble 1212: 66
+n patterns on ensemble 1213: 66
+n UNIQUE patterns on ensemble 1213: 66
+n patterns on ensemble 1214: 68
+n UNIQUE patterns on ensemble 1214: 68
+n patterns on ensemble 1215: 68
+n UNIQUE patterns on ensemble 1215: 68
+n patterns on ensemble 1216: 73
+n UNIQUE patterns on ensemble 1216: 73
+n patterns on ensemble 1217: 73
+n UNIQUE patterns on ensemble 1217: 73
+n patterns on ensemble 1218: 76
+n UNIQUE patterns on ensemble 1218: 76
+n patterns on ensemble 1219: 76
+n UNIQUE patterns on ensemble 1219: 76
+n patterns on ensemble 1220: 70
+n UNIQUE patterns on ensemble 1220: 70
+n patterns on ensemble 1221: 70
+n UNIQUE patterns on ensemble 1221: 70
+n patterns on ensemble 1222: 75
+n UNIQUE patterns on ensemble 1222: 75
+n patterns on ensemble 1223: 75
+n UNIQUE patterns on ensemble 1223: 75
+n patterns on ensemble 1224: 71
+n UNIQUE patterns on ensemble 1224: 71
+n patterns on ensemble 1225: 71
+n UNIQUE patterns on ensemble 1225: 71
+n patterns on ensemble 1226: 69
+n UNIQUE patterns on ensemble 1226: 69
+n patterns on ensemble 1227: 69
+n UNIQUE patterns on ensemble 1227: 69
+n patterns on ensemble 1228: 69
+n UNIQUE patterns on ensemble 1228: 69
+n patterns on ensemble 1229: 69
+n UNIQUE patterns on ensemble 1229: 69
+n patterns on ensemble 1230: 67
+n UNIQUE patterns on ensemble 1230: 67
+n patterns on ensemble 1231: 67
+n UNIQUE patterns on ensemble 1231: 67
+n patterns on ensemble 1232: 75
+n UNIQUE patterns on ensemble 1232: 75
+n patterns on ensemble 1233: 75
+n UNIQUE patterns on ensemble 1233: 75
+n patterns on ensemble 1234: 68
+n UNIQUE patterns on ensemble 1234: 68
+n patterns on ensemble 1235: 68
+n UNIQUE patterns on ensemble 1235: 68
+n patterns on ensemble 1236: 69
+n UNIQUE patterns on ensemble 1236: 69
+n patterns on ensemble 1237: 69
+n UNIQUE patterns on ensemble 1237: 69
+n patterns on ensemble 1238: 69
+n UNIQUE patterns on ensemble 1238: 69
+n patterns on ensemble 1239: 69
+n UNIQUE patterns on ensemble 1239: 69
+n patterns on ensemble 1240: 73
+n UNIQUE patterns on ensemble 1240: 73
+n patterns on ensemble 1241: 73
+n UNIQUE patterns on ensemble 1241: 73
+n patterns on ensemble 1242: 70
+n UNIQUE patterns on ensemble 1242: 70
+n patterns on ensemble 1243: 70
+n UNIQUE patterns on ensemble 1243: 70
+n patterns on ensemble 1244: 62
+n UNIQUE patterns on ensemble 1244: 62
+n patterns on ensemble 1245: 62
+n UNIQUE patterns on ensemble 1245: 62
+n patterns on ensemble 1246: 69
+n UNIQUE patterns on ensemble 1246: 69
+n patterns on ensemble 1247: 69
+n UNIQUE patterns on ensemble 1247: 69
+n patterns on ensemble 1248: 63
+n UNIQUE patterns on ensemble 1248: 63
+n patterns on ensemble 1249: 63
+n UNIQUE patterns on ensemble 1249: 63
+n patterns on ensemble 1250: 66
+n UNIQUE patterns on ensemble 1250: 66
+n patterns on ensemble 1251: 66
+n UNIQUE patterns on ensemble 1251: 66
+n patterns on ensemble 1252: 69
+n UNIQUE patterns on ensemble 1252: 69
+n patterns on ensemble 1253: 69
+n UNIQUE patterns on ensemble 1253: 69
+n patterns on ensemble 1254: 68
+n UNIQUE patterns on ensemble 1254: 68
+n patterns on ensemble 1255: 68
+n UNIQUE patterns on ensemble 1255: 68
+n patterns on ensemble 1256: 68
+n UNIQUE patterns on ensemble 1256: 68
+n patterns on ensemble 1257: 68
+n UNIQUE patterns on ensemble 1257: 68
+n patterns on ensemble 1258: 57
+n UNIQUE patterns on ensemble 1258: 57
+n patterns on ensemble 1259: 57
+n UNIQUE patterns on ensemble 1259: 57
+n patterns on ensemble 1260: 76
+n UNIQUE patterns on ensemble 1260: 76
+n patterns on ensemble 1261: 76
+n UNIQUE patterns on ensemble 1261: 76
+n patterns on ensemble 1262: 70
+n UNIQUE patterns on ensemble 1262: 70
+n patterns on ensemble 1263: 70
+n UNIQUE patterns on ensemble 1263: 70
+n patterns on ensemble 1264: 72
+n UNIQUE patterns on ensemble 1264: 72
+n patterns on ensemble 1265: 72
+n UNIQUE patterns on ensemble 1265: 72
+n patterns on ensemble 1266: 65
+n UNIQUE patterns on ensemble 1266: 65
+n patterns on ensemble 1267: 65
+n UNIQUE patterns on ensemble 1267: 65
+n patterns on ensemble 1268: 69
+n UNIQUE patterns on ensemble 1268: 69
+n patterns on ensemble 1269: 69
+n UNIQUE patterns on ensemble 1269: 69
+n patterns on ensemble 1270: 73
+n UNIQUE patterns on ensemble 1270: 73
+n patterns on ensemble 1271: 73
+n UNIQUE patterns on ensemble 1271: 73
+n patterns on ensemble 1272: 71
+n UNIQUE patterns on ensemble 1272: 71
+n patterns on ensemble 1273: 71
+n UNIQUE patterns on ensemble 1273: 71
+n patterns on ensemble 1274: 69
+n UNIQUE patterns on ensemble 1274: 69
+n patterns on ensemble 1275: 69
+n UNIQUE patterns on ensemble 1275: 69
+n patterns on ensemble 1276: 66
+n UNIQUE patterns on ensemble 1276: 66
+n patterns on ensemble 1277: 66
+n UNIQUE patterns on ensemble 1277: 66
+n patterns on ensemble 1278: 65
+n UNIQUE patterns on ensemble 1278: 65
+n patterns on ensemble 1279: 65
+n UNIQUE patterns on ensemble 1279: 65
+n patterns on ensemble 1280: 61
+n UNIQUE patterns on ensemble 1280: 61
+n patterns on ensemble 1281: 61
+n UNIQUE patterns on ensemble 1281: 61
+n patterns on ensemble 1282: 68
+n UNIQUE patterns on ensemble 1282: 68
+n patterns on ensemble 1283: 68
+n UNIQUE patterns on ensemble 1283: 68
+n patterns on ensemble 1284: 69
+n UNIQUE patterns on ensemble 1284: 69
+n patterns on ensemble 1285: 69
+n UNIQUE patterns on ensemble 1285: 69
+n patterns on ensemble 1286: 63
+n UNIQUE patterns on ensemble 1286: 63
+n patterns on ensemble 1287: 63
+n UNIQUE patterns on ensemble 1287: 63
+n patterns on ensemble 1288: 66
+n UNIQUE patterns on ensemble 1288: 66
+n patterns on ensemble 1289: 66
+n UNIQUE patterns on ensemble 1289: 66
+n patterns on ensemble 1290: 59
+n UNIQUE patterns on ensemble 1290: 59
+n patterns on ensemble 1291: 59
+n UNIQUE patterns on ensemble 1291: 59
+n patterns on ensemble 1292: 70
+n UNIQUE patterns on ensemble 1292: 70
+n patterns on ensemble 1293: 70
+n UNIQUE patterns on ensemble 1293: 70
+n patterns on ensemble 1294: 66
+n UNIQUE patterns on ensemble 1294: 66
+n patterns on ensemble 1295: 66
+n UNIQUE patterns on ensemble 1295: 66
+n patterns on ensemble 1296: 69
+n UNIQUE patterns on ensemble 1296: 69
+n patterns on ensemble 1297: 69
+n UNIQUE patterns on ensemble 1297: 69
+n patterns on ensemble 1298: 72
+n UNIQUE patterns on ensemble 1298: 72
+n patterns on ensemble 1299: 72
+n UNIQUE patterns on ensemble 1299: 72
+n patterns on ensemble 1300: 69
+n UNIQUE patterns on ensemble 1300: 69
+n patterns on ensemble 1301: 69
+n UNIQUE patterns on ensemble 1301: 69
+n patterns on ensemble 1302: 69
+n UNIQUE patterns on ensemble 1302: 69
+n patterns on ensemble 1303: 69
+n UNIQUE patterns on ensemble 1303: 69
+n patterns on ensemble 1304: 60
+n UNIQUE patterns on ensemble 1304: 60
+n patterns on ensemble 1305: 60
+n UNIQUE patterns on ensemble 1305: 60
+n patterns on ensemble 1306: 71
+n UNIQUE patterns on ensemble 1306: 71
+n patterns on ensemble 1307: 71
+n UNIQUE patterns on ensemble 1307: 71
+n patterns on ensemble 1308: 70
+n UNIQUE patterns on ensemble 1308: 70
+n patterns on ensemble 1309: 70
+n UNIQUE patterns on ensemble 1309: 70
+n patterns on ensemble 1310: 76
+n UNIQUE patterns on ensemble 1310: 76
+n patterns on ensemble 1311: 76
+n UNIQUE patterns on ensemble 1311: 76
+n patterns on ensemble 1312: 65
+n UNIQUE patterns on ensemble 1312: 65
+n patterns on ensemble 1313: 65
+n UNIQUE patterns on ensemble 1313: 65
+n patterns on ensemble 1314: 72
+n UNIQUE patterns on ensemble 1314: 72
+n patterns on ensemble 1315: 72
+n UNIQUE patterns on ensemble 1315: 72
+n patterns on ensemble 1316: 68
+n UNIQUE patterns on ensemble 1316: 68
+n patterns on ensemble 1317: 68
+n UNIQUE patterns on ensemble 1317: 68
+n patterns on ensemble 1318: 73
+n UNIQUE patterns on ensemble 1318: 73
+n patterns on ensemble 1319: 73
+n UNIQUE patterns on ensemble 1319: 73
+n patterns on ensemble 1320: 62
+n UNIQUE patterns on ensemble 1320: 62
+n patterns on ensemble 1321: 62
+n UNIQUE patterns on ensemble 1321: 62
+n patterns on ensemble 1322: 71
+n UNIQUE patterns on ensemble 1322: 71
+n patterns on ensemble 1323: 71
+n UNIQUE patterns on ensemble 1323: 71
+n patterns on ensemble 1324: 69
+n UNIQUE patterns on ensemble 1324: 69
+n patterns on ensemble 1325: 69
+n UNIQUE patterns on ensemble 1325: 69
+n patterns on ensemble 1326: 73
+n UNIQUE patterns on ensemble 1326: 73
+n patterns on ensemble 1327: 73
+n UNIQUE patterns on ensemble 1327: 73
+n patterns on ensemble 1328: 65
+n UNIQUE patterns on ensemble 1328: 65
+n patterns on ensemble 1329: 65
+n UNIQUE patterns on ensemble 1329: 65
+n patterns on ensemble 1330: 67
+n UNIQUE patterns on ensemble 1330: 67
+n patterns on ensemble 1331: 67
+n UNIQUE patterns on ensemble 1331: 67
+n patterns on ensemble 1332: 72
+n UNIQUE patterns on ensemble 1332: 72
+n patterns on ensemble 1333: 72
+n UNIQUE patterns on ensemble 1333: 72
+n patterns on ensemble 1334: 67
+n UNIQUE patterns on ensemble 1334: 67
+n patterns on ensemble 1335: 67
+n UNIQUE patterns on ensemble 1335: 67
+n patterns on ensemble 1336: 64
+n UNIQUE patterns on ensemble 1336: 64
+n patterns on ensemble 1337: 64
+n UNIQUE patterns on ensemble 1337: 64
+n patterns on ensemble 1338: 66
+n UNIQUE patterns on ensemble 1338: 66
+n patterns on ensemble 1339: 66
+n UNIQUE patterns on ensemble 1339: 66
+n patterns on ensemble 1340: 72
+n UNIQUE patterns on ensemble 1340: 72
+n patterns on ensemble 1341: 72
+n UNIQUE patterns on ensemble 1341: 72
+n patterns on ensemble 1342: 68
+n UNIQUE patterns on ensemble 1342: 68
+n patterns on ensemble 1343: 68
+n UNIQUE patterns on ensemble 1343: 68
+n patterns on ensemble 1344: 65
+n UNIQUE patterns on ensemble 1344: 65
+n patterns on ensemble 1345: 65
+n UNIQUE patterns on ensemble 1345: 65
+n patterns on ensemble 1346: 74
+n UNIQUE patterns on ensemble 1346: 74
+n patterns on ensemble 1347: 74
+n UNIQUE patterns on ensemble 1347: 74
+n patterns on ensemble 1348: 66
+n UNIQUE patterns on ensemble 1348: 66
+n patterns on ensemble 1349: 66
+n UNIQUE patterns on ensemble 1349: 66
+n patterns on ensemble 1350: 67
+n UNIQUE patterns on ensemble 1350: 67
+n patterns on ensemble 1351: 67
+n UNIQUE patterns on ensemble 1351: 67
+n patterns on ensemble 1352: 68
+n UNIQUE patterns on ensemble 1352: 68
+n patterns on ensemble 1353: 68
+n UNIQUE patterns on ensemble 1353: 68
+n patterns on ensemble 1354: 65
+n UNIQUE patterns on ensemble 1354: 65
+n patterns on ensemble 1355: 65
+n UNIQUE patterns on ensemble 1355: 65
+n patterns on ensemble 1356: 68
+n UNIQUE patterns on ensemble 1356: 68
+n patterns on ensemble 1357: 68
+n UNIQUE patterns on ensemble 1357: 68
+n patterns on ensemble 1358: 68
+n UNIQUE patterns on ensemble 1358: 68
+n patterns on ensemble 1359: 68
+n UNIQUE patterns on ensemble 1359: 68
+n patterns on ensemble 1360: 74
+n UNIQUE patterns on ensemble 1360: 74
+n patterns on ensemble 1361: 74
+n UNIQUE patterns on ensemble 1361: 74
+n patterns on ensemble 1362: 76
+n UNIQUE patterns on ensemble 1362: 76
+n patterns on ensemble 1363: 76
+n UNIQUE patterns on ensemble 1363: 76
+n patterns on ensemble 1364: 71
+n UNIQUE patterns on ensemble 1364: 71
+n patterns on ensemble 1365: 71
+n UNIQUE patterns on ensemble 1365: 71
+n patterns on ensemble 1366: 63
+n UNIQUE patterns on ensemble 1366: 63
+n patterns on ensemble 1367: 63
+n UNIQUE patterns on ensemble 1367: 63
+n patterns on ensemble 1368: 69
+n UNIQUE patterns on ensemble 1368: 69
+n patterns on ensemble 1369: 69
+n UNIQUE patterns on ensemble 1369: 69
+n patterns on ensemble 1370: 76
+n UNIQUE patterns on ensemble 1370: 76
+n patterns on ensemble 1371: 76
+n UNIQUE patterns on ensemble 1371: 76
+n patterns on ensemble 1372: 71
+n UNIQUE patterns on ensemble 1372: 71
+n patterns on ensemble 1373: 71
+n UNIQUE patterns on ensemble 1373: 71
+n patterns on ensemble 1374: 67
+n UNIQUE patterns on ensemble 1374: 67
+n patterns on ensemble 1375: 67
+n UNIQUE patterns on ensemble 1375: 67
+n patterns on ensemble 1376: 65
+n UNIQUE patterns on ensemble 1376: 65
+n patterns on ensemble 1377: 65
+n UNIQUE patterns on ensemble 1377: 65
+n patterns on ensemble 1378: 65
+n UNIQUE patterns on ensemble 1378: 65
+n patterns on ensemble 1379: 65
+n UNIQUE patterns on ensemble 1379: 65
+n patterns on ensemble 1380: 65
+n UNIQUE patterns on ensemble 1380: 65
+n patterns on ensemble 1381: 65
+n UNIQUE patterns on ensemble 1381: 65
+n patterns on ensemble 1382: 64
+n UNIQUE patterns on ensemble 1382: 64
+n patterns on ensemble 1383: 64
+n UNIQUE patterns on ensemble 1383: 64
+n patterns on ensemble 1384: 66
+n UNIQUE patterns on ensemble 1384: 66
+n patterns on ensemble 1385: 66
+n UNIQUE patterns on ensemble 1385: 66
